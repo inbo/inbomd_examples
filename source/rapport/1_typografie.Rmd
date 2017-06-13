@@ -23,3 +23,27 @@
 ###### Niveau 6: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
 
 \lipsum[16-18]
+
+# Kopstijlen zonder nummer: niveau 1: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+
+\lipsum[19]
+
+## Niveau 2: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+
+\lipsum[20]
+
+### Niveau 3: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+
+\lipsum[21]
+
+#### Niveau 4: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+
+\lipsum[22-23]
+
+\paragraph*{Niveau 5: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.}
+
+\lipsum[24]
+
+\subparagraph*{Niveau 6: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.}
+
+\lipsum[25]
