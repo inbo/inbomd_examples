@@ -7,11 +7,25 @@
 Kruisverwijzingen zijn eenvoudig te maken door te verwijzen naar de bijhorende label, bijvoorbeeld figuur \@ref(fig:koolrabi). Doordat we verwijzen naar een uniek label, kan de software voor ons automatisch het juiste nummer berekenen. De cijfers zijn een klikbare link. Je kan kruisverwijzingen maken naar:
 
 - koppen (\@ref(h:kruisverwijzing), \@ref(s:figuur-invoegen))
+- tabellen (\@ref(tab:mtcars))
 - figuren (\@ref(fig:koolrabi))
 
 Je voegt een label aan een kop toe door op het einde `{#mijn-label}` te plaatsen. Hierbij vervang je 'mijn-label' door iets zinvol en eenvoudig te onthouden. Het is handig om steeds een prefix te gebruiken. Bijvoorbeeld `h:` voor een hoofdstuk, `s:` voor een sectie. Belangrijk om weten is dat elk label uniek moet zijn binnen het volledige document. Gebruik enkel letters, cijfers, `:`, `/` en `-`. Andere tekens als spaties of lage streepjes (`_`) zijn niet toegestaan.
 
 ## Figuren en tabellen
+
+### Tabellen
+
+Tabellen zijn een eenvoudigst te genereren vanuit een `R data.frame` met de functie `kable()`. De naam van de chunk met prefix `tab:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen. Bijschriften plaats je in `caption`.
+
+```{r mtcars, echo = FALSE}
+kable(
+  head(mtcars[, 1:8], 10), 
+  booktabs = TRUE,
+  caption = 'Een tabel met de eerste 10 rijen van de `mtcars` dataset.'
+)
+```
+
 
 ### Figuren {#s:figuur-invoegen}
 
@@ -29,9 +43,9 @@ Figuur \@ref(fig:koolrabi) is 4896 pixels breed, 3264 pixels hoog met een resolu
 include_graphics("kohlrabi-2266665.jpg", dpi = 792)
 ```
 
-### Plaatsing van figuren
+### Plaatsing van tabellen en figuren
 
-Belangrijk om weten is dat de software zelf een zo goed mogelijke plaats zoekt voor de figuren. Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren zullen nooit in een hoofdstuk terecht komen.
+Belangrijk om weten is dat de software zelf een zo goed mogelijke plaats zoekt voor de zogenaamde floats (tabellen en figuren). Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren zullen nooit in een hoofdstuk terecht komen.
 
 De beste optie om hier iets aan te doen, is te zorgen voor volgende tekst ;-). Als het probleem zich enkel lokaal voordoet kan je op die plaats volgende code opnemen.
 
