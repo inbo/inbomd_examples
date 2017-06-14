@@ -13,6 +13,12 @@ Kruisverwijzingen zijn eenvoudig te maken door te verwijzen naar de bijhorende l
 
 Je voegt een label aan een kop toe door op het einde `{#mijn-label}` te plaatsen. Hierbij vervang je 'mijn-label' door iets zinvol en eenvoudig te onthouden. Het is handig om steeds een prefix te gebruiken. Bijvoorbeeld `h:` voor een hoofdstuk, `s:` voor een sectie. Belangrijk om weten is dat elk label uniek moet zijn binnen het volledige document. Gebruik enkel letters, cijfers, `:`, `/` en `-`. Andere tekens als spaties of lage streepjes (`_`) zijn niet toegestaan.
 
+## Externe verwijzingen
+
+Naakte URLs moeten met het gebruikte protocol beginnen bv http://www.inbo.be. Relevante protocols zijn http:// en https:// voor websites, ftp:// voor ftp sites, mailto:// voor email e.g. mailto:nobody@inbo.be. 
+
+We kunnen de URL tevens achter een link tekst plaatsen bv [Google](http://google.be). We kunnen deze techniek eveneens gebruiken voor de andere protocols bv [e-mail](mailto:nobody@inbo.be).
+
 ## Figuren en tabellen
 
 ### Tabellen
