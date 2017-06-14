@@ -26,6 +26,15 @@ kable(
 )
 ```
 
+Je kan de tabellen eveneens dynamisch weergeven met behulp van de `datatable()` functie. De HTML versie van het rapport zal dan een interactieve versie van de tabel bevatten. Hier kan de gebruiker eenvoudig zoeken, sorteren, .... Die functionaliteit is uiteraard niet beschikbaar in pdf formaat. Daarom wordt in de pdf automatisch een schermafdruk gemaakt (figuur \@ref(fig:mtcars2)).
+
+```{r mtcars2, echo = FALSE, fig.cap = "Schermafdruk van de dynamische tabel", out.width="\\textwidth"}
+datatable(
+  head(mtcars[, 1:8], 10), 
+  caption = 'Een dynamische tabel met de eerste 10 rijen van de `mtcars` dataset.'
+)
+```
+
 
 ### Figuren {#s:figuur-invoegen}
 
