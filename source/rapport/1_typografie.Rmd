@@ -47,3 +47,96 @@
 \subparagraph*{Niveau 6: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.}
 
 \lipsum[25]
+
+# Lettertypes
+
+## Normaal
+
+\lipsum[26]
+
+## Vet
+
+**\lipsum[27]**
+
+## Schuin
+
+_\lipsum[28]_
+
+##Vet en schuin
+
+_**\lipsum[29]**_
+
+## Met vaste tekenbreedte
+
+\texttt{\lipsum[30]}
+
+`Filmquiz bracht knappe ex-yogi van de wijs.`
+
+**`Filmquiz bracht knappe ex-yogi van de wijs.`**
+
+_`Filmquiz bracht knappe ex-yogi van de wijs.`_
+
+**_`Filmquiz bracht knappe ex-yogi van de wijs.`_**
+
+**`Filmquiz`** `bracht` _`knappe`_ `ex-yogi van de` **_`wijs`_**.
+
+80 characters
+
+`12345678911234567892123456789312345678941234567895123456789612345678971234567898`
+
+100 characters
+
+`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`
+
+## Kleine letter L versus hoofdletter i
+
+normaal:
+  ~ lI
+
+vet:
+  ~ **lI**
+  
+schuin:
+  ~ _lI_
+
+vet en schuin:
+  ~ **_lI_**
+
+met vaste tekenbreedte:
+  ~ `lI` **`lI`** _`lI`_ **_`lI`_** 
+
+## Speciale characters
+  
+### Normaal
+
+€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
+
+### Vet
+**€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
+
+### Schuin
+_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
+
+### Vet en schuin
+**_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
+  
+### Met vaste tekenbreedte
+`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
+
+## Aanhalingstekens
+
+normaal:
+  ~ "dubbele", 'enkele'
+
+vet:
+  ~ **"dubbele", 'enkele'**
+
+schuin:
+  ~ _"dubbele", 'enkele'_
+
+vet en schuin:
+  ~ **_"dubbele", 'enkele'_**
+
+met vaste tekenbreedte:
+  ~ `"dubbele", 'enkele',` **`"dubbele", 'enkele',`** _`"dubbele", 'enkele',`_ **_`"dubbele", 'enkele'`_**
+
