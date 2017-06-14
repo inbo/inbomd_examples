@@ -140,3 +140,86 @@ vet en schuin:
 met vaste tekenbreedte:
   ~ `"dubbele", 'enkele',` **`"dubbele", 'enkele',`** _`"dubbele", 'enkele',`_ **_`"dubbele", 'enkele'`_**
 
+# Opsommingen
+
+## Ongeordende lijsten
+
+- \lipsum[31]
+- Item 2
+- Item 3
+    - Item a
+        - item I
+        - item II
+            - item A
+            - item B
+            - \lipsum[32]
+        - \lipsum[33]
+    - \lipsum[34]
+    - Item c
+- Item 4
+
+## Genummerde lijsten
+
+1. \lipsum[35]
+1. Item 2
+1. Item 3
+    1. Item a
+        1. item I
+        1. item II
+            1. \lipsum[36]
+            1. item B
+            1. item C
+        1. \lipsum[37]
+    1. \lipsum[38]
+    1. Item c
+1. Item 4
+
+## Lijsten met definities
+
+Item A
+  ~ \lipsum[39]
+  
+Longer item title B
+  ~ \lipsum[40]
+  
+    Item B1
+      ~ \lipsum[41]
+
+        Item B1a
+          ~ \lipsum[42]
+
+        Item B1b
+          ~ \lipsum[43]
+
+            Item B1b1
+              ~ \lipsum[44]
+              
+    Item B2
+      ~ \lipsum[45]
+
+Item C
+  ~ \lipsum[46]
+  
+Item D
+  ~ \lipsum[47]
+
+## Lijsten mengen
+
+- Item 1
+- Item 2
+- Item 3
+    1. Item a
+    
+        item I
+          ~ Uitleg I
+          
+        item II
+          ~ Uitleg II
+          
+    1. Item b
+        - Item b I
+        - Item b II
+    1. Item c
+        1. Item c I
+        1. Item c II
+- Item 4
