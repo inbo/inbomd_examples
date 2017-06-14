@@ -223,3 +223,54 @@ Item D
         1. Item c I
         1. Item c II
 - Item 4
+
+
+# Kaders
+
+\lipsum[48]
+
+## Standaard kader
+
+```{block, type = "block"}
+\lipsum[49]
+```
+
+\lipsum[50-51]
+
+```{block, type = "block"}
+\lipsum[52-53]
+```
+
+## Kader met voorbeeld
+  
+\lipsum[54]
+
+```{block, type = "exampleblock"}
+\lipsum[55]
+```
+
+\lipsum[56-58]
+
+```{block, type = "exampleblock"}
+\lipsum[59-60]
+```
+
+## Kader met waarschuwing
+
+\lipsum[61]
+
+```{block, type = "alertblock"}
+\lipsum[62]
+```
+
+\lipsum[63]
+
+```{block, type = "alertblock"}
+\lipsum[64-65]
+```
+
+\lipsum[66]
+
+```{block, type = "alertblock"}
+\lipsum[67-68]
+```
