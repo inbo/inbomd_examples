@@ -47,10 +47,18 @@ De afmetingen in een figuur zijn in principe gebaseerd op de afmetingen zoals ge
 - 600 pixels breed / 300 dpi = 2 inch (50,8 mm)
 - 600 pixels breed / 72 dpi = 8.33 inch (211.7 mm)
 
-Figuur \@ref(fig:koolrabi) is 4896 pixels breed, 3264 pixels hoog met een resolutie van 72 dpi. De figuur wordt dan 173 cm breed en 115 cm hoog, hetgeen uiteraard niet op A4 past. De beschikbare horizontale breedte is 157 mm of 6.18 inch. Dus moeten we een resolutie van 4896 / 6.18 = 792 dpi (of groter) gebruiken.
+Figuur \@ref(fig:koolrabi) is 4896 pixels breed en 3264 pixels hoog. Standaard gebruikt de huisstijl een resolutie van 300 dpi. De figuur wordt dan 41.5 cm breed en 27.6 cm hoog, hetgeen uiteraard niet op A4 past. Via `out.width` geven we de gewenste breedte op. Een cijfer wordt geïnterpreteerd als een afmeting in inch. Je kan ook `\\textwidth` opgeven, de textbreedte van het document (figuur \@ref(fig:koolrabi2)). De interpretatie hiervan zal afhangelijk zijn van de gebruikte stijl. Bij figuur \@ref(fig:koolrabi3) hebben we `0.5\\textwidth` of de halve tekstbreedte opgegeven.
 
-```{r koolrabi, fig.cap = "Koolrabi", echo = FALSE}
-include_graphics("kohlrabi-2266665.jpg", dpi = 792)
+```{r koolrabi, fig.cap = "Koolrabi, originele afmetingen", echo = FALSE}
+include_graphics("kohlrabi-2266665.jpg")
+```
+
+```{r koolrabi2, fig.cap = "Koolrabi, tekstbreedte", echo = FALSE, out.width="\\textwidth"}
+include_graphics("kohlrabi-2266665.jpg")
+```
+
+```{r koolrabi3, fig.cap = "Koolrabi, halve tekstbreedte", echo = FALSE, out.width="0.5\\textwidth"}
+include_graphics("kohlrabi-2266665.jpg")
 ```
 
 ### Plaatsing van tabellen en figuren
