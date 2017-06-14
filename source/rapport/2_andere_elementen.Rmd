@@ -1,0 +1,42 @@
+# (PART) Andere elementen {-}
+
+# Kruisverwijzigingen {#h:kruisverwijzing}
+
+## Interne kruisverwijzingen
+
+Kruisverwijzingen zijn eenvoudig te maken door te verwijzen naar de bijhorende label, bijvoorbeeld figuur \@ref(fig:koolrabi). Doordat we verwijzen naar een uniek label, kan de software voor ons automatisch het juiste nummer berekenen. De cijfers zijn een klikbare link. Je kan kruisverwijzingen maken naar:
+
+- koppen (\@ref(h:kruisverwijzing), \@ref(s:figuur-invoegen))
+- figuren (\@ref(fig:koolrabi))
+
+Je voegt een label aan een kop toe door op het einde `{#mijn-label}` te plaatsen. Hierbij vervang je 'mijn-label' door iets zinvol en eenvoudig te onthouden. Het is handig om steeds een prefix te gebruiken. Bijvoorbeeld `h:` voor een hoofdstuk, `s:` voor een sectie. Belangrijk om weten is dat elk label uniek moet zijn binnen het volledige document. Gebruik enkel letters, cijfers, `:`, `/` en `-`. Andere tekens als spaties of lage streepjes (`_`) zijn niet toegestaan.
+
+## Figuren en tabellen
+
+### Figuren {#s:figuur-invoegen}
+
+Figuren zijn het eenvoudigst toe te voegen als een R chunk. De naam van de chunk met prefix `fig:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen. Bijschriften plaats je in `fig.cap`.
+
+De afmetingen in een figuur zijn in principe gebaseerd op de afmetingen zoals gedefineerd in het bestand: het aantal pixels gedeeld door de resolutie.
+
+- 600 pixels breed / 600 dpi = 1 inch (25,4 mm)
+- 600 pixels breed / 300 dpi = 2 inch (50,8 mm)
+- 600 pixels breed / 72 dpi = 8.33 inch (211.7 mm)
+
+Figuur \@ref(fig:koolrabi) is 4896 pixels breed, 3264 pixels hoog met een resolutie van 72 dpi. De figuur wordt dan 173 cm breed en 115 cm hoog, hetgeen uiteraard niet op A4 past. De beschikbare horizontale breedte is 157 mm of 6.18 inch. Dus moeten we een resolutie van 4896 / 6.18 = 792 dpi (of groter) gebruiken.
+
+```{r koolrabi, fig.cap = "Koolrabi", echo = FALSE}
+include_graphics("kohlrabi-2266665.jpg", dpi = 792)
+```
+
+### Plaatsing van figuren
+
+Belangrijk om weten is dat de software zelf een zo goed mogelijke plaats zoekt voor de figuren. Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren zullen nooit in een hoofdstuk terecht komen.
+
+De beste optie om hier iets aan te doen, is te zorgen voor volgende tekst ;-). Als het probleem zich enkel lokaal voordoet kan je op die plaats volgende code opnemen.
+
+```
+\FloatBarrier
+```
+
+Op dat moment worden eerst alle hangende figuren geplaatst vooraleer verder te gaan met de tekst. Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke _section_ (kop 2). Je kan dit ook doen met _subsection_ (kop 3) en _subsubsection_ (kop 4). Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen.
