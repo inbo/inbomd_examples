@@ -85,3 +85,113 @@ ggplot(
   geom_smooth(method = "lm") +
   theme_inbo(base_size = 11)
 ```
+
+# Tabellen
+
+Er zijn een aantal mogelijke manieren om een `data.frame` in tabelvorm weer te geven.
+
+```{r genereer-tabel}
+# functies om tabellen te genereren
+cijfer_tabel <- function(rijen = 20, kolommen = 10) {
+  data.frame(
+    matrix(
+      rnorm(rijen * kolommen),
+      nrow = rijen,
+      ncol = kolommen
+    ),
+    row.names = paste("rij", seq_len(rijen))
+  )
+}
+random_woord <- function(n_letters = 5){
+  paste(
+    sample(letters, size = n_letters, replace = TRUE),
+    collapse = ""
+  )
+}
+random_zin <- function(n_woorden = 10, n_letters = 10){
+  paste(
+    sapply(
+      rpois(n_woorden, n_letters), 
+      FUN = random_woord
+    ),
+    collapse = " "
+  )
+}
+tekst_tabel <- function(rijen = 20, kolommen = 10, n_woorden = 10, n_letters = 5){
+  x <- data.frame(
+    matrix(
+      sapply(
+        rpois(rijen * kolommen, lambda = n_woorden), 
+        random_zin,
+        n_letters
+      ),
+      nrow = rijen,
+      ncol = kolommen
+    )
+  )
+  colnames(x) <- head(LETTERS, kolommen)
+  return(x)
+}
+genereer_tabel <- function(rijen = 20, kolommen = c(5, 5), n_woorden = 10, n_letters = 5){
+  cbind(
+    cijfer_tabel(rijen = rijen, kolommen = kolommen[1]),
+    tekst_tabel(
+      rijen = rijen, kolommen = kolommen[2], n_woorden = n_woorden, n_letters = n_letters
+    )
+  )
+}
+```
+
+## `kable()`
+
+We raden aan om in eerste instantie `kable()` te gebruiken. De standaard (tabel \@ref(tab:kable)) genereert zowel tabellen in pdf als HTML output formaat. In pdf formaat wordt het een floating tabel. Dat houdt in dat de volledige tabel op een pagina geplaatst wordt van zodra er plaats is om de volledige tabel te plaatsen. Is de tabel zo groot dat ze niet op een pagina past, dan valt het laatste stuk van de pagina.
+
+```{r kable}
+kable(
+  genereer_tabel(50, c(4, 2), 4, 4), 
+  caption = "Standaard output van `kable()`."
+)
+```
+
+De booktabs past een lay-out met minder lijnen toe (tabel \@ref(tab:kable-booktabs)). Nu geven we ook het gewenste aantal decimalen voor elke kolom weer. Nu past de tabel omdat we een aangepast aantal rijen en kolommen hebben gekozen.
+
+```{r kable-booktabs}
+kable(
+  genereer_tabel(40, c(4, 1), 5, 4), 
+  caption = "Booktabs output van `kable()`",
+  digits = 1:5,
+  booktabs = TRUE
+)
+```
+
+Het longtable formaat is beschikt wanneer we een tabel hebben die langer is dan op een pagina past (tabel \@ref(tab:kable-longtable)). Dit soort tabel is geen floating table. Dat wil zeggen dat ze onmiddellijk start daar waar de code ze genereert. Onderaan de pagina wordt de tabel afgebroken en op de volgende pagina opnieuw gestart. Merk op dit een te brede tabel nog steeds wordt afgebroken.
+
+```{r kable-longtable}
+kable(
+  genereer_tabel(40, c(4, 1), 4, 4), 
+  digits = 2,
+  caption = "Longtable output van `kable()`.",
+  longtable = TRUE
+)
+```
+
+Het markdown formaat is handig voor grotere tabellen met tekst. Wanneer de tekst te lang is worden de rijen over meerdere regels gespreidt. Indien nodig wordt de tabel over meerdere pagina's gespreidt. Het nadeel is dat je geen bijschrift kan plaatsen en er ook niet naar kan verwijzen.
+
+```{r kable-markdown}
+kable(
+  genereer_tabel(20, c(4, 3), 5, 4), 
+  digits = 2,
+  format = "markdown"
+)
+```
+
+De laatste optie is het pandoc formaat (tabel \@ref(tab:kable-pandoc)). Dit gedraagt zich als het longtable formaat met een aangepaste lay-out.
+
+```{r kable-pandoc}
+kable(
+  genereer_tabel(50, c(3, 1), 4, 4), 
+  digits = 3,
+  caption = "pandoc output van `kable()`",
+  format = "pandoc"
+)
+```
