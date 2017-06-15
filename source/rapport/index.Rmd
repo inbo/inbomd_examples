@@ -3,10 +3,11 @@ title: "Voorbeeldrapport met INBOmd"
 author: "Thierry Onkelinx"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+bibliography: INBOmd.bib
+header-includes: \usepackage{lipsum}
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_rapport_2015
-    header-includes: \usepackage{lipsum}
     keep_tex: TRUE
 ---
 
@@ -14,7 +15,6 @@ output:
 library(knitr)
 library(DT)
 ```
-
 
 # Inleiding 
 
