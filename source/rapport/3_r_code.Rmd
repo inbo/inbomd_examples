@@ -195,3 +195,36 @@ kable(
   format = "pandoc"
 )
 ```
+
+## Mogelijke alternatieven
+
+### `pandoc.table()`
+
+`pandoc.table()` komt uit het `pander` package.
+
+Voordelen:
+
+1. Zet tabellen steeds naar markdown formaat. Dit betekent dat je steeds een brede waaier aan outputformaten kan gebruiken.
+
+Nadelen:
+
+1. Je moet steeds `results='asis'` toevoegen aan de chunk opties.
+1. Kruisverwijzingen zijn lastig, zeker als je ze wel in pdf als HTML wilt hebben.
+
+### `xtable()`
+
+`xtable()` komt uit het `xtable` package. 
+
+Voordelen:
+
+1. Biedt veel mogelijkheden om tabellen te fine-tunen. Zie `?xtable` en `?print.xtable` voor alle details. Een paar handige opties:
+    - tabellen in landscape weergeven
+    - rijnames of kolomnamen roteren
+    - het lettertype van de tabel verkleinen (of vergroten)
+1. Biedt native code voor latex (pdf) en HTML.
+
+Nadelen:
+
+1. Je moet steeds `results='asis'` toevoegen aan de chunk opties.
+1. Kan niet dynamisch kiezen tussen pdf of HTML. Minder handig als je zowel HTML als pdf output wilt.
+1. Kruisverwijzingen zijn lastig, zeker als je ze wel in pdf als HTML wilt hebben.
