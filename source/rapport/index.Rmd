@@ -5,6 +5,7 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 bibliography: INBOmd.bib
 header-includes: \usepackage{lipsum}
+always_allow_html: yes
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_rapport_2015
