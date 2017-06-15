@@ -1,0 +1,9 @@
+# (APPENDIX) appendix {-}
+
+# Titel van eerste bijlage
+
+\lipsum[94-97]
+
+# Titel van tweede bijlage
+
+\lipsum[98-103]
