@@ -8,6 +8,9 @@ header-includes: \usepackage{lipsum}
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_rapport_2015
+    subtitle: "Hier komt de optionele ondertitel"
+    reportnr: "Hier komt het rapportnummer"
+    ordernr: "Het optionele nummer van de opdrachtgever"
     keep_tex: TRUE
 ---
 
