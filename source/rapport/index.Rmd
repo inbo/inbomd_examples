@@ -19,3 +19,14 @@ library(DT)
 # Inleiding 
 
 Het doel van dit document is louter de beschikbare stijlelementen te tonen.
+
+## Lipsum
+
+Lorem ipsum is een opvultekst die drukkers, zetters, grafisch ontwerpers en dergelijken gebruiken om te kijken hoe een lay-out er grafisch uitziet.
+
+De reden waarom de tekst gebruikt worden door die doelgroep is dat bij een leesbare tekst de lezer afgeleid zou worden door de inhoud, terwijl het alleen om de vormgeving gaat. Bovendien heeft het Lorem ipsum een redelijk normale afwisseling van de verschillende letters en korte en lange woorden.
+
+Wanneer we een korte zin nodig hebben gebruiken we "Filmquiz bracht knappe ex-yogi
+van de wijs." Deze zin heeft als voordeel dat alle letters van het alfabet er in voorkomen.
+
+In de broncode van dit document vind je stukjes code als `\usepackage{lipsum}` of `\lipsum[10]`. Deze code is enkel nodig om de stukjes van de Lipsum tekst te tonen. In een werkelijk rapport heb je deze uiteraard niet nodig.
