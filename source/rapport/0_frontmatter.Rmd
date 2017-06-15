@@ -22,6 +22,8 @@
 
 \eenglish
 
+\mainmatter
+
 # Inleiding 
 
 Het doel van dit document is louter de beschikbare stijlelementen te tonen.
