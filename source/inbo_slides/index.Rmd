@@ -1,0 +1,15 @@
+--- 
+title: "Voorbeeldslides met INBOmd"
+author: "Thierry Onkelinx"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::pdf_book:
+    base_format: INBOmd::inbo_slides
+    subtitle: "Hier komt de optionele ondertitel"
+    location: "Hier komt optioneel de plaats"
+    institute: "Hier komt optioneel de affiliatie"
+    toc_name: "De naam van de inhoudstafel"
+    cover: "trees-1036958.jpg"
+    cover_horizontal: FALSE
+---
