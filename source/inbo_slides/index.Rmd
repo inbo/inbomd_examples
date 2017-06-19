@@ -3,6 +3,7 @@ title: "Voorbeeldslides met INBOmd"
 author: "Thierry Onkelinx"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+header-includes: \usepackage{lipsum}
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_slides
@@ -12,4 +13,5 @@ output:
     toc_name: "De naam van de inhoudstafel"
     cover: "trees-1036958.jpg"
     cover_horizontal: FALSE
+    slide_level: 3
 ---
