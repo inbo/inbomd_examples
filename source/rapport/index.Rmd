@@ -18,4 +18,7 @@ output:
 ```{r setup, include = FALSE}
 library(knitr)
 library(DT)
+library(ggplot2)
+library(INBOtheme)
+theme_set(theme_inbo(base_size = 8))
 ```
