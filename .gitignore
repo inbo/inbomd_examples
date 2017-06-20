@@ -5,3 +5,8 @@
 docs
 *.Rproj
 *_files
+*.log
+*.nav
+*.snm
+*.toc
+*.vrb
