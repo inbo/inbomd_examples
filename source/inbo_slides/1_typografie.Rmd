@@ -156,3 +156,23 @@ Item D
         1. Item c I
         1. Item c II
 - Item 4
+
+## Kaders
+
+### Standaard kader
+
+```{block2, type = "block", latex.options = "{Titel van het standaardkader}"}
+\lipsum[6]
+```
+
+### Kader met voorbeeld
+  
+```{block2, type = "exampleblock", latex.options = "{Titel van het voorbeeldkader}"}
+\lipsum[7]
+```
+
+### Kader met waarschuwing
+
+```{block2, type = "alertblock", latex.options = "{Titel van het waarschuwingskader}"}
+\lipsum[8]
+```
