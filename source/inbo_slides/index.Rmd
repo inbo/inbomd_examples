@@ -14,4 +14,67 @@ output:
     cover: "trees-1036958.jpg"
     cover_horizontal: FALSE
     slide_level: 3
+    keep_tex: TRUE
 ---
+
+# Opties
+
+### Titelslide
+
+subtitle
+  ~ ondertitel op titelslide (optioneel)
+  
+location
+  ~ plaats en datum van presentatie op titelslide (optioneel)
+  
+institute
+  ~ affiliatie op titelslide (optioneel)
+
+cover
+  ~ figuur voor achtergrond van titelslide. Standaardfiguur indien ontbreekt.
+  
+cover_horizontal
+  ~ schaal de coverfoto naar de breedte indien TRUE (standaard) of naar de hoogte indien FALSE.
+
+cover_offset
+  ~ verschuif de coverfoto vertikaal (optioneel).
+
+cover_hoffset
+  ~ verschuif de coverfoto horizontaal (optioneel).
+
+### Inhoudstafel
+
+toc
+  ~ maak slide met inhoudstafel indien TRUE (standaard). Geen inhoudstafel indien FALSE
+  
+toc_naam
+  ~ titel van de slide met inhoudstafel. Standaard: "Overzicht"
+
+slide_level
+  ~ hoofdingsniveau dat overeenkomt met slidetitels. Standaard: 2. Moet tussen 1 en 3 liggen.
+  ~ hogere niveaus worden tussenslides
+
+# Tussenslide kop 1 (indien slide_level > 1) extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4
+
+## Tussenslide kop 2 (indien slide_level > 2) extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9  a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l
+
+### Slidetitel (kop = slide_level) extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9
+
+- Bij een lange titel wordt het vak voor de tekst automatisch kleiner
+- De tekst in het tekstvak blijft vertikaal gecentreerd binnen het tekstvak
+- Bij te lange tekst van kop 1 verdwijnt het begin van de tekst op de tussenslide
+- Bij te lange tekst van kop 2 verdwijnt het einde van de tekst op de tussenslide
+
+### Slide met teveel tekst extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9
+
+- Te lange tekst loopt gewoon verder buiten de afmetingen van de slide
+- Dus niet automatisch verkleind zoals in PowerPoint
+
+\lipsum[9-10]
+
+### Slide met veel tekst automatisch splitsen {.allowframebreaks}
+
+- Met   `{.allowframebreaks}` achter de titel laat je lange slides automatisch over meerdere slides uitsplitsen
+- Er wordt automatisch een volgnummer (Romeins cijfer) aan de slidetitel toegevoegd
+
+\lipsum[9-10]
