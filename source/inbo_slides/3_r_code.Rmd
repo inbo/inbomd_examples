@@ -1,0 +1,45 @@
+# R gebaseerde output
+
+## Code
+
+### Chunks + output {.allowframebreaks}
+
+```{r datasets, error = TRUE, message = TRUE}
+# logical
+c(TRUE, FALSE)
+# integer
+0:1
+# numeric
+c(0.0, 1.1)
+# scientific
+c(1e-10, 1e10)
+# character
+c("maandag", "dinsdag", "woensdag")
+# factor
+factor(c("maandag", "dinsdag", "woensdag"))
+# function
+my_fun <- function(x){
+  cat("mijn functie is", x)
+}
+# data.frame
+state <- data.frame(
+  region = state.region,
+  Division = state.division,
+  state.x77
+)
+# function
+my_fun("cool")
+# boodschappen
+message("dit is een boodschap")
+warning("dit is een waarschuwing")
+stop("dit is een foutmelding")
+# programma flow
+if (is.data.frame(state)) {
+  summary(state)
+} else {
+  stop("state is not a data.frame")
+}
+for (i in 1:5) {
+  cat("i =", i, "\n")
+}
+```
