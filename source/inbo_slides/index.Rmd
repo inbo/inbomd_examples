@@ -4,6 +4,7 @@ author: "Thierry Onkelinx"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 header-includes: \usepackage{lipsum}
+bibliography: ../INBOmd.bib
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_slides

@@ -82,3 +82,38 @@ $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
   \frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}
   (\#eq:som1)
 \end{equation}
+
+## Citeren van literatuur
+
+### In-lijn stijlen
+
+- auteur (jaartal)
+    - @BlauwdrukVleermuizen
+- (auteur, jaartal)
+    - [@BlauwdrukVleermuizen]
+- (prefix auteur, jaartal suffix)
+    - [zie @BlauwdrukVleermuizen, hoofdstuk 1]
+- (meerdere referenties zelfde auteurs)
+    - [@BlauwdrukVleermuizen; @Onkelinx2014a]
+- (meerdere referenties verschillende auteurs)
+    - [@BlauwdrukVleermuizen; @Agresti2002]
+
+### Types referenties
+
+boeken
+  ~ [@Agresti2002; @DiggleRibeiro2007; @ZuurEtal2009; @Bolker2008; @Kish_1965; @BanerjeeEtal2003; @franklin_mapping_2009]
+
+hoofdstukken
+  ~ [@Degraer2013a; @BlauwdrukVogels; @BlauwdrukVleermuizen]
+
+proceedings
+  ~ [@Onkelinx2014a; @Onkelinx2012]
+
+artikels
+  ~ [@Amano2012; @VanderMijnsbrugge2005; @R-reshape; @Yli-Viikari2007]
+
+thesis
+  ~ [@MaStatThesis]
+  
+software
+  ~ [@R-3.0.1]
