@@ -17,6 +17,11 @@ output:
     keep_tex: TRUE
 ---
 
+```{r include = FALSE}
+library(knitr)
+library(DT)
+```
+
 # Opties
 
 ### Titelslide

@@ -1,5 +1,35 @@
 # Andere elementen
 
+## Figuren en tabellen
+
+### Tabel
+
+```{r mtcars, echo = FALSE}
+kable(
+  head(mtcars[, 1:8], 10), 
+  booktabs = TRUE
+)
+```
+
+### Tabel met bijschrift
+
+```{r mtcars-cap, echo = FALSE}
+kable(
+  head(mtcars[, 1:8], 10), 
+  booktabs = TRUE,
+  caption = 'Een tabel met de eerste 10 rijen van de `mtcars` dataset.'
+)
+```
+
+### Dynamische tabel
+
+```{r mtcars2, echo = FALSE, out.width="\\textwidth"}
+datatable(
+  head(mtcars[, 1:8], 10), 
+  caption = 'Een dynamische tabel met de eerste 10 rijen van de `mtcars` dataset.'
+)
+```
+
 ## Wiskundige formules
 
 ### In-lijn formules
