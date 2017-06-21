@@ -9,7 +9,7 @@ Kruisverwijzingen zijn eenvoudig te maken door te verwijzen naar de bijhorende l
 - koppen (\@ref(h:kruisverwijzing), \@ref(s:figuur-invoegen))
 - tabellen (\@ref(tab:mtcars))
 - figuren (\@ref(fig:koolrabi))
-- formules (\@ref(eq:som))
+- formules (\@ref(eq:som)^[Het nummer van een formule krijgt automatisch haakjes. Zie ook §\@ref(s:formule-nummer)])
 
 Je voegt een label aan een kop toe door op het einde `{#mijn-label}` te plaatsen. Hierbij vervang je 'mijn-label' door iets zinvol en eenvoudig te onthouden. Het is handig om steeds een prefix te gebruiken. Bijvoorbeeld `h:` voor een hoofdstuk, `s:` voor een sectie. Belangrijk om weten is dat elk label uniek moet zijn binnen het volledige document. Gebruik enkel letters, cijfers, `:`, `/` en `-`. Andere tekens als spaties of lage streepjes (`_`) zijn niet toegestaan.
 
@@ -18,6 +18,12 @@ Je voegt een label aan een kop toe door op het einde `{#mijn-label}` te plaatsen
 Naakte URLs moeten met het gebruikte protocol beginnen bv http://www.inbo.be. Relevante protocols zijn http:// en https:// voor websites, ftp:// voor ftp sites, mailto:// voor email e.g. mailto:nobody@inbo.be. 
 
 We kunnen de URL tevens achter een link tekst plaatsen bv [Google](http://google.be). We kunnen deze techniek eveneens gebruiken voor de andere protocols bv [e-mail](mailto:nobody@inbo.be).
+
+## Extra formattering
+
+Voetnoten^[Filmquiz bracht knappe ex-yogi van de wijs.] zijn vrij eenvoudig toe te voegen^[\lipsum[94]]. Je voegt `^[gewenste voetnoot tekst]` in op de plaats waar een voetnoot dient te verschijnen.
+
+Tekst in onderschrift krijgt je door een `~` te plaatsen voor en achter de tekst die in onderschrift moet komen. Bijvoorbeeld: `H~2~SO~4~` wordt H~2~SO~4~. Bovenschrift krijg je op een gelijkaardige manier door `^` te gebruiken. Bij voorbeeld `Fe^2+^` wordt Fe^2+^. Als alternatief kan je ook wiskundige formules^[Zie hoofdstuk \@ref(h:formules)] gebruiken. Bijvoorbeeld: `$H_2SO_4$` wordt $H_2SO_4$ en `$Fe^{2+}$` wordt $Fe^{2+}$. Je kan ook dingen doen als `$^3_2He$` ($^3_2He$) terwijl `^3^~2~He` (^3^~2~He) niet het gewenste resultaat geeft.
 
 # Figuren en tabellen
 
@@ -79,7 +85,7 @@ De beste optie om hier iets aan te doen, is te zorgen voor volgende tekst ;-). A
 
 Op dat moment worden eerst alle hangende figuren geplaatst vooraleer verder te gaan met de tekst. Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke _section_ (kop 2). Je kan dit ook doen met _subsection_ (kop 3) en _subsubsection_ (kop 4). Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen.
 
-# Wiskundige formules
+# Wiskundige formules {#h:formules}
 
 ## In-lijn formules
 
@@ -96,6 +102,8 @@ $$\bar{X} = \sum_{i = 1}^NX_i$$
 $$\frac{X}{Y}$$
 
 $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
+
+## Genummerde formules {#s:formule-nummer}
 
 Het is tevens mogelijk om de losstaande formules te nummeren. Het nummer bevat steeds het hoofdstuknummer als prefix. Wanneer je aan dergelijke formule een label toekent, kan je er naar verwijzen. Bijvoorbeeld: formule \@ref(eq:som). Merk op dat het nummer dat naar een formule verwijst steeds tussen haakjes geplaatst wordt. Het is praktisch om de prefix `eq:` te gebruiken in de labels van formules.
 
