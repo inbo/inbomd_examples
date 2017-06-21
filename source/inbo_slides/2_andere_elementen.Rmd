@@ -1,0 +1,36 @@
+# Andere elementen
+
+## Wiskundige formules
+
+### In-lijn formules
+
+In-lijn formules worden opgenomen binnen de tekst van de alinea. Bijvoorbeeld $P(y < Y|\theta) = \alpha$. Dit werkt het best met beknopte formules. Formules die een zekere hoogte nodig hebben zullen in de mate van het mogelijke aangepast worden om zo min mogelijk hoogte in te nemen. Een voorbeeld hier van is $\bar{X} = \sum_{i = 1}^NX_i$. Hierbij zijn $i = 1$ en $N$ naast $\sum$ geplaatst in plaats van er boven. Dat lukt uiteraard niet altijd. Breuken zijn daar een goed voorbeeld van $\frac{X}{Y}$. In dat geval wordt het lettertype verkleind. Hetgeen de leesbaarheid niet bevordert. Bij complexe formule als $\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}$ is het noodzakelijk om tevens de regelafstand te vergroten. In dergelijke gevallen is het beter om losstaande formules te gebruiken.
+
+### Losstaande formules
+
+Losstaande formules worden elk in een afzonderlijke alinea opgenomen.
+
+$$P(y < Y|\theta) = \alpha$$
+
+$$\bar{X} = \sum_{i = 1}^NX_i$$
+
+$$\frac{X}{Y}$$
+
+$$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
+
+### Genummerde formules
+
+Het is tevens mogelijk om de losstaande formules te nummeren. Het nummer bevat steeds het hoofdstuknummer als prefix. Wanneer je aan dergelijke formule een label toekent, kan je er naar verwijzen. Bijvoorbeeld: formule \@ref(eq:som). Merk op dat het nummer dat naar een formule verwijst steeds tussen haakjes geplaatst wordt. Het is praktisch om de prefix `eq:` te gebruiken in de labels van formules.
+
+\begin{equation}
+  \bar{X} = \sum_{i = 1}^NX_i
+  (\#eq:som)
+\end{equation}
+
+\begin{equation}
+  \frac{X}{Y}
+\end{equation}
+
+\begin{equation}
+  \frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}
+\end{equation}
