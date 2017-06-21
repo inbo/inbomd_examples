@@ -21,6 +21,9 @@ output:
 ```{r include = FALSE}
 library(knitr)
 library(DT)
+library(ggplot2)
+library(INBOtheme)
+theme_set(theme_inbo(6, transparent = "plot"))
 ```
 
 # Opties

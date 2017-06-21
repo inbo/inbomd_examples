@@ -43,3 +43,65 @@ for (i in 1:5) {
   cat("i =", i, "\n")
 }
 ```
+
+## Figuren
+
+### Figuur met standaard kleur
+
+```{r figtransparant, echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + geom_histogram() + 
+  facet_wrap(~agegp, scales = "free")
+```
+
+### Figuur met kleur per discrete categorie
+
+```{r echo = FALSE, message=FALSE}
+ggplot(diamonds, aes(x = price, fill = cut)) + geom_histogram()
+```
+
+### Figuur met kleur per discrete categorie
+
+```{r echo = FALSE}
+ggplot(mtcars, 
+       aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
+  geom_point() + geom_smooth(method = "lm")
+```
+
+### Figuur met enkelvoudige kleurgradient
+
+```{r echo = FALSE}
+pp <- function(n) {
+  df <- expand.grid(
+    x = seq_len(n),
+    y = seq_len(n)
+  )
+  df$z <- df$x + df$y
+  df
+}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient()
+```
+
+### Figuur met kleurgradient met middenkleur
+
+```{r echo = FALSE}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient2(
+    midpoint = 20, 
+    low = vl.lightblue, 
+    high = vl.lightred
+  )
+```
+
+### Standaard volgorde van kleuren bij categorieën
+
+```{r echo = FALSE, warning=FALSE}
+testgrid <- expand.grid(x = 1:4, y = 1:4)
+testgrid$z <- factor((testgrid$x - 1) * 4 + testgrid$y)
+ggplot(testgrid, aes(x = x, y = y, fill = z, label = z)) +
+  geom_tile(width = 0.7, height = 0.7) +
+  geom_text() +
+  coord_fixed()
+```
