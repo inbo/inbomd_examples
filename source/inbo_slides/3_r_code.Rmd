@@ -105,3 +105,105 @@ ggplot(testgrid, aes(x = x, y = y, fill = z, label = z)) +
   geom_text() +
   coord_fixed()
 ```
+
+## Tabellen
+
+```{r genereer-tabel, echo = FALSE}
+# functies om tabellen te genereren
+cijfer_tabel <- function(rijen = 20, kolommen = 10) {
+  data.frame(
+    matrix(
+      rnorm(rijen * kolommen),
+      nrow = rijen,
+      ncol = kolommen
+    ),
+    row.names = paste("rij", seq_len(rijen))
+  )
+}
+random_woord <- function(n_letters = 5){
+  paste(
+    sample(letters, size = n_letters, replace = TRUE),
+    collapse = ""
+  )
+}
+random_zin <- function(n_woorden = 10, n_letters = 10){
+  paste(
+    sapply(
+      rpois(n_woorden, n_letters), 
+      FUN = random_woord
+    ),
+    collapse = " "
+  )
+}
+tekst_tabel <- function(rijen = 20, kolommen = 10, n_woorden = 10, n_letters = 5){
+  x <- data.frame(
+    matrix(
+      sapply(
+        rpois(rijen * kolommen, lambda = n_woorden), 
+        random_zin,
+        n_letters
+      ),
+      nrow = rijen,
+      ncol = kolommen
+    )
+  )
+  colnames(x) <- head(LETTERS, kolommen)
+  return(x)
+}
+genereer_tabel <- function(rijen = 20, kolommen = c(5, 5), n_woorden = 10, n_letters = 5){
+  cbind(
+    cijfer_tabel(rijen = rijen, kolommen = kolommen[1]),
+    tekst_tabel(
+      rijen = rijen, kolommen = kolommen[2], n_woorden = n_woorden, n_letters = n_letters
+    )
+  )
+}
+```
+
+### Standaard `kable()`
+
+```{r kable, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4),
+  digits = 2
+)
+```
+
+### Booktabs `kable()`
+
+```{r kable-booktabs, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4),
+  digits = 2,
+  booktabs = TRUE
+)
+```
+
+### longtable `kable()`
+
+```{r kable-longtable, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4), 
+  digits = 2,
+  longtable = TRUE
+)
+```
+
+### Markdown `kable()`
+
+```{r kable-markdown, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4), 
+  digits = 2
+)
+```
+
+### Pandoc `kable()`
+
+```{r kable-pandoc, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4), 
+  digits = 2,
+  format = "pandoc"
+)
+```
