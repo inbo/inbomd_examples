@@ -231,13 +231,13 @@ Item D
 
 ## Standaard kader
 
-```{block, type = "block"}
+```{block2, type = "block"}
 \lipsum[49]
 ```
 
 \lipsum[50-51]
 
-```{block, type = "block"}
+```{block2, type = "block"}
 \lipsum[52-53]
 ```
 
@@ -245,13 +245,13 @@ Item D
   
 \lipsum[54]
 
-```{block, type = "exampleblock"}
+```{block2, type = "exampleblock"}
 \lipsum[55]
 ```
 
 \lipsum[56-58]
 
-```{block, type = "exampleblock"}
+```{block2, type = "exampleblock"}
 \lipsum[59-60]
 ```
 
@@ -259,18 +259,18 @@ Item D
 
 \lipsum[61]
 
-```{block, type = "alertblock"}
+```{block2, type = "alertblock"}
 \lipsum[62]
 ```
 
 \lipsum[63]
 
-```{block, type = "alertblock"}
+```{block2, type = "alertblock"}
 \lipsum[64-65]
 ```
 
 \lipsum[66]
 
-```{block, type = "alertblock"}
+```{block2, type = "alertblock"}
 \lipsum[67-68]
 ```
