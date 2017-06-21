@@ -30,6 +30,25 @@ datatable(
 )
 ```
 
+### Figuur met tekstbreedte
+
+```{r forest, echo = FALSE, out.width="\\textwidth"}
+include_graphics("trees-1036958.jpg")
+```
+
+### Figuur met teksthoogte
+
+```{r forest2, echo = FALSE, out.width="\\textheight"}
+include_graphics("trees-1036958.jpg")
+```
+
+### Figuur met bijschrift
+
+```{r forest3, fig.cap = "Foto van bos, halve tekstbreedte", echo = FALSE, out.width="0.5\\textwidth"}
+include_graphics("trees-1036958.jpg")
+```
+
+
 ## Wiskundige formules
 
 ### In-lijn formules
