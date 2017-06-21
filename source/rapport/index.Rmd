@@ -3,7 +3,7 @@ title: "Voorbeeldrapport met INBOmd"
 author: "Thierry Onkelinx"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-bibliography: INBOmd.bib
+bibliography: ../INBOmd.bib
 header-includes: \usepackage{lipsum}
 output:
   bookdown::pdf_book:
