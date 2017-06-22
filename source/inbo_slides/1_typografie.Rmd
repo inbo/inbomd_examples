@@ -99,6 +99,19 @@ met vaste tekenbreedte:
     - Item c
 - Item 4
 
+### Ongeordende lijsten incrementeel weergeven
+
+> - Eerste niveau
+> - Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+> - Item 3
+>     - Tweede niveau
+>         - Derde niveau
+>         - Drie niveaus is het maximum
+>         - Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+>     - Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+>     - Item c
+> - Item 4
+
 ### Genummerde lijsten
 
 1. Eerste niveau
@@ -111,6 +124,19 @@ met vaste tekenbreedte:
     1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
     1. Item c
 1. Item 4
+
+### Genummerde lijsten incrementeel weergeven
+
+> 1. Eerste niveau
+> 1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+> 1. Item 3
+>     1. Tweede niveau
+>         1. Derde niveau
+>         1. Drie niveaus is het maximum
+>         1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+>     1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+>     1. Item c
+> 1. Item 4
 
 ### Lijsten met definities
 
