@@ -1,0 +1,206 @@
+# Typography
+
+## Fonts 
+
+### Normal font
+
+\lipsum[1]
+
+### Italic font
+
+_\lipsum[2]_
+
+### Bold font
+
+**\lipsum[3]**
+
+### Bold and italic font
+
+**_\lipsum[4]_**
+
+### Fixed width font
+
+\texttt{\lipsum[5]}
+
+### Available number of characters
+
+About 66 characters with normal font
+
+12345678911234567892123456789312345678941234567895123456789612345678971234567898
+
+_12345678911234567892123456789312345678941234567895123456789612345678971234567898_
+
+**12345678911234567892123456789312345678941234567895123456789612345678971234567898**
+
+**_12345678911234567892123456789312345678941234567895123456789612345678971234567898_**
+
+67 characters with fixed width font
+
+`12345678911234567892123456789312345678941234567895123456789612345678971234567898`
+
+### Minuscule L versus captital i
+
+normal:
+  ~ lI
+
+bold:
+  ~ **lI**
+  
+italics:
+  ~ _lI_
+  
+bold italics:
+  ~ **_lI_**
+
+fixed width font:
+  ~ `lI`
+
+### Special characters
+
+€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
+
+_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
+
+**€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
+
+**_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
+
+`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
+
+### Quotation marks
+
+normal:
+  ~ "double", 'single'
+
+bold:
+  ~ **"double", 'single'**
+
+italics:
+  ~ _"double", 'single'_
+
+bold italics:
+  ~ **_"double", 'single'_**
+
+fixed width font:
+  ~ `"double", 'single',`
+
+## Lists
+
+### Unordered list
+
+- First level
+- The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+- Item 3
+    - Second level
+        - Third level
+        - Maximum three levels 
+        - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+    - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+    - Item c
+- Item 4
+
+### Incremental unordered list
+
+> - First level
+> - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+> - Item 3
+>     - Second level
+>         - Third level
+>         - Maximum three levels 
+>         - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+>     - The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+>     - Item c
+> - Item 4
+
+### Ordered list
+
+1. First level
+1. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+1. Item 3
+    1. Second level
+        1. Third level
+        1. Maximum three levels 
+        1. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+    1. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+    1. Item c
+1. Item 4
+
+### Incremental ordered list
+
+> 1. First level
+> 1. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+> 1. Item 3
+>     1. Second level
+>         1. Third level
+>         1. Maximum three levels 
+>         1. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+>     1. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+>     1. Item c
+> 1. Item 4
+
+### List with definitions
+
+First level
+  ~ Definition of the first level
+  
+An item with a long title
+  ~ Definition of the item with a long title
+  
+    Second level
+      ~ Definition of the second level
+
+        Third level
+          ~ Maximum three levels 
+
+        An item with a long title
+          ~ The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+
+    An item with a long title
+      ~ The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog
+
+Item C
+  ~ The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+  
+Item D
+  ~ Definition of D
+
+### Mixing lists
+
+- First level
+- Item 2
+- Item 3
+    1. Second level
+    
+        Third level
+          ~ Again, three levels is maximum
+          
+        item II
+          ~ Definition II
+          
+    1. Item b
+        - Item b I
+        - Item b II
+    1. Item c
+        1. Item c I
+        1. Item c II
+- Item 4
+
+## Frames
+
+### Default frame
+
+```{block2, type = "block", latex.options = "{Title of the default frame}"}
+\lipsum[6]
+```
+
+### Frame with example
+  
+```{block2, type = "exampleblock", latex.options = "{Title of the example frame}"}
+\lipsum[7]
+```
+
+### Frame with alert
+
+```{block2, type = "alertblock", latex.options = "{Title of the alert frame}"}
+\lipsum[8]
+```
