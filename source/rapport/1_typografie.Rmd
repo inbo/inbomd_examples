@@ -239,7 +239,7 @@ Item D
 
 \lipsum[50-51]
 
-```{block2, type = "block"}
+```{block2, type = "block", latex.options = "{Optionele titel van het kader}"}
 \lipsum[52-53]
 ```
 
@@ -253,7 +253,7 @@ Item D
 
 \lipsum[56-58]
 
-```{block2, type = "exampleblock"}
+```{block2, type = "exampleblock", latex.options = "{Optionele titel van het kader}"}
 \lipsum[59-60]
 ```
 
@@ -267,7 +267,7 @@ Item D
 
 \lipsum[63]
 
-```{block2, type = "alertblock"}
+```{block2, type = "alertblock", latex.options = "{Optionele titel van het kader}"}
 \lipsum[64-65]
 ```
 
