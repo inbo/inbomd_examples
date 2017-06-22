@@ -1,0 +1,92 @@
+--- 
+title: "Example presentation using INBOmd"
+author: "Thierry Onkelinx"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+header-includes: \usepackage{lipsum}
+bibliography: ../INBOmd.bib
+output:
+  bookdown::pdf_book:
+    base_format: INBOmd::inbo_slides
+    theme: vlaanderen
+    lang: english
+    subtitle: "Here comes the optional subtitle"
+    location: "Here comes the optional location"
+    institute: "Here comes the optional affilitation"
+    toc_name: "Title of the table of content"
+    cover: "trees-1036958.jpg"
+    cover_horizontal: FALSE
+    slide_level: 3
+    font_flanders: TRUE
+    keep_tex: TRUE
+---
+
+```{r include = FALSE}
+library(knitr)
+library(DT)
+library(ggplot2)
+library(INBOtheme)
+theme_set(theme_vlaanderen2015(6, transparent = "plot"))
+```
+
+# Options
+
+### Title slide
+
+subtitle
+  ~ subtitle on the title slide (optional)
+  
+location
+  ~ place and date of the presentation on the title slide (optional)
+  
+institute
+  ~ affiliation on title slide (optional)
+
+cover
+  ~ background figure for the title slide. A standard figure will be used when missing
+  
+cover_horizontal
+  ~ scale the cover figure to the width when TRUE (default) or to the height when FALSE
+
+cover_offset
+  ~ shift the cover figure vertically (optional)
+
+cover_hoffset
+  ~ shift the cover figure horizontally (optional)
+
+### Table of content
+
+toc
+  ~ add a slide with table of content when TRUE (default), no table of content when FALSE
+  
+toc_naam
+  ~ title of the slide with the table of content
+
+slide_level
+  ~ header level that matches with slide titles. Default: 2. Must be between 1 and 3
+  ~ higher levels become separator slides
+
+# Separator slide heading 1 (in case slide_level > 1) extra text a b c d e f g h i j k l m n o p q r s t
+
+## Separator slide heading 2 (in case slide_level > 2) extra text a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9  a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e
+
+### Slide title (heading = slide_level) extra text a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9
+
+- The text box will automatically shring when the slide title requires more lines
+- The text is vertically centered within the text box
+- In case the title of heading 1 is too long, the first part of the title will disappear
+- In case the title of heading 2 is too long, the last part of the title will disappear
+
+### Slide with too much text
+
+- The last part of the text will disappear if it doesn't fit the slide
+- The font size will not shrink to fit the text (like PowerPoint does)
+
+\lipsum[9-10]
+
+### Split slides automatically {.allowframebreaks}
+
+- Adding `{.allowframebreaks}` at the end of the slide title will split long slides automatically into multiple slides
+- A Roman nummeral will be added at the end of the title to each of those slides
+
+\lipsum[9-10]
