@@ -9,7 +9,7 @@ Kruisverwijzingen zijn eenvoudig te maken door te verwijzen naar de bijhorende l
 - koppen (\@ref(h:kruisverwijzing), \@ref(s:figuur-invoegen))
 - tabellen (\@ref(tab:mtcars))
 - figuren (\@ref(fig:koolrabi))
-- formules (\@ref(eq:som))
+- formules (\@ref(eq:som)^[Het nummer van een formule krijgt automatisch haakjes. Zie ook §\@ref(s:formule-nummer)])
 
 Je voegt een label aan een kop toe door op het einde `{#mijn-label}` te plaatsen. Hierbij vervang je 'mijn-label' door iets zinvol en eenvoudig te onthouden. Het is handig om steeds een prefix te gebruiken. Bijvoorbeeld `h:` voor een hoofdstuk, `s:` voor een sectie. Belangrijk om weten is dat elk label uniek moet zijn binnen het volledige document. Gebruik enkel letters, cijfers, `:`, `/` en `-`. Andere tekens als spaties of lage streepjes (`_`) zijn niet toegestaan.
 
@@ -19,9 +19,15 @@ Naakte URLs moeten met het gebruikte protocol beginnen bv http://www.inbo.be. Re
 
 We kunnen de URL tevens achter een link tekst plaatsen bv [Google](http://google.be). We kunnen deze techniek eveneens gebruiken voor de andere protocols bv [e-mail](mailto:nobody@inbo.be).
 
-## Figuren en tabellen
+## Extra formattering
 
-### Tabellen
+Voetnoten^[Filmquiz bracht knappe ex-yogi van de wijs.] zijn vrij eenvoudig toe te voegen^[\lipsum[94]]. Je voegt `^[gewenste voetnoot tekst]` in op de plaats waar een voetnoot dient te verschijnen.
+
+Tekst in onderschrift krijgt je door een `~` te plaatsen voor en achter de tekst die in onderschrift moet komen. Bijvoorbeeld: `H~2~SO~4~` wordt H~2~SO~4~. Bovenschrift krijg je op een gelijkaardige manier door `^` te gebruiken. Bij voorbeeld `Fe^2+^` wordt Fe^2+^. Als alternatief kan je ook wiskundige formules^[Zie hoofdstuk \@ref(h:formules)] gebruiken. Bijvoorbeeld: `$H_2SO_4$` wordt $H_2SO_4$ en `$Fe^{2+}$` wordt $Fe^{2+}$. Je kan ook dingen doen als `$^3_2He$` ($^3_2He$) terwijl `^3^~2~He` (^3^~2~He) niet het gewenste resultaat geeft.
+
+# Figuren en tabellen
+
+## Tabellen
 
 Tabellen zijn een eenvoudigst te genereren vanuit een `R data.frame` met de functie `kable()`. De naam van de chunk met prefix `tab:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen. Bijschriften plaats je in `caption`.
 
@@ -43,7 +49,7 @@ datatable(
 ```
 
 
-### Figuren {#s:figuur-invoegen}
+## Figuren {#s:figuur-invoegen}
 
 Figuren zijn het eenvoudigst toe te voegen als een R chunk. De naam van de chunk met prefix `fig:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen. Bijschriften plaats je in `fig.cap`.
 
@@ -67,7 +73,7 @@ include_graphics("kohlrabi-2266665.jpg")
 include_graphics("kohlrabi-2266665.jpg")
 ```
 
-### Plaatsing van tabellen en figuren
+## Plaatsing van tabellen en figuren
 
 Belangrijk om weten is dat de software zelf een zo goed mogelijke plaats zoekt voor de zogenaamde floats (tabellen en figuren). Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren zullen nooit in een hoofdstuk terecht komen.
 
@@ -79,13 +85,13 @@ De beste optie om hier iets aan te doen, is te zorgen voor volgende tekst ;-). A
 
 Op dat moment worden eerst alle hangende figuren geplaatst vooraleer verder te gaan met de tekst. Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke _section_ (kop 2). Je kan dit ook doen met _subsection_ (kop 3) en _subsubsection_ (kop 4). Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen.
 
-## Wiskundige formules
+# Wiskundige formules {#h:formules}
 
-### In-lijn formules
+## In-lijn formules
 
 In-lijn formules worden opgenomen binnen de tekst van de alinea. Bijvoorbeeld $P(y < Y|\theta) = \alpha$. Dit werkt het best met beknopte formules. Formules die een zekere hoogte nodig hebben zullen in de mate van het mogelijke aangepast worden om zo min mogelijk hoogte in te nemen. Een voorbeeld hier van is $\bar{X} = \sum_{i = 1}^NX_i$. Hierbij zijn $i = 1$ en $N$ naast $\sum$ geplaatst in plaats van er boven. Dat lukt uiteraard niet altijd. Breuken zijn daar een goed voorbeeld van $\frac{X}{Y}$. In dat geval wordt het lettertype verkleind. Hetgeen de leesbaarheid niet bevordert. Bij complexe formule als $\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}$ is het noodzakelijk om tevens de regelafstand te vergroten. In dergelijke gevallen is het beter om losstaande formules te gebruiken.
 
-### Losstaande formules
+## Losstaande formules
 
 Losstaande formules worden elk in een afzonderlijke alinea opgenomen.
 
@@ -96,6 +102,8 @@ $$\bar{X} = \sum_{i = 1}^NX_i$$
 $$\frac{X}{Y}$$
 
 $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
+
+## Genummerde formules {#s:formule-nummer}
 
 Het is tevens mogelijk om de losstaande formules te nummeren. Het nummer bevat steeds het hoofdstuknummer als prefix. Wanneer je aan dergelijke formule een label toekent, kan je er naar verwijzen. Bijvoorbeeld: formule \@ref(eq:som). Merk op dat het nummer dat naar een formule verwijst steeds tussen haakjes geplaatst wordt. Het is praktisch om de prefix `eq:` te gebruiken in de labels van formules.
 
@@ -112,13 +120,13 @@ Het is tevens mogelijk om de losstaande formules te nummeren. Het nummer bevat s
   \frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}
 \end{equation}
 
-## Citeren van literatuur
+# Citeren van literatuur
 
-### Vereisten
+## Vereisten
 
 Bibliografische verwijzingen zijn geen probleem. De bibliografie moet in BibTex formaat beschikbaar zijn. Dit formaat kan automatisch aangemaakt worden door Mendeley.
 
-### In-lijn stijlen
+## In-lijn stijlen
 
 - @BlauwdrukVleermuizen
 - [@BlauwdrukVleermuizen]

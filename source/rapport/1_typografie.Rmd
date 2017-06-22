@@ -74,19 +74,19 @@ _**\lipsum[29]**_
 
 **`Filmquiz bracht knappe ex-yogi van de wijs.`**
 
-_`Filmquiz bracht knappe ex-yogi van de wijs.`_
-
-**_`Filmquiz bracht knappe ex-yogi van de wijs.`_**
-
-**`Filmquiz`** `bracht` _`knappe`_ `ex-yogi van de` **_`wijs`_**.
+**`Filmquiz`** `bracht knappe ex-yogi van de` **`wijs`**.
 
 80 characters
 
 `12345678911234567892123456789312345678941234567895123456789612345678971234567898`
 
+**`12345678911234567892123456789312345678941234567895123456789612345678971234567898`**
+
 100 characters
 
 `1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`
+
+**`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`**
 
 ## Kleine letter L versus hoofdletter i
 
@@ -103,7 +103,7 @@ vet en schuin:
   ~ **_lI_**
 
 met vaste tekenbreedte:
-  ~ `lI` **`lI`** _`lI`_ **_`lI`_** 
+  ~ `lI` **`lI`**
 
 ## Speciale characters
   
@@ -123,6 +123,8 @@ _€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòó�
 ### Met vaste tekenbreedte
 `€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
 
+**`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
+
 ## Aanhalingstekens
 
 normaal:
@@ -138,7 +140,7 @@ vet en schuin:
   ~ **_"dubbele", 'enkele'_**
 
 met vaste tekenbreedte:
-  ~ `"dubbele", 'enkele',` **`"dubbele", 'enkele',`** _`"dubbele", 'enkele',`_ **_`"dubbele", 'enkele'`_**
+  ~ `"dubbele", 'enkele',` **`"dubbele", 'enkele',`**
 
 # Opsommingen
 
@@ -231,13 +233,13 @@ Item D
 
 ## Standaard kader
 
-```{block, type = "block"}
+```{block2, type = "block"}
 \lipsum[49]
 ```
 
 \lipsum[50-51]
 
-```{block, type = "block"}
+```{block2, type = "block"}
 \lipsum[52-53]
 ```
 
@@ -245,13 +247,13 @@ Item D
   
 \lipsum[54]
 
-```{block, type = "exampleblock"}
+```{block2, type = "exampleblock"}
 \lipsum[55]
 ```
 
 \lipsum[56-58]
 
-```{block, type = "exampleblock"}
+```{block2, type = "exampleblock"}
 \lipsum[59-60]
 ```
 
@@ -259,18 +261,18 @@ Item D
 
 \lipsum[61]
 
-```{block, type = "alertblock"}
+```{block2, type = "alertblock"}
 \lipsum[62]
 ```
 
 \lipsum[63]
 
-```{block, type = "alertblock"}
+```{block2, type = "alertblock"}
 \lipsum[64-65]
 ```
 
 \lipsum[66]
 
-```{block, type = "alertblock"}
+```{block2, type = "alertblock"}
 \lipsum[67-68]
 ```
