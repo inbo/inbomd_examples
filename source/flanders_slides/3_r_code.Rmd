@@ -1,0 +1,212 @@
+# R based output
+
+## Code
+
+### Chunks + output {.allowframebreaks}
+
+```{r datasets, error = TRUE, message = TRUE}
+# logical
+c(TRUE, FALSE)
+# integer
+0:1
+# numeric
+c(0.0, 1.1)
+# scientific
+c(1e-10, 1e10)
+# character
+c("monday", "tuesday", "wednesday")
+# factor
+factor(c("monday", "tuesday", "wednesday"))
+# function
+my_fun <- function(x){
+  cat("my function is", x)
+}
+# data.frame
+state <- data.frame(
+  region = state.region,
+  Division = state.division,
+  state.x77
+)
+# function
+my_fun("cool")
+# messages
+message("this is a message")
+warning("this is a warning")
+stop("this is an error")
+# programma flow
+if (is.data.frame(state)) {
+  summary(state)
+} else {
+  stop("state is not a data.frame")
+}
+for (i in 1:5) {
+  cat("i =", i, "\n")
+}
+# number of characters
+#       10        20        30        40        50        60        70        80        90       100       110       120
+#2345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+```
+
+## Figures
+
+### Figure with default colour
+
+```{r figtransparant, echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + geom_histogram() + 
+  facet_wrap(~agegp, scales = "free")
+```
+
+### Figure with discrete colours
+
+```{r echo = FALSE, message=FALSE}
+ggplot(diamonds, aes(x = price, fill = cut)) + geom_histogram()
+```
+
+### Figure with discrete colours
+
+```{r echo = FALSE}
+ggplot(mtcars, 
+       aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
+  geom_point() + geom_smooth(method = "lm")
+```
+
+### Figure with single colour gradient
+
+```{r echo = FALSE}
+pp <- function(n) {
+  df <- expand.grid(
+    x = seq_len(n),
+    y = seq_len(n)
+  )
+  df$z <- df$x + df$y
+  df
+}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient()
+```
+
+### Figure with colour gradient over a central colour
+
+```{r echo = FALSE}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient2(
+    midpoint = 20, 
+    low = vl.lightblue, 
+    high = vl.lightred
+  )
+```
+
+### Default order of discrete colours
+
+```{r echo = FALSE, warning=FALSE}
+testgrid <- expand.grid(x = 1:4, y = 1:4)
+testgrid$z <- factor((testgrid$x - 1) * 4 + testgrid$y)
+ggplot(testgrid, aes(x = x, y = y, fill = z, label = z)) +
+  geom_tile(width = 0.7, height = 0.7) +
+  geom_text() +
+  coord_fixed()
+```
+
+## Tables
+
+```{r generate-table, echo = FALSE}
+# functies om tabellen te genereren
+number_table <- function(rows = 20, cols = 10) {
+  data.frame(
+    matrix(
+      rnorm(rows * cols),
+      nrow = rows,
+      ncol = cols
+    ),
+    row.names = paste("rij", seq_len(rows))
+  )
+}
+random_word <- function(n_letters = 5){
+  paste(
+    sample(letters, size = n_letters, replace = TRUE),
+    collapse = ""
+  )
+}
+random_sentence <- function(n_words = 10, n_letters = 10){
+  paste(
+    sapply(
+      rpois(n_words, n_letters), 
+      FUN = random_word
+    ),
+    collapse = " "
+  )
+}
+text_table <- function(rows = 20, cols = 10, n_words = 10, n_letters = 5){
+  x <- data.frame(
+    matrix(
+      sapply(
+        rpois(rows * cols, lambda = n_words), 
+        random_sentence,
+        n_letters
+      ),
+      nrow = rows,
+      ncol = cols
+    )
+  )
+  colnames(x) <- head(LETTERS, cols)
+  return(x)
+}
+generate_table <- function(rows = 20, cols = c(5, 5), n_words = 10, n_letters = 5){
+  cbind(
+    number_table(rows = rows, cols = cols[1]),
+    text_table(
+      rows = rows, cols = cols[2], n_words = n_words, n_letters = n_letters
+    )
+  )
+}
+```
+
+### Default `kable()`
+
+```{r kable, echo = FALSE}
+kable(
+  generate_table(15, c(2, 1), 4, 4),
+  digits = 2
+)
+```
+
+### Booktabs `kable()`
+
+```{r kable-booktabs, echo = FALSE}
+kable(
+  generate_table(15, c(2, 1), 4, 4),
+  digits = 2,
+  booktabs = TRUE
+)
+```
+
+### longtable `kable()`
+
+```{r kable-longtable, echo = FALSE}
+kable(
+  generate_table(15, c(2, 1), 4, 4), 
+  digits = 2,
+  longtable = TRUE
+)
+```
+
+### Markdown `kable()`
+
+```{r kable-markdown, echo = FALSE}
+kable(
+  generate_table(15, c(2, 1), 4, 4), 
+  digits = 2
+)
+```
+
+### Pandoc `kable()`
+
+```{r kable-pandoc, echo = FALSE}
+kable(
+  generate_table(15, c(2, 1), 4, 4), 
+  digits = 2,
+  format = "pandoc"
+)
+```
