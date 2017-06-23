@@ -46,7 +46,7 @@ for (i in 1:5) {
 
 ## In-lijn figuren
 
-Een in-lijn figuren worden steeds geplaatst waar de bijhorende code staat. Ze kunnen bijgevolg ook in een alinea geplaatst worden. Merk op dat in-lijn figuren om die reden geen bijschrift kunnen hebben. Je kan er evenmin naar verwijzen.
+In-lijn figuren worden steeds geplaatst waar de bijhorende code staat. Ze kunnen bijgevolg ook in een alinea geplaatst worden. Merk op dat in-lijn figuren om die reden geen bijschrift kunnen hebben. Je kan er evenmin naar verwijzen.
 
 ```{r gg-mtcars, warning = FALSE}
 ggplot(
@@ -59,7 +59,7 @@ ggplot(
 
 ## Zwevende figuren
 
-Zwevende figuren worden in de buurt van de code geplaatst. Ze worden in de mate van de mogelijk op de plaats van de code geplaatst, bovenaan de pagina of onderaan de pagina. Indien veel figuren onmiddellijk na elkaar geplaatst worden zullen sommige figuren naar een volgende pagina verplaatst worden. Je kan er naar verwijzen op basis van de naam van de chunk: figuur \@ref(fig:movie), \@ref(fig:diamond) en \@ref(fig:gg-mtcars1).
+Zwevende figuren worden in de buurt van de code geplaatst. Ze worden in de mate van het mogelijke op de plaats van de code geplaatst, bovenaan de pagina of onderaan de pagina. Indien veel figuren onmiddellijk na elkaar geplaatst worden, zullen sommige figuren naar een volgende pagina verplaatst worden. Je kan er naar verwijzen op basis van de naam van de chunk: figuur \@ref(fig:movie), \@ref(fig:diamond) en \@ref(fig:gg-mtcars1).
 
 De standaardafmeting van figuren is 4.5 inch (114 mm) breed en 2.9 inch (74 mm) hoog. Het bestandsformaat van de figuren hangt af van het output-formaat. In geval van pdf worden pdf figuren aangemaakt, in geval van HTML png figuren (300 dpi). Indien gewenst kan je hier van afwijken. Dat kan zowel door een nieuwe standaard op te geven voor het volledige bestand als door aangepaste afmetingen op te geven voor individuele figuren. Deze afmetingen moet je in inch opgeven. Je kan ook forceren om een ander bestandsformaat te gebruiken. Bijvoorbeeld 'png' in plaats van 'pdf'. Dan kan nuttig zijn wanneer de figuur uit veel elementen bestaat, bijvoorbeeld een scatterplot van een grote dataset.
 
@@ -164,7 +164,7 @@ kable(
 )
 ```
 
-Het longtable formaat is beschikt wanneer we een tabel hebben die langer is dan op een pagina past (tabel \@ref(tab:kable-longtable)). Dit soort tabel is geen floating table. Dat wil zeggen dat ze onmiddellijk start daar waar de code ze genereert. Onderaan de pagina wordt de tabel afgebroken en op de volgende pagina opnieuw gestart. Merk op dit een te brede tabel nog steeds wordt afgebroken.
+Het longtable formaat is geschikt wanneer we een tabel hebben die langer is dan op een pagina past (tabel \@ref(tab:kable-longtable)). Dit soort tabel is geen floating table. Dat wil zeggen dat ze onmiddellijk start daar waar de code ze genereert. Onderaan de pagina wordt de tabel afgebroken en op de volgende pagina opnieuw gestart. Merk op dat een te brede tabel nog steeds wordt afgebroken.
 
 ```{r kable-longtable}
 kable(
@@ -175,7 +175,7 @@ kable(
 )
 ```
 
-Het markdown formaat is handig voor grotere tabellen met tekst. Wanneer de tekst te lang is worden de rijen over meerdere regels gespreidt. Indien nodig wordt de tabel over meerdere pagina's gespreidt. Het nadeel is dat je geen bijschrift kan plaatsen en er ook niet naar kan verwijzen.
+Het markdown formaat is handig voor grotere tabellen met tekst. Wanneer de tekst te lang is worden de rijen over meerdere regels gespreid. Indien nodig wordt de tabel over meerdere pagina's gespreid. Het nadeel is dat je geen bijschrift kan plaatsen en er ook niet naar kan verwijzen.
 
 ```{r kable-markdown}
 kable(
@@ -209,7 +209,6 @@ Voordelen:
 Nadelen:
 
 1. Je moet steeds `results='asis'` toevoegen aan de chunk opties.
-1. Kruisverwijzingen zijn lastig, zeker als je ze wel in pdf als HTML wilt hebben.
 
 ### `xtable()`
 
@@ -227,4 +226,4 @@ Nadelen:
 
 1. Je moet steeds `results='asis'` toevoegen aan de chunk opties.
 1. Kan niet dynamisch kiezen tussen pdf of HTML. Minder handig als je zowel HTML als pdf output wilt.
-1. Kruisverwijzingen zijn lastig, zeker als je ze wel in pdf als HTML wilt hebben.
+1. Kruisverwijzingen zijn lastig, zeker als je ze zowel in pdf als HTML wilt hebben.
