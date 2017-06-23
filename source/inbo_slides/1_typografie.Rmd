@@ -6,7 +6,7 @@
 
 \lipsum[1]
 
-### Schuin lettertype
+### Cursief lettertype
 
 _\lipsum[2]_
 
@@ -14,7 +14,7 @@ _\lipsum[2]_
 
 **\lipsum[3]**
 
-### Vet en schuin lettertype
+### Vet en cursief lettertype
 
 **_\lipsum[4]_**
 
@@ -46,10 +46,10 @@ normaal:
 vet:
   ~ **lI**
   
-schuin:
+cursief:
   ~ _lI_
   
-vet en schuin:
+vet en cursief:
   ~ **_lI_**
 
 met vaste tekenbreedte:
@@ -75,10 +75,10 @@ normaal:
 vet:
   ~ **"dubbele", 'enkele'**
 
-schuin:
+cursief:
   ~ _"dubbele", 'enkele'_
 
-vet en schuin:
+vet en cursief:
   ~ **_"dubbele", 'enkele'_**
 
 met vaste tekenbreedte:
