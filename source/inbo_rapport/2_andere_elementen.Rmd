@@ -79,15 +79,15 @@ include_graphics("kohlrabi-2266665.jpg")
 
 ## Plaatsing van tabellen en figuren
 
-Belangrijk om weten is dat de software zelf een zo goed mogelijke plaats zoekt voor de zogenaamde floats (tabellen en figuren). Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren zullen nooit in een hoofdstuk terecht komen.
+Belangrijk om weten is dat de software zelf een zo goed mogelijke plaats zoekt voor de zogenaamde floats (tabellen en figuren). Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren en tabellen zullen nooit in een volgend hoofdstuk terecht komen. Wanneer je eerst een floating tabel invoegt (bijv. table \@ref(tab:kable)) en iets later een lokale tabel (bijv. tabel \@ref(tab:kable-longtable)), dan kan het gebeuren dat de floating tabel pas na de lokale tabel getoond wordt. Het volgnummer hangt echter af van de plaatsing in de code, niet de finale plaats in het document. 
 
-De beste optie om hier iets aan te doen, is te zorgen voor volgende tekst ;-). Als het probleem zich enkel lokaal voordoet kan je op die plaats volgende code opnemen.
+De beste optie om hier iets aan te doen, is te zorgen voor voldoende tekst ;-). Als het probleem zich enkel lokaal voordoet kan je op die plaats volgende code opnemen.
 
 ```
 \FloatBarrier
 ```
 
-Op dat moment worden eerst alle hangende figuren geplaatst vooraleer verder te gaan met de tekst. Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke _section_ (kop 2). Je kan dit ook doen met _subsection_ (kop 3) en _subsubsection_ (kop 4). Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen.
+Op dat moment worden eerst alle hangende figuren en tabellen geplaatst vooraleer verder te gaan met de tekst. Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke _section_ (kop 2). Je kan dit ook doen met _subsection_ (kop 3) en _subsubsection_ (kop 4). Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen.
 
 # Wiskundige formules {#h:formules}
 
