@@ -58,11 +58,11 @@
 
 **\lipsum[27]**
 
-## Schuin
+## Cursief
 
 _\lipsum[28]_
 
-##Vet en schuin
+## Vet en cursief
 
 _**\lipsum[29]**_
 
@@ -76,13 +76,13 @@ _**\lipsum[29]**_
 
 **`Filmquiz`** `bracht knappe ex-yogi van de` **`wijs`**.
 
-80 characters
+80 karakters passen in de breedte
 
 `12345678911234567892123456789312345678941234567895123456789612345678971234567898`
 
 **`12345678911234567892123456789312345678941234567895123456789612345678971234567898`**
 
-100 characters
+100 karakters passen niet meer in de breedte
 
 `1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`
 
@@ -96,14 +96,31 @@ normaal:
 vet:
   ~ **lI**
   
-schuin:
+cursief:
   ~ _lI_
 
-vet en schuin:
+vet en cursief:
   ~ **_lI_**
 
 met vaste tekenbreedte:
   ~ `lI` **`lI`**
+
+## Grote letter O versus cijfer 0
+
+normaal:
+  ~ O0
+
+vet:
+  ~ **O0**
+  
+cursief:
+  ~ _O0_
+
+vet en cursief:
+  ~ **_O0_**
+
+met vaste tekenbreedte:
+  ~ `O0` **`O0`**
 
 ## Speciale characters
   
@@ -114,10 +131,10 @@ met vaste tekenbreedte:
 ### Vet
 **€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
 
-### Schuin
+### Cursief
 _€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
 
-### Vet en schuin
+### Vet en cursief
 **_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
   
 ### Met vaste tekenbreedte
@@ -133,10 +150,10 @@ normaal:
 vet:
   ~ **"dubbele", 'enkele'**
 
-schuin:
+cursief:
   ~ _"dubbele", 'enkele'_
 
-vet en schuin:
+vet en cursief:
   ~ **_"dubbele", 'enkele'_**
 
 met vaste tekenbreedte:
