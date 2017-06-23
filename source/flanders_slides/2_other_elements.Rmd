@@ -1,0 +1,119 @@
+# Other elements
+
+## Tables
+
+### Table
+
+```{r mtcars, echo = FALSE}
+kable(
+  head(mtcars[, 1:8], 10), 
+  booktabs = TRUE
+)
+```
+
+### Table with caption
+
+```{r mtcars-cap, echo = FALSE}
+kable(
+  head(mtcars[, 1:8], 10), 
+  booktabs = TRUE,
+  caption = 'A table with the first 10 rows of the `mtcars` dataset.'
+)
+```
+
+### Dynamic table
+
+```{r mtcars2, echo = FALSE, out.width="\\textwidth"}
+datatable(
+  head(mtcars[, 1:8], 10), 
+  caption = 'A dynamic table with the first 10 rows of the `mtcars` dataset.'
+)
+```
+
+## Figures
+
+### Figure with text width
+
+```{r forest, echo = FALSE, out.width="\\textwidth"}
+include_graphics("trees-1036958.jpg")
+```
+
+### Figure with text height
+
+```{r forest2, echo = FALSE, out.width="\\textheight"}
+include_graphics("trees-1036958.jpg")
+```
+
+### Figure with caption
+
+```{r forest3, fig.cap = "Picture of a forest, half text width", echo = FALSE, out.width="0.5\\textwidth"}
+include_graphics("trees-1036958.jpg")
+```
+
+## Mathematical formulas
+
+### In-line formulas
+
+In-line formulas are intermixed with normal text, e.g. $P(y < Y|\theta) = \alpha$. This works best with simple formulas. Taller formulas will be reformatted to match the line height of the text, e.g. $\bar{X} = \sum_{i = 1}^NX_i$. Here, $i = 1$ and $N$ are placed besides $\sum$ instead of below and above. That trick doesn't hold with all formulas, e.g. fractions $\frac{X}{Y}$. In such case the font size is shrunk. Really tall formulas like $\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}$ will require an increased interline distance. Stand-alone formulas are therefore advisable.
+
+### Stand-alone formulas
+
+$$P(y < Y|\theta) = \alpha$$
+
+$$\bar{X} = \sum_{i = 1}^NX_i$$
+
+$$\frac{X}{Y}$$
+
+$$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
+
+### Numbered formulas
+
+\begin{equation}
+  \bar{X} = \sum_{i = 1}^NX_i
+  (\#eq:som0)
+\end{equation}
+
+\begin{equation}
+  \frac{X}{Y}
+  (\#eq:som)
+\end{equation}
+
+\begin{equation}
+  \frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}
+  (\#eq:som1)
+\end{equation}
+
+## Citations
+
+### In-line styles
+
+- author (year)
+    - @BlauwdrukVleermuizen
+- (author, year)
+    - [@BlauwdrukVleermuizen]
+- (prefix author, year suffix)
+    - [see @BlauwdrukVleermuizen, chapter 1]
+- (multiple citations to the same authors)
+    - [@BlauwdrukVleermuizen; @Onkelinx2014a]
+- (multiple citations to different authors)
+    - [@BlauwdrukVleermuizen; @Agresti2002]
+
+### Types of references
+
+book
+  ~ [@Agresti2002; @DiggleRibeiro2007; @ZuurEtal2009; @Bolker2008; @Kish_1965; @BanerjeeEtal2003; @franklin_mapping_2009]
+
+chapter
+  ~ [@Degraer2013a; @BlauwdrukVogels; @BlauwdrukVleermuizen]
+
+proceedings
+  ~ [@Onkelinx2014a; @Onkelinx2012]
+
+articles
+  ~ [@Amano2012; @VanderMijnsbrugge2005; @R-reshape; @Yli-Viikari2007]
+
+thesis
+  ~ [@MaStatThesis]
+  
+software
+  ~ [@R-3.0.1]

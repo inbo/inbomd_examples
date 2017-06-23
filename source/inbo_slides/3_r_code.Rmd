@@ -1,0 +1,225 @@
+# R gebaseerde output
+
+## Code
+
+### Chunks + output {.allowframebreaks}
+
+```{r datasets, error = TRUE, message = TRUE}
+# logical
+c(TRUE, FALSE)
+# integer
+0:1
+# numeric
+c(0.0, 1.1)
+# scientific
+c(1e-10, 1e10)
+# character
+c("maandag", "dinsdag", "woensdag")
+# factor
+factor(c("maandag", "dinsdag", "woensdag"))
+# function
+my_fun <- function(x){
+  cat("mijn functie is", x)
+}
+# data.frame
+state <- data.frame(
+  region = state.region,
+  Division = state.division,
+  state.x77
+)
+# function
+my_fun("cool")
+# boodschappen
+message("dit is een boodschap")
+warning("dit is een waarschuwing")
+stop("dit is een foutmelding")
+# programma flow
+if (is.data.frame(state)) {
+  summary(state)
+} else {
+  stop("state is not a data.frame")
+}
+for (i in 1:5) {
+  cat("i =", i, "\n")
+}
+# aantal karakters
+#       10        20        30        40        50        60        70        80        90       100       110       120
+#2345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+```
+
+### Door R berekende waarden gebruiken in gewone tekst
+
+```{r echo = FALSE}
+life_exp <- sprintf(
+  "%.1f (%.1f; %.1f) jaren",
+  mean(state$Life.Exp),
+  quantile(state$Life.Exp, 0.025),
+  quantile(state$Life.Exp, 0.975)
+)
+```
+
+R output mengen met gewoon tekst is vrij eenvoudig. Bijvoorbeeld $1 + 1 = `r 1+1`$. Zorg er voor dat je in de tekst een enkel en eenvoudig R commando hoeft gebruiken. Heb je een complexere berekening nodig dan doe je die op voorhand. Bijvoorbeeld: de levensverwachting in de USA is `r life_exp`.
+
+## Figuren
+
+### Figuur met standaard kleur
+
+```{r figtransparant, echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + geom_histogram() + 
+  facet_wrap(~agegp, scales = "free")
+```
+
+### Figuur met kleur per discrete categorie
+
+```{r echo = FALSE, message=FALSE}
+ggplot(diamonds, aes(x = price, fill = cut)) + geom_histogram()
+```
+
+### Figuur met kleur per discrete categorie
+
+```{r echo = FALSE}
+ggplot(mtcars, 
+       aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
+  geom_point() + geom_smooth(method = "lm")
+```
+
+### Figuur met enkelvoudige kleurgradient
+
+```{r echo = FALSE}
+pp <- function(n) {
+  df <- expand.grid(
+    x = seq_len(n),
+    y = seq_len(n)
+  )
+  df$z <- df$x + df$y
+  df
+}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient()
+```
+
+### Figuur met kleurgradient met middenkleur
+
+```{r echo = FALSE}
+ggplot(pp(20), aes(x = x, y = y, fill = z)) +
+  geom_tile(width = 0.8, height = 0.8) +
+  scale_fill_gradient2(
+    midpoint = 20, 
+    low = vl.lightblue, 
+    high = vl.lightred
+  )
+```
+
+### Standaard volgorde van kleuren bij categorieën
+
+```{r echo = FALSE, warning=FALSE}
+testgrid <- expand.grid(x = 1:4, y = 1:4)
+testgrid$z <- factor((testgrid$x - 1) * 4 + testgrid$y)
+ggplot(testgrid, aes(x = x, y = y, fill = z, label = z)) +
+  geom_tile(width = 0.7, height = 0.7) +
+  geom_text() +
+  coord_fixed()
+```
+
+## Tabellen
+
+```{r genereer-tabel, echo = FALSE}
+# functies om tabellen te genereren
+cijfer_tabel <- function(rijen = 20, kolommen = 10) {
+  data.frame(
+    matrix(
+      rnorm(rijen * kolommen),
+      nrow = rijen,
+      ncol = kolommen
+    ),
+    row.names = paste("rij", seq_len(rijen))
+  )
+}
+random_woord <- function(n_letters = 5){
+  paste(
+    sample(letters, size = n_letters, replace = TRUE),
+    collapse = ""
+  )
+}
+random_zin <- function(n_woorden = 10, n_letters = 10){
+  paste(
+    sapply(
+      rpois(n_woorden, n_letters), 
+      FUN = random_woord
+    ),
+    collapse = " "
+  )
+}
+tekst_tabel <- function(rijen = 20, kolommen = 10, n_woorden = 10, n_letters = 5){
+  x <- data.frame(
+    matrix(
+      sapply(
+        rpois(rijen * kolommen, lambda = n_woorden), 
+        random_zin,
+        n_letters
+      ),
+      nrow = rijen,
+      ncol = kolommen
+    )
+  )
+  colnames(x) <- head(LETTERS, kolommen)
+  return(x)
+}
+genereer_tabel <- function(rijen = 20, kolommen = c(5, 5), n_woorden = 10, n_letters = 5){
+  cbind(
+    cijfer_tabel(rijen = rijen, kolommen = kolommen[1]),
+    tekst_tabel(
+      rijen = rijen, kolommen = kolommen[2], n_woorden = n_woorden, n_letters = n_letters
+    )
+  )
+}
+```
+
+### Standaard `kable()`
+
+```{r kable, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4),
+  digits = 2
+)
+```
+
+### Booktabs `kable()`
+
+```{r kable-booktabs, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4),
+  digits = 2,
+  booktabs = TRUE
+)
+```
+
+### longtable `kable()`
+
+```{r kable-longtable, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4), 
+  digits = 2,
+  longtable = TRUE
+)
+```
+
+### Markdown `kable()`
+
+```{r kable-markdown, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4), 
+  digits = 2
+)
+```
+
+### Pandoc `kable()`
+
+```{r kable-pandoc, echo = FALSE}
+kable(
+  genereer_tabel(15, c(2, 1), 4, 4), 
+  digits = 2,
+  format = "pandoc"
+)
+```

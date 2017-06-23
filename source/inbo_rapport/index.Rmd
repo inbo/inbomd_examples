@@ -3,15 +3,14 @@ title: "Voorbeeldrapport met INBOmd"
 author: "Thierry Onkelinx"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-bibliography: INBOmd.bib
+bibliography: ../INBOmd.bib
 header-includes: \usepackage{lipsum}
 output:
   bookdown::pdf_book:
-    base_format: INBOmd::inbo_rapport_2015
+    base_format: INBOmd::inbo_rapport
     subtitle: "Hier komt de optionele ondertitel"
     reportnr: "Hier komt het rapportnummer"
     ordernr: "Het optionele nummer van de opdrachtgever"
-    keep_tex: TRUE
 ---
 
 ```{r setup, include = FALSE}
