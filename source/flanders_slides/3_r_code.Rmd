@@ -47,6 +47,19 @@ for (i in 1:5) {
 #2345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
 ```
 
+### Using values calculated by R in plain text
+
+```{r echo = FALSE}
+life_exp <- sprintf(
+  "%.1f (%.1f; %.1f) years",
+  mean(state$Life.Exp),
+  quantile(state$Life.Exp, 0.025),
+  quantile(state$Life.Exp, 0.975)
+)
+```
+
+Mixing R output and text is straightforward. E.g $1 + 1 = `r 1+1`$. Just make sure that you can use a single and simple command. Precalculate the output in case you need more elaborate calculations. E.g the life expectancy in the USA is `r life_exp`.
+
 ## Figures
 
 ### Figure with default colour
