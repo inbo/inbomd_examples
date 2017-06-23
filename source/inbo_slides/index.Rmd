@@ -15,7 +15,6 @@ output:
     cover: "trees-1036958.jpg"
     cover_horizontal: FALSE
     slide_level: 3
-    keep_tex: TRUE
 ---
 
 ```{r include = FALSE}

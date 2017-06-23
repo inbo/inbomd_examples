@@ -18,7 +18,6 @@ output:
     cover_horizontal: FALSE
     slide_level: 3
     font_flanders: TRUE
-    keep_tex: TRUE
 ---
 
 ```{r include = FALSE}
