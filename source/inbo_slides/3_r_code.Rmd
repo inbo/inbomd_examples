@@ -47,6 +47,19 @@ for (i in 1:5) {
 #2345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
 ```
 
+### Door R berekende waarden gebruiken in gewone tekst
+
+```{r echo = FALSE}
+life_exp <- sprintf(
+  "%.1f (%.1f; %.1f) jaren",
+  mean(state$Life.Exp),
+  quantile(state$Life.Exp, 0.025),
+  quantile(state$Life.Exp, 0.975)
+)
+```
+
+R output mengen met gewoon tekst is vrij eenvoudig. Bijvoorbeeld $1 + 1 = `r 1+1`$. Zorg er voor dat je in de tekst een enkel en eenvoudig R commando hoeft gebruiken. Heb je een complexere berekening nodig dan doe je die op voorhand. Bijvoorbeeld: de levensverwachting in de USA is `r life_exp`.
+
 ## Figuren
 
 ### Figuur met standaard kleur
