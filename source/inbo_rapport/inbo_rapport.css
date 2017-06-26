@@ -1,17 +1,17 @@
 .block {
-    background:#FFFFFF;
+    background:#E5E5E5;
     padding:10px;
     border:1px solid black;
 }
 
 .exampleblock {
-    background:#E5E5E5;
+    background:#44C46E;
     padding:10px;
     border:1px solid black;
 }
 
 .alertblock {
-    background:#E5E5E5;
+    background:#C04384;
     color:black;
     padding:10px;
     border:1px solid black;
