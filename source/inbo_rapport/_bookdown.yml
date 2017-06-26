@@ -1,2 +1,3 @@
 book_filename: "INBOmd_rapport"
 output_dir: "../../docs"
+edit: https://github.com/inbo/inbomd-examples/edit/master/%s
