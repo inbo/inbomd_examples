@@ -11,6 +11,9 @@ output:
     subtitle: "Hier komt de optionele ondertitel"
     reportnr: "Hier komt het rapportnummer"
     ordernr: "Het optionele nummer van de opdrachtgever"
+  bookdown::gitbook:
+    split_by: "chapter+number"
+    css: "inbo_rapport.css"
 ---
 
 ```{r setup, include = FALSE}
