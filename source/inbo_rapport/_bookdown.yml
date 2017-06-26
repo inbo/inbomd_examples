@@ -1,2 +1,16 @@
 book_filename: "INBOmd_rapport"
 output_dir: "../../docs"
+edit: https://github.com/inbo/inbomd-examples/edit/master/%s
+language:
+  label:
+    fig: 'Figuur '
+    tab: 'Tabel '
+    eq: 'Vergelijking '
+    thm: 'Theorema '
+    lem: 'Lemma '
+    def: 'Definitie '
+    cor: 'Gevolgtrekking '
+    prp: 'Bewering '
+    ex: 'Voorbeeld '
+    proof: 'Bewijs. '
+    remark: 'Opmerking. '
