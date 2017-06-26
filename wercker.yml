@@ -1,4 +1,4 @@
-box: inbo_bmk/rstable
+box: inbobmk/rstable
 build:
   steps:
     - script:
