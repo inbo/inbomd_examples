@@ -1,0 +1,5 @@
+box: inbo_bmk/rstable
+build:
+  steps:
+    - script:
+        code: Rscript source/render_all.R
