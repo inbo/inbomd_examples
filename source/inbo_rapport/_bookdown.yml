@@ -1,5 +1,5 @@
 book_filename: "INBOmd_rapport"
-output_dir: "../../docs"
+output_dir: "../../docs/inbo_rapport"
 edit: https://github.com/inbo/inbomd-examples/edit/master/%s
 language:
   label:
