@@ -10,6 +10,10 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
     - [PDF](docs/inbo_rapport/INBO_rapport.pdf) versie
     - [HTML](docs/inbo_rapport/dankwoord.html) versie
     - [EPUB](docs/inbo_rapport/INBO_rapport.epub) versie
+- INBO slides
+    - [Stapsgewijze](docs/inbo_slides/inbo_slides.pdf) slides in pdf
+    - [Handout versie](docs/inbo_slides/inbo_slides_handout.pdf) slides in pdf
+    - [Rapport versie](docs/inbo_slides/inbo_slides_rapport.pdf) in pdf
 - Flanders slides
     - [Stapsgewijze](docs/flanders_slides/flanders_slides.pdf) slides in pdf
-    - [Handout versie](docs/flanders_slides/flanders_slides.pdf) slides in pdf
+    - [Handout versie](docs/flanders_slides/flanders_slides_handout.pdf) slides in pdf
