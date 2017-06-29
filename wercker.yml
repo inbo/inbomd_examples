@@ -15,3 +15,13 @@ build:
           update-texmf
           Rscript -e 'devtools::install_github("inbo/INBOtheme", upgrade = FALSE)'
           Rscript source/render_all.R
+
+deploy:
+  steps:
+    - script:
+        code: |
+          zip -r website.zip docs
+          curl -H "Content-Type: application/zip" \
+               -H "Authorization: Bearer $NETLIFY_KEY" \
+               --data-binary "@website.zip" \
+               https://api.netlify.com/api/v1/sites/$NETLIFY_SITEID/deploys
