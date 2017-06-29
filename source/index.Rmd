@@ -1,0 +1,19 @@
+---
+title: "Voorbeelden met INBOmd"
+author: "Thierry Onkelinx"
+output: html_document
+---
+
+Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://github.com/inbo/inbomd_examples).
+
+- INBO rapport
+    - [PDF](inbo_rapport/inbo_rapport.pdf) versie
+    - [HTML](inbo_rapport/dankwoord.html) versie
+    - [EPUB](inbo_rapport/inbo_rapport.epub) versie
+- INBO slides
+    - [Stapsgewijze](inbo_slides/inbo_slides.pdf) slides in pdf
+    - [Handout versie](inbo_slides/inbo_slides_handout.pdf) slides in pdf
+    - [Rapport versie](inbo_slides/inbo_slides_rapport.pdf) in pdf
+- Flanders slides
+    - [Stapsgewijze](flanders_slides/flanders_slides.pdf) slides in pdf
+    - [Handout versie](flanders_slides/flanders_slides_handout.pdf) slides in pdf
