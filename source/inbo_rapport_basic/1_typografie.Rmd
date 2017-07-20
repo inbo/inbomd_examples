@@ -1,0 +1,295 @@
+# Kopstijlen: niveau 1: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {#h:koppen}
+
+\lipsum[1-3] Filmquiz bracht knappe ex-yogi van de wijs.
+
+## Niveau 2: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+
+\lipsum[4-6] Filmquiz bracht knappe ex-yogi van de wijs.
+
+### Niveau 3: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+
+\lipsum[7-9] Filmquiz bracht knappe ex-yogi van de wijs.
+
+#### Niveau 4: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+
+\lipsum[10-12] Filmquiz bracht knappe ex-yogi van de wijs.
+
+##### Niveau 5: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+
+\lipsum[13-15] Filmquiz bracht knappe ex-yogi van de wijs.
+
+###### Niveau 6: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+
+\lipsum[16-18] Filmquiz bracht knappe ex-yogi van de wijs.
+
+# Kopstijlen zonder nummer: niveau 1: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {- #h:koppen-zonder-nummer}
+
+\lipsum[19] Filmquiz bracht knappe ex-yogi van de wijs.
+
+## Niveau 2: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+
+\lipsum[20] Filmquiz bracht knappe ex-yogi van de wijs.
+
+### Niveau 3: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+
+\lipsum[21] Filmquiz bracht knappe ex-yogi van de wijs.
+
+#### Niveau 4: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+
+\lipsum[22-23] Filmquiz bracht knappe ex-yogi van de wijs.
+
+##### Niveau 5: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+
+\lipsum[24] Filmquiz bracht knappe ex-yogi van de wijs.
+
+###### Niveau 6: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+
+\lipsum[25] Filmquiz bracht knappe ex-yogi van de wijs.
+
+# Typografie
+
+## Lettertypes
+
+### Normaal
+
+\lipsum[26] Filmquiz bracht knappe ex-yogi van de wijs.
+
+### Vet
+
+**\lipsum[27] Filmquiz bracht knappe ex-yogi van de wijs.**
+
+### Cursief
+
+_\lipsum[28] Filmquiz bracht knappe ex-yogi van de wijs._
+
+### Vet en cursief
+
+_**\lipsum[29] Filmquiz bracht knappe ex-yogi van de wijs.**_
+
+### Met vaste tekenbreedte
+
+\texttt{\lipsum[30] Filmquiz bracht knappe ex-yogi van de wijs.}
+
+`Filmquiz bracht knappe ex-yogi van de wijs.`
+
+**`Filmquiz bracht knappe ex-yogi van de wijs.`**
+
+**`Filmquiz`** `bracht knappe ex-yogi van de` **`wijs`**.
+
+80 karakters passen in de breedte
+
+`12345678911234567892123456789312345678941234567895123456789612345678971234567898`
+
+**`12345678911234567892123456789312345678941234567895123456789612345678971234567898`**
+
+100 karakters passen niet meer in de breedte
+
+`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`
+
+**`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`**
+
+### Kleine letter L versus hoofdletter i
+
+normaal:
+  ~ lI
+
+vet:
+  ~ **lI**
+  
+cursief:
+  ~ _lI_
+
+vet en cursief:
+  ~ **_lI_**
+
+met vaste tekenbreedte:
+  ~ `lI` **`lI`**
+
+### Grote letter O versus cijfer 0
+
+normaal:
+  ~ O0
+
+vet:
+  ~ **O0**
+  
+cursief:
+  ~ _O0_
+
+vet en cursief:
+  ~ **_O0_**
+
+met vaste tekenbreedte:
+  ~ `O0` **`O0`**
+
+### Speciale characters
+  
+#### Normaal
+
+€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
+
+#### Vet
+**€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
+
+#### Cursief
+_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
+
+#### Vet en cursief
+**_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
+  
+#### Met vaste tekenbreedte
+`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
+
+**`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
+
+### Aanhalingstekens
+
+normaal:
+  ~ "dubbele", 'enkele'
+
+vet:
+  ~ **"dubbele", 'enkele'**
+
+cursief:
+  ~ _"dubbele", 'enkele'_
+
+vet en cursief:
+  ~ **_"dubbele", 'enkele'_**
+
+met vaste tekenbreedte:
+  ~ `"dubbele", 'enkele',` **`"dubbele", 'enkele',`**
+
+## Opsommingen
+
+### Ongeordende lijsten
+
+- \lipsum[31] Filmquiz bracht knappe ex-yogi van de wijs.
+- Item 2
+- Item 3
+    - Item a
+        - item I
+        - item II
+            - item A
+            - item B
+            - \lipsum[32] Filmquiz bracht knappe ex-yogi van de wijs.
+        - \lipsum[33] Filmquiz bracht knappe ex-yogi van de wijs.
+    - \lipsum[34] Filmquiz bracht knappe ex-yogi van de wijs.
+    - Item c
+- Item 4
+
+### Genummerde lijsten
+
+1. \lipsum[35] Filmquiz bracht knappe ex-yogi van de wijs.
+1. Item 2
+1. Item 3
+    1. Item a
+        1. item I
+        1. item II
+            1. \lipsum[36] Filmquiz bracht knappe ex-yogi van de wijs.
+            1. item B
+            1. item C
+        1. \lipsum[37] Filmquiz bracht knappe ex-yogi van de wijs.
+    1. \lipsum[38] Filmquiz bracht knappe ex-yogi van de wijs.
+    1. Item c
+1. Item 4
+
+### Lijsten met definities
+
+Item A
+  ~ \lipsum[39] Filmquiz bracht knappe ex-yogi van de wijs.
+  
+Longer item title B
+  ~ \lipsum[40] Filmquiz bracht knappe ex-yogi van de wijs.
+  
+    Item B1
+      ~ \lipsum[41] Filmquiz bracht knappe ex-yogi van de wijs.
+
+        Item B1a
+          ~ \lipsum[42] Filmquiz bracht knappe ex-yogi van de wijs.
+
+        Item B1b
+          ~ \lipsum[43] Filmquiz bracht knappe ex-yogi van de wijs.
+
+            Item B1b1
+              ~ \lipsum[44] Filmquiz bracht knappe ex-yogi van de wijs.
+              
+    Item B2
+      ~ \lipsum[45] Filmquiz bracht knappe ex-yogi van de wijs.
+
+Item C
+  ~ \lipsum[46] Filmquiz bracht knappe ex-yogi van de wijs.
+  
+Item D
+  ~ \lipsum[47] Filmquiz bracht knappe ex-yogi van de wijs.
+
+### Lijsten mengen
+
+- Item 1
+- Item 2
+- Item 3
+    1. Item a
+    
+        item I
+          ~ Uitleg I
+          
+        item II
+          ~ Uitleg II
+          
+    1. Item b
+        - Item b I
+        - Item b II
+    1. Item c
+        1. Item c I
+        1. Item c II
+- Item 4
+
+
+## Kaders
+
+\lipsum[48] Filmquiz bracht knappe ex-yogi van de wijs.
+
+### Standaard kader
+
+```{block2, type = "block"}
+\lipsum[49] Filmquiz bracht knappe ex-yogi van de wijs.
+```
+
+\lipsum[50-51] Filmquiz bracht knappe ex-yogi van de wijs.
+
+```{block2, type = "block", latex.options = "{Optionele titel van het kader}"}
+\lipsum[52-53] Filmquiz bracht knappe ex-yogi van de wijs.
+```
+
+### Kader met voorbeeld
+  
+\lipsum[54] Filmquiz bracht knappe ex-yogi van de wijs.
+
+```{block2, type = "exampleblock"}
+\lipsum[55] Filmquiz bracht knappe ex-yogi van de wijs.
+```
+
+\lipsum[56-58] Filmquiz bracht knappe ex-yogi van de wijs.
+
+```{block2, type = "exampleblock", latex.options = "{Optionele titel van het kader}"}
+\lipsum[59-60] Filmquiz bracht knappe ex-yogi van de wijs.
+```
+
+### Kader met waarschuwing
+
+\lipsum[61] Filmquiz bracht knappe ex-yogi van de wijs.
+
+```{block2, type = "alertblock"}
+\lipsum[62] Filmquiz bracht knappe ex-yogi van de wijs.
+```
+
+\lipsum[63] Filmquiz bracht knappe ex-yogi van de wijs.
+
+```{block2, type = "alertblock", latex.options = "{Optionele titel van het kader}"}
+\lipsum[64-65] Filmquiz bracht knappe ex-yogi van de wijs.
+```
+
+\lipsum[66] Filmquiz bracht knappe ex-yogi van de wijs.
+
+```{block2, type = "alertblock"}
+\lipsum[67-68] Filmquiz bracht knappe ex-yogi van de wijs.
+```
