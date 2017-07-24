@@ -6,10 +6,14 @@ output: html_document
 
 Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://github.com/inbo/inbomd_examples).
 
-- INBO rapport
+- INBO rapport met delen en klikbare referenties
     - [PDF](inbo_rapport/inbo_rapport.pdf) versie
     - [HTML](inbo_rapport/dankwoord.html) versie
     - [EPUB](inbo_rapport/inbo_rapport.epub) versie
+- INBO rapport zonder delen en niet-klikbare referenties
+    - [PDF](inbo_rapport_basic/inbo_rapport_basic.pdf) versie
+    - [HTML](inbo_rapport_basic/dankwoord.html) versie
+    - [EPUB](inbo_rapport_basic/inbo_rapport_basic.epub) versie
 - INBO slides
     - [Stapsgewijze](inbo_slides/inbo_slides.pdf) slides in pdf
     - [Handout versie](inbo_slides/inbo_slides_handout.pdf) slides in pdf
