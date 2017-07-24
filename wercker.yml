@@ -3,7 +3,7 @@ build:
   steps:
     - script:
         code: |
-          Rscript -e 'devtools::install_github("inbo/INBOmd", ref = "webshot", upgrade = FALSE)'
+          Rscript -e 'devtools::install_github("inbo/INBOmd", upgrade = FALSE)'
           export TEXMFHOME=/usr/local/lib/R/site-library/INBOmd/local_tex
           mkdir ~/.fonts
           apt-get update
