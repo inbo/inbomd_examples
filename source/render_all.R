@@ -6,6 +6,10 @@ rmarkdown::render("index.Rmd", output_dir = "../docs")
 setwd("inbo_rapport")
 rmarkdown::render_site(encoding = "UTF-8")
 
+# inbo rapport basic
+setwd("../inbo_rapport_basic")
+rmarkdown::render_site(encoding = "UTF-8")
+
 # flanders slides
 setwd("../flanders_slides")
 source("handout_slides.R")

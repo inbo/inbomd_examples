@@ -1,0 +1,156 @@
+# Andere elementen
+
+## Kruisverwijzigingen {#h:kruisverwijzing}
+
+### Interne kruisverwijzingen
+
+Kruisverwijzingen zijn eenvoudig te maken door te verwijzen naar de bijhorende label, bijvoorbeeld figuur \@ref(fig:koolrabi). Doordat we verwijzen naar een uniek label, kan de software voor ons automatisch het juiste nummer berekenen. De cijfers zijn een klikbare link. Je kan kruisverwijzingen maken naar:
+
+- koppen (\@ref(h:kruisverwijzing), \@ref(s:figuur-invoegen))
+- tabellen (\@ref(tab:mtcars))
+- figuren (\@ref(fig:koolrabi))
+- formules (\@ref(eq:som)^[Het nummer van een formule krijgt automatisch haakjes. Zie ook §\@ref(s:formule-nummer)])
+
+Je voegt een label aan een kop toe door op het einde `{#mijn-label}` te plaatsen. Hierbij vervang je 'mijn-label' door iets zinvol en eenvoudig te onthouden. Het is handig om steeds een prefix te gebruiken. Bijvoorbeeld `h:` voor een hoofdstuk, `s:` voor een sectie. Belangrijk om weten is dat elk label uniek moet zijn binnen het volledige document. Gebruik enkel letters, cijfers, `:`, `/` en `-`. Andere tekens als spaties of lage streepjes (`_`) zijn niet toegestaan.
+
+### Externe verwijzingen
+
+Naakte URLs moeten met het gebruikte protocol beginnen, bv. http://www.inbo.be. Relevante protocols zijn http:// en https:// voor websites, ftp:// voor ftp sites, mailto: voor email bv. mailto:nobody@inbo.be. 
+
+We kunnen de URL tevens achter een link tekst plaatsen bv [Google](http://google.be). We kunnen deze techniek eveneens gebruiken voor de andere protocols, bv. [e-mail](mailto:nobody@inbo.be).
+
+### Extra formattering
+
+Voetnoten^[Filmquiz bracht knappe ex-yogi van de wijs.] zijn eenvoudig toe te voegen^[\lipsum[94] Filmquiz bracht knappe ex-yogi van de wijs.]. Je voegt `^[gewenste voetnoot tekst]` in op de plaats waar een voetnoot dient te verschijnen.
+
+Terugkerende voetnoten kun je een label geven en éénmalig in de broncode definiëren.[^yogi] Je kunt ze dan verschillende keren[^yogi] gebruiken.
+
+[^yogi]: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+
+Tekst in onderschrift krijgt je door een `~` te plaatsen voor en achter de tekst die in onderschrift moet komen. Bijvoorbeeld: `H~2~SO~4~` wordt H~2~SO~4~. Bovenschrift krijg je op een gelijkaardige manier door `^` te gebruiken. Bij voorbeeld `Fe^2+^` wordt Fe^2+^. Als alternatief kan je ook wiskundige formules^[Zie hoofdstuk \@ref(h:formules)] gebruiken. Bijvoorbeeld: `$H_2SO_4$` wordt $H_2SO_4$ en `$Fe^{2+}$` wordt $Fe^{2+}$. Je kan ook dingen doen als `$^3_2He$` ($^3_2He$) terwijl `^3^~2~He` (^3^~2~He) niet het gewenste resultaat geeft.
+
+## Figuren en tabellen
+
+### Tabellen
+
+Tabellen zijn het eenvoudigst te genereren vanuit een `R data.frame` met de functie `kable()`. De naam van de chunk met prefix `tab:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen. Bijschriften plaats je in `caption`.
+
+```{r mtcars, echo = FALSE}
+kable(
+  head(mtcars[, 1:8], 10), 
+  booktabs = TRUE,
+  caption = 'Een tabel met de eerste 10 rijen van de `mtcars` dataset.'
+)
+```
+
+Je kan de tabellen eveneens dynamisch weergeven met behulp van de `datatable()` functie. De HTML versie van het rapport zal dan een interactieve versie van de tabel bevatten. Hier kan de gebruiker eenvoudig zoeken, sorteren, .... Die functionaliteit is uiteraard niet beschikbaar in pdf formaat. Daarom wordt in de pdf automatisch een schermafdruk gemaakt (figuur \@ref(fig:mtcars2)).
+
+```{r mtcars2, echo = FALSE, fig.cap = "Schermafdruk van de dynamische tabel", out.width="\\textwidth"}
+datatable(
+  head(mtcars[, 1:8], 10), 
+  caption = 'Een dynamische tabel met de eerste 10 rijen van de `mtcars` dataset.'
+)
+```
+
+
+### Figuren {#s:figuur-invoegen}
+
+Figuren zijn het eenvoudigst toe te voegen als een R chunk. De naam van de chunk met prefix `fig:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen. Bijschriften plaats je in `fig.cap`.
+
+De afmetingen in een figuur zijn in principe gebaseerd op de afmetingen zoals gedefineerd in het bestand: het aantal pixels gedeeld door de resolutie.
+
+- 600 pixels breed / 600 dpi = 1 inch (25,4 mm)
+- 600 pixels breed / 300 dpi = 2 inch (50,8 mm)
+- 600 pixels breed / 72 dpi = 8.33 inch (211.7 mm)
+
+Figuur \@ref(fig:koolrabi) is 4896 pixels breed en 3264 pixels hoog. Standaard gebruikt de huisstijl een resolutie van 300 dpi. De figuur wordt dan 41.5 cm breed en 27.6 cm hoog, hetgeen uiteraard niet op A4 past. Via `out.width` geven we de gewenste breedte op. Een cijfer wordt geïnterpreteerd als een afmeting in inch. Je kan ook `\\textwidth` opgeven, de textbreedte van het document (figuur \@ref(fig:koolrabi2)). De interpretatie hiervan zal afhangelijk zijn van de gebruikte stijl. Bij figuur \@ref(fig:koolrabi3) hebben we `0.5\\textwidth` of de halve tekstbreedte opgegeven.
+
+```{r koolrabi, fig.cap = "Koolrabi, originele afmetingen", echo = FALSE}
+include_graphics("kohlrabi-2266665.jpg")
+```
+
+```{r koolrabi2, fig.cap = "Koolrabi, tekstbreedte", echo = FALSE, out.width="\\textwidth"}
+include_graphics("kohlrabi-2266665.jpg")
+```
+
+```{r koolrabi3, fig.cap = "Koolrabi, halve tekstbreedte", echo = FALSE, out.width="0.5\\textwidth"}
+include_graphics("kohlrabi-2266665.jpg")
+```
+
+### Plaatsing van tabellen en figuren
+
+Belangrijk om weten is dat de software zelf een zo goed mogelijke plaats zoekt voor de zogenaamde floats (tabellen en figuren). Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren en tabellen zullen nooit in een volgend hoofdstuk terecht komen. Wanneer je eerst een floating tabel invoegt (bijv. table \@ref(tab:kable)) en iets later een lokale tabel (bijv. tabel \@ref(tab:kable-longtable)), dan kan het gebeuren dat de floating tabel pas na de lokale tabel getoond wordt. Het volgnummer hangt echter af van de plaatsing in de code, niet de finale plaats in het document. 
+
+De beste optie om hier iets aan te doen, is te zorgen voor voldoende tekst ;-). Als het probleem zich enkel lokaal voordoet kan je op die plaats volgende code opnemen.
+
+```
+\FloatBarrier
+```
+
+Op dat moment worden eerst alle hangende figuren en tabellen geplaatst vooraleer verder te gaan met de tekst. Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke _section_ (kop 2). Je kan dit ook doen met _subsection_ (kop 3) en _subsubsection_ (kop 4). Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen.
+
+## Wiskundige formules {#h:formules}
+
+### In-lijn formules
+
+In-lijn formules worden opgenomen binnen de tekst van de alinea. Bijvoorbeeld $P(y < Y|\theta) = \alpha$. Dit werkt het best met beknopte formules. Formules die een zekere hoogte nodig hebben zullen in de mate van het mogelijke aangepast worden om zo min mogelijk hoogte in te nemen. Een voorbeeld hier van is $\bar{X} = \sum_{i = 1}^NX_i$. Hierbij zijn $i = 1$ en $N$ naast $\sum$ geplaatst in plaats van er boven. Dat lukt uiteraard niet altijd. Breuken zijn daar een goed voorbeeld van: $\frac{X}{Y}$. In dat geval wordt het lettertype verkleind. Hetgeen de leesbaarheid niet bevordert. Bij complexe formule als $\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}$ is het noodzakelijk om tevens de regelafstand te vergroten. In dergelijke gevallen is het beter om losstaande formules te gebruiken.
+
+### Losstaande formules
+
+Losstaande formules worden elk in een afzonderlijke alinea opgenomen.
+
+$$P(y < Y|\theta) = \alpha$$
+
+$$\bar{X} = \sum_{i = 1}^NX_i$$
+
+$$\frac{X}{Y}$$
+
+$$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
+
+### Genummerde formules {#s:formule-nummer}
+
+Het is tevens mogelijk om de losstaande formules te nummeren. Het nummer bevat steeds het hoofdstuknummer als prefix. Wanneer je aan dergelijke formule een label toekent, kan je er naar verwijzen. Bijvoorbeeld: formule \@ref(eq:som). Merk op dat het nummer dat naar een formule verwijst steeds tussen haakjes geplaatst wordt. Het is praktisch om de prefix `eq:` te gebruiken in de labels van formules.
+
+\begin{equation}
+  \bar{X} = \sum_{i = 1}^NX_i
+  (\#eq:som)
+\end{equation}
+
+\begin{equation}
+  \frac{X}{Y}
+\end{equation}
+
+\begin{equation}
+  \frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}
+\end{equation}
+
+## Citeren van literatuur
+
+### Vereisten
+
+Bibliografische verwijzingen zijn geen probleem. De bibliografie moet in BibTex formaat beschikbaar zijn. Dit formaat kan automatisch aangemaakt worden door Mendeley.
+
+### In-lijn stijlen
+
+- @BlauwdrukVleermuizen
+- [@BlauwdrukVleermuizen]
+- [zie @BlauwdrukVleermuizen, hoofdstuk 1]
+- [@BlauwdrukVleermuizen; @Onkelinx2014a]
+
+boeken
+  ~ [@Agresti2002; @DiggleRibeiro2007; @ZuurEtal2009; @Bolker2008; @Kish_1965; @BanerjeeEtal2003; @franklin_mapping_2009]
+
+hoofdstukken
+  ~ [@Degraer2013a; @BlauwdrukVogels; @BlauwdrukVleermuizen]
+
+proceedings
+  ~ [@Onkelinx2014a; @Onkelinx2012]
+
+artikels
+  ~ [@Amano2012; @VanderMijnsbrugge2005; @R-reshape; @Yli-Viikari2007]
+
+thesis
+  ~ [@MaStatThesis]
+  
+software
+  ~ [@R-3.0.1]

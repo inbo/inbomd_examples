@@ -9,7 +9,7 @@ github-repo: "inbo/inbomd-examples"
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_rapport
-    subtitle: "Dit is de versie met delen"
+    subtitle: "Dit is de versie zonder delen"
     reportnr: "Hier komt het rapportnummer"
     ordernr: "Het optionele nummer van de opdrachtgever"
     citation_package: "none"
