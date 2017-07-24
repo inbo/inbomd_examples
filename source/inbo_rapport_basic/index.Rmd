@@ -12,6 +12,7 @@ output:
     subtitle: "Dit is de versie zonder delen"
     reportnr: "Hier komt het rapportnummer"
     ordernr: "Het optionele nummer van de opdrachtgever"
+    citation_package: "none"
   bookdown::epub_book:
     stylesheet: "inbo_rapport.css"
   bookdown::gitbook:
