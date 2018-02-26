@@ -1,6 +1,6 @@
 # Dankwoord {-}
 
-\lipsum[69-74] Filmquiz bracht knappe ex-yogi van de wijs.
+\lipsum[69-73] Filmquiz bracht knappe ex-yogi van de wijs.
 
 # Voorwoord {-}
 

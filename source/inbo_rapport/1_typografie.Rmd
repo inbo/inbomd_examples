@@ -1,5 +1,136 @@
 # (PART) Typografie {-}
 
+# Definitie van typografie
+
+## Marges
+
+Maat | Word | Markdown
+---- | ---- | --------
+boven | 20 mm |
+binnenkant | 30 mm |
+onder | 25 mm |
+buitenkant | 30 mm |
+koptekst | 25 mm vanaf bovenaan |
+voettekst | 15 mm vanaf onderaan |
+
+## Basisparagraaf
+
+Maat | Word | Markdown
+---- | ---- | --------
+lettertype | Calibri |
+fontsize | 9 pt |
+gewicht | normaal |
+breedte | 150 mm |
+inspringen | 0 mm |
+uitlijnen | links |
+witruimte voor | 0 pt |
+witruimte na | 9 pt |
+regelafstand | 10.35 pt |
+
+## Koppen
+
+Enkel de afwijkingen t.o.v. de basisparagraaf worden weergegeven
+
+### Kop 1
+
+Maat | Word | Markdown
+---- | ---- | --------
+fontsize | 18 pt |
+gewicht | vet all caps |
+inspringen | verkeerd om 7.6 mm |
+witruimte voor | 24 pt |
+witruimte na | 24 pt |
+regelafstand | 21.6 pt |
+
+### Kop 1 zonder nummering
+
+Maat | Word | Markdown
+---- | ---- | --------
+fontsize | 14 pt |
+gewicht | vet |
+witruimte na | 14 pt |
+regelafstand | 30 pt |
+
+### Kop 2
+
+Maat | Word | Markdown
+---- | ---- | --------
+fontsize | 16 pt |
+gewicht | all caps |
+onderstreept | stippellijn |
+inspringen | verkeerd om 15 mm |
+witruimte voor | 10 pt |
+witruimte na | 12 pt |
+regelafstand | 20 pt |
+
+### Kop 3
+
+Maat | Word | Markdown
+---- | ---- | --------
+fontsize | 12 pt |
+gewicht | vet |
+inspringen | verkeerd om 15 mm |
+witruimte voor | 10 pt |
+
+### Kop 4
+
+Maat | Word | Markdown
+---- | ---- | --------
+gewicht | vet |
+inspringen | verkeerd om 15 mm |
+witruimte voor | 10 pt |
+
+## Voettekst
+
+Maat | Word | Markdown
+---- | ---- | --------
+fontsize | 8 pt |
+paginanummers | vet |
+paginanummers | buitenkant |
+DOI | gecenteerd |
+www.inbo.be | binnenkant |
+
+## Cover
+
+### Titel
+
+Maat | Word | Markdown
+---- | ---- | --------
+font | Flanders art Sans |
+fontsize | 18 pt |
+gewicht | vet all caps |
+tekenafstand | 0.25 pt verbreed |
+onderstreept | volle lijn |
+links inspringen | 10 mm |
+witruimte voor | 21 pt |
+witruimte na | 26 pt |
+regelafstand | 60 pt |
+
+### Ondertitel
+
+Maat | Word | Markdown
+---- | ---- | --------
+fontsize | 18 pt |
+gewicht | vet |
+links inspringen | 10 mm |
+regelafstand | 30 pt |
+
+### Auteurs
+
+Maat | Word | Markdown
+---- | ---- | --------
+fontsize | 12 pt |
+links inspringen | 10 mm |
+witruimte voor | 12 pt |
+witruimte na | 144 pt |
+
+### DOI + opdrachtnummer
+
+Maat | Word | Markdown
+---- | ---- | --------
+links inspringen | 10 mm |
+witruimte na | 0 pt |
+
 # Kopstijlen: niveau 1: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {#h:koppen}
 
 \lipsum[1-3] Filmquiz bracht knappe ex-yogi van de wijs.
@@ -10,7 +141,7 @@
 
 ### Niveau 3: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
 
-\lipsum[7-9] Filmquiz bracht knappe ex-yogi van de wijs.
+\lipsum[7-10] Filmquiz bracht knappe ex-yogi van de wijs.
 
 #### Niveau 4: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
 
