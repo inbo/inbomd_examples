@@ -2,134 +2,246 @@
 
 # Definitie van typografie
 
+In dit hoofdstuk geven we de definities van de huisstijl van de ontwerpstijl in Word en de Markdown versie. Wanneer de Markdown versie afwijkt van de Word versie geven we de afwijkende cijfers in het vet weer.
+
 ## Marges
 
 Maat | Word | Markdown
 ---- | ---- | --------
-boven | 20 mm |
-binnenkant | 30 mm |
-onder | 25 mm |
-buitenkant | 30 mm |
-koptekst | 25 mm vanaf bovenaan |
-voettekst | 15 mm vanaf onderaan |
+boven | 20 mm | 20 mm
+binnenkant | 30 mm | 30 mm
+onder | 25 mm | 25 mm
+buitenkant | 30 mm | 30 mm
+koptekst | 25 mm vanaf bovenkant blad | niet gedefinieerd
+voettekst | 15 mm vanaf onderkant blad |  **10 mm van onderkant tekst**
 
 ## Basisparagraaf
 
 Maat | Word | Markdown
 ---- | ---- | --------
-lettertype | Calibri |
-fontsize | 9 pt |
-gewicht | normaal |
-breedte | 150 mm |
-inspringen | 0 mm |
-uitlijnen | links |
-witruimte voor | 0 pt |
-witruimte na | 9 pt |
-regelafstand | 10.35 pt |
+kleur | zwart | zwart
+lettertype | Calibri | Calibri
+fontsize | 9 pt | 9pt
+gewicht | normaal | normaal
+inspringen | 0 mm | 0 mm
+uitlijnen | links | links
+witruimte voor | 0 pt | 0 pt
+witruimte na | 9 pt | 9 pt
+regelafstand | 1.15 | 1.15
+
+### Verwijzingen
+
+#### Intern
+
+Maat | Word | Markdown
+---- | ---- | --------
+kleur | blauw | blauw
+
+#### URL
+
+Maat | Word | Markdown
+---- | ---- | --------
+kleur | blauw | blauw
+
+#### Citatie
+
+Maat | Word | Markdown
+---- | ---- | --------
+kleur | zwart | blauw
 
 ## Koppen
 
 Enkel de afwijkingen t.o.v. de basisparagraaf worden weergegeven
 
+### Deel
+
+Maat | Word | Markdown
+---- | ---- | --------
+kleur | - | **fuchsia**
+fontsize | - | **28 pt**
+gewicht | - | **vet small caps**
+regelafstand |  | **32.2pt**
+
 ### Kop 1
 
 Maat | Word | Markdown
 ---- | ---- | --------
-fontsize | 18 pt |
-gewicht | vet all caps |
-inspringen | verkeerd om 7.6 mm |
-witruimte voor | 24 pt |
-witruimte na | 24 pt |
-regelafstand | 21.6 pt |
+kleur | fuchsia | fuchsia
+fontsize | 18 pt | 18 pt
+gewicht | vet all caps | vet all caps
+inspringen | verkeerd om 7.6 mm | verkeerd om 7.6mm
+witruimte voor | 24 pt | 24 pt^[start steeds op een nieuwe pagina]
+witruimte na | 24 pt | 24pt
+regelafstand | 21.6 pt | 21.6pt
 
 ### Kop 1 zonder nummering
 
+Het betreft de titels van voorwoord, samenvatting, inhoudstafel, ...
+
 Maat | Word | Markdown
 ---- | ---- | --------
-fontsize | 14 pt |
-gewicht | vet |
-witruimte na | 14 pt |
-regelafstand | 30 pt |
+kleur | fuchsia | fuchsia
+fontsize | 14 pt | 14pt
+gewicht | vet | vet
+witruimte na | 14 pt | 14pt
+regelafstand | 30 pt | 30 pt
 
 ### Kop 2
 
 Maat | Word | Markdown
 ---- | ---- | --------
-fontsize | 16 pt |
-gewicht | all caps |
-onderstreept | stippellijn |
-inspringen | verkeerd om 15 mm |
-witruimte voor | 10 pt |
-witruimte na | 12 pt |
-regelafstand | 20 pt |
+kleur | fuchsia | fuchsia
+fontsize | 16 pt | 16pt
+gewicht | all caps | all caps
+onderstreept | stippellijn | stippellijn
+inspringen | verkeerd om 15 mm | verkeerd om 15 mm
+witruimte voor | 10 pt | 10 pt
+witruimte na | 12 pt | 12pt
+regelafstand | 20 pt | 20pt
 
 ### Kop 3
 
 Maat | Word | Markdown
 ---- | ---- | --------
-fontsize | 12 pt |
-gewicht | vet |
-inspringen | verkeerd om 15 mm |
-witruimte voor | 10 pt |
+kleur | fuchsia | fuchsia
+fontsize | 12 pt | 12pt
+gewicht | vet | vet
+inspringen | verkeerd om 15 mm | verkeerd om 15 mm
+witruimte voor | 10 pt | 10 pt
 
 ### Kop 4
 
 Maat | Word | Markdown
 ---- | ---- | --------
-gewicht | vet |
-inspringen | verkeerd om 15 mm |
-witruimte voor | 10 pt |
+kleur | fuchsia | fuchsia
+gewicht | vet | vet
+inspringen | verkeerd om 15 mm | verkeerd om 15 mm
+witruimte voor | 10 pt | 10pt
+
+### Kop 5
+
+Maat | Word | Markdown
+---- | ---- | --------
+kleur | fuchsia | fuchsia
+inspringen | verkeerd om 17.8 mm | verkeerd om 17.8 mm
+witruimte na | 9 pt | 9pt
+
+### Kop 6
+
+Maat | Word | Markdown
+---- | ---- | --------
+kleur | fuchsia | fuchsia
+inspringen | verkeerd om 20.3 mm | verkeerd om 20.3 mm
+witruimte na | 9 pt | 9pt
 
 ## Voettekst
 
 Maat | Word | Markdown
 ---- | ---- | --------
-fontsize | 8 pt |
-paginanummers | vet |
-paginanummers | buitenkant |
-DOI | gecenteerd |
-www.inbo.be | binnenkant |
+kleur | fuchsia | fuchsia
+fontsize | 8 pt | 8 pt
+paginanummers | vet | vet
+paginanummers | buitenkant | buitenkant
+DOI | gecenteerd | gecentreerd
+www.inbo.be | binnenkant | binnenkant
 
 ## Cover
+
+In Markdown wordt de verticale indeling van de coverpagina als volgt bepaalt.
+
+1. Plaats bovenaan het verticale Nederlandstalige INBO logo 17 mm hoog.
+1. Plaats de titel
+1. Plaats 60 pt verticale witruimte
+1. Plaats de (optionele) ondertitel
+1. Plaats 30 pt vertical witruimte
+1. Plaats de auteurs
+1. Plaats 144 pt verticale witruimte
+1. Plaats de DOI en het (optionele) opdrachtnummer
+1. Verdeel de overblijvende verticale ruimte in twee. Plaats de ene helft tussen het logo en de titel. De andere helft komt onderaan de pagina.
 
 ### Titel
 
 Maat | Word | Markdown
 ---- | ---- | --------
-font | Flanders art Sans |
-fontsize | 18 pt |
-gewicht | vet all caps |
-tekenafstand | 0.25 pt verbreed |
-onderstreept | volle lijn |
-links inspringen | 10 mm |
-witruimte voor | 21 pt |
-witruimte na | 26 pt |
-regelafstand | 60 pt |
+kleur | fuchsia | fuchsia
+font | Flanders art Sans | **Calibri** (optioneel Flanders art Sans)
+fontsize | 18 pt | 18pt
+gewicht | vet all caps | vet all caps
+tekenafstand | 0.25 pt verbreed | 0.25 pt verbreed
+onderstreept | volle lijn | volle lijn
+links inspringen | 10 mm | 10 mm
+witruimte voor | 21 pt | 21pt
+witruimte na | 26 pt | 26pt
+regelafstand | 60 pt | 60 pt
 
 ### Ondertitel
 
 Maat | Word | Markdown
 ---- | ---- | --------
-fontsize | 18 pt |
-gewicht | vet |
-links inspringen | 10 mm |
-regelafstand | 30 pt |
+kleur | fuchsia | fuchsia
+fontsize | 18 pt | 18 pt
+gewicht | vet | vet
+links inspringen | 10 mm | 10 mm
+regelafstand | 30 pt | 30 pt
 
 ### Auteurs
 
 Maat | Word | Markdown
 ---- | ---- | --------
-fontsize | 12 pt |
-links inspringen | 10 mm |
-witruimte voor | 12 pt |
-witruimte na | 144 pt |
+kleur | fuchsia | fuchsia
+fontsize | 12 pt | 12 pt
+links inspringen | 10 mm | 10 mm
+witruimte voor | 12 pt | 12 pt
+witruimte na | 144 pt | 144 pt
 
 ### DOI + opdrachtnummer
 
 Maat | Word | Markdown
 ---- | ---- | --------
-links inspringen | 10 mm |
-witruimte na | 0 pt |
+kleur | fuchsia | fuchsia
+links inspringen | 10 mm | 10 mm
+witruimte na | 0 pt | 0 pt
+
+## Inhoudstafel
+
+In Markdown wordt enkel t.e.m. kop 3 in de inhoudstafel weergegeven.
+
+Maat | Word | Markdown
+---- | ---- | --------
+paginanummer | zwart | **blauw**^[om aan te geven dat het een klikbare link is]
+
+### Deel 1
+
+Maat | Word | Markdown
+---- | ---- | --------
+font size | - | **11pt**
+gewicht | | **vet**
+witruimte voor | - | **6pt**
+
+### Kop 1
+
+Maat | Word | Markdown
+---- | ---- | --------
+font size | 11 pt | 11pt
+witruimte voor | 3 pt wanneer niet identiek | **3pt** altijd
+witruimte na | 3 pt wanneer niet identiek | **0pt** altijd
+links inspringen | verkeerd om 15 mm | verkeerd om 15 mm
+
+### Kop 2
+
+Maat | Word | Markdown
+---- | ---- | --------
+witruimte voor | 3 pt wanneer niet identiek | **0pt** altijd
+witruimte na | 3 pt wanneer niet identiek | **0pt** altijd
+links inspringen | verkeerd om 15 mm | verkeerd om 15 mm
+
+### Kop 3
+
+Maat | Word | Markdown
+---- | ---- | --------
+witruimte voor | 3 pt wanneer niet identiek | **0pt** altijd
+witruimte na | 3 pt wanneer niet identiek | **0pt** altijd
+links inspringen | verkeerd om 15 mm | verkeerd om 15 mm
 
 # Kopstijlen: niveau 1: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {#h:koppen}
 
