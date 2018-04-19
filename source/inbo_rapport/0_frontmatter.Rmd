@@ -8,17 +8,30 @@
 
 # Samenvatting {-}
 
-\lipsum[80-84] Filmquiz bracht knappe ex-yogi van de wijs.
+Een uittreksel over ecologie uit [Wikipedia](https://nl.wikipedia.org/wiki/Ecologie)
+
+Ecologie (ook wel met de spelling: _oecologie_) als wetenschap is een onderdeel van biologie. De ecologie bestudeert de dynamiek van de wisselwerking tussen organismen, populaties of levensgemeenschappen (de biotische milieufactoren) en de relaties tussen organismen, populaties, levensgemeenschappen of landschappen en het niet-biologische milieu (de abiotische milieufactoren). De studie op het niveau van de soort heet ook wel autoecologie en op het niveau van de levensgemeenschap en ecosysteem heet gemeenschapsecologie of synecologie.
+
+Het woord ecologie (oorspronkelijk Duits: _Ökologie_) werd geïntroduceerd door de Duitse bioloog Ernst Haeckel in 1866, als samentrekking van de Griekse woorden _oikos_ (huishouding) en _logos_ (studie, wetenschap).
+
+In de Angelsaksische wereld werd dit _ecology_, dat daar een iets andere, meer milieukundige en mens-gerichte, betekenis kreeg. In Nederland bestaan het meer biologische oecologie en meer milieukundige ecologie naast elkaar, maar het verschil vervaagt.
+
+Het woord ecologie wordt ook gebruikt in andere betekenissen:
+
+- gerelateerd aan een beter milieu, in het bijzonder dat van de mens, 
+- meer praktisch, betreffende gedrag dat goed is voor de mens en zijn milieu en voor de natuur (zie [ecologische landbouw](https://nl.wikipedia.org/wiki/Ecologische_landbouw) en [EKO-keurmerk](https://nl.wikipedia.org/wiki/EKO-keurmerk)), 
+- gericht op een bepaalde levensbeschouwing (zie [ecologisme](https://nl.wikipedia.org/wiki/Ecologisme)).
+- betreffende omgeving of netwerk van bijvoorbeeld een bedrijf.
 
 # Aanbevelingen voor beheer en/of beleid {-}
 
 \lipsum[85-89] Filmquiz bracht knappe ex-yogi van de wijs.
 
-# Abstract {-}
+# English abstract {-}
 
 \benglish
 
-Excerpt taken from [Wikipedia](https://en.wikipedia.org/wiki/Ecology)
+Excerpt on ecology taken from [Wikipedia](https://en.wikipedia.org/wiki/Ecology)
 
 **Ecology** (from οίκος, "house", or "environment"; -λογία, "study of") is the branch of [biology](http://www.dictionary.com/browse/ecology|title=the definition of ecology|website=Dictionary.com|access-date=2018-02-20) which studies the interactions among organisms and their environment. Objects of study include interactions of organisms with each other and with abiotic components of their environment. Topics of interest include the biodiversity, distribution, biomass, and opulations of organisms, as well as cooperation and competition within and between species Ecosystems are dynamically interacting systems of organisms, the communities they make up, and the non-living components of their environment. Ecosystem processes, such as primary production, pedogenesis, nutrient cycling, and niche construction, regulate the flux of energy and matter through an environment. These processes are sustained by organisms with specific life history traits. Biodiversity means the varieties of species, genes, and ecosystems, enhances certain ecosystem services.
 
