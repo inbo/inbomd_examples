@@ -1,24 +1,20 @@
 .block {
-    background:#E5E5E5;
+    background:#FFFFFF;
     padding:10px;
     border:1px solid black;
 }
 
 .exampleblock {
-    background:#44C46E;
+    background:#E5E5E5;
     padding:10px;
     border:1px solid black;
 }
 
 .alertblock {
-    background:#C04384;
+    background:#E5E5E5;
     color:black;
     padding:10px;
     border:1px solid black;
-}
-
-a:link, a:hover, a:active, a:visited {
-    color:#C04384;
 }
 
 blockquote {
