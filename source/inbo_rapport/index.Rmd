@@ -13,10 +13,14 @@ output:
     reportnr: "Hier komt het rapportnummer"
     ordernr: "Het optionele nummer van de opdrachtgever"
   bookdown::epub_book:
-    stylesheet: "inbo_rapport.css"
+    stylesheet: 
+      - "inbo_rapport.css"
+      - "epub.css"
+    template: "inbo.epub3"
   bookdown::gitbook:
     split_by: "chapter+number"
     css: "inbo_rapport.css"
+    template: "gitbook.html"
 ---
 
 ```{r setup, include = FALSE}
