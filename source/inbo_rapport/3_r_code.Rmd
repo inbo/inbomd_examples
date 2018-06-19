@@ -166,28 +166,6 @@ kable(
 )
 ```
 
-De booktabs past een lay-out met minder lijnen toe (tabel \@ref(tab:kable-booktabs)). Nu geven we ook het gewenste aantal decimalen voor elke kolom weer. Nu past de tabel omdat we een aangepast aantal rijen en kolommen hebben gekozen.
-
-```{r kable-booktabs}
-kable(
-  genereer_tabel(40, c(4, 1), 5, 4), 
-  caption = "Booktabs output van `kable()`",
-  digits = 1:5,
-  booktabs = TRUE
-)
-```
-
-Het longtable formaat is geschikt wanneer we een tabel hebben die langer is dan op een pagina past (tabel \@ref(tab:kable-longtable)). Dit soort tabel is geen floating table. Dat wil zeggen dat ze onmiddellijk start daar waar de code ze genereert. Onderaan de pagina wordt de tabel afgebroken en op de volgende pagina opnieuw gestart. Merk op dat een te brede tabel nog steeds wordt afgebroken.
-
-```{r kable-longtable}
-kable(
-  genereer_tabel(40, c(4, 1), 4, 4), 
-  digits = 2,
-  caption = "Longtable output van `kable()`.",
-  longtable = TRUE
-)
-```
-
 Het markdown formaat is handig voor grotere tabellen met tekst. Wanneer de tekst te lang is worden de rijen over meerdere regels gespreid. Indien nodig wordt de tabel over meerdere pagina's gespreid. Het nadeel is dat je geen bijschrift kan plaatsen en er ook niet naar kan verwijzen.
 
 ```{r kable-markdown}
@@ -210,6 +188,37 @@ kable(
 ```
 
 ## Mogelijke alternatieven
+
+### Aangepaste `kable()` formaten voor pdf output
+
+
+```{block2 kable-warning, type="alertblock"}
+De argumenten hebben geen invloed over het uitzicht in de HTML versie.
+
+```
+
+
+De booktabs past een lay-out met minder lijnen toe (tabel \@ref(tab:kable-booktabs)). Nu geven we ook het gewenste aantal decimalen voor elke kolom weer. Nu past de tabel omdat we een aangepast aantal rijen en kolommen hebben gekozen.
+
+```{r kable-booktabs}
+kable(
+  genereer_tabel(40, c(4, 1), 5, 4), 
+  caption = "Booktabs output van `kable()`",
+  digits = 1:5,
+  booktabs = TRUE
+)
+```
+
+Het longtable formaat is geschikt wanneer we een tabel hebben die langer is dan op een pagina past (tabel \@ref(tab:kable-longtable)). Dit soort tabel is geen floating table. Dat wil zeggen dat ze onmiddellijk start daar waar de code ze genereert. Onderaan de pagina wordt de tabel afgebroken en op de volgende pagina opnieuw gestart. Merk op dat een te brede tabel nog steeds wordt afgebroken.
+
+```{r kable-longtable}
+kable(
+  genereer_tabel(40, c(4, 1), 4, 4), 
+  digits = 2,
+  caption = "Longtable output van `kable()`.",
+  longtable = TRUE
+)
+```
 
 ### `pandoc.table()`
 

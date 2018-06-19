@@ -9,3 +9,5 @@
 # Titel van tweede bijlage
 
 \lipsum[98-103] Filmquiz bracht knappe ex-yogi van de wijs.
+
+`r if (knitr::is_html_output()) '# Referenties {-}'`

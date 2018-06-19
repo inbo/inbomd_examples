@@ -37,17 +37,17 @@ Tabellen zijn het eenvoudigst te genereren vanuit een `R data.frame` met de func
 
 ```{r mtcars, echo = FALSE}
 kable(
-  head(mtcars[, 1:8], 10), 
+  head(mtcars[, 1:5], 10), 
   booktabs = TRUE,
   caption = 'Een tabel met de eerste 10 rijen van de `mtcars` dataset.'
 )
 ```
 
-Je kan de tabellen eveneens dynamisch weergeven met behulp van de `datatable()` functie. De HTML versie van het rapport zal dan een interactieve versie van de tabel bevatten. Hier kan de gebruiker eenvoudig zoeken, sorteren, .... Die functionaliteit is uiteraard niet beschikbaar in pdf formaat. Daarom wordt in de pdf automatisch een schermafdruk gemaakt (figuur \@ref(fig:mtcars2)).
+Je kan de tabellen eveneens dynamisch weergeven met behulp van de `datatable()` functie uit het `DT` package. De HTML versie van het rapport zal dan een interactieve versie van de tabel bevatten. Hier kan de gebruiker eenvoudig zoeken, sorteren, .... Die functionaliteit is uiteraard niet beschikbaar in pdf formaat. Daarom wordt in de pdf automatisch een schermafdruk gemaakt (figuur \@ref(fig:mtcars2)).
 
-```{r mtcars2, echo = FALSE, fig.cap = "Schermafdruk van de dynamische tabel", out.width="\\textwidth"}
+```{r mtcars2, echo = FALSE, fig.cap = "Dynamische tabel. Deze wordt automatisch vervangen door een schermafdruk bij formaten die geen dynamische inhoud kunnen weergeven.", out.width="\\textwidth"}
 datatable(
-  head(mtcars[, 1:8], 10), 
+  mtcars[, 1:5], 
   caption = 'Een dynamische tabel met de eerste 10 rijen van de `mtcars` dataset.'
 )
 ```
@@ -63,23 +63,19 @@ De afmetingen in een figuur zijn in principe gebaseerd op de afmetingen zoals ge
 - 600 pixels breed / 300 dpi = 2 inch (50,8 mm)
 - 600 pixels breed / 72 dpi = 8.33 inch (211.7 mm)
 
-Figuur \@ref(fig:koolrabi) is 4896 pixels breed en 3264 pixels hoog. Standaard gebruikt de huisstijl een resolutie van 300 dpi. De figuur wordt dan 41.5 cm breed en 27.6 cm hoog, hetgeen uiteraard niet op A4 past. Via `out.width` geven we de gewenste breedte op. Een cijfer wordt geïnterpreteerd als een afmeting in inch. Je kan ook `\\textwidth` opgeven, de textbreedte van het document (figuur \@ref(fig:koolrabi2)). De interpretatie hiervan zal afhangelijk zijn van de gebruikte stijl. Bij figuur \@ref(fig:koolrabi3) hebben we `0.5\\textwidth` of de halve tekstbreedte opgegeven.
+Figuur \@ref(fig:koolrabi) is 4896 pixels breed en 3264 pixels hoog. Standaard gebruikt de huisstijl een resolutie van 300 dpi. De figuur in de pdf wordt dan 41.5 cm breed en 27.6 cm hoog, hetgeen uiteraard niet op A4 past. In de HTML versie wordt een te grootte figuur automatisch verkleint tot de breedte van de tekst. Er zijn trukjes om de figuur in pdf automatisch te verkleinen, doch dan werkt de HTML output niet meer zo goed. De beste manier is de figuur zelf te verkleinen tot het gewenste formaat. Een bijkomend voordeel is dat de bestandsgrootte enorm verkleind. Figuur \@ref(fig:koolrabi2) geeft dezelfde foto die vooraf met externe software geschaald werd naar 1181 x 787 pixels. Dat komt overeen met 10 cm breed bij een resolutie van 300 dpi. De bestandsgrootte daalde met een factor van 2.9 MB naar 295 kB. Hierdoor wordt het finale rapport veel compacter, zowel in pdf als HTML formaat.
 
 ```{r koolrabi, fig.cap = "Koolrabi, originele afmetingen", echo = FALSE}
 include_graphics("kohlrabi-2266665.jpg")
 ```
 
-```{r koolrabi2, fig.cap = "Koolrabi, tekstbreedte", echo = FALSE, out.width="\\textwidth"}
-include_graphics("kohlrabi-2266665.jpg")
-```
-
-```{r koolrabi3, fig.cap = "Koolrabi, halve tekstbreedte", echo = FALSE, out.width="0.5\\textwidth"}
-include_graphics("kohlrabi-2266665.jpg")
+```{r koolrabi2, fig.cap = "Koolrabi, verkleind", echo = FALSE}
+include_graphics("kohlrabi-2266665-klein.jpg")
 ```
 
 ## Plaatsing van tabellen en figuren
 
-Belangrijk om weten is dat de software zelf een zo goed mogelijke plaats zoekt voor de zogenaamde floats (tabellen en figuren). Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren en tabellen zullen nooit in een volgend hoofdstuk terecht komen. Wanneer je eerst een floating tabel invoegt (bijv. table \@ref(tab:kable)) en iets later een lokale tabel (bijv. tabel \@ref(tab:kable-longtable)), dan kan het gebeuren dat de floating tabel pas na de lokale tabel getoond wordt. Het volgnummer hangt echter af van de plaatsing in de code, niet de finale plaats in het document. 
+Belangrijk om weten is dat, in het geval van het pdf formaat, de software zelf een zo goed mogelijke plaats zoekt voor de zogenaamde floats (tabellen en figuren). Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren en tabellen zullen nooit in een volgend hoofdstuk terecht komen. Wanneer je eerst een floating tabel invoegt (bijv. table \@ref(tab:kable)) en iets later een lokale tabel (bijv. tabel \@ref(tab:kable-longtable)), dan kan het gebeuren dat de floating tabel pas na de lokale tabel getoond wordt. Het volgnummer hangt echter af van de plaatsing in de code, niet de finale plaats in het document. 
 
 De beste optie om hier iets aan te doen, is te zorgen voor voldoende tekst ;-). Als het probleem zich enkel lokaal voordoet kan je op die plaats volgende code opnemen.
 
@@ -87,7 +83,7 @@ De beste optie om hier iets aan te doen, is te zorgen voor voldoende tekst ;-). 
 \FloatBarrier
 ```
 
-Op dat moment worden eerst alle hangende figuren en tabellen geplaatst vooraleer verder te gaan met de tekst. Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke _section_ (kop 2). Je kan dit ook doen met _subsection_ (kop 3) en _subsubsection_ (kop 4). Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen.
+Op dat moment worden eerst alle hangende figuren en tabellen geplaatst vooraleer verder te gaan met de tekst. Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke _section_ (kop 2). Je kan dit ook doen met _subsection_ (kop 3) en _subsubsection_ (kop 4). Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen. `\FloatBarrier` heeft enkel invloed op de pdf versie van het rapport.
 
 # Wiskundige formules {#h:formules}
 
