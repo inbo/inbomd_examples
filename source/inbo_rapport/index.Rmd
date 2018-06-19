@@ -1,32 +1,58 @@
 --- 
 title: "Voorbeeldrapport met INBOmd"
-author: "Thierry Onkelinx"
-date: "`r Sys.Date()`"
+author: 
+  - 
+    name: "Thierry Onkelinx"
+    email: "thierry.onkelinx@inbo.be"
 site: bookdown::bookdown_site
+link-citations: TRUE
 bibliography: ../INBOmd.bib
 header-includes: \usepackage{lipsum}
 github-repo: "inbo/inbomd-examples"
+subtitle: "Dit is de versie met delen"
+reportnr: "Hier komt de DOI van het rapport"
+ordernr: "Het optionele nummer van de opdrachtgever"
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_rapport
-    subtitle: "Dit is de versie met delen"
-    reportnr: "Hier komt het rapportnummer"
-    ordernr: "Het optionele nummer van de opdrachtgever"
-  bookdown::epub_book:
-    stylesheet: 
-      - "inbo_rapport.css"
-      - "epub.css"
-    template: "inbo.epub3"
   bookdown::gitbook:
     split_by: "chapter+number"
-    css: "inbo_rapport.css"
-    template: "gitbook.html"
+    template: !expr INBOmd::inbo_rapport_css("html")
+  bookdown::epub_book:
+    stylesheet: "css/inbo_rapport.css"
+    template: !expr INBOmd::inbo_rapport_css("epub")
 ---
 
 ```{r setup, include = FALSE}
 library(knitr)
-library(DT)
+opts_chunk$set(
+  echo = TRUE, 
+  eval = TRUE,
+  cache = FALSE,
+  dpi = 300,
+  fig.width = 150 / 25.4,
+  fig.height = 100 / 25.4,
+  warning = TRUE,
+  error = TRUE,
+  message = TRUE
+)
 library(ggplot2)
 library(INBOtheme)
-theme_set(theme_inbo(base_size = 8))
+if (opts_knit$get("rmarkdown.pandoc.to") == "html") {
+  theme_set(
+    theme_inbo(
+      base_family = "Calibri", # "Flanders Art Sans",
+      base_size = 12
+    )
+  )
+} else {
+  opts_chunk$set(dev = "cairo_pdf")
+  theme_set(
+    theme_inbo(
+      base_family = "Calibri", # "Flanders Art Sans",
+      base_size = 8
+    )
+  )
+}
+library(DT)
 ```
