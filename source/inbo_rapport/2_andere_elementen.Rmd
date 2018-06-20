@@ -1,5 +1,3 @@
-# (PART) Andere elementen {-}
-
 # Kruisverwijzigingen {#h:kruisverwijzing}
 
 ## Interne kruisverwijzingen
