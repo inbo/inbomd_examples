@@ -21,7 +21,7 @@ We kunnen de URL tevens achter een link tekst plaatsen bv [Google](http://google
 
 Voetnoten^[Filmquiz bracht knappe ex-yogi van de wijs.] zijn eenvoudig toe te voegen^[\lipsum[94] Filmquiz bracht knappe ex-yogi van de wijs.]. Je voegt `^[gewenste voetnoot tekst]` in op de plaats waar een voetnoot dient te verschijnen.
 
-Terugkerende voetnoten kun je een label geven en éénmalig in de broncode definiëren.[^yogi] Je kunt ze dan verschillende keren[^yogi] gebruiken.
+Terugkerende voetnoten kun je een label geven en éénmalig in de broncode definiëren.[^yogi] Je kunt ze dan verschillende keren[^yogi] gebruiken. Let wel: er wordt telkens een nieuwe voetnoot met een nieuw nummer aangemaakt.
 
 [^yogi]: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
 

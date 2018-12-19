@@ -38,18 +38,17 @@ opts_chunk$set(
 )
 library(ggplot2)
 library(INBOtheme)
-if (opts_knit$get("rmarkdown.pandoc.to") == "html") {
-  theme_set(
-    theme_inbo(
-      base_family = "Calibri", # "Flanders Art Sans",
-      base_size = 12
-    )
+theme_set(
+  theme_inbo(
+    base_family = "Flanders Art Sans", # "Calibri",
+    base_size = 12
   )
-} else {
+)
+if (!interactive() && opts_knit$get("rmarkdown.pandoc.to") != "html") {
   opts_chunk$set(dev = "cairo_pdf")
   theme_set(
     theme_inbo(
-      base_family = "Calibri", # "Flanders Art Sans",
+      base_family = "Flanders Art Sans", # "Calibri",
       base_size = 8
     )
   )
