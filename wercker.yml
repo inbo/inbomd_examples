@@ -5,6 +5,7 @@ build:
         code: |
           Rscript -e 'devtools::install_github("inbo/INBOmd")' \
           export TEXMFHOME=/usr/local/lib/R/site-library/INBOmd/local_tex
+          Rscript -e 'tinytex::tlmgr_conf(c("auxtrees", "add", system.file("local_tex", package = "INBOmd")))'
           Rscript source/render_all.R
 
 deploy:
