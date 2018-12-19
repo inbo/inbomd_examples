@@ -7,7 +7,7 @@ setwd("inbo_rapport")
 rmarkdown::render_site(encoding = "UTF-8")
 
 # inbo rapport basic
-setwd("../inbo_rapport_basic")
+setwd("../inbo_rapport_delen")
 rmarkdown::render_site(encoding = "UTF-8")
 
 # flanders slides

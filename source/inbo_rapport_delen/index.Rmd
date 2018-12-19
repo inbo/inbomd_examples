@@ -9,12 +9,14 @@ link-citations: TRUE
 bibliography: ../INBOmd.bib
 header-includes: \usepackage{lipsum}
 github-repo: "inbo/inbomd-examples"
-subtitle: "Dit is de standaardversie"
+subtitle: "Dit is de versie met een aantal alternatieven"
 reportnr: "Hier komt de DOI van het rapport"
 ordernr: "Het optionele nummer van de opdrachtgever"
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_rapport
+    lof: FALSE
+    lot: FALSE
   bookdown::gitbook:
     split_by: "chapter+number"
     template: !expr INBOmd::inbo_rapport_css("html")
@@ -38,17 +40,18 @@ opts_chunk$set(
 )
 library(ggplot2)
 library(INBOtheme)
-theme_set(
-  theme_inbo(
-    base_family = "Flanders Art Sans", # "Calibri",
-    base_size = 12
+if (opts_knit$get("rmarkdown.pandoc.to") == "html") {
+  theme_set(
+    theme_inbo(
+      base_family = "Calibri", # "Flanders Art Sans",
+      base_size = 12
+    )
   )
-)
-if (!interactive() && opts_knit$get("rmarkdown.pandoc.to") != "html") {
+} else {
   opts_chunk$set(dev = "cairo_pdf")
   theme_set(
     theme_inbo(
-      base_family = "Flanders Art Sans", # "Calibri",
+      base_family = "Calibri", # "Flanders Art Sans",
       base_size = 8
     )
   )
