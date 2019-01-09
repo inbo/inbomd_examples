@@ -17,6 +17,7 @@ output:
     base_format: INBOmd::inbo_rapport
     lof: FALSE
     lot: FALSE
+    floatbarrier: section
   bookdown::gitbook:
     split_by: "chapter+number"
     template: !expr INBOmd::inbo_rapport_css("html")

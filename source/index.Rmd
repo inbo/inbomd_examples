@@ -22,6 +22,7 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
         - geen klikbare referenties
         - geen lijst met figuren
         - geen lijst met tabellen
+        - zwevende elementen blijven binnen hun sectie
     - [PDF](inbo_rapport_basic/inbo_rapport_basic.pdf) versie
     - [HTML](inbo_rapport_basic/dankwoord.html) versie
     - [EPUB](inbo_rapport_basic/inbo_rapport_basic.epub) versie
