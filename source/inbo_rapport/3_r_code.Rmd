@@ -218,6 +218,10 @@ kable(
 )
 ```
 
+### Het `kableExtra` package
+
+`kableExtra` biedt de mogelijkheid om het uitzicht van `kable()` tabellen aan te passen. Je kan in een zelfde commando zowel het HTML als pdf formaat aanpassen. In plaats van hier een beperkt aantal voorbeelden te geven, verwijzen we liever naar de uitgebreide vignettes van `kableExtra`. Ze hebben een vignette voor [HTML output](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) en [pdf output](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_pdf.pdf).
+
 ### `pandoc.table()`
 
 `pandoc.table()` komt uit het `pander` package.
