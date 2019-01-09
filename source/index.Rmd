@@ -4,7 +4,7 @@ author: "Thierry Onkelinx"
 output: 
   html_document:
     css: 
-      - https://www.inbo.be/sites/all/themes/bootstrap_inbo/css/style.css
+      - !expr gsub("/gitbook.html$", "/inbo_rapport.css", INBOmd::inbo_rapport_css("html"))
       - extra.css
 ---
 
@@ -17,7 +17,6 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
 - alternatief INBO rapport ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/inbo_rapport_delen))
     - extra's
         - delen (groepeert hoofdstukken)
-        - bijlage met definitie van stijlen
         - bijlage met koppen met extreem lange nummers
     - verschillen
         - geen klikbare referenties
