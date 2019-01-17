@@ -3,7 +3,6 @@ title: "Voorbeeldslides met INBOmd"
 author: "Thierry Onkelinx"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-header-includes: \usepackage{lipsum}
 bibliography: ../INBOmd.bib
 output:
   bookdown::pdf_book:
@@ -23,6 +22,7 @@ library(DT)
 library(ggplot2)
 library(INBOtheme)
 theme_set(theme_inbo(6, transparent = "plot"))
+library(lipsum)
 ```
 
 # Opties
@@ -78,11 +78,11 @@ slide_level
 - Te lange tekst loopt gewoon verder buiten de afmetingen van de slide
 - Dus niet automatisch verkleind zoals in PowerPoint
 
-\lipsum[9-10]
+`r paragraph(1:2)`
 
 ### Slide met veel tekst automatisch splitsen {.allowframebreaks}
 
 - Met   `{.allowframebreaks}` achter de titel laat je lange slides automatisch over meerdere slides uitsplitsen
 - Er wordt automatisch een volgnummer (Romeins cijfer) aan de slidetitel toegevoegd
 
-\lipsum[9-10]
+`r paragraph(1:2)`

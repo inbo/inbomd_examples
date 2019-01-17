@@ -1,78 +1,72 @@
-# Kopstijlen: niveau 1: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {#h:koppen}
+# Kopstijlen: niveau 1: `r sentence(words = 20)` {#h:koppen}
 
-\lipsum[1-3] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
-## Niveau 2: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+## Niveau 2: `r sentence(words = 20)`
 
-\lipsum[4-6] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
-### Niveau 3: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+### Niveau 3: `r sentence(words = 20)`
 
-\lipsum[7-10] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
-#### Niveau 4: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+#### Niveau 4: `r sentence(words = 20)`
 
-\lipsum[10-12] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
-##### Niveau 5: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+##### Niveau 5: `r sentence(words = 20)`
 
-\lipsum[13-15] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
-###### Niveau 6: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+###### Niveau 6: `r sentence(words = 20)`
 
-\lipsum[16-18] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
-# Kopstijlen zonder nummer: niveau 1: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {- #h:koppen-zonder-nummer}
+# Kopstijlen zonder nummer: niveau 1: `r sentence(words = 20)` {- #h:koppen-zonder-nummer}
 
-\lipsum[19] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
-## Niveau 2: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+## Niveau 2: `r sentence(words = 20)` {-}
 
-\lipsum[20] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
-### Niveau 3: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+### Niveau 3: `r sentence(words = 20)` {-}
 
-\lipsum[21] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
-#### Niveau 4: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
+#### Niveau 4: `r sentence(words = 20)` {-}
 
-\lipsum[22-23] Filmquiz bracht knappe ex-yogi van de wijs.
-
-##### Niveau 5: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
-
-\lipsum[24] Filmquiz bracht knappe ex-yogi van de wijs.
-
-###### Niveau 6: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. {-}
-
-\lipsum[25] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 3)`
 
 # Lettertypes
 
+In dit hoofdstuk tonen we de verschillende lettertypes en hun vormen. Deels om te tonen hoe ze er uitzien, deels om eventuele problemen op te sporen met bepaalde tekens.
+
 ## Normaal
 
-\lipsum[26] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 1)`
 
 ## Vet
 
-**\lipsum[27] Filmquiz bracht knappe ex-yogi van de wijs.**
+**`r paragraph(n = 1)`**
 
 ## Cursief
 
-_\lipsum[28] Filmquiz bracht knappe ex-yogi van de wijs._
+_`r paragraph(n = 1)`_
 
 ## Vet en cursief
 
-_**\lipsum[29] Filmquiz bracht knappe ex-yogi van de wijs.**_
+_**`r paragraph(n = 1)`**_
 
 ## Met vaste tekenbreedte
 
-\texttt{\lipsum[30] Filmquiz bracht knappe ex-yogi van de wijs.}
+```{r echo = FALSE, results = "asis"}
+cat("`", paragraph(), "`", sep = "")
+```
 
-`Filmquiz bracht knappe ex-yogi van de wijs.`
-
-**`Filmquiz bracht knappe ex-yogi van de wijs.`**
-
-**`Filmquiz`** `bracht knappe ex-yogi van de` **`wijs`**.
+```{r echo = FALSE, results = "asis"}
+cat("**`", paragraph(), "`**", sep = "")
+```
 
 80 karakters passen in de breedte van de pdf
 
@@ -161,7 +155,7 @@ met vaste tekenbreedte:
 
 ## Ongeordende lijsten
 
-- \lipsum[31] Filmquiz bracht knappe ex-yogi van de wijs.
+- `r paragraph()`
 - Item 2
 - Item 3
     - Item a
@@ -169,56 +163,56 @@ met vaste tekenbreedte:
         - item II
             - item A
             - item B
-            - \lipsum[32] Filmquiz bracht knappe ex-yogi van de wijs.
-        - \lipsum[33] Filmquiz bracht knappe ex-yogi van de wijs.
-    - \lipsum[34] Filmquiz bracht knappe ex-yogi van de wijs.
+            - `r paragraph()`
+        - `r paragraph()`
+    - `r paragraph()`
     - Item c
 - Item 4
 
 ## Genummerde lijsten
 
-1. \lipsum[35] Filmquiz bracht knappe ex-yogi van de wijs.
+1. `r paragraph()`
 1. Item 2
 1. Item 3
     1. Item a
         1. item I
         1. item II
-            1. \lipsum[36] Filmquiz bracht knappe ex-yogi van de wijs.
+            1. `r paragraph()`
             1. item B
             1. item C
-        1. \lipsum[37] Filmquiz bracht knappe ex-yogi van de wijs.
-    1. \lipsum[38] Filmquiz bracht knappe ex-yogi van de wijs.
+        1. `r paragraph()`
+    1. `r paragraph()`
     1. Item c
 1. Item 4
 
 ## Lijsten met definities
 
 Item A
-  ~ \lipsum[39] Filmquiz bracht knappe ex-yogi van de wijs.
+  ~ `r paragraph()`
   
 Longer item title B
-  ~ \lipsum[40] Filmquiz bracht knappe ex-yogi van de wijs.
+  ~ `r paragraph()`
   
     Item B1
-      ~ \lipsum[41] Filmquiz bracht knappe ex-yogi van de wijs.
+      ~ `r paragraph()`
 
         Item B1a
-          ~ \lipsum[42] Filmquiz bracht knappe ex-yogi van de wijs.
+          ~ `r paragraph()`
 
         Item B1b
-          ~ \lipsum[43] Filmquiz bracht knappe ex-yogi van de wijs.
+          ~ `r paragraph()`
 
             Item B1b1
-              ~ \lipsum[44] Filmquiz bracht knappe ex-yogi van de wijs.
+              ~ `r paragraph()`
               
     Item B2
-      ~ \lipsum[45] Filmquiz bracht knappe ex-yogi van de wijs.
+      ~ `r paragraph()`
 
 Item C
-  ~ \lipsum[46] Filmquiz bracht knappe ex-yogi van de wijs.
+  ~ `r paragraph()`
   
 Item D
-  ~ \lipsum[47] Filmquiz bracht knappe ex-yogi van de wijs.
+  ~ `r paragraph()`
 
 ## Lijsten mengen
 
@@ -244,50 +238,85 @@ Item D
 
 # Kaders
 
-\lipsum[48] Filmquiz bracht knappe ex-yogi van de wijs.
+De eenvoudigste manier om kaders in te voegen in RStudio is in de werkbalk het drop-down menu "Addins" te kiezen. Vervolgens kies je in de lijst onder "INBOmd" `insert "block"` (standaard kader), `insert "exampleblock"` (kader met voorbeeld) `insert "alertblock"` (kader met waarschuwing).
 
 ## Standaard kader
 
+`r paragraph(n = 1)`
+
+(ref:block) `r paragraph()`
+
 ```{block2, type = "block"}
-\lipsum[49] Filmquiz bracht knappe ex-yogi van de wijs.
+(ref:block)
+
 ```
 
-\lipsum[50-51] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph()`
+
+(ref:block2a) `r paragraph()`
+
+(ref:block2b) `r paragraph()`
+
 
 ```{block2, type = "block", latex.options = "{Optionele titel van het kader}"}
-\lipsum[52-53] Filmquiz bracht knappe ex-yogi van de wijs.
+(ref:block2a)
+
+(ref:block2b)
+
 ```
 
 ## Kader met voorbeeld
   
-\lipsum[54] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 2)`
+
+(ref:exampleblock) `r paragraph()`
 
 ```{block2, type = "exampleblock"}
-\lipsum[55] Filmquiz bracht knappe ex-yogi van de wijs.
+(ref:exampleblock)
+
 ```
 
-\lipsum[56-58] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 2)`
+
+(ref:exampleblock2a) `r paragraph()`
+
+(ref:exampleblock2b) `r paragraph()`
 
 ```{block2, type = "exampleblock", latex.options = "{Optionele titel van het kader}"}
-\lipsum[59-60] Filmquiz bracht knappe ex-yogi van de wijs.
+(ref:exampleblock2a)
+
+(ref:exampleblock2b)
+
 ```
 
 ## Kader met waarschuwing
+  
+`r paragraph(n = 2)`
 
-\lipsum[61] Filmquiz bracht knappe ex-yogi van de wijs.
+(ref:alterblock) `r paragraph()`
 
 ```{block2, type = "alertblock"}
-\lipsum[62] Filmquiz bracht knappe ex-yogi van de wijs.
+(ref:alterblock)
+
 ```
 
-\lipsum[63] Filmquiz bracht knappe ex-yogi van de wijs.
+`r paragraph(n = 1)`
+
+(ref:alterblock2a) `r paragraph()`
+
+(ref:alterblock2b) `r paragraph()`
 
 ```{block2, type = "alertblock", latex.options = "{Optionele titel van het kader}"}
-\lipsum[64-65] Filmquiz bracht knappe ex-yogi van de wijs.
+(ref:alterblock2a)
+
+(ref:alterblock2b)
+
 ```
 
-\lipsum[66] Filmquiz bracht knappe ex-yogi van de wijs.
+(ref:alterblock3) `r paragraph()`
+
 
 ```{block2, type = "alertblock"}
-\lipsum[67-68] Filmquiz bracht knappe ex-yogi van de wijs.
+(ref:alterblock3)
+
 ```
