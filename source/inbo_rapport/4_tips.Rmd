@@ -4,7 +4,27 @@ Bij de omzetting van Markdown naar pdf wordt gebruik gemaakt van [LaTeX](https:/
 
 ## Nieuwe pagina forceren
 
-Door `\pagebreak` te plaatsen forceer je de start van een nieuwe pagina op deze plaats. Dit kan handig zijn in de uitzonderlijke gevallen dat de pagina's niet helemaal goed gezet worden. Je gebruikt dit best enkel in de finale versie van je document.
+Door `\pagebreak` te plaatsen forceer je de start van een nieuwe pagina op deze plaats. Gebruik dit enkel wanneer je altijd een nieuwe pagina wilt starten en niet om tekst samen te houden.
+
+## Tekst samenhouden
+
+Standaard mag een nieuwe pagina starten voor een kop maar niet na een kop. Op die manier wordt een kop samengehouden met de eerst volgende paragraaf. Stel dat je een kop 2, een kop 3 en dan gewone tekst hebt. De kop 3 en de eerste regels van de gewone tekst worden samengehouden. Tussen kop 2 en kop 3 heb je twee conflicterende regels. Enerzijds laat kop 2 geen nieuwe pagina toe na zichzelf, terwijl kop 3 een nieuw pagina toelaat voor zichzelf. Uiteindelijk wint het toelaten van de nieuwe pagina omdat de pagina's dan optimaler gevuld worden. Met als gevolg dat kop 2 onderaan de pagina staat en kop 3 bovenaan de nieuwe pagina.
+
+Als dergelijk situatie zich voordoet kan je het `\needspace` commando gebruiken. Dit commando meet hoeveel plaats er nog overblijft onderaan de pagina, gemeten op het punt waar je het commando plaatst. Deze verticale ruimte wordt vergeleken met de waarde die je opgeeft in het commando. Is die ruimte te klein, dan wordt een nieuwe pagina gestart. Hieronder vind je een concreet voorbeeld.
+
+```markdown
+Een paragraaf
+
+\needspace{50mm}
+
+## Een kop 2
+
+### Een kop 3
+
+De eerste paragraaf onder kop 3
+```
+
+\needspace{50mm}
 
 ## Problemen met zwevende figuren en tabellen
 
