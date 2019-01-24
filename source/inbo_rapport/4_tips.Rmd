@@ -1,0 +1,77 @@
+# Lay-out tips voor pdf
+
+Bij de omzetting van Markdown naar pdf wordt gebruik gemaakt van [LaTeX](https://nl.wikipedia.org/wiki/LaTeX), software speciaal gemaakt voor het zetten van wetenschappelijke documenten. Meestal werk dit zeer goed. Soms gaat het de mist in. Vooral in situatie wanneer het aandeel tekst klein is in vergelijking met andere elementen zoals figuren en tabellen. Dit kan een indicatie zijn dat je te weinig tekst of te veel figuren hebt ;-)
+
+## Nieuwe pagina forceren
+
+Door `\pagebreak` te plaatsen forceer je de start van een nieuwe pagina op deze plaats. Gebruik dit enkel wanneer je altijd een nieuwe pagina wilt starten en niet om tekst samen te houden.
+
+## Tekst samenhouden
+
+Standaard mag een nieuwe pagina starten voor een kop maar niet na een kop. Op die manier wordt een kop samengehouden met de eerst volgende paragraaf. Stel dat je een kop 2, een kop 3 en dan gewone tekst hebt. De kop 3 en de eerste regels van de gewone tekst worden samengehouden. Tussen kop 2 en kop 3 heb je twee conflicterende regels. Enerzijds laat kop 2 geen nieuwe pagina toe na zichzelf, terwijl kop 3 een nieuw pagina toelaat voor zichzelf. Uiteindelijk wint het toelaten van de nieuwe pagina omdat de pagina's dan optimaler gevuld worden. Met als gevolg dat kop 2 onderaan de pagina staat en kop 3 bovenaan de nieuwe pagina.
+
+Als dergelijk situatie zich voordoet kan je het `\needspace` commando gebruiken. Dit commando meet hoeveel plaats er nog overblijft onderaan de pagina, gemeten op het punt waar je het commando plaatst. Deze verticale ruimte wordt vergeleken met de waarde die je opgeeft in het commando. Is die ruimte te klein, dan wordt een nieuwe pagina gestart. Hieronder vind je een concreet voorbeeld.
+
+```markdown
+Een paragraaf
+
+\needspace{50mm}
+
+## Een kop 2
+
+### Een kop 3
+
+De eerste paragraaf onder kop 3
+```
+
+\needspace{50mm}
+
+## Problemen met zwevende figuren en tabellen
+
+### Foutmelding: "too many unprocessed floats"
+
+Je document bevat een hoofdstuk met heel veel zwevende figuren of tabellen die nog niet gezet worden. Dit treedt meestal op wanneer je meer dan 20 zwevende objecten hebt in een hoofdstuk. De truck is een `\FloatBarrier` plaatsen. Dit forceert dat eerst alle nog zwevende objecten gezet worden voor dat de rest van de tekst gezet wordt. 
+
+### Zwevende figuur of tabel wordt in de volgende sectie geplaatst
+
+LaTeX gaat zelf op zoek naar de optimale plaats om een zwevende figuur (of tabel) te plaatsen. Ideaal is dat vlakbij het punt waar je de figuur in de tekst geplaatst hebt. Wanneer je voldoende tekst hebt is dat meestal geen probleem. Is je figuur nogal groot of plaats je verschillende figuren vlak bij elkaar, dan gaat LaTeX opzoek naar een geschikte plaats verder in het document. Hierdoor kan het gebeuren dat de figuur in een volgende (sub)sectie terecht komt. Als je een `\FloatBarrier` toevoegt voor de nieuwe sectie begint, dan dwing je LaTeX om eerst alle nog zwevende elementen te plaatsen voor dat de volgende sectie gezet wordt.
+
+### Automatische `\FloatBarrier`
+
+Alle zwevende elementen bij INBOmd blijven steeds binnen het hoofdstuk waarin ze gedefinieerd zijn. Je kan dit strenger instellen door in de `yaml` de optie `floatbarrier: section` toe te voegen. Dit is equivalent met het manueel plaatsen van een  `\FloatBarrier` voor elke kop van niveau 2 of hoger (`#` en `##`). Andere opties zijn `floatbarrier: subsection` en `floatbarrier: subsubsection` die staan voor respectievelijk kop 3 (`#`, `##` en `###`) en kop 4 (`#`, `##`, `###` en `####`).
+
+## Foutmelding bij het gebruik van `%` in bijschriften.
+
+`%` wordt gebruikt als commentaarteken in LaTeX. In gewone tekst kan Markdown daar mee zonder problemen overweg, maar in bijschriften moet een kleine omweg gebruiken. Je moet deze truck ook gebruiken als je Markdown formattering wilt gebruiken in bijschriften.
+
+````markdown
+Een gewone paragraaf.
+
+(ref:mijn-label) Een 100% **cool** `bijschrift`
+
+`r ''````{r mijn-label, fig.cap='(ref:mijn-label)'}
+plot(cars)  # jouw grafiek
+```
+````
+
+## Gebruik van markdown syntax of quotes in onderlijnde koppen
+
+Het onderlijnen van koppen stuurt de regelafbreking in de war wanneer extra opmaak wordt gebruikt. De beste oplossing zou zijn om geen onderlijning te gebruiken. Onderlijnen wordt echter opgelegd in de generieke huisstijl van de Vlaamse overheid.
+
+## Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._ **Ut tempor laoreet quam.**
+
+#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._ **Ut tempor laoreet quam.**
+
+## Disserendi artem nullam habuit. 'Etiam fringilla \break faucibus augue.' `Nullam laoreet fermentum urna.` \break _Fusce dignissim facilisis tortor._ \break **Ut tempor laoreet quam.**
+
+#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` \break _Fusce dignissim facilisis tortor._ **Ut tempor laoreet quam.**
+
+Je kan het probleem op drie manieren omzeilen:
+
+1. Gebruik een titel die op 1 lijn past
+1. Gebruik enkel standaard tekst. Dus geen opmaak of quotes.
+1. Definiëer regeleindes handmatig met het \\break commando. Deze oplossing werkt overigens niet altijd even goed in combinatie met vette tekst. Anderzijds hoort het al dan niet vet zijn bij de definitie van de huisstijl en hoor je dat als auteurs niet te gebruiken in een kop.
+
+## _Fusce dignissim facilisis tortor._
+
+#### _Fusce dignissim facilisis tortor._

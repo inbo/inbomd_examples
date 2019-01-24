@@ -19,11 +19,11 @@ We kunnen de URL tevens achter een link tekst plaatsen bv [Google](http://google
 
 ## Extra formattering
 
-Voetnoten^[Filmquiz bracht knappe ex-yogi van de wijs.] zijn eenvoudig toe te voegen^[\lipsum[94] Filmquiz bracht knappe ex-yogi van de wijs.]. Je voegt `^[gewenste voetnoot tekst]` in op de plaats waar een voetnoot dient te verschijnen.
+Voetnoten^[`r paragraph()`] zijn eenvoudig toe te voegen^[`r sentence()`]. Je voegt `^[gewenste voetnoot tekst]` in op de plaats waar een voetnoot dient te verschijnen.
 
 Terugkerende voetnoten kun je een label geven en éénmalig in de broncode definiëren.[^yogi] Je kunt ze dan verschillende keren[^yogi] gebruiken. Let wel: er wordt telkens een nieuwe voetnoot met een nieuw nummer aangemaakt.
 
-[^yogi]: Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+[^yogi]: `r sentence()`
 
 Tekst in onderschrift krijgt je door een `~` te plaatsen voor en achter de tekst die in onderschrift moet komen. Bijvoorbeeld: `H~2~SO~4~` wordt H~2~SO~4~. Bovenschrift krijg je op een gelijkaardige manier door `^` te gebruiken. Bij voorbeeld `Fe^2+^` wordt Fe^2+^. Als alternatief kan je ook wiskundige formules^[Zie hoofdstuk \@ref(h:formules)] gebruiken. Bijvoorbeeld: `$H_2SO_4$` wordt $H_2SO_4$ en `$Fe^{2+}$` wordt $Fe^{2+}$. Je kan ook dingen doen als `$^3_2He$` ($^3_2He$) terwijl `^3^~2~He` (^3^~2~He) niet het gewenste resultaat geeft.
 

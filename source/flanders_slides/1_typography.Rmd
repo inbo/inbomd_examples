@@ -4,23 +4,25 @@
 
 ### Normal font
 
-\lipsum[1]
+`r paragraph()`
 
 ### Italic font
 
-_\lipsum[2]_
+_`r paragraph()`_
 
 ### Bold font
 
-**\lipsum[3]**
+**`r paragraph()`**
 
 ### Bold and italic font
 
-**_\lipsum[4]_**
+**_`r paragraph()`_**
 
 ### Fixed width font
 
-\texttt{\lipsum[5]}
+```{r echo = FALSE, results = "asis"}
+cat("`", paragraph(), "`", sep = "")
+```
 
 ### Available number of characters
 
@@ -189,18 +191,27 @@ Item D
 
 ### Default frame
 
+(ref:block) `r paragraph()`
+
 ```{block2, type = "block", latex.options = "{Title of the default frame}"}
-\lipsum[6]
+(ref:block)
+
 ```
 
 ### Frame with example
   
+(ref:exampleblock) `r paragraph()`
+  
 ```{block2, type = "exampleblock", latex.options = "{Title of the example frame}"}
-\lipsum[7]
+(ref:exampleblock)
+
 ```
 
 ### Frame with alert
 
+(ref:alertblock) `r paragraph()`
+
 ```{block2, type = "alertblock", latex.options = "{Title of the alert frame}"}
-\lipsum[8]
+(ref:alertblock)
+
 ```

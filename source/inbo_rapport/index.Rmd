@@ -7,7 +7,6 @@ author:
 site: bookdown::bookdown_site
 link-citations: TRUE
 bibliography: ../INBOmd.bib
-header-includes: \usepackage{lipsum}
 github-repo: "inbo/inbomd-examples"
 subtitle: "Dit is de standaardversie"
 reportnr: "Hier komt de DOI van het rapport"
@@ -37,13 +36,14 @@ opts_chunk$set(
   message = TRUE
 )
 library(ggplot2)
-library(INBOtheme)
+library(INBOtheme) # remotes::install_github("inbo/INBOtheme")
 theme_set(
   theme_inbo(
     base_family = "Flanders Art Sans", # "Calibri",
     base_size = 12
   )
 )
+library(lipsum) # remotes::install_github("inbo/lipsum")
 if (!interactive() && opts_knit$get("rmarkdown.pandoc.to") != "html") {
   opts_chunk$set(dev = "cairo_pdf")
   theme_set(
@@ -54,4 +54,5 @@ if (!interactive() && opts_knit$get("rmarkdown.pandoc.to") != "html") {
   )
 }
 library(DT)
+set.seed(201901017)
 ```

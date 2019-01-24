@@ -4,23 +4,25 @@
 
 ### Normaal lettertype
 
-\lipsum[1]
+`r paragraph()`
 
 ### Cursief lettertype
 
-_\lipsum[2]_
+_`r paragraph()`_
 
 ### Vet lettertype
 
-**\lipsum[3]**
+**`r paragraph()`**
 
 ### Vet en cursief lettertype
 
-**_\lipsum[4]_**
+**_`r paragraph()`_**
 
 ### Lettertype met vaste tekenbreedte
 
-\texttt{\lipsum[5]}
+```{r echo = FALSE, results = "asis"}
+cat("`", paragraph(), "`", sep = "")
+```
 
 ### Beschikbaar aantal karakters
 
@@ -89,20 +91,20 @@ met vaste tekenbreedte:
 ### Ongeordende lijsten
 
 - Eerste niveau
-- Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+- `r sentence(n = 3)` 
 - Item 3
     - Tweede niveau
         - Derde niveau
         - Drie niveaus is het maximum
-        - Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
-    - Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+        - `r sentence(n = 3)`
+    - `r sentence(n = 3)`
     - Item c
 - Item 4
 
 ### Ongeordende lijsten incrementeel weergeven
 
 > - Eerste niveau
-> - Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+> - `r sentence(n = 3)`
 > - Item 3
 >     - Tweede niveau
 >         - Derde niveau
@@ -115,26 +117,26 @@ met vaste tekenbreedte:
 ### Genummerde lijsten
 
 1. Eerste niveau
-1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+1. `r sentence(n = 3)` 
 1. Item 3
     1. Tweede niveau
         1. Derde niveau
         1. Drie niveaus is het maximum
-        1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
-    1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+        1. `r sentence(n = 3)` 
+    1. `r sentence(n = 3)` 
     1. Item c
 1. Item 4
 
 ### Genummerde lijsten incrementeel weergeven
 
 > 1. Eerste niveau
-> 1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+> 1. `r sentence(n = 3)` 
 > 1. Item 3
 >     1. Tweede niveau
 >         1. Derde niveau
 >         1. Drie niveaus is het maximum
->         1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
->     1. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+>         1. `r sentence(n = 3)` 
+>     1. `r sentence(n = 3)` 
 >     1. Item c
 > 1. Item 4
 
@@ -153,13 +155,13 @@ Een item met een lange titel
           ~ Drie niveaus is het maximum
 
         Een item met een lange titel
-          ~ Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs.
+          ~ `r sentence(n = 3)` 
 
     Een item met een lange titel
-      ~ Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs
+      ~ `r sentence(n = 3)` 
 
 Item C
-  ~ Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. Filmquiz bracht knappe ex-yogi van de wijs. 
+  ~ `r sentence(n = 3)` 
   
 Item D
   ~ Definitie van D
@@ -189,18 +191,27 @@ Item D
 
 ### Standaard kader
 
+(ref:block) `r paragraph()`
+
 ```{block2, type = "block", latex.options = "{Titel van het standaardkader}"}
-\lipsum[6]
+(ref:block)
+
 ```
 
 ### Kader met voorbeeld
   
+(ref:exampleblock) `r paragraph()`
+  
 ```{block2, type = "exampleblock", latex.options = "{Titel van het voorbeeldkader}"}
-\lipsum[7]
+(ref:exampleblock)
+
 ```
 
 ### Kader met waarschuwing
 
+(ref:alertblock) `r paragraph()`
+
 ```{block2, type = "alertblock", latex.options = "{Titel van het waarschuwingskader}"}
-\lipsum[8]
+(ref:alertblock)
+
 ```
