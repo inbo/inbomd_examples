@@ -1,42 +1,61 @@
-# Kopstijlen: niveau 1: `r sentence(words = 20)` {#h:koppen}
+```{r generate_header, echo = FALSE}
+header <- function(words = 4, format = FALSE) {
+  sprintf(
+    ifelse(
+      format,
+      "%s '%s' `%s` _%s_ **%s**",
+      "%s %s %s %s %s"
+    ),
+    sentence(words = words),
+    sentence(words = words),
+    sentence(words = words),
+    sentence(words = words),
+    sentence(words = words)
+  )
+}
+```
+
+# Kopstijlen: niveau 1: `r header(4)` {#h:koppen}
 
 `r paragraph(n = 3)`
 
-## Niveau 2: `r sentence(words = 20)`
+## Niveau 2: `r header(4)`
 
 `r paragraph(n = 3)`
 
-### Niveau 3: `r sentence(words = 20)`
+### Niveau 3: `r header(4)`
 
 `r paragraph(n = 3)`
 
-#### Niveau 4: `r sentence(words = 20)`
+#### Niveau 4: `r header(5)`
 
 `r paragraph(n = 3)`
 
-##### Niveau 5: `r sentence(words = 20)`
+##### Niveau 5: `r header(4)`
 
 `r paragraph(n = 3)`
 
-###### Niveau 6: `r sentence(words = 20)`
+###### Niveau 6: `r header(4)`
 
 `r paragraph(n = 3)`
 
-# Kopstijlen zonder nummer: niveau 1: `r sentence(words = 20)` {- #h:koppen-zonder-nummer}
+# Kopstijlen zonder nummer: niveau 1: `r header(4)` {- #h:koppen-zonder-nummer}
 
 `r paragraph(n = 3)`
 
-## Niveau 2: `r sentence(words = 20)` {-}
+## Niveau 2: `r header(4)` {-}
 
 `r paragraph(n = 3)`
 
-### Niveau 3: `r sentence(words = 20)` {-}
+### Niveau 3: `r header(4)` {-}
 
 `r paragraph(n = 3)`
 
-#### Niveau 4: `r sentence(words = 20)` {-}
+#### Niveau 4: `r header(5)` {-}
 
 `r paragraph(n = 3)`
+
+Ongenummerde koppen hebben maximaal niveau 4
 
 # Lettertypes
 

@@ -53,3 +53,25 @@ Een gewone paragraaf.
 plot(cars)  # jouw grafiek
 ```
 ````
+
+## Gebruik van markdown syntax of quotes in onderlijnde koppen
+
+Het onderlijnen van koppen stuurt de regelafbreking in de war wanneer extra opmaak wordt gebruikt. De beste oplossing zou zijn om geen onderlijning te gebruiken. Onderlijnen wordt echter opgelegd in de generieke huisstijl van de Vlaamse overheid.
+
+## Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._ **Ut tempor laoreet quam.**
+
+#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._ **Ut tempor laoreet quam.**
+
+## Disserendi artem nullam habuit. 'Etiam fringilla \break faucibus augue.' `Nullam laoreet fermentum urna.` \break _Fusce dignissim facilisis tortor._ \break **Ut tempor laoreet quam.**
+
+#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` \break _Fusce dignissim facilisis tortor._ **Ut tempor laoreet quam.**
+
+Je kan het probleem op drie manieren omzeilen:
+
+1. Gebruik een titel die op 1 lijn past
+1. Gebruik enkel standaard tekst. Dus geen opmaak of quotes.
+1. Definiëer regeleindes handmatig met het \\break commando. Deze oplossing werkt overigens niet altijd even goed in combinatie met vette tekst. Anderzijds hoort het al dan niet vet zijn bij de definitie van de huisstijl en hoor je dat als auteurs niet te gebruiken in een kop.
+
+## _Fusce dignissim facilisis tortor._
+
+#### _Fusce dignissim facilisis tortor._
