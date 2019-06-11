@@ -3,7 +3,6 @@
 .RData
 .Ruserdata
 docs
-*.Rproj
 *_files
 *.log
 *.nav
