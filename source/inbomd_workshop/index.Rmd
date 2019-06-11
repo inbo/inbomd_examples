@@ -166,16 +166,16 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
 ## Add a caption
 
 - Plain text caption without special characters (`%`, `_`)
-  - Chunk option: `fig.cap = "Place your caption here"`
+    - Chunk option: `fig.cap = "Place your caption here"`
 - Special characters or Markdown syntax
-  - Use text references
-  - Outside of chunk: 
-      - `(ref:label) This figure caption _works_ 100%!`
-      - Must be a single line
-      - At least 1 blank line above and below
-  - Chunk option: `fig.cap = "(ref:label)"`
-  - `label` must be a unique name in the document
-  - Pro tip: use the chunk name as `label`
+    - Use text references
+    - Outside of chunk: 
+        - `(ref:label) This figure caption _works_ 100%!`
+        - Must be a single line
+        - At least 1 blank line above and below
+    - Chunk option: `fig.cap = "(ref:label)"`
+    - `label` must be a unique name in the document
+    - Pro tip: use the chunk name as `label`
 
 # Tables in bookdown
 
