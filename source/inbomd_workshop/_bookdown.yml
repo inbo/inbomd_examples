@@ -1,0 +1,3 @@
+book_filename: "inbomd_workshop.Rmd"
+output_dir: "../../docs/inbomd_workshop"
+delete_merged_file: TRUE
