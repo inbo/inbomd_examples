@@ -9,6 +9,7 @@ output:
     toc: FALSE
     slide_level: 2
     theme: inboenglish
+    lang: english
     flandersfont: TRUE
     cover: e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
     cover_horizontal: FALSE
@@ -61,8 +62,8 @@ if (interactive()) {
 update.packages(ask = FALSE, checkBuilt = TRUE)
 if (length(find.package("tinytex", quiet = TRUE)) == 0) {
   install.packages("tinytex")
+  tinytex::install_tinytex()
 }
-tinytex::install_tinytex()
 ```
 
 - `tinytex` is only required for pdf output
@@ -241,6 +242,7 @@ cat("```
 - `My sentence with a footnote^[footnote text].` 
 - My sentence with a footnote^[footnote text].
 - Use `[^footnote-label]: footnote text` to define the footnote in a separate paragraph[^example].
+    - `[^example]: This an example of a reusable footnote.`
 - These footnotes are reusable[^example].
     - Note that reusing a footnote[^example] adds a copy of the footnote.
 
