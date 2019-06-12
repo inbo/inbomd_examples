@@ -1,0 +1,382 @@
+--- 
+title: "Creating a report using INBOmd"
+author: "Thierry Onkelinx"
+site: bookdown::bookdown_site
+bibliography: ../INBOmd.bib
+output:
+  bookdown::pdf_book:
+    base_format: INBOmd::inbo_slides
+    toc: FALSE
+    slide_level: 2
+    theme: inboenglish
+    lang: english
+    flandersfont: TRUE
+    cover: e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
+    cover_horizontal: FALSE
+---
+
+```{r setup, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  dev = "cairo_pdf"
+)
+library(tidyverse)
+library(INBOtheme)
+if (interactive()) {
+  theme_set(
+    theme_inbo(
+      base_family = "Calibri", # "Flanders Art Sans",
+      base_size = 12, 
+      transparent = "plot"
+    )
+  )
+} else {
+  theme_set(
+    theme_inbo(
+      base_family = "Calibri", # "Flanders Art Sans",
+      base_size = 6, 
+      transparent = "plot"
+    )
+  )
+  update_geom_defaults("text", list(size = 3))
+}
+```
+
+## Where to find documentation
+
+- Documention on `INBOmd`
+    - https://inbomd.netlify.com
+- Example code using `INBOmd` 
+    - https://inbomd-examples.netlify.com/
+    - Do have a look at our [tips and tricks for the pdf version](https://inbomd-examples.netlify.com/inbo_rapport/13-lay-out-tips-voor-pdf.html)
+- `bookdown`: Authoring Books and Technical Documents with R Markdown
+    - https://bookdown.org/yihui/bookdown/
+- R Markdown: The Definitive Guide 
+    - https://bookdown.org/yihui/rmarkdown/
+    
+# Install requirements
+
+## Install `tinytex`
+
+```{r eval = FALSE}
+update.packages(ask = FALSE, checkBuilt = TRUE)
+if (length(find.package("tinytex", quiet = TRUE)) == 0) {
+  install.packages("tinytex")
+  tinytex::install_tinytex()
+}
+```
+
+- `tinytex` is only required for pdf output
+- `tinytex` is not compatible with MikTeX, uninstall MikTeX first
+
+## Install `INBOmd`
+
+```{r eval = FALSE}
+if (length(find.package("remotes", quiet = TRUE)) == 0) {
+  install.packages("remotes")
+}
+remotes::install_github("inbo/INBOmd", dependencies = TRUE)
+# setup for tinytex
+tinytex::tlmgr_install(c(
+  'inconsolata', 'times', 'tex', 'helvetic', 'dvips'
+))
+tinytex::tlmgr_conf(
+  c("auxtrees", "add", system.file("local_tex", package = "INBOmd"))
+)
+tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
+```
+
+# Getting started
+
+## Important things to known about bookdown
+
+- There must be at least a file named `index.Rmd`
+    - This contains the YAML header
+    - It must contain at least one header 1 (`#`)
+    - Pro tip: place your summary or introduction in `index.Rmd`
+- You can split long documents over multiple `.Rmd` files
+    - Add only a YAML to the `index.Rmd`
+    - All `.Rmd` files will be glued into a single `.Rmd` when rendering the document
+        - Except files starting with `_`
+        - Their order: `index.Rmd` + other files in alphabethical order
+    - Pro tip: start the filenames with a number indicating the order
+    
+## Starting a new document
+
+- Open RStudio
+- Choose File > New File > R Markdown
+- Select 'From Template' and select 'INBO rapport'
+- Enter the `name` for your report, select its main directory and press 'OK'
+    - This creates `name/name.Rmd` in the selected directory
+    - Rename `name/name.Rmd` to `name/index.Rmd` in the `Files` window of RStudio
+- Choose File > New Project > Existing directory, select `name` and press 'Create project'
+- Open `_bookdown.yml` in this project and update `book_filename` and `output_dir`
+- Open `index.Rmd` in this project and update the YAML header
+
+## Coverting an existing RMarkdown document
+
+- Start a new Bookdown document
+- Copy-paste the relevant code from the existing document to the new document
+
+- Try this using your own RMarkdown document
+
+## The `setup` chunk
+
+- The `setup` chunk is the best location to load packages
+- `opts_chunk$set()` defines the default options for each chunk
+    - You can override these in an individual chunk
+    - `fig.width` and `fig.height` are defined in inches
+        - `fig.width = 150 / 25.4` defines the plot width to be 150 mm (5.91 in)
+- `theme_set()` and `interactive()`
+    - Sets a default INBO theme for ggplot2
+    - pdf output uses a smaller font size for the ggplot2 graphics
+    - You can use the Flanders Art Sans font if it is installed on your computer
+
+## Building the report
+
+- Use the `Build Book` button instead of the `Knit` button
+    - You can find this button in the same window as `Environment` and `History`
+- Open the dropdown menu to select the required output format
+    - Defaults to **all** formats listed in the YAML
+    - Pro tip: select a **single** format while working on the document
+    
+- Try this with your first Bookdown document
+
+# Figures in bookdown
+
+## Figure basics
+
+### Chunk setup
+
+- One plot = one chunk
+- Give the chunk a relevant name
+    - Only alphanumeric characters (a-z, A-Z, 0-9), slashes (/), or dashes (-)
+    - Chunk names must be unique
+
+### Reference a figure
+
+- Syntax: `\@ref(fig:the-chunk-name)`
+- This will render the figure number and a hyperlink to the caption
+- Works only if the figure has a caption
+
+### Add an external figure
+
+- Create an R chunk
+- Add `knitr::include_graphics("path-to-figure.png")`
+
+## Add a caption
+
+- Plain text caption without special characters (`%`, `_`)
+    - Chunk option: `fig.cap = "Place your caption here"`
+- Special characters or Markdown syntax
+    - Use text references
+    - Outside of chunk: 
+        - `(ref:label) This figure caption _works_ 100%!`
+        - Must be a single line
+        - At least 1 blank line above and below
+    - Chunk option: `fig.cap = "(ref:label)"`
+    - `label` must be a unique name in the document
+    - Pro tip: use the chunk name as `label`
+
+# Tables in bookdown
+
+## Tables
+
+- Chunk setup identical to chunk setup for figures
+- First try `knitr::kable()` to generate the table
+    - See [examples](https://inbomd-examples.netlify.com/inbo_rapport/7-figuren-en-tabellen.html#tabellen) on the INBOmd website
+    - Improve formatting with `kableExtra`
+- `knitr::kable(caption = "My table caption")`
+    - Text references `(ref:label)` are possible too
+- Reference the table with `\@ref(tab:the-chunk-name)`
+
+# Citing literature
+
+## Setting up the YAML
+
+- Add `bibliography: your-bibliography.bib` to the YAML header
+    - Must have `.bib` extention
+    - Name contains only letters, digits and dash (`-`)
+- Must be in bibtex format
+- Add the code below to add a title for the references in HTML or EPUB (not necessary for PDF)
+
+
+```{r reference, results='asis', echo = FALSE}
+cat("```
+`r if (knitr::is_html_output()) '# References {-}'`
+```")
+```
+
+## Inserting citations manually
+
+- `[@bibtex-key]` for the notation with parantheses [@Agresti2002]
+- `@bibtex-key` for the notation without parantheses @Amano2012
+- Use a semi-colon to separate citations
+    - `[@bibtex-key; @bibtex-key2; @bibtex-key3]` [@BanerjeeEtal2003; @BlauwdrukVogels]
+- Create a sensible key for each reference in your bibliography
+    - Key must contain only letters, digits, dashed and colons
+    - Edit the bibliography using RStudio or JabRef
+
+## Inserting citations using `citr` addin
+
+- `install.packages("citr")`
+- Go to "Addins" in the RStudio toolbar
+- Select "CITR", "Insert citations" 
+- Search and select the references you want
+- Insert the citations
+
+## Using Zotero through `citr` addin
+
+- Install "Zotero"" and "Better bibtex" plugin
+- Start Zotero
+- Go to "Addins" in the RStudio toolbar
+- Select "CITR", "Insert citations" 
+- Connect to Zotero
+- Go to "Settings" tab
+- Add references to local bibliography file
+
+# Miscellaneous
+
+## Footnotes
+
+- `My sentence with a footnote^[footnote text].` 
+- My sentence with a footnote^[footnote text].
+- Use `[^footnote-label]: footnote text` to define the footnote in a separate paragraph[^example].
+    - `[^example]: This an example of a reusable footnote.`
+- These footnotes are reusable[^example].
+    - Note that reusing a footnote[^example] adds a copy of the footnote.
+
+[^example]: This an example of a reusable footnote.
+
+
+## Equations
+
+- Equations are based on [LaTeX code](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
+- [Online editor](https://www.codecogs.com/latex/eqneditor.php)
+- Code between single `$` results in an inline equation $\sum_{i=1}^nx_i$
+- Code between double `$` results in a stand alone equation $$\sum_{i=1}^nx_i$$
+- Code between `\begin{equation}` and `\end{equation}` and with a label `(\#eq:sum)` is stand alone and numbered
+
+\begin{equation}
+  \sum_{i=1}^nx_i
+  (\#eq:sum)
+\end{equation}
+
+## Cross references
+
+- Figures: `\@ref(fig:chunk-name)`
+- Tables: `\@ref(tab:chunk-name)`
+- Equations: `\@ref(eq:equation-label)`
+- Headings
+    - Label the heading by adding `(#my-label)` at the end
+    - `\@ref(my-label)`
+    - Pro-tip: use a prefix to indicate the heading level
+        - `# Introduction (#ch:introduction)`
+        - `## Conclusion (#s:executive-conclusion)`
+
+## Boxes
+
+- Open the dropdown menu 'Addins' for the RStudio toolbar
+- Look for the INBOmd package[^example]
+- Choose insert 'block', insert 'alertblock' or insert 'exampleblock'
+- Boxes can have an optional title
+    - Works only with pdf output!
+
+## Adding introduction chapters
+
+- Add ` {-}` at the end of the header to make it an unnumbered header
+- For pdf only
+    - Place `\mainmatter` at the position where the table of contents should go
+    - The default language is Dutch
+        - Place English text between `\benglish` and `\eenglish`
+        - Place French text between `\bfrench` and `\efrench`
+
+```markdown
+# Voorwoord {-}
+
+\benglish
+
+# English abstract {-}
+
+\eenglish
+
+\mainmatter
+```
+
+## Adding appendices
+
+For pdf only
+
+- Insert `\appendix`
+- The bibliography will be placed before the appendices
+- Chapters in the appendix get letters instead of numbers
+
+Other output formats ignore `\appendix` 
+
+- The bibliography will be placed at the end of the document
+- Appendix chapters will get a continuing number
+
+# Using templates within a document
+
+## `knit_expand` concept
+
+- Create a template with template tags
+- Create Rmarkdown through find and replace the template tags with a value
+- Repeat for each value
+- Combine and knit the resulting Rmarkdown
+
+## Creating the template
+
+- Start by creating a regular Rmarkdown subdocument
+- Use a name starting with underscore (`_`)
+- Create a template tag by placing it between double curly brackets `{{` and `}}`.
+- Pro tips:
+    - Use a single template tag
+    - Use that single template tag to select relevant data
+    - Add the template tag to the chunk to create unique chunk names
+
+## Example template
+
+```{r echo = FALSE}
+title <- "## `r selection$title[1]`"
+plot_template <- '```{r mt-{{id}}-plot, fig.cap = selection$caption[1]}
+ggplot(selection, aes(x = year, y = value)) + geom_point()
+```'
+```
+
+````markdown
+`r ''````{r mt-{{id}}-setup}
+if (interactive()) {
+  this_id <- sample(mt$id, 1)
+} else {
+  this_id <- "{{id}}"
+}
+selection <- filter(mt, id == this_id)
+```
+
+`r title`
+
+`r plot_template`
+````
+
+## Handle the template
+
+- Chunk option `results` must be "asis"
+- Call `knit_expand()` on each value of the template tag
+    - The example will replace every `{{id}}` from the template with a value from `to_do`
+- `knit_expand()` only does the 'find and replace'
+- `knit()` actually runs the Rmarkdown code created by `knit_expand()`
+
+````markdown
+`r ''````{r display-monthly-totals, results = "asis"}
+to_do <- unique(mt$id)
+rmd <- sapply(
+  to_do, 
+  function(id) {
+    knit_expand("_monthly_totals.Rmd", id = id)
+  }
+)
+rmd <- paste(collapse = "\n\n")
+cat(knit(text = rmd, quiet = TRUE))
+```
+````

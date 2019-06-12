@@ -32,4 +32,9 @@ file.rename(
   "../../docs/inbo_slides/inbo_slides_rapport.pdf"
 )
 rmarkdown::render_site(encoding = "UTF-8")
+
+# INBOmd workshop
+setwd("../inbomd_workshop")
+rmarkdown::render_site(encoding = "UTF-8")
+
 setwd("../..")
