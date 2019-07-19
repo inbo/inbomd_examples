@@ -1,0 +1,110 @@
+# Cross references {#h:kruisverwijzing}
+
+## Internal cross references
+
+- heading (\@ref(h:kruisverwijzing), \@ref(s:figuur-invoegen))
+- table (\@ref(tab:mtcars))
+- figure (\@ref(fig:koolrabi2))
+- equations (\@ref(eq:som)^[Equations number get round braces by default. See §\@ref(s:formule-nummer)])
+
+## External references
+
+http://www.inbo.be
+
+mailto:nobody@inbo.be. 
+
+[Google](http://google.be)
+
+[e-mail](mailto:nobody@inbo.be)
+
+# Figures and tables
+
+## Tables
+
+```{r mtcars, echo = FALSE}
+kable(
+  head(mtcars[, 1:5], 10), 
+  booktabs = TRUE,
+  caption = 'First 10 rows of the `mtcars` dataset.'
+)
+```
+
+```{r mtcars2, echo = FALSE, fig.cap = "Dynamic table. Will be replaced by a screenshot in case of static format.", out.width="\\textwidth"}
+datatable(
+  mtcars[, 1:5], 
+  caption = 'First 10 rows of the `mtcars` dataset.'
+)
+```
+
+
+## Static figure {#s:figuur-invoegen}
+
+```{r koolrabi2, fig.cap = "Figure caption", echo = FALSE}
+include_graphics("kohlrabi-2266665-klein.jpg")
+```
+
+# Equations {#h:formules}
+
+## Inline equations
+
+Inline equation fit within the paragraph. 
+E.g. $P(y < Y|\theta) = \alpha$. 
+This works OK with short equations.
+More complex, taller equation will altered to minize their height, e.g. $\bar{X} = \sum_{i = 1}^NX_i$. 
+$i = 1$ and $N$ are placed beside $\sum$ instead of above it. 
+This doesn't work with even taller equations like breaks, e.g. $\frac{X}{Y}$. 
+In this case the font size is decreased.
+Complex equations like $\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}$ require a larger interline distance.
+A stand alone equations is a better solution for complex equations.
+
+## Stand alone equations
+
+$$P(y < Y|\theta) = \alpha$$
+
+$$\bar{X} = \sum_{i = 1}^NX_i$$
+
+$$\frac{X}{Y}$$
+
+$$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
+
+## Numberd equations {#s:formule-nummer}
+
+\begin{equation}
+  \bar{X} = \sum_{i = 1}^NX_i
+  (\#eq:som)
+\end{equation}
+
+\begin{equation}
+  \frac{X}{Y}
+\end{equation}
+
+\begin{equation}
+  \frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}
+\end{equation}
+
+# Citing literature
+
+## In-lijn style
+
+- @BlauwdrukVleermuizen
+- [@BlauwdrukVleermuizen]
+- [zie @BlauwdrukVleermuizen, hoofdstuk 1]
+- [@BlauwdrukVleermuizen; @Onkelinx2014a]
+
+book
+  ~ [@Agresti2002; @DiggleRibeiro2007; @ZuurEtal2009; @Bolker2008; @Kish_1965; @BanerjeeEtal2003; @franklin_mapping_2009]
+
+chapter
+  ~ [@Degraer2013a; @BlauwdrukVogels; @BlauwdrukVleermuizen]
+
+proceedings
+  ~ [@Onkelinx2014a; @Onkelinx2012]
+
+article
+  ~ [@Amano2012; @VanderMijnsbrugge2005; @R-reshape; @Yli-Viikari2007]
+
+thesis
+  ~ [@MaStatThesis]
+  
+software
+  ~ [@R-3.0.1]

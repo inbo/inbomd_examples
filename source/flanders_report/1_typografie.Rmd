@@ -1,0 +1,318 @@
+```{r generate_header, echo = FALSE}
+header <- function(words = 4, format = FALSE) {
+  sprintf(
+    ifelse(
+      format,
+      "%s '%s' `%s` _%s_ **%s**",
+      "%s %s %s %s %s"
+    ),
+    sentence(words = words),
+    sentence(words = words),
+    sentence(words = words),
+    sentence(words = words),
+    sentence(words = words)
+  )
+}
+```
+
+# Headings: level 1: `r header(4)` {#h:koppen}
+
+`r paragraph(n = 3)`
+
+## Level 2: `r header(4)`
+
+`r paragraph(n = 3)`
+
+### Level 3: `r header(4)`
+
+`r paragraph(n = 3)`
+
+#### Level 4: `r header(5)`
+
+`r paragraph(n = 3)`
+
+##### Level 5: `r header(4)`
+
+`r paragraph(n = 3)`
+
+###### Level 6: `r header(4)`
+
+`r paragraph(n = 3)`
+
+# Heading with number: level 1: `r header(4)` {- #h:koppen-zonder-nummer}
+
+`r paragraph(n = 3)`
+
+## Level 2: `r header(4)` {-}
+
+`r paragraph(n = 3)`
+
+### Level 3: `r header(4)` {-}
+
+`r paragraph(n = 3)`
+
+#### Level 4: `r header(5)` {-}
+
+`r paragraph(n = 3)`
+
+Unnumbered headers are available from level 1 until 4.
+
+# Fonts
+
+This chapters displayes the different fonts and their shapes.
+Partly to visualise them, partly to highlight problems with specific combinations of characters.
+
+## Normal
+
+`r paragraph(n = 1)`
+
+## Bold
+
+**`r paragraph(n = 1)`**
+
+## Italics
+
+_`r paragraph(n = 1)`_
+
+## Bold italics
+
+_**`r paragraph(n = 1)`**_
+
+## Fixed width font
+
+```{r echo = FALSE, results = "asis"}
+cat("`", paragraph(), "`", sep = "")
+```
+
+```{r echo = FALSE, results = "asis"}
+cat("**`", paragraph(), "`**", sep = "")
+```
+
+80 characters fit within the margins of the pdf
+
+`12345678911234567892123456789312345678941234567895123456789612345678971234567898`
+
+**`12345678911234567892123456789312345678941234567895123456789612345678971234567898`**
+
+100 characer no longer fit on the pdf page
+
+`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`
+
+**`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`**
+
+## Lowercase L versus uppercase i
+
+normal:
+  ~ lI
+
+bold:
+  ~ **lI**
+  
+italics:
+  ~ _lI_
+
+bold italics:
+  ~ **_lI_**
+
+fixed width:
+  ~ `lI` **`lI`**
+
+## Uppercase O versus digit 0
+
+normal:
+  ~ O0
+
+bold:
+  ~ **O0**
+  
+italics:
+  ~ _O0_
+
+bold italics:
+  ~ **_O0_**
+
+fix width font:
+  ~ `O0` **`O0`**
+
+## Special characters
+  
+### Normal
+
+€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
+
+### Bold
+**€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
+
+### Italics
+_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
+
+### Bold italics
+**_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
+  
+### Fixed width font
+`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
+
+**`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
+
+## Quotes
+
+normal:
+  ~ "double", 'single'
+
+bold:
+  ~ **"double", 'single'**
+
+italics:
+  ~ _"double", 'single'_
+
+bold italics:
+  ~ **_"double", 'single'_**
+
+fix width font:
+  ~ `"double", 'single',` **`"double", 'single',`**
+
+# Lists
+
+## Unordered list
+
+- `r paragraph()`
+- Item 2
+- Item 3
+    - Item a
+        - item I
+        - item II
+            - item A
+            - item B
+            - `r paragraph()`
+        - `r paragraph()`
+    - `r paragraph()`
+    - Item c
+- Item 4
+
+## Numbered list
+
+1. `r paragraph()`
+1. Item 2
+1. Item 3
+    1. Item a
+        1. item I
+        1. item II
+            1. `r paragraph()`
+            1. item B
+            1. item C
+        1. `r paragraph()`
+    1. `r paragraph()`
+    1. Item c
+1. Item 4
+
+## Definition list
+
+Item A
+  ~ `r paragraph()`
+  
+Longer item title B
+  ~ `r paragraph()`
+  
+    Item B1
+      ~ `r paragraph()`
+
+        Item B1a
+          ~ `r paragraph()`
+
+        Item B1b
+          ~ `r paragraph()`
+
+            Item B1b1
+              ~ `r paragraph()`
+              
+    Item B2
+      ~ `r paragraph()`
+
+Item C
+  ~ `r paragraph()`
+  
+Item D
+  ~ `r paragraph()`
+
+# Boxes
+
+## Default box
+
+`r paragraph(n = 1)`
+
+(ref:block) `r paragraph()`
+
+```{block2, type = "block"}
+(ref:block)
+
+```
+
+`r paragraph()`
+
+(ref:block2a) `r paragraph()`
+
+(ref:block2b) `r paragraph()`
+
+
+```{block2, type = "block", latex.options = "{Optional box title}"}
+(ref:block2a)
+
+(ref:block2b)
+
+```
+
+## Example box
+  
+`r paragraph(n = 2)`
+
+(ref:exampleblock) `r paragraph()`
+
+```{block2, type = "exampleblock"}
+(ref:exampleblock)
+
+```
+
+`r paragraph(n = 2)`
+
+(ref:exampleblock2a) `r paragraph()`
+
+(ref:exampleblock2b) `r paragraph()`
+
+```{block2, type = "exampleblock", latex.options = "{Optional title of the box}"}
+(ref:exampleblock2a)
+
+(ref:exampleblock2b)
+
+```
+
+## Alert box
+  
+`r paragraph(n = 2)`
+
+(ref:alterblock) `r paragraph()`
+
+```{block2, type = "alertblock"}
+(ref:alterblock)
+
+```
+
+`r paragraph(n = 1)`
+
+(ref:alterblock2a) `r paragraph()`
+
+(ref:alterblock2b) `r paragraph()`
+
+```{block2, type = "alertblock", latex.options = "{Optional title of the box}"}
+(ref:alterblock2a)
+
+(ref:alterblock2b)
+
+```
+
+(ref:alterblock3) `r paragraph()`
+
+
+```{block2, type = "alertblock"}
+(ref:alterblock3)
+
+```

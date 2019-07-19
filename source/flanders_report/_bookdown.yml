@@ -1,0 +1,4 @@
+book_filename: "flanders_report"
+output_dir: "../../docs/flanders_report"
+delete_merged_file: TRUE
+edit: https://github.com/inbo/inbomd_examples/edit/master/source/vlaanderen_rapport/%s

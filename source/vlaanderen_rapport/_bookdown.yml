@@ -1,0 +1,24 @@
+book_filename: "vlaanderen_rapport"
+output_dir: "../../docs/vlaanderen_rapport"
+delete_merged_file: TRUE
+edit: https://github.com/inbo/inbomd_examples/edit/master/source/vlaanderen_rapport/%s
+rmd_files:
+  - "index.Rmd"
+  - "../inbo_rapport/0_frontmatter.Rmd"
+  - "../inbo_rapport/1_typografie.Rmd"
+  - "../inbo_rapport/2_andere_elementen.Rmd"
+  - "../inbo_rapport/3_r_code.Rmd"
+  - "../inbo_rapport/z_bijlage.Rmd"
+language:
+  label:
+    fig: 'Figuur '
+    tab: 'Tabel '
+    eq: 'Vergelijking '
+    thm: 'Theorema '
+    lem: 'Lemma '
+    def: 'Definitie '
+    cor: 'Gevolgtrekking '
+    prp: 'Bewering '
+    ex: 'Voorbeeld '
+    proof: 'Bewijs. '
+    remark: 'Opmerking. '
