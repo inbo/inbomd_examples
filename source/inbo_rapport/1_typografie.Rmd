@@ -257,7 +257,7 @@ Item D
 
 # Kaders
 
-De eenvoudigste manier om kaders in te voegen in RStudio is in de werkbalk het drop-down menu "Addins" te kiezen. Vervolgens kies je in de lijst onder "INBOmd" `insert "block"` (standaard kader), `insert "exampleblock"` (kader met voorbeeld) `insert "alertblock"` (kader met waarschuwing).
+De eenvoudigste manier om kaders in te voegen in RStudio is in de werkbalk het drop-down menu "Addins" te kiezen. Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader), _insert "exampleblock"_ (kader met voorbeeld)  _insert "alertblock"_ (kader met waarschuwing).
 
 ## Standaard kader
 

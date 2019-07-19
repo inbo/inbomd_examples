@@ -17,6 +17,7 @@ output:
     base_format: INBOmd::inbo_rapport
     lof: FALSE
     lot: FALSE
+    tocdepth: 4
     floatbarrier: section
   bookdown::gitbook:
     split_by: "chapter+number"
@@ -39,6 +40,8 @@ opts_chunk$set(
   error = TRUE,
   message = TRUE
 )
+library(lipsum) # remotes::install_github("inbo/lipsum")
+library(DT)
 library(ggplot2)
 library(INBOtheme) # remotes::install_github("inbo/INBOtheme")
 theme_set(
@@ -47,7 +50,6 @@ theme_set(
     base_size = 12
   )
 )
-library(lipsum) # remotes::install_github("inbo/lipsum")
 if (!interactive() && opts_knit$get("rmarkdown.pandoc.to") != "html") {
   opts_chunk$set(dev = "cairo_pdf")
   theme_set(
@@ -57,6 +59,5 @@ if (!interactive() && opts_knit$get("rmarkdown.pandoc.to") != "html") {
     )
   )
 }
-library(DT)
 set.seed(20190117)
 ```
