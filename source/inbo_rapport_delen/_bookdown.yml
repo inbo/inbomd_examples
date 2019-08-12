@@ -12,6 +12,8 @@ rmd_files:
   - "../inbo_rapport/4_tips.Rmd"
   - "bijlage.Rmd"
   - "../inbo_rapport/z_bijlage.Rmd"
+  - "referenties.Rmd"
+delete_merged_file: TRUE
 output_dir: "../../docs/inbo_rapport_delen"
 edit: https://github.com/inbo/inbomd_examples/edit/master/source/inbo_rapport_delen/%s
 language:

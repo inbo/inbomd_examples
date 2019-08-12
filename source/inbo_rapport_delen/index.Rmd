@@ -7,7 +7,6 @@ author:
 site: bookdown::bookdown_site
 link-citations: TRUE
 bibliography: ../INBOmd.bib
-header-includes: \usepackage{lipsum}
 github-repo: "inbo/inbomd-examples"
 subtitle: "Dit is de versie met een aantal alternatieven"
 reportnr: "Hier komt de DOI van het rapport"
@@ -19,6 +18,7 @@ output:
     lot: FALSE
     tocdepth: 4
     floatbarrier: section
+    citation_package: none
   bookdown::gitbook:
     split_by: "chapter+number"
     template: !expr INBOmd::inbo_rapport_css("html")
