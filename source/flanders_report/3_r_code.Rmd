@@ -55,7 +55,7 @@ ggplot(
 
 ## Floating figure
 
-```{r movie, fig.cap= "Distribution of esophageal cancer inIlle-et-Villaine, France.", message = FALSE}
+```{r movie, fig.cap= "Distribution of esophageal cancer in Ille-et-Villaine, France.", message = FALSE}
 ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + 
   geom_histogram() + 
   facet_wrap(~agegp, scales = "free")

@@ -21,7 +21,8 @@ header <- function(words = 4, format = FALSE) {
 
 ## Niveau 2: `r header(4)`
 
-Automatische woordafbreking werkt niet bij niveau 2 naar pdf formaat. Dit wordt veroorzaakt door de opgelegde onderlijning. Manuele woordafbreking lukt uiteraard wel, maar zorgt voor een vreemde output bij andere formaten (gitbook en epub). De beste manier om dit probleem te omzeilen is te zorgen voor korte titels of door lange woorden te vermijden.
+Automatische woordafbreking werkt niet bij niveau 2 naar pdf formaat. 
+Zie sectie \@ref(s:onderlijnd).
 
 `r paragraph(n = 3)`
 
@@ -31,7 +32,8 @@ Automatische woordafbreking werkt niet bij niveau 2 naar pdf formaat. Dit wordt 
 
 #### Niveau 4: `r header(5)`
 
-Automatische woordafbreking werkt evenmin bij niveau 4 naar pdf formaat. Het probleem is hier minder zichtbaar omdat de woorden korter zijn door het kleinere lettertype. Hierdoor staat er meer woorden op een regel. Meer woorden impliceert meer horizontale witruimte tussen de woorden. Hetgeen LaTeX meer speelruimte geeft om de witruimte groter of kleiner te maken.
+Automatische woordafbreking werkt niet bij niveau 4 naar pdf formaat. 
+Zie sectie \@ref(s:onderlijnd).
 
 `r paragraph(n = 3)`
 
@@ -63,7 +65,8 @@ Ongenummerde koppen hebben maximaal niveau 4
 
 # Lettertypes
 
-In dit hoofdstuk tonen we de verschillende lettertypes en hun vormen. Deels om te tonen hoe ze er uitzien, deels om eventuele problemen op te sporen met bepaalde tekens.
+In dit hoofdstuk tonen we de verschillende lettertypes en hun vormen. 
+Deels om te tonen hoe ze er uitzien, deels om eventuele problemen op te sporen met bepaalde tekens.
 
 ## Normaal
 
@@ -261,7 +264,8 @@ Item D
 
 # Kaders
 
-De eenvoudigste manier om kaders in te voegen in RStudio is in de werkbalk het drop-down menu "Addins" te kiezen. Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader), _insert "exampleblock"_ (kader met voorbeeld)  _insert "alertblock"_ (kader met waarschuwing).
+De eenvoudigste manier om kaders in te voegen in RStudio is in de werkbalk het drop-down menu "Addins" te kiezen. 
+Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader), _insert "exampleblock"_ (kader met voorbeeld)  _insert "alertblock"_ (kader met waarschuwing).
 
 ## Standaard kader
 
