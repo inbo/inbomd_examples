@@ -14,6 +14,7 @@ ordernr: "Het optionele nummer van de opdrachtgever"
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_rapport
+    style: INBO
   bookdown::gitbook:
     split_by: "chapter+number"
     template: !expr INBOmd::inbo_rapport_css("html")

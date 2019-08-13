@@ -1,5 +1,5 @@
 --- 
-title: "Voorbeeldrapport met INBOmd"
+title: "Example report using INBOmd"
 author: 
   - 
     name: "Thierry Onkelinx"
@@ -8,17 +8,16 @@ site: bookdown::bookdown_site
 link-citations: TRUE
 bibliography: ../INBOmd.bib
 github-repo: "inbo/inbomd-examples"
-subtitle: "Dit is de versie met een aantal alternatieven"
-reportnr: "Hier komt de DOI van het rapport"
-ordernr: "Het optionele nummer van de opdrachtgever"
+subtitle: "This is an optional subtitle"
+reportnr: "Add the DOI or number of the report"
+ordernr: "This is an optional order number"
 output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_rapport
-    lof: FALSE
-    lot: FALSE
+    style: Flanders
     tocdepth: 4
-    floatbarrier: section
-    citation_package: none
+    keep_tex: TRUE
+    clean: FALSE
   bookdown::gitbook:
     split_by: "chapter+number"
     template: !expr INBOmd::inbo_rapport_css("html")
@@ -45,19 +44,20 @@ library(DT)
 library(ggplot2)
 library(INBOtheme) # remotes::install_github("inbo/INBOtheme")
 theme_set(
-  theme_inbo(
+  theme_vlaanderen2015(
     base_family = "Flanders Art Sans", # "Calibri",
     base_size = 12
   )
 )
+switchColour(vl.darkyellow)
 if (!interactive() && opts_knit$get("rmarkdown.pandoc.to") != "html") {
   opts_chunk$set(dev = "cairo_pdf")
   theme_set(
-    theme_inbo(
+    theme_vlaanderen2015(
       base_family = "Flanders Art Sans", # "Calibri",
       base_size = 8
     )
   )
 }
-set.seed(20190117)
+set.seed(201901017)
 ```

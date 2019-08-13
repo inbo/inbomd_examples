@@ -15,76 +15,70 @@ header <- function(words = 4, format = FALSE) {
 }
 ```
 
-# Kopstijlen: niveau 1: `r header(4)` {#h:koppen}
+# Headings: level 1: `r header(4)` {#h:koppen}
 
 `r paragraph(n = 3)`
 
-## Niveau 2: `r header(4)`
-
-Automatische woordafbreking werkt niet bij niveau 2 naar pdf formaat. 
-Zie sectie \@ref(s:onderlijnd).
+## Level 2: `r header(4)`
 
 `r paragraph(n = 3)`
 
-### Niveau 3: `r header(4)`
+### Level 3: `r header(4)`
 
 `r paragraph(n = 3)`
 
-#### Niveau 4: `r header(5)`
-
-Automatische woordafbreking werkt niet bij niveau 4 naar pdf formaat. 
-Zie sectie \@ref(s:onderlijnd).
+#### Level 4: `r header(5)`
 
 `r paragraph(n = 3)`
 
-##### Niveau 5: `r header(4)`
+##### Level 5: `r header(4)`
 
 `r paragraph(n = 3)`
 
-###### Niveau 6: `r header(4)`
+###### Level 6: `r header(4)`
 
 `r paragraph(n = 3)`
 
-# Kopstijlen zonder nummer: niveau 1: `r header(4)` {- #h:koppen-zonder-nummer}
+# Heading with number: level 1: `r header(4)` {- #h:koppen-zonder-nummer}
 
 `r paragraph(n = 3)`
 
-## Niveau 2: `r header(4)` {-}
+## Level 2: `r header(4)` {-}
 
 `r paragraph(n = 3)`
 
-### Niveau 3: `r header(4)` {-}
+### Level 3: `r header(4)` {-}
 
 `r paragraph(n = 3)`
 
-#### Niveau 4: `r header(5)` {-}
+#### Level 4: `r header(5)` {-}
 
 `r paragraph(n = 3)`
 
-Ongenummerde koppen hebben maximaal niveau 4
+Unnumbered headers are available from level 1 until 4.
 
-# Lettertypes
+# Fonts
 
-In dit hoofdstuk tonen we de verschillende lettertypes en hun vormen. 
-Deels om te tonen hoe ze er uitzien, deels om eventuele problemen op te sporen met bepaalde tekens.
+This chapters displayes the different fonts and their shapes.
+Partly to visualise them, partly to highlight problems with specific combinations of characters.
 
-## Normaal
+## Normal
 
 `r paragraph(n = 1)`
 
-## Vet
+## Bold
 
 **`r paragraph(n = 1)`**
 
-## Cursief
+## Italics
 
 _`r paragraph(n = 1)`_
 
-## Vet en cursief
+## Bold italics
 
 _**`r paragraph(n = 1)`**_
 
-## Met vaste tekenbreedte
+## Fixed width font
 
 ```{r echo = FALSE, results = "asis"}
 cat("`", paragraph(), "`", sep = "")
@@ -94,92 +88,92 @@ cat("`", paragraph(), "`", sep = "")
 cat("**`", paragraph(), "`**", sep = "")
 ```
 
-80 karakters passen in de breedte van de pdf
+80 characters fit within the margins of the pdf
 
 `12345678911234567892123456789312345678941234567895123456789612345678971234567898`
 
 **`12345678911234567892123456789312345678941234567895123456789612345678971234567898`**
 
-100 karakters passen niet meer in de breedte van de pdf
+100 characer no longer fit on the pdf page
 
 `1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`
 
 **`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`**
 
-## Kleine letter L versus hoofdletter i
+## Lowercase L versus uppercase i
 
-normaal:
+normal:
   ~ lI
 
-vet:
+bold:
   ~ **lI**
   
-cursief:
+italics:
   ~ _lI_
 
-vet en cursief:
+bold italics:
   ~ **_lI_**
 
-met vaste tekenbreedte:
+fixed width:
   ~ `lI` **`lI`**
 
-## Grote letter O versus cijfer 0
+## Uppercase O versus digit 0
 
-normaal:
+normal:
   ~ O0
 
-vet:
+bold:
   ~ **O0**
   
-cursief:
+italics:
   ~ _O0_
 
-vet en cursief:
+bold italics:
   ~ **_O0_**
 
-met vaste tekenbreedte:
+fix width font:
   ~ `O0` **`O0`**
 
-## Speciale characters
+## Special characters
   
-### Normaal
+### Normal
 
 €$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
 
-### Vet
+### Bold
 **€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
 
-### Cursief
+### Italics
 _€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
 
-### Vet en cursief
+### Bold italics
 **_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
   
-### Met vaste tekenbreedte
+### Fixed width font
 `€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
 
 **`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
 
-## Aanhalingstekens
+## Quotes
 
-normaal:
-  ~ "dubbele", 'enkele'
+normal:
+  ~ "double", 'single'
 
-vet:
-  ~ **"dubbele", 'enkele'**
+bold:
+  ~ **"double", 'single'**
 
-cursief:
-  ~ _"dubbele", 'enkele'_
+italics:
+  ~ _"double", 'single'_
 
-vet en cursief:
-  ~ **_"dubbele", 'enkele'_**
+bold italics:
+  ~ **_"double", 'single'_**
 
-met vaste tekenbreedte:
-  ~ `"dubbele", 'enkele',` **`"dubbele", 'enkele',`**
+fix width font:
+  ~ `"double", 'single',` **`"double", 'single',`**
 
-# Opsommingen
+# Lists
 
-## Ongeordende lijsten
+## Unordered list
 
 - `r paragraph()`
 - Item 2
@@ -195,7 +189,7 @@ met vaste tekenbreedte:
     - Item c
 - Item 4
 
-## Genummerde lijsten
+## Numbered list
 
 1. `r paragraph()`
 1. Item 2
@@ -211,7 +205,7 @@ met vaste tekenbreedte:
     1. Item c
 1. Item 4
 
-## Lijsten met definities
+## Definition list
 
 Item A
   ~ `r paragraph()`
@@ -240,34 +234,9 @@ Item C
 Item D
   ~ `r paragraph()`
 
-## Lijsten mengen
+# Boxes
 
-- Item 1
-- Item 2
-- Item 3
-    1. Item a
-    
-        item I
-          ~ Uitleg I
-          
-        item II
-          ~ Uitleg II
-          
-    1. Item b
-        - Item b I
-        - Item b II
-    1. Item c
-        1. Item c I
-        1. Item c II
-- Item 4
-
-
-# Kaders
-
-De eenvoudigste manier om kaders in te voegen in RStudio is in de werkbalk het drop-down menu "Addins" te kiezen. 
-Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader), _insert "exampleblock"_ (kader met voorbeeld)  _insert "alertblock"_ (kader met waarschuwing).
-
-## Standaard kader
+## Default box
 
 `r paragraph(n = 1)`
 
@@ -285,14 +254,14 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 (ref:block2b) `r paragraph()`
 
 
-```{block2, type = "block", latex.options = "{Optionele titel van het kader}"}
+```{block2, type = "block", latex.options = "{Optional box title}"}
 (ref:block2a)
 
 (ref:block2b)
 
 ```
 
-## Kader met voorbeeld
+## Example box
   
 `r paragraph(n = 2)`
 
@@ -309,14 +278,14 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 
 (ref:exampleblock2b) `r paragraph()`
 
-```{block2, type = "exampleblock", latex.options = "{Optionele titel van het kader}"}
+```{block2, type = "exampleblock", latex.options = "{Optional title of the box}"}
 (ref:exampleblock2a)
 
 (ref:exampleblock2b)
 
 ```
 
-## Kader met waarschuwing
+## Alert box
   
 `r paragraph(n = 2)`
 
@@ -333,7 +302,7 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 
 (ref:alterblock2b) `r paragraph()`
 
-```{block2, type = "alertblock", latex.options = "{Optionele titel van het kader}"}
+```{block2, type = "alertblock", latex.options = "{Optional title of the box}"}
 (ref:alterblock2a)
 
 (ref:alterblock2b)

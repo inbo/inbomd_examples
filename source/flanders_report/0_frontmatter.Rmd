@@ -1,38 +1,12 @@
-# Dankwoord {-}
+# Acknowledgement {-}
 
 `r paragraph(n = 5)`
 
-# Voorwoord {-}
+# Preface {-}
 
 `r paragraph(n = 5)`
 
-# Samenvatting {-}
-
-Een uittreksel over ecologie uit [Wikipedia](https://nl.wikipedia.org/wiki/Ecologie)
-
-Ecologie (ook wel met de spelling: _oecologie_) als wetenschap is een onderdeel van biologie. 
-De ecologie bestudeert de dynamiek van de wisselwerking tussen organismen, populaties of levensgemeenschappen (de biotische milieufactoren) en de relaties tussen organismen, populaties, levensgemeenschappen of landschappen en het niet-biologische milieu (de abiotische milieufactoren). 
-De studie op het niveau van de soort heet ook wel autoecologie en op het niveau van de levensgemeenschap en ecosysteem heet gemeenschapsecologie of synecologie.
-
-Het woord ecologie (oorspronkelijk Duits: _Ökologie_) werd geïntroduceerd door de Duitse bioloog Ernst Haeckel in 1866, als samentrekking van de Griekse woorden _oikos_ (huishouding) en _logos_ (studie, wetenschap).
-
-In de Angelsaksische wereld werd dit _ecology_, dat daar een iets andere, meer milieukundige en mens-gerichte, betekenis kreeg. 
-In Nederland bestaan het meer biologische oecologie en meer milieukundige ecologie naast elkaar, maar het verschil vervaagt.
-
-Het woord ecologie wordt ook gebruikt in andere betekenissen:
-
-- gerelateerd aan een beter milieu, in het bijzonder dat van de mens, 
-- meer praktisch, betreffende gedrag dat goed is voor de mens en zijn milieu en voor de natuur (zie [ecologische landbouw](https://nl.wikipedia.org/wiki/Ecologische_landbouw) en [EKO-keurmerk](https://nl.wikipedia.org/wiki/EKO-keurmerk)), 
-- gericht op een bepaalde levensbeschouwing (zie [ecologisme](https://nl.wikipedia.org/wiki/Ecologisme)).
-- betreffende omgeving of netwerk van bijvoorbeeld een bedrijf.
-
-# Aanbevelingen voor beheer en/of beleid {-}
-
-`r paragraph(n = 5)`
-
-# English abstract {-}
-
-\benglish
+# Abstract {-}
 
 Excerpt on ecology taken from [Wikipedia](https://en.wikipedia.org/wiki/Ecology)
 
@@ -65,7 +39,33 @@ Ancient Greek philosophers such as Hippocrates and Aristotle laid the foundation
 Modern ecology became a much more rigorous science in the late 19th century.
 Evolutionary concepts relating to adaptation and natural selection became the cornerstones of modern ecological theory.
 
-\eenglish
+\bdutch
+
+# Samenvatting {-}
+
+Een uittreksel over ecologie uit [Wikipedia](https://nl.wikipedia.org/wiki/Ecologie)
+
+Ecologie (ook wel met de spelling: _oecologie_) als wetenschap is een onderdeel van biologie. 
+De ecologie bestudeert de dynamiek van de wisselwerking tussen organismen, populaties of levensgemeenschappen (de biotische milieufactoren) en de relaties tussen organismen, populaties, levensgemeenschappen of landschappen en het niet-biologische milieu (de abiotische milieufactoren). 
+De studie op het niveau van de soort heet ook wel autoecologie en op het niveau van de levensgemeenschap en ecosysteem heet gemeenschapsecologie of synecologie.
+
+Het woord ecologie (oorspronkelijk Duits: _Ökologie_) werd geïntroduceerd door de Duitse bioloog Ernst Haeckel in 1866, als samentrekking van de Griekse woorden _oikos_ (huishouding) en _logos_ (studie, wetenschap).
+
+In de Angelsaksische wereld werd dit _ecology_, dat daar een iets andere, meer milieukundige en mens-gerichte, betekenis kreeg. 
+In Nederland bestaan het meer biologische oecologie en meer milieukundige ecologie naast elkaar, maar het verschil vervaagt.
+
+Het woord ecologie wordt ook gebruikt in andere betekenissen:
+
+- gerelateerd aan een beter milieu, in het bijzonder dat van de mens, 
+- meer praktisch, betreffende gedrag dat goed is voor de mens en zijn milieu en voor de natuur (zie [ecologische landbouw](https://nl.wikipedia.org/wiki/Ecologische_landbouw) en [EKO-keurmerk](https://nl.wikipedia.org/wiki/EKO-keurmerk)), 
+- gericht op een bepaalde levensbeschouwing (zie [ecologisme](https://nl.wikipedia.org/wiki/Ecologisme)).
+- betreffende omgeving of netwerk van bijvoorbeeld een bedrijf.
+
+\edutch
+
+# Recommendations for management and / or policy {-}
+
+`r paragraph(n = 5)`
 
 \bfrench
 
@@ -88,14 +88,17 @@ Un **écologue** ou **écologiste** (qu'il soit chercheur, biologiste ou ingéni
 
 \mainmatter
 
-# Inleiding 
+# Introduction 
 
-Het doel van dit document is louter de beschikbare stijlelementen te tonen. De pdf versie heeft als doelstelling een drukklare versie van een tweezijdig rapport af te leveren. De titelpagina's van het rapport en van de verschillende delen staan steeds op de rechterpagina. Het eerste hoofdstuk van een rapport of van een deel begint eveneens steeds op de rechterpagina. Hierdoor komt er een blanco pagina tussen een titelpagina en het eerste hoofdstuk. 
+This document is only intended to display all elements from the corporate identity.
 
 ## Lipsum
 
-Lorem ipsum is een opvultekst die drukkers, zetters, grafisch ontwerpers en dergelijke gebruiken om te kijken hoe een lay-out er uit ziet.
+Lorem ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-De reden waarom de tekst gebruikt wordt door die doelgroep is dat bij een leesbare tekst de lezer afgeleid zou worden door de inhoud, terwijl het alleen om de vormgeving gaat. Bovendien heeft het Lorem ipsum een redelijk normale afwisseling van de verschillende letters en korte en lange woorden.
-
-In de broncode van dit document vind je stukjes code als `\usepackage{lipsum}` of `\lipsum[10]`. Deze code is enkel nodig om de stukjes van de Lipsum tekst te tonen. In een werkelijk rapport heb je deze uiteraard niet nodig.
+The source code of this document contains code chunks like `\usepackage{lipsum}` or `\lipsum[10]`. 
+This code is only needed to display chunks from the lipsum text.
+You don't need them in a real life report.

@@ -19,10 +19,10 @@ output:
 ```{r include = FALSE}
 library(knitr)
 library(DT)
+library(lipsum)
 library(ggplot2)
 library(INBOtheme)
 theme_set(theme_inbo(6, transparent = "plot"))
-library(lipsum)
 ```
 
 # Opties

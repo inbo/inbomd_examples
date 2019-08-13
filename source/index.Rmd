@@ -26,6 +26,10 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
     - [PDF](inbo_rapport_basic/inbo_rapport_basic.pdf) versie
     - [HTML](inbo_rapport_basic/dankwoord.html) versie
     - [EPUB](inbo_rapport_basic/inbo_rapport_basic.epub) versie
+- Nederlandstalig rapport in de huisstijl van de Vlaamse overheid ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/vlaanderen_rapport))
+    - [PDF](vlaanderen_rapport/vlaanderen_rapport.pdf) versie
+- Engelstalig rapport in de huisstijl van de Vlaamse overheid ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/flanders_report))
+    - [PDF](vlaanderen_rapport/flanders_report.pdf) versie
 - INBO presentatie ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/inbo_slides))
     - [Stapsgewijze](inbo_slides/inbo_slides.pdf) slides in pdf
     - [Handout versie](inbo_slides/inbo_slides_handout.pdf) slides in pdf
