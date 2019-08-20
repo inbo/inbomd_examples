@@ -143,17 +143,32 @@ deel van een boek
 in proceedings
   ~ [@Onkelinx2014a; @Onkelinx2012;@inproceedings-a3e3; @inproceedings-a2e1; @inproceedings-a1e0]
   
+proceedings
+  ~ [@proceedings-e0, @proceedings-e1, @proceedings-e2, @proceedings-e3]
+
 conferentie
   ~ [@conference-a1e1; @conference-a2e0; @conference-a3e3]
 
 artikels
   ~ [@Amano2012; @VanderMijnsbrugge2005; @R-reshape; @Yli-Viikari2007; @article-single; @article-double; @article-triple]
 
-thesis
-  ~ [@MaStatThesis]
+masterthesis
+  ~ [@MaStatThesis; @masterthesis]
+
+doctoraatsthesis
+  ~ [@phdthesis]
   
 software
   ~ [@R-3.0.1]
 
 brochure
   ~ [@booklet-a0; @booklet-a1; @booklet-a2; @booklet-a3]
+
+niet gepubliceerd
+  ~ [@unpublished-a3; @unpublished-a2; @unpublished-a1]
+
+technisch rapport
+  ~ @techreport-a1; @techreport-a2; @techreport-a3
+
+handleiding
+  ~ [@manual-a3; @manual-a2; @manual-a1; @manual-a0]
