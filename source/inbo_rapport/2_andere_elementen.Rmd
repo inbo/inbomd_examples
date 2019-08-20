@@ -132,19 +132,28 @@ Bibliografische verwijzingen zijn geen probleem. De bibliografie moet in BibTex 
 - [@BlauwdrukVleermuizen; @Onkelinx2014a]
 
 boeken
-  ~ [@Agresti2002; @DiggleRibeiro2007; @ZuurEtal2009; @Bolker2008; @Kish_1965; @BanerjeeEtal2003; @franklin_mapping_2009]
+  ~ [@Agresti2002; @DiggleRibeiro2007; @ZuurEtal2009; @Bolker2008; @Kish_1965; @BanerjeeEtal2003; @franklin_mapping_2009; @book-a1e0; @book-a2e0; @book-a3e0; @book-a1e1; @book-a0e1; @book-a0e2; @book-a0e3]
 
 hoofdstukken
-  ~ [@Degraer2013a; @BlauwdrukVogels; @BlauwdrukVleermuizen]
+  ~ [@inbook-a0e1; @inbook-a2e0; @inbook-a3e0]
 
-proceedings
-  ~ [@Onkelinx2014a; @Onkelinx2012]
+deel van een boek
+  ~ [@Degraer2013a; @BlauwdrukVogels; @BlauwdrukVleermuizen; @incollection-a1e1; @incollection-a2e0; @incollection-a3e3]
+
+in proceedings
+  ~ [@Onkelinx2014a; @Onkelinx2012;@inproceedings-a3e3; @inproceedings-a2e1; @inproceedings-a1e0]
+  
+conferentie
+  ~ [@conference-a1e1; @conference-a2e0; @conference-a3e3]
 
 artikels
-  ~ [@Amano2012; @VanderMijnsbrugge2005; @R-reshape; @Yli-Viikari2007]
+  ~ [@Amano2012; @VanderMijnsbrugge2005; @R-reshape; @Yli-Viikari2007; @article-single; @article-double; @article-triple]
 
 thesis
   ~ [@MaStatThesis]
   
 software
   ~ [@R-3.0.1]
+
+brochure
+  ~ [@booklet-a0; @booklet-a1; @booklet-a2; @booklet-a3]
