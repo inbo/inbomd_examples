@@ -10,3 +10,6 @@ docs
 *.toc
 *.vrb
 *.html
+css
+output
+*.bak

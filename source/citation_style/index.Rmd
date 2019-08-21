@@ -1,0 +1,59 @@
+---
+title: "Voorbeeld van referentiestijl"
+author: 
+  - 
+    name: "Thierry Onkelinx"
+    email: "thierry.onkelinx@inbo.be"
+link-citations: TRUE
+site: bookdown::bookdown_site
+bibliography: ../INBOmd.bib
+output:
+  bookdown::pdf_book:
+    base_format: INBOmd::inbo_rapport
+    style: INBO
+    lof: FALSE
+    lot: FALSE
+  bookdown::gitbook:
+    split_by: "chapter+number"
+    template: !expr INBOmd::inbo_rapport_css("html")
+  bookdown::epub_book:
+    stylesheet: "css/inbo_rapport.css"
+    template: !expr INBOmd::inbo_rapport_css("epub")
+---
+
+# Verwijzingen in tekst
+
+Table: Verschillende types documenten
+
+| BibTex type   | voorbeelden                                                  |
+| ------------- | ------------------------------------------------------------ |
+| Article       | [@article-single; @article-double; @article-triple] |
+| Book          | [@book-a1e0; @book-a2e0; @book-a3e0; @book-a1e1; @book-a0e1; @book-a0e2; @book-a0e3] |
+| Booklet       | [@booklet-a0; @booklet-a1; @booklet-a2; @booklet-a3] |
+| Conference    | [@conference-a1e1; @conference-a2e0; @conference-a3e3] |
+| InBook        | [@inbook-a0e1; @inbook-a2e0; @inbook-a3e0] |
+| InCollection  | [@incollection-a1e1; @incollection-a2e0; @incollection-a3e3] |
+| InProceedings | [@inproceedings-a3e3; @inproceedings-a2e1; @inproceedings-a1e0] |
+| Manual        | [@manual-a3; @manual-a2; @manual-a1; @manual-a0] |
+| MastersThesis | [@masterthesis] |
+| Misc          | [@misc] |
+| PhdThesis     | [@phdthesis] |
+| Proceedings   | [@proceedings-e0, @proceedings-e1, @proceedings-e2, @proceedings-e3] |
+| TechReport    | [@techreport-a1; @techreport-a2; @techreport-a3] |
+| Unpublished   | [@unpublished-a3; @unpublished-a2; @unpublished-a1] |
+
+
+Table: Weergave van namen
+
+| Bibtex                            | Weergave \hphantom{aaaaaaaaaaaaaaaaaa}|
+| --------------------------------- | ------------------------------------- |
+| Achternaam                        | @name0   |
+| Achternaam, Voornaam              | @name1   |
+| De Achternaam, V.                 | @name2   |
+| Van de Achternaam, V              | @name3   |
+| Achternaam, Voornaam Tweede       | @name4   |
+| Achternaam, Voornaam Tweede Derde | @name5   |
+| Achternaam, V. T. D.              | @name6   |
+| Achternaam, VTD                   | @name7   |
+| Achternaam, Voornaam TD           | @name8   |
+| Accent áâàäçéêëèíuîïìóôöòúûüù     | @name9   |
