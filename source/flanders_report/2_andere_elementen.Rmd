@@ -84,7 +84,7 @@ $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
 
 # Citing literature
 
-## In-lijn style
+## Inline style
 
 - @BlauwdrukVleermuizen
 - [@BlauwdrukVleermuizen]
