@@ -32,7 +32,6 @@ opts_chunk$set(
   echo = TRUE, 
   eval = TRUE,
   cache = FALSE,
-  dpi = 300,
   fig.width = 150 / 25.4,
   fig.height = 100 / 25.4,
   warning = TRUE,
@@ -43,21 +42,46 @@ library(lipsum) # remotes::install_github("inbo/lipsum")
 library(DT)
 library(ggplot2)
 library(INBOtheme) # remotes::install_github("inbo/INBOtheme")
-theme_set(
-  theme_vlaanderen2015(
-    base_family = "Flanders Art Sans", # "Calibri",
-    base_size = 12
-  )
-)
-switchColour(vl.darkyellow)
-if (!interactive() && opts_knit$get("rmarkdown.pandoc.to") != "html") {
-  opts_chunk$set(dev = "cairo_pdf")
+if (interactive()) {
   theme_set(
     theme_vlaanderen2015(
-      base_family = "Flanders Art Sans", # "Calibri",
-      base_size = 8
+      base_family = "FlandersArtSans-Regular",
+      base_size = 10
     )
   )
+} else {
+  switch(
+    opts_knit$get("rmarkdown.pandoc.to"),
+    html = {
+      opts_chunk$set(dev = "png", dpi = 72)
+      theme_set(
+        theme_vlaanderen2015(
+          base_family = "FlandersArtSans-Regular", 
+          base_size = 12
+        )
+      )
+    },
+    latex = {
+      opts_chunk$set(dev = "cairo_pdf", dpi = 300)
+      theme_set(
+        theme_vlaanderen2015(
+          base_family = "FlandersArtSans-Regular", 
+          base_size = 9
+        )
+      )
+      update_geom_defaults("point", list(size = 1.5))
+    },
+    epub3 = {
+      opts_chunk$set(dev = "png", dpi = 300)
+      theme_set(
+        theme_vlaanderen2015(
+          base_family = "FlandersArtSans-Regular", 
+          base_size = 12
+        )
+      )
+    }
+  )
 }
+switchColour(vl.darkyellow)
 set.seed(201901017)
 ```
