@@ -16,22 +16,35 @@ output:
   bookdown::gitbook:
     split_by: "chapter+number"
     template: !expr INBOmd::inbo_rapport_css("html")
+    pandoc_args: !expr c("--csl", system.file("inbo.csl", package = "INBOmd"))
   bookdown::epub_book:
     stylesheet: "css/inbo_rapport.css"
     template: !expr INBOmd::inbo_rapport_css("epub")
+    pandoc_args: !expr c("--csl", system.file("inbo.csl", package = "INBOmd"))
 ---
 
 # Verwijzingen in tekst
+
+```{r echo = FALSE, results = "asis"}
+library(knitr)
+natbib <- any(grepl("natbib", opts_knit$get()$rmarkdown.pandoc.args))
+cat(
+  sprintf(
+    "Stijl referentielijst gebaseerd op %s.\n\n", 
+    ifelse(natbib, "bst", "csl")
+  )
+)
+```
 
 Table: Verschillende types documenten
 
 | BibTex type   | voorbeelden                                                  |
 | ------------- | ------------------------------------------------------------ |
 | Article       | [@article-single; @article-double; @article-triple] |
-| Book          | [@book-a1e0; @book-a2e0; @book-a3e0; @book-a1e1; @book-a0e1; @book-a0e2; @book-a0e3] |
+| Book          | [@book-a1e0; @book-a2e0; @book-a3e0; @book-a0e1; @book-a0e2; @book-a0e3] |
 | Booklet       | [@booklet-a0; @booklet-a1; @booklet-a2; @booklet-a3] |
 | Conference    | [@conference-a1e1; @conference-a2e0; @conference-a3e3] |
-| InBook        | [@inbook-a0e1; @inbook-a2e0; @inbook-a3e0] |
+| InBook        | [@inbook-a1e0; @inbook-a0e1; @inbook-a2e0; @inbook-a3e0] |
 | InCollection  | [@incollection-a1e1; @incollection-a2e0; @incollection-a3e3] |
 | InProceedings | [@inproceedings-a3e3; @inproceedings-a2e1; @inproceedings-a1e0] |
 | Manual        | [@manual-a3; @manual-a2; @manual-a1; @manual-a0] |
@@ -57,3 +70,62 @@ Table: Weergave van namen
 | Achternaam, VTD                   | @name7   |
 | Achternaam, Voornaam TD           | @name8   |
 | Accent áâàäçéêëèíuîïìóôöòúûüù     | @name9   |
+
+## DOI of URL
+
+- beide: @article-single
+- enkel DOI: @Amano2012
+- enkel URL: @franklin_mapping_2009
+
+# Na te kijken verschillen tussen bst en csl
+
+- `Edition`
+    - afkorting: 'edn.' (bst) of 'ed.' (csl)
+    - bst zet Engelse rangtelwoorden om naar cijfers ("second" wordt "2nd")
+- `Series`
+    - cls wijzigt de hoofdletters van `Series` naar sentence case
+- `Publisher`
+    - cls wijzigt "and" in `Publisher` naar ";"
+- `Volume`
+    - bts toont "Vol. `Volume` van `Series`"
+        - Manual
+        - Book
+        - Conference
+        - InBook
+        - InCollection
+        - Proceedings
+        - InProceedings
+- `Number`
+    - bts toon "No. `Number` in `Series`", enkel wanneer `Volume` ontbreekt
+        - Manual
+        - Book
+        - Conference
+        - InBook
+        - InCollection
+        - Proceedings
+        - InProceedings
+- `URL`
+    - csl toont "URL:" prefix
+- Article
+    - bst laat geen regeleinde toe tussen `Volume` en (`Number`)
+- Booklet
+    - bst toont `Howpublished`
+    - bst toont `Address`
+- Conference
+    - bst toont "In: `Editor` `booktitle` `Organization` `Publisher`"
+- InBook
+    - csl toont "In: `Series`"
+- Misc
+    - bst toont `Howpublished`
+- Sortering
+    - bst: auteur, jaar, titel, letters met accenten tussen het alfabet (aábz)
+    - csl: auteur (inclusief ed.), jaar, titel, letter met accenten na het alfabet (abzá)
+
+Is de prefix "DOI:" nodig? De url start met https://doi.org.
+
+```{asis echo = FALSE, eval = !natbib}
+\chapter*{Referenties}
+\addcontentsline{toc}{chapter}{Referenties}
+```
+
+`r if (knitr::is_html_output()) '# Referenties {-}'`
