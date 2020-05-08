@@ -42,7 +42,7 @@ library(ggplot2)
 library(INBOtheme) # remotes::install_github("inbo/INBOtheme")
 if (interactive()) {
   theme_set(
-    theme_vlaanderen(
+    theme_vlaanderen2015(
       base_family = "FlandersArtSans-Regular",
       base_size = 10
     )
