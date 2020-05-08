@@ -1,2 +1,3 @@
 book_filename: "flanders_slides"
 output_dir: "../../docs/flanders_slides"
+delete_merged_file: TRUE
