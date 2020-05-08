@@ -37,3 +37,6 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
 - Presentatie in overkoepelende huisstijl Vlaamse overheid ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/flanders_slides))
     - [Stapsgewijze](flanders_slides/flanders_slides.pdf) slides in pdf
     - [Handout versie](flanders_slides/flanders_slides_handout.pdf) slides in pdf
+- Voorbeelden van referenties
+    - Op basis van [bst bestand](citation_style/citation_style_bst.pdf)
+    - Op basis van [csl bestand](citation_style/citation_style_csl.pdf)
