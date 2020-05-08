@@ -1,3 +1,5 @@
+old_wd <- getwd()
+on.exit(setwd(old_wd))
 # main file
 setwd("source")
 rmarkdown::render("index.Rmd", output_dir = "../docs")
