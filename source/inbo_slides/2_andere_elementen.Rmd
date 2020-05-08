@@ -21,15 +21,6 @@ kable(
 )
 ```
 
-### Dynamische tabel
-
-```{r mtcars2, echo = FALSE, out.width="\\textwidth"}
-datatable(
-  head(mtcars[, 1:8], 10), 
-  caption = 'Een dynamische tabel met de eerste 10 rijen van de `mtcars` dataset.'
-)
-```
-
 ## Figuren
 
 ### Figuur met tekstbreedte
