@@ -47,4 +47,8 @@ rmarkdown::render_site(encoding = "UTF-8")
 setwd("../inbomd_workshop")
 rmarkdown::render_site(encoding = "UTF-8")
 
+# citation syles
+setwd("../citation_style")
+source("render.R")
+
 setwd("../..")
