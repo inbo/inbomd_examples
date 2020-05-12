@@ -69,7 +69,7 @@ Evolutionary concepts relating to adaptation and natural selection became the co
 
 \bfrench
 
-# Résumé français {-}
+# Résumé français {- #resume-francais}
 
 Extrait sur l'écologie de [Wikipedia](https://fr.wikipedia.org/wiki/%C3%89cologie)
 
