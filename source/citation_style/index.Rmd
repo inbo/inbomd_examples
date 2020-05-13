@@ -128,4 +128,4 @@ Is de prefix "DOI:" nodig? De url start met https://doi.org.
 \addcontentsline{toc}{chapter}{Referenties}
 ```
 
-`r if (knitr::is_html_output()) '# Referenties {-}'`
+`r if (knitr::is_html_output() | !natbib) '# Referenties {-}'`

@@ -7,8 +7,8 @@ rmarkdown::render_site(
   )
 )
 file.rename(
-  "../../output/citation_style/citation_style.pdf",
-  "../../output/citation_style/citation_style_bst.pdf"
+  "../../docs/citation_style/citation_style.pdf",
+  "../../docs/citation_style/citation_style_bst.pdf"
 )
 rmarkdown::render_site(
   output_format =  bookdown::pdf_book(
@@ -20,8 +20,8 @@ rmarkdown::render_site(
   )
 )
 file.rename(
-  "../../output/citation_style/citation_style.pdf",
-  "../../output/citation_style/citation_style_csl.pdf"
+  "../../docs/citation_style/citation_style.pdf",
+  "../../docs/citation_style/citation_style_csl.pdf"
 )
 rmarkdown::render_site(
   output_format =  bookdown::gitbook(
