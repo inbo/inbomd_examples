@@ -29,7 +29,7 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
 - Nederlandstalig rapport in de huisstijl van de Vlaamse overheid ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/vlaanderen_rapport))
     - [PDF](vlaanderen_rapport/vlaanderen_rapport.pdf) versie
 - Engelstalig rapport in de huisstijl van de Vlaamse overheid ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/flanders_report))
-    - [PDF](vlaanderen_rapport/flanders_report.pdf) versie
+    - [PDF](flanders_report/flanders_report.pdf) versie
 - INBO presentatie ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/inbo_slides))
     - [Stapsgewijze](inbo_slides/inbo_slides.pdf) slides in pdf
     - [Handout versie](inbo_slides/inbo_slides_handout.pdf) slides in pdf
@@ -38,5 +38,6 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
     - [Stapsgewijze](flanders_slides/flanders_slides.pdf) slides in pdf
     - [Handout versie](flanders_slides/flanders_slides_handout.pdf) slides in pdf
 - Voorbeelden van referenties
-    - Op basis van [bst bestand](citation_style/citation_style_bst.pdf)
-    - Op basis van [csl bestand](citation_style/citation_style_csl.pdf)
+    - Pdf op basis van [bst bestand](citation_style/citation_style_bst.pdf)
+    - Pdf op basis van [csl bestand](citation_style/citation_style_csl.pdf)
+    - HTML op basis van [csl bestand](citation_style/index.html)
