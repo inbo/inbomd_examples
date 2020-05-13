@@ -27,6 +27,12 @@ rmarkdown::render_site(
   output_format =  bookdown::gitbook(
     split_by = "chapter+number",
     template = INBOmd::inbo_rapport_css("html"),
-    pandoc_args = c("--csl", system.file("inbo.csl", package = "INBOmd"))
+    pandoc_args = c(
+      "--csl",
+      system.file(
+        "research-institute-for-nature-and-forest.csl",
+        package = "INBOmd"
+      )
+    )
   )
 )
