@@ -41,12 +41,12 @@ Table: Verschillende types documenten
 | BibTex type   | voorbeelden                                                  |
 | ------------- | ------------------------------------------------------------ |
 | Article       | [@article-single; @article-double; @article-triple] |
-| Book          | [@book-a1e0; @book-a2e0; @book-a3e0; @book-a0e1; @book-a0e2; @book-a0e3] |
+| Book          | [@book-a1e0; @book-a2e0; @book-a3e0; @book-a0e1; @book-a0e2; @book-a0e3; @BanerjeeEtal2003] |
 | Booklet       | [@booklet-a0; @booklet-a1; @booklet-a2; @booklet-a3] |
 | Conference    | [@conference-a1e1; @conference-a2e0; @conference-a3e3] |
 | InBook        | [@inbook-a1e0; @inbook-a0e1; @inbook-a2e0; @inbook-a3e0] |
 | InCollection  | [@incollection-a1e1; @incollection-a2e0; @incollection-a3e3] |
-| InProceedings | [@inproceedings-a3e3; @inproceedings-a2e1; @inproceedings-a1e0] |
+| InProceedings | [@inproceedings-a3e3; @inproceedings-a2e1; @inproceedings-a1e0; @Onkelinx2014a] |
 | Manual        | [@manual-a3; @manual-a2; @manual-a1; @manual-a0] |
 | MastersThesis | [@masterthesis] |
 | Misc          | [@misc] |
