@@ -51,7 +51,7 @@ Table: Verschillende types documenten
 | MastersThesis | [@masterthesis] |
 | Misc          | [@misc] |
 | PhdThesis     | [@phdthesis] |
-| Proceedings   | [@proceedings-e0, @proceedings-e1, @proceedings-e2, @proceedings-e3] |
+| Proceedings   | [@proceedings-e0; @proceedings-e1; @proceedings-e2; @proceedings-e3] |
 | TechReport    | [@techreport-a1; @techreport-a2; @techreport-a3] |
 | Unpublished   | [@unpublished-a3; @unpublished-a2; @unpublished-a1] |
 
