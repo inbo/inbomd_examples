@@ -79,51 +79,54 @@ Table: Weergave van namen
 - enkel DOI: @Amano2012
 - enkel URL: @franklin_mapping_2009
 
-# Na te kijken verschillen tussen bst en csl
+# Na te kijken
 
-- `Edition`
-    - afkorting: 'edn.' (bst) of 'ed.' (csl)
-    - bst zet Engelse rangtelwoorden om naar cijfers ("second" wordt "2nd")
-- `Series`
-    - cls wijzigt de hoofdletters van `Series` naar sentence case
-- `Publisher`
-    - cls wijzigt "and" in `Publisher` naar ";"
-- `Volume`
-    - bts toont "Vol. `Volume` van `Series`"
-        - Manual
-        - Book
-        - Conference
-        - InBook
-        - InCollection
-        - Proceedings
-        - InProceedings
-- `Number`
-    - bts toon "No. `Number` in `Series`", enkel wanneer `Volume` ontbreekt
-        - Manual
-        - Book
-        - Conference
-        - InBook
-        - InCollection
-        - Proceedings
-        - InProceedings
-- `URL`
-    - csl toont "URL:" prefix
-- Article
-    - bst laat geen regeleinde toe tussen `Volume` en (`Number`)
-- Booklet
-    - bst toont `Howpublished`
-    - bst toont `Address`
+Algemene opvolging gebeurt in [deze gsheet](https://docs.google.com/spreadsheets/d/1cQfMKcVxCiGOH6s2np-uecRa-5_r1vS2MGRpqLGM2Gk).
+
+## Op te volgen voor bst
+
+Specifieke zaken (zie ook gsheet):
+
 - Conference
-    - bst toont "In: `Editor` `booktitle` `Organization` `Publisher`"
-- InBook
-    - csl toont "In: `Series`"
-- Misc
-    - bst toont `Howpublished`
-- Sortering
-    - bst: auteur, jaar, titel, letters met accenten tussen het alfabet (aábz)
-    - csl: auteur (inclusief ed.), jaar, titel, letter met accenten na het alfabet (abzá)
+  - `Organization` beter laten vallen in bst en dit veld niet ondersteunen? citeproc-js toont het niet en pandoc-citeproc voegt dit vooraan in het publisher-veld gevolg door ";" en publisher (dit gebeurt nog vóór de CSL-processing, dus bij omzetting bib-file).
+- Laten vallen van “URL:” en “DOI:” prefixen.
+- Zoals in csl: Nederlandstalige variant voorzien voor verschillende termen, o.a.: ed. (nl) ipv edn. (en) en Nr. (nl) ipv No. (en).
+- Aanpassing van 'Vol. van', 'No. in' naar de afgesproken syntaxis (zie gsheet).
+- Bij ontbreken van de datum:gebruik '(s.d.)' bij ontbreken van een datum (cf. csl)
+  - zie voorbeeld @databank_ondergrond_vlaanderen_bepalen_nodate.
+- Hanteer `<title>. <edition>` in plaats van	`<title>, <edition>`.
+  - Reden: 'title' betreft soms meerdere delen, gescheiden door een punt (bv. titel. subtitel). Het laatste deel laten volgen door een komma en dan '2nd edn.' is wat raar. Zie bv. @book-a1e0.
+  - NB. voor InBook wordt de voorgestelde werkwijze al gevolgd in bst.
+- Voor het BibLaTeX type '**Online**' (aangewezen voor een webpage, want enkel dan wordt dit correct vertaald door pandoc en Zotero als een webpage): volgen van de csl weergave
+  - weergave van `[WWW document]` na de titel
+  - toevoegen van "(accessed `datum als tekst`). In csl gebeurt dit taal-afhankelijk, bv. (accessed June 30, 2020) versus (geraadpleegd 30 juni 2020).
+  - merk op dat `@online` een BibLaTeX type is. Om een bib-file met dit type zonder probleem in te kunnen lezen in **JabRef**, moet je bij de preferences > advanced kiezen voor de _BibLaTeX mode_!
+  
 
-Is de prefix "DOI:" nodig? De url start met https://doi.org.
+## Issues bij renderen met csl
+
+Deze issues zijn niet oplosbaar via het csl-bestand.
+
+### In R Markdown
+
+Als gevolg van bug in de **bib2json** conversie van **pandoc-citeproc**:
+
+- `Publisher`
+  - "and" in `Publisher`wordt ";"
+    
+Als gevolg van bug in de CSL processor van **pandoc-citeproc**:
+
+- `Series`, `Booktitle`:
+  - Title Case wordt sentence case
+    
+### In Zotero
+
+Bij renderen vanuit Zotero (dus mbv citeproc-js), na import van `INBOmd.bib` met **Better BibTeX** plugin en als gevolg van bugs in deze laatste:
+
+- `journal = {Journal}` (in `INBOmd.bib`) wordt in Zotero `publication: 'The Journal'`, wat ook zo wordt weergegeven in bibliografie (dus _'The'_ wordt toegevoegd).
+- `Series`, `Booktitle`, `Title`:
+    - Title Case wordt sentence case
+
 
 ```{asis echo = FALSE, eval = !natbib}
 \chapter*{Referenties}
