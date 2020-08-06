@@ -2,7 +2,7 @@
 title: "Voorbeeld van referentiestijl"
 author: 
   - 
-    name: "Thierry Onkelinx"
+    name: "Thierry Onkelinx & Floris Vanderhaeghe"
     email: "thierry.onkelinx@inbo.be"
 link-citations: TRUE
 site: bookdown::bookdown_site
