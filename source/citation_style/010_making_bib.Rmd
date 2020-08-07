@@ -1,0 +1,45 @@
+# Aandachtspunten bij aanmaken van een bib bestand voor gebruik met CSL {#bibcsl}
+
+Er zijn enkele aandachtspunten in verband met het gebruik van een bib-file in combinatie met CSL, meer bepaald in verband met de wijze van ingeven van bepaalde velden.
+
+Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zotero en vandaaruit een bib-bestand wordt geëxporteerd, dit met de [Better BibTeX plugin](https://retorque.re/zotero-better-bibtex/) geïnstalleerd.
+
+
+## Voor pandoc (gebruikt in R Markdown): gebruik '{and}' in publisher-veld
+
+Indien 'and' voorkomt in een publisher-veld waarbij dit letterlijk moet worden getoond, dan moet dat met **een extra paar `{}`** worden opgelost, bv. `{ALLCAPS {and} Title Case Publishing}` of `{{ALLCAPS and Title Case Publishing}}`.
+
+Meer info: zie de commit message van [381aa28](https://github.com/inbo/inbomd_examples/commit/381aa28), waar dit is gebeurd op het `INBOmd.bib` bestand:
+
+> By putting an extra pair of curly braces around 'and',
+this issue was solved.
+It has to do with the biblatex approach by the csl processor
+in pandoc-citeproc, where 'and' is mapped to semicolons.
+See also a similar discussion in
+https://github.com/jgm/pandoc-citeproc/issues/121 :
+"biblatex is the default treatment of .bib files"
+
+Indien dit niet wordt gedaan, dan zal pandoc-citeproc bij de conversie van het bib-bestand naar CSL-JSON (via bib2json) het woord "and" in `Publisher` vervangen door ";", conform de biblatex benadering.
+
+Merk op dat de import van de bib-file met Better BibTeX in Zotero deze omzetting niet doet, waardoor dit probleem alleen in R Markdown optrad en niet via Zotero-gegenereerde bibliografieën.
+  
+## Voor pandoc (gebruikt in R Markdown) en bij import in Zotero, indien gebruik van '{Title Case}' strings
+    
+Indien je 'Title Case' strings in de velden `Series` en `Booktitle` (bv. InCollection) wil behouden als 'Title Case', dan moeten de 'Title Case' woorden (of de hele Title Case woordenreeks) in de bib-file worden omringd met **extra `{}`**.
+Dit is niet nodig voor het eerste woord, waar steeds een hoofdletter wordt gebruikt.
+
+Voorbeeld: `{Series in {Title Case}}`.
+
+Dit is eigen aan CSL-processors: ze veronderstellen voor deze velden sentence case tenzij de stijl expliciet 'Title Case' instelt 
+(zie [deze](https://github.com/jgm/pandoc-citeproc/issues/436#issuecomment-577184970) opmerking in een pandoc-citeproc discussie).
+
+- In een CSL-stijl kan voor een veld een omzetting naar Title Case of sentence case opgelegd worden (dit gebeurt momenteel _niet_ in `research-institute-for-nature-and-forest.csl`).
+- Het verdient volgens de CSL-documentatie overigens aanbeveling ([bron](https://docs.citationstyles.org/en/1.0.1/specification.html#sentence-case-conversion)) om steeds _in te voeren_ als **sentence case met alleen `{Eigennamen}` als hoofdletter**.
+Immers, terwijl de omzetting naar Title Case geen rariteiten zal opleveren, kan een omzetting van Title Case naar sentence case geen rekening houden met eigennamen.
+
+Ook de Better BibTeX plugin volgt kennelijk deze filosofie ([link](https://retorque.re/zotero-better-bibtex/support/faq/#bbt-is-changing-the-capitalization-of-my-titles----why)).
+
+### Ter overweging
+
+Een haalbaar, automatiseerbaar en betrouwbaar alternatief voor `research-institute-for-nature-and-forest.csl` kan zijn om _binnen de stijl_ steeds omzetting naar Title Case te doen voor _Engelstalige_ titel- en serievelden (CSL ondersteunt conversie alleen Engelstalig).
+Momenteel kom je sowieso met heterogeniteit te zitten als gevolg van de heterogeniteit in het referentiebestand (sommige ingevoerd als Title Case, sommige als sentence case).
