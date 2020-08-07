@@ -103,30 +103,28 @@ Specifieke zaken (zie ook gsheet):
   - merk op dat `@online` een BibLaTeX type is. Om een bib-file met dit type zonder probleem in te kunnen lezen in **JabRef**, moet je bij de preferences > advanced kiezen voor de _BibLaTeX mode_!
   
 
-## Issues bij renderen met csl
+## Issues in het csl bestand
 
-Deze issues zijn niet oplosbaar via het csl-bestand.
+Betreft `research-institute-for-nature-and-forest.csl`.
 
-### In R Markdown
+Momenteel zijn geen resterende issues gekend in de ontwikkelversie.
 
-Als gevolg van bug in de **bib2json** conversie van **pandoc-citeproc**:
+Issues kunnen gepost worden op de INBO-fork van de CSL-repository (<https://github.com/inbo/styles>), waar verbeteringen aan de file gebeuren (om dan bij te dragen aan de CSL-repo zelf).
 
-- `Publisher`
-  - "and" in `Publisher`wordt ";"
+### Aandachtspunten bij aanmaken van een bib bestand
+
+Er zijn wel enkele aandachtspunten in verband met het gebruik van een bib-file in combinatie met CSL, meer bepaald in verband met de wijze van ingeven van bepaalde velden.
+Deze worden behandeld in hoofdstuk \@ref(bibcsl).
+
+Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zotero en vandaaruit een bib-bestand wordt geëxporteerd, dit met de [Better BibTeX plugin](https://retorque.re/zotero-better-bibtex/) geïnstalleerd.
     
-Als gevolg van bug in de CSL processor van **pandoc-citeproc**:
+## Issue in de Zotero addon 'Better BibTeX'
 
-- `Series`, `Booktitle`:
-  - Title Case wordt sentence case
-    
-### In Zotero
-
-Bij renderen vanuit Zotero (dus mbv citeproc-js), na import van `INBOmd.bib` met **Better BibTeX** plugin en als gevolg van bugs in deze laatste:
+Bij import van `INBOmd.bib` in Zotero met addon 'Better BibTeX':
 
 - `journal = {Journal}` (in `INBOmd.bib`) wordt in Zotero `publication: 'The Journal'`, wat ook zo wordt weergegeven in bibliografie (dus _'The'_ wordt toegevoegd).
-- `Series`, `Booktitle`, `Title`:
-    - Title Case wordt sentence case
 
+Hiervan is een [issue](https://github.com/retorquere/zotero-better-bibtex/issues/1601) gemaakt bij Better BibTeX.
 
 ```{asis echo = FALSE, eval = !natbib}
 \chapter*{Referenties}
