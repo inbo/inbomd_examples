@@ -126,9 +126,4 @@ Bij import van `INBOmd.bib` in Zotero met addon 'Better BibTeX':
 
 Hiervan is een [issue](https://github.com/retorquere/zotero-better-bibtex/issues/1601) gemaakt bij Better BibTeX.
 
-```{asis echo = FALSE, eval = !natbib}
-\chapter*{Referenties}
-\addcontentsline{toc}{chapter}{Referenties}
-```
 
-`r if (knitr::is_html_output() | !natbib) '# Referenties {-}'`

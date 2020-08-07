@@ -1,0 +1,8 @@
+
+```{asis echo = FALSE, eval = !natbib}
+\chapter*{Referenties}
+\addcontentsline{toc}{chapter}{Referenties}
+```
+
+`r if (knitr::is_html_output() | !natbib) '# Referenties {-}'`
+
