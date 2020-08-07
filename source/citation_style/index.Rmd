@@ -88,11 +88,11 @@ Algemene opvolging gebeurt in [deze gsheet](https://docs.google.com/spreadsheets
 Specifieke zaken (zie ook gsheet):
 
 - Conference
-  - `Organization` beter laten vallen in bst en dit veld niet ondersteunen? citeproc-js toont het niet en pandoc-citeproc voegt dit vooraan in het publisher-veld gevolg door ";" en publisher (dit gebeurt nog vóór de CSL-processing, dus bij omzetting bib-file).
+  - `Organization` beter laten vallen in bst en dit veld niet ondersteunen? citeproc-js toont het niet en pandoc-citeproc voegt dit vooraan in het publisher-veld gevolgd door ";" en publisher (dit gebeurt nog vóór de CSL-processing, dus bij omzetting bib-file).
 - Laten vallen van “URL:” en “DOI:” prefixen.
 - Zoals in csl: Nederlandstalige variant voorzien voor verschillende termen, o.a.: ed. (nl) ipv edn. (en) en Nr. (nl) ipv No. (en).
 - Aanpassing van 'Vol. van', 'No. in' naar de afgesproken syntaxis (zie gsheet).
-- Bij ontbreken van de datum:gebruik '(s.d.)' bij ontbreken van een datum (cf. csl)
+- Bij ontbreken van de datum: gebruik '(s.d.)' (cf. csl)
   - zie voorbeeld @databank_ondergrond_vlaanderen_bepalen_nodate.
 - Hanteer `<title>. <edition>` in plaats van	`<title>, <edition>`.
   - Reden: 'title' betreft soms meerdere delen, gescheiden door een punt (bv. titel. subtitel). Het laatste deel laten volgen door een komma en dan '2nd edn.' is wat raar. Zie bv. @book-a1e0.
