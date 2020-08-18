@@ -1,3 +1,4 @@
+options(bookdown.render.file_scope = FALSE)
 old_wd <- getwd()
 on.exit(setwd(old_wd))
 # main file
