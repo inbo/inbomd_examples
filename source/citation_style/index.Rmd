@@ -122,12 +122,6 @@ Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zot
 
 Bijzonderheden bij import/export van `INBOmd.bib` naar/van Zotero met addon 'Better BibTeX'
 
-### Import van `journal = {Journal}`
-
-`journal = {Journal}` (in `INBOmd.bib`) wordt in Zotero `publication: 'The Journal'`, wat ook zo wordt weergegeven in bibliografie (dus _'The'_ wordt toegevoegd).
-
-Hiervan is een [issue](https://github.com/retorquere/zotero-better-bibtex/issues/1601) gemaakt bij Better BibTeX.
-
 ### Export van article met page-range 'x-y'
 
 Range `x-y` wordt omgezet naar `x--y` (in bib-file).
