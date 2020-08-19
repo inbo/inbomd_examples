@@ -128,7 +128,7 @@ Range `x-y` wordt omgezet naar `x--y` (in bib-file).
 
 Zie bespreking in het [issue](https://github.com/retorquere/zotero-better-bibtex/issues/1602).
 Dit blijkt een weloverwogen feature te zijn (en geen bug) om met zekerheid n-dashes te induceren voor page-ranges.
-Zie ook: '[many, but not all, BibTeX styles will correct hyphen to n-dash]( many, but not all, BibTeX styles will correct hyphen to n-dash)'.
+Zie ook: '[many, but not all, BibTeX styles will correct hyphen to n-dash](https://tex.stackexchange.com/a/58671/27603)'.
 
 
 
