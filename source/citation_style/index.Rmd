@@ -118,7 +118,7 @@ Deze worden behandeld in hoofdstuk \@ref(bibcsl).
 
 Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zotero en vandaaruit een bib-bestand wordt geëxporteerd, dit met de [Better BibTeX plugin](https://retorque.re/zotero-better-bibtex/) geïnstalleerd.
     
-## Issues in de Zotero addon 'Better BibTeX'
+## Bijzonderheden in de Zotero addon 'Better BibTeX'
 
 Bijzonderheden bij import/export van `INBOmd.bib` naar/van Zotero met addon 'Better BibTeX'
 
@@ -126,7 +126,9 @@ Bijzonderheden bij import/export van `INBOmd.bib` naar/van Zotero met addon 'Bet
 
 Range `x-y` wordt omgezet naar `x--y` (in bib-file).
 
-Zie aangemaakt [issue](https://github.com/retorquere/zotero-better-bibtex/issues/1602).
+Zie bespreking in het [issue](https://github.com/retorquere/zotero-better-bibtex/issues/1602).
+Dit blijkt een weloverwogen feature te zijn (en geen bug) om met zekerheid n-dashes te induceren voor page-ranges.
+Zie ook: '[many, but not all, BibTeX styles will correct hyphen to n-dash]( many, but not all, BibTeX styles will correct hyphen to n-dash)'.
 
 
 
