@@ -38,6 +38,8 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
     - [Stapsgewijze](flanders_slides/flanders_slides.pdf) slides in pdf
     - [Handout versie](flanders_slides/flanders_slides_handout.pdf) slides in pdf
 - Voorbeelden van referenties
-    - Pdf op basis van [bst bestand](citation_style/citation_style_bst.pdf)
-    - Pdf op basis van [csl bestand](citation_style/citation_style_csl.pdf)
-    - HTML op basis van [csl bestand](citation_style/index.html)
+    <!-- - Pdf op basis van [bst bestand](citation_style/citation_style_bst.pdf) -->
+    - [PDF met Nederlandstalige bibliografie](citation_style/nl/citation_style_csl.pdf) op basis van csl bestand
+    - [HTML met Nederlandstalige bibliografie](citation_style/nl/index.html) op basis van csl bestand
+    - [PDF met Engelstalige bibliografie](citation_style/en/citation_style_csl.pdf) op basis van csl bestand
+    - [HTML met Engelstalige bibliografie](citation_style/en/index.html) op basis van csl bestand
