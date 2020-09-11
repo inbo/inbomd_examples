@@ -15,6 +15,7 @@
 #########################
 
 # Dutch bibliography
+dir.create("../../docs/citation_style/nl", recursive = TRUE)
 rmarkdown::render_site(
   output_format =  bookdown::pdf_book(
     base_format = "INBOmd::inbo_rapport",
@@ -27,7 +28,7 @@ rmarkdown::render_site(
 )
 file.rename(
   "../../docs/citation_style/citation_style.pdf",
-  "../../docs/citation_style/citation_style_csl.pdf"
+  "../../docs/citation_style/nl/citation_style_csl.pdf"
 )
 rmarkdown::render_site(
   output_format =  bookdown::gitbook(
@@ -44,8 +45,16 @@ rmarkdown::render_site(
     )
   )
 )
+website_files <- list.files("../../docs/citation_style")
+website_files <- website_files[!website_files %in% c("nl", "en")]
+file.rename(
+  file.path("../../docs/citation_style", website_files),
+  file.path("../../docs/citation_style/nl", website_files)
+)
+
 
 # English bibliography
+dir.create("../../docs/citation_style/en", recursive = TRUE)
 rmarkdown::render_site(
   output_format =  bookdown::pdf_book(
     base_format = "INBOmd::inbo_rapport",
@@ -58,7 +67,7 @@ rmarkdown::render_site(
 )
 file.rename(
   "../../docs/citation_style/citation_style.pdf",
-  "../../docs/citation_style/citation_style_csl.pdf"
+  "../../docs/citation_style/en/citation_style_csl.pdf"
 )
 rmarkdown::render_site(
   output_format =  bookdown::gitbook(
@@ -74,4 +83,10 @@ rmarkdown::render_site(
       "lang=en"
     )
   )
+)
+website_files <- list.files("../../docs/citation_style")
+website_files <- website_files[!website_files %in% c("nl", "en")]
+file.rename(
+  file.path("../../docs/citation_style", website_files),
+  file.path("../../docs/citation_style/en", website_files)
 )
