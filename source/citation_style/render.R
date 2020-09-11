@@ -1,15 +1,18 @@
-rmarkdown::render_site(
-  output_format =  bookdown::pdf_book(
-    base_format = "INBOmd::inbo_rapport",
-    style = "INBO",
-    lof = FALSE,
-    lot =  FALSE
-  )
-)
-file.rename(
-  "../../docs/citation_style/citation_style.pdf",
-  "../../docs/citation_style/citation_style_bst.pdf"
-)
+# citation_style bst is outdated, so temporarily disabling it for the website:
+#########################
+# rmarkdown::render_site(
+#   output_format =  bookdown::pdf_book(
+#     base_format = "INBOmd::inbo_rapport",
+#     style = "INBO",
+#     lof = FALSE,
+#     lot =  FALSE
+#   )
+# )
+# file.rename(
+#   "../../docs/citation_style/citation_style.pdf",
+#   "../../docs/citation_style/citation_style_bst.pdf"
+# )
+#########################
 
 # Dutch bibliography
 rmarkdown::render_site(
