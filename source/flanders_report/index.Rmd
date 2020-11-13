@@ -82,6 +82,6 @@ if (interactive()) {
     }
   )
 }
-switchColour(vl.darkyellow)
+switchColour(vl_darkyellow)
 set.seed(201901017)
 ```
