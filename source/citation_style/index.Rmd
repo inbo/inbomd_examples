@@ -51,7 +51,7 @@ Table: Verschillende types documenten
 | MastersThesis | [@masterthesis] |
 | Misc          | [@misc] |
 | Misc (with type set as dataset)   | [@onkelinx_thierry_2019_2682323; @oosterlynck_patrik_2019_3550995] |
-| Online (a BibLaTeX type) | [@databank_ondergrond_vlaanderen_bepalen_nodate; @european_topic_centre_on_biological_diversity_etc/bd_reference_2016; @wikipedia_muizenberg_2019] |
+| Online (a BibLaTeX type) | [@databank_ondergrond_vlaanderen_bepalen_nodate; @european_topic_centre_on_biological_diversity_etc/bd_reference_2016; @wikipedia_muizenberg_2019;@lastnameWebpageTitle2020] |
 | PhdThesis     | [@phdthesis] |
 | Proceedings   | [@proceedings-e0; @proceedings-e1; @proceedings-e2; @proceedings-e3] |
 | TechReport    | [@techreport-a1; @techreport-a2; @techreport-a3] |
