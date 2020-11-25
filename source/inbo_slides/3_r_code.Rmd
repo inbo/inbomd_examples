@@ -114,8 +114,8 @@ ggplot(pp(20), aes(x = x, y = y, fill = z)) +
 ### Standaard volgorde van kleuren bij categorieën
 
 ```{r echo = FALSE, warning=FALSE}
-testgrid <- expand.grid(x = 1:4, y = 1:4)
-testgrid$z <- factor((testgrid$x - 1) * 4 + testgrid$y)
+testgrid <- expand.grid(x = 1:3, y = 1:3)
+testgrid$z <- factor((testgrid$x - 1) * 3 + testgrid$y)
 ggplot(testgrid, aes(x = x, y = y, fill = z, label = z)) +
   geom_tile(width = 0.7, height = 0.7) +
   geom_text() +
