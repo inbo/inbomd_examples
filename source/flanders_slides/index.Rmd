@@ -27,6 +27,7 @@ library(ggplot2)
 library(INBOtheme)
 theme_set(theme_vlaanderen2015(6, transparent = "plot"))
 set.seed(20190117)
+switch_colour(vl_darkyellow)
 ```
 
 # Options
