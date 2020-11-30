@@ -16,8 +16,6 @@ output:
     base_format: INBOmd::inbo_rapport
     style: Flanders
     tocdepth: 4
-    keep_tex: TRUE
-    clean: FALSE
   bookdown::gitbook:
     split_by: "chapter+number"
     template: !expr INBOmd::inbo_rapport_css("html")
@@ -82,6 +80,6 @@ if (interactive()) {
     }
   )
 }
-switchColour(vl.darkyellow)
+switch_colour(vl_darkyellow)
 set.seed(201901017)
 ```
