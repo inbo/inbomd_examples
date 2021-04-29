@@ -66,6 +66,70 @@ Je kan dit strenger instellen door in de `yaml` de optie `floatbarrier: section`
 Dit is equivalent met het manueel plaatsen van een  `\FloatBarrier` voor elke kop van niveau 2 of hoger (`#` en `##`). 
 Andere opties zijn `floatbarrier: subsection` en `floatbarrier: subsubsection` die staan voor respectievelijk kop 3 (`#`, `##` en `###`) en kop 4 (`#`, `##`, `###` en `####`).
 
+## Woordafbreking
+
+In de html en epub versie is woordafbreking niet van toepassing.
+De woordafbreking van pdf documenten gebeurd automatisch en in functie van de taal^[Bijgevolg lukt de automatische woordafbreking niet bij een willekeurige tekenreeks. Denk hierbij aan de link naar een bestand op Google Drive zoals https://docs.google.com/presentation/d/10KkXEv4r3wWtdKvB6RFOPe809eMNldODaRqQxn-jeME/edit#slide=id.g321e330f74_1_997. Overweeg in dergelijke gevallen om het bestand via Zenodo te publiceren, wat een korte link oplevert https://doi.org/10.5281/zenodo.842223. Een andere mogelijkheid is de link achter een [woord](https://docs.google.com/presentation/d/10KkXEv4r3wWtdKvB6RFOPe809eMNldODaRqQxn-jeME/edit#slide=id.g321e330f74_1_997) te plaatsen].
+Kies daarom de stijl `Flanders` als de hoofdtaal van de document anders dan Nederlands is.
+Als je binnen een document een langer stuk in een ander taal dan de hoofdtaal hebt (bijv. Engelse samenvatting in een Nederlandstalig rapport), moet je aangeven dat dat stuk in de betrokken taal is.
+Je doet dit voor aan het begin `\b_taal_` en aan het einde `\e_taal_` te gebruiken waarbij je `_taal_` vervangt door de Engelse naam van de taal.
+Dus `\benglish` en `\eenglish` voor Engels, `\bdutch` en `\edutch` voor Nederlands en `\bfrench` en `\efrench` voor Frans.
+
+We lijnen de paragrafen zowel links als rechts uit.
+Om de tekst rechts uit te lijnen zal LaTeX de spaties breder of smaller maken.
+Om te vermijden dat de spaties te groot of te klein worden, kunnen we een woord afbreken.
+Als we het woord niet kunnen afbreken, is een alternatief om het woord toch op de dezelfde regel te houden en bijgevolg een langere regel te krijgen.
+LaTeX zal in dat laatste geval een afweging maken tussen te brede/smalle spaties of een te lange regel.
+Regels met weinig spaties en een woord op het einde met weinig mogelijkheden qua woordafbreking maken het moeilijk om alle mooi rechts uit te lijnen zonder heel brede/smalle spaties te gebruiken.
+In dergelijke gevallen zal LaTeX ervoor kiezen om de regel langer te maken.
+
+Soms breekt LaTeX een woord niet af, of op de verkeerde plaats.
+Om dat te verhelpen kan je in de YAML onder de tag `hyphenation` een kommagescheiden lijst van woorden opnemen met de gewenste plaatsen waar de LaTeX het woord mag afbreken.
+Bijvoorbeeld `hyphenation: bio-lo-gische, waar-derings-kaart, wild-detectie-systeem` zal wilddetectiesysteem enkel afbreken als wild-detectiesysteem of wilddetectie-systeem.
+
+```{block2, type = "alertblock"}
+Wanneer je een koppelteken in een woord gebruikt, dan zal LaTeX dat woord _enkel op dat punt_ afbreken.
+Woorden met vaste tekenbreedte (§\@ref(s:vaste-tekenbreedte)) zal LaTeX _nooit_ afbreken.
+
+**voorbeeld met koppelteken**  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg a multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg ab multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abc multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcd multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcde multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdef multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg a multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg ab multi-disciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abc multi-disciplinair.  
+
+**voorbeeld zonder koppelteken**  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg a multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg ab multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abc multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcd multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcde multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdef multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg a multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg ab multidisciplinair.  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abc multidisciplinair.  
+
+**voorbeeld met vaste tekenbreedte**  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg `multidisciplinair.`  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg a `multidisciplinair.`  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg ab `multidisciplinair.`  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abc `multidisciplinair.`  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcd `multidisciplinair.`  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcde `multidisciplinair.`  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdef `multidisciplinair.`  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg `multidisciplinair.`  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg `multidisciplinair.`  
+abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg `multidisciplinair.`
+```
+
 ## Foutmelding bij het gebruik van `%` in bijschriften.
 
 `%` wordt gebruikt als commentaarteken in LaTeX. 

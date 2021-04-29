@@ -84,7 +84,7 @@ _`r paragraph(n = 1)`_
 
 _**`r paragraph(n = 1)`**_
 
-## Met vaste tekenbreedte
+## Met vaste tekenbreedte {#s:vaste-tekenbreedte}
 
 ```{r echo = FALSE, results = "asis"}
 cat("`", paragraph(), "`", sep = "")
