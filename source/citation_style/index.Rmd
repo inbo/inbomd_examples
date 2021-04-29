@@ -1,13 +1,23 @@
 ---
 title: "Voorbeeld van referentiestijl"
 author: 
-  - 
-    name: "Thierry Onkelinx & Floris Vanderhaeghe"
-    email: "thierry.onkelinx@inbo.be"
+  - firstname: Thierry
+    name: Onkelinx
+    email: thierry.onkelinx@inbo.be
+    orcid: 0000-0001-8804-4216
+reviewer:
+  - firstname: Floris
+    name: Vanderhaeghe
+    email: floris.vanderhaeghe@inbo.be
+    orcid: 0000-0002-6378-6229
+github-repo: inbo/inbomd-examples
+
 link-citations: TRUE
 site: bookdown::bookdown_site
 bibliography: ../INBOmd.bib
-output:
+lang: nl
+
+  output:
   bookdown::pdf_book:
     base_format: INBOmd::inbo_rapport
     style: INBO

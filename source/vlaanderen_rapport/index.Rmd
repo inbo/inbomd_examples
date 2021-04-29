@@ -44,6 +44,7 @@ print:
 site: bookdown::bookdown_site
 link-citations: TRUE
 bibliography: ../INBOmd.bib
+lang: nl
 
 output:
   bookdown::pdf_book:
@@ -53,9 +54,11 @@ output:
   bookdown::gitbook:
     split_by: "chapter+number"
     template: !expr INBOmd::inbo_rapport_css("html")
+    pandoc_args: !expr c("--csl", system.file("research-institute-for-nature-and-forest.csl", package = "INBOmd"))
   bookdown::epub_book:
     stylesheet: "css/inbo_rapport.css"
     template: !expr INBOmd::inbo_rapport_css("epub")
+    pandoc_args: !expr c("--csl", system.file("research-institute-for-nature-and-forest.csl", package = "INBOmd"))
 ---
 
 ```{r setup, include = FALSE}
