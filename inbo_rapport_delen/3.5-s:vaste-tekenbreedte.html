@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html  lang="nl">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3.5 Met vaste tekenbreedte | Voorbeeldrapport met INBOmd</title>
+  <meta name="description" content="3.5 Met vaste tekenbreedte | Voorbeeldrapport met INBOmd">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="3.5 Met vaste tekenbreedte | Voorbeeldrapport met INBOmd" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="/github/workdir/source/inbo_rapport_delen/cover.jpeg" />
+  
+  <meta name="github-repo" content="inbo/inbomd-examples" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3.5 Met vaste tekenbreedte | Voorbeeldrapport met INBOmd" />
+  
+  
+  <meta name="twitter:image" content="/github/workdir/source/inbo_rapport_delen/cover.jpeg" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="3.4-vet-en-cursief.html"/>
+<link rel="next" href="3.6-onderscheiden-van-tekens.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/INBOmd-0.5.2/inbo_report.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.20/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/inbo_rapport.css" type="text/css"/>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+<a href=".">
+<img src="cover.jpeg" alt = "Onkelinx, T. (2021) Voorbeeldrapport met INBOmd" class = "thumbnail"></a><br>
+<a class="chapter" href="#"><a href="https://doi.org/10.5281/zenodo.842223" class="uri">https://doi.org/10.5281/zenodo.842223</a></a>
+<br><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/>
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Dankwoord</a></li>
+<li class="chapter" data-level="" data-path="voorwoord.html"><a href="voorwoord.html"><i class="fa fa-check"></i>Voorwoord</a></li>
+<li class="chapter" data-level="" data-path="samenvatting.html"><a href="samenvatting.html"><i class="fa fa-check"></i>Samenvatting</a></li>
+<li class="chapter" data-level="" data-path="aanbevelingen-voor-beheer-enof-beleid.html"><a href="aanbevelingen-voor-beheer-enof-beleid.html"><i class="fa fa-check"></i>Aanbevelingen voor beheer en/of beleid</a></li>
+<li class="chapter" data-level="" data-path="english-abstract.html"><a href="english-abstract.html"><i class="fa fa-check"></i>English abstract</a></li>
+<li class="chapter" data-level="" data-path="resume-francais.html"><a href="resume-francais.html"><i class="fa fa-check"></i>Résumé français</a></li>
+<li class="chapter" data-level="1" data-path="1-inleiding.html"><a href="1-inleiding.html"><i class="fa fa-check"></i><b>1</b> Inleiding</a><ul>
+<li class="chapter" data-level="1.1" data-path="1.1-lipsum.html"><a href="1.1-lipsum.html"><i class="fa fa-check"></i><b>1.1</b> Lipsum</a></li>
+</ul></li>
+<li class="part"><span><b>I Typografie</b></span></li>
+<li class="chapter" data-level="2" data-path="2-koppen.html"><a href="2-koppen.html"><i class="fa fa-check"></i><b>2</b> Kopstijlen: niveau 1: Vivamus viverra fermentum felis. Integer pretium semper justo. Donec sit amet nibh. Nullam eleifend pellentesque ligula. Sed mattis tempor felis.</a><ul>
+<li class="chapter" data-level="2.1" data-path="2.1-niveau-2-aliquam-consectetuer-varius-nulla.-vivamus-scelerisque-semper-mi.-sed-vehicula-aliquam-ligula.-aliquam-tincidunt-ullamcorper-justo.-aliquam-tincidunt-ullamcorper-justo..html"><a href="2.1-niveau-2-aliquam-consectetuer-varius-nulla.-vivamus-scelerisque-semper-mi.-sed-vehicula-aliquam-ligula.-aliquam-tincidunt-ullamcorper-justo.-aliquam-tincidunt-ullamcorper-justo..html"><i class="fa fa-check"></i><b>2.1</b> Niveau 2: Aliquam consectetuer varius nulla. Vivamus scelerisque semper mi. Sed vehicula aliquam ligula. Aliquam tincidunt ullamcorper justo. Aliquam tincidunt ullamcorper justo.</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2.1-niveau-2-aliquam-consectetuer-varius-nulla.-vivamus-scelerisque-semper-mi.-sed-vehicula-aliquam-ligula.-aliquam-tincidunt-ullamcorper-justo.-aliquam-tincidunt-ullamcorper-justo..html"><a href="2.1-niveau-2-aliquam-consectetuer-varius-nulla.-vivamus-scelerisque-semper-mi.-sed-vehicula-aliquam-ligula.-aliquam-tincidunt-ullamcorper-justo.-aliquam-tincidunt-ullamcorper-justo..html#niveau-3-etiam-fringilla-faucibus-augue.-quisque-ullamcorper-placerat-ipsum.-ut-elementum-auctor-metus.-nulla-molestie-convallis-arcu.-sed-vestibulum-dapibus-neque."><i class="fa fa-check"></i><b>2.1.1</b> Niveau 3: Etiam fringilla faucibus augue. Quisque ullamcorper placerat ipsum. Ut elementum auctor metus. Nulla molestie convallis arcu. Sed vestibulum dapibus neque.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="koppen-zonder-nummer.html"><a href="koppen-zonder-nummer.html"><i class="fa fa-check"></i>Kopstijlen zonder nummer: niveau 1: Maecenas sit amet diam. Ut egestas feugiat magna. Nulla ullamcorper vestibulum turpis. In sit amet diam. Donec lacinia malesuada massa.</a><ul>
+<li class="chapter" data-level="" data-path="niveau-2-morbi-malesuada-faucibus-dolor.-etiam-elementum-pretium-justo.-nunc-dictum-vulputate-purus.-phasellus-aliquet-volutpat-odio.-sed-dapibus-feugiat-sapien..html"><a href="niveau-2-morbi-malesuada-faucibus-dolor.-etiam-elementum-pretium-justo.-nunc-dictum-vulputate-purus.-phasellus-aliquet-volutpat-odio.-sed-dapibus-feugiat-sapien..html"><i class="fa fa-check"></i>Niveau 2: Morbi malesuada faucibus dolor. Etiam elementum pretium justo. Nunc dictum vulputate purus. Phasellus aliquet volutpat odio. Sed dapibus feugiat sapien.</a><ul>
+<li class="chapter" data-level="" data-path="niveau-2-morbi-malesuada-faucibus-dolor.-etiam-elementum-pretium-justo.-nunc-dictum-vulputate-purus.-phasellus-aliquet-volutpat-odio.-sed-dapibus-feugiat-sapien..html"><a href="niveau-2-morbi-malesuada-faucibus-dolor.-etiam-elementum-pretium-justo.-nunc-dictum-vulputate-purus.-phasellus-aliquet-volutpat-odio.-sed-dapibus-feugiat-sapien..html#niveau-3-donec-sit-amet-nibh.-mauris-malesuada-malesuada-elit.-phasellus-commodo-vulputate-arcu.-nam-vestibulum-ullamcorper-leo.-vivamus-sagittis-volutpat-dui."><i class="fa fa-check"></i>Niveau 3: Donec sit amet nibh. Mauris malesuada malesuada elit. Phasellus commodo vulputate arcu. Nam vestibulum ullamcorper leo. Vivamus sagittis volutpat dui.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-lettertypes.html"><a href="3-lettertypes.html"><i class="fa fa-check"></i><b>3</b> Lettertypes</a><ul>
+<li class="chapter" data-level="3.1" data-path="3.1-normaal.html"><a href="3.1-normaal.html"><i class="fa fa-check"></i><b>3.1</b> Normaal</a></li>
+<li class="chapter" data-level="3.2" data-path="3.2-vet.html"><a href="3.2-vet.html"><i class="fa fa-check"></i><b>3.2</b> Vet</a></li>
+<li class="chapter" data-level="3.3" data-path="3.3-cursief.html"><a href="3.3-cursief.html"><i class="fa fa-check"></i><b>3.3</b> Cursief</a></li>
+<li class="chapter" data-level="3.4" data-path="3.4-vet-en-cursief.html"><a href="3.4-vet-en-cursief.html"><i class="fa fa-check"></i><b>3.4</b> Vet en cursief</a></li>
+<li class="chapter" data-level="3.5" data-path="3.5-s:vaste-tekenbreedte.html"><a href="3.5-s:vaste-tekenbreedte.html"><i class="fa fa-check"></i><b>3.5</b> Met vaste tekenbreedte</a></li>
+<li class="chapter" data-level="3.6" data-path="3.6-onderscheiden-van-tekens.html"><a href="3.6-onderscheiden-van-tekens.html"><i class="fa fa-check"></i><b>3.6</b> Onderscheiden van tekens</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-opsommingen.html"><a href="4-opsommingen.html"><i class="fa fa-check"></i><b>4</b> Opsommingen</a><ul>
+<li class="chapter" data-level="4.1" data-path="4.1-ongeordende-lijsten.html"><a href="4.1-ongeordende-lijsten.html"><i class="fa fa-check"></i><b>4.1</b> Ongeordende lijsten</a></li>
+<li class="chapter" data-level="4.2" data-path="4.2-genummerde-lijsten.html"><a href="4.2-genummerde-lijsten.html"><i class="fa fa-check"></i><b>4.2</b> Genummerde lijsten</a></li>
+<li class="chapter" data-level="4.3" data-path="4.3-lijsten-met-definities.html"><a href="4.3-lijsten-met-definities.html"><i class="fa fa-check"></i><b>4.3</b> Lijsten met definities</a></li>
+<li class="chapter" data-level="4.4" data-path="4.4-lijsten-mengen.html"><a href="4.4-lijsten-mengen.html"><i class="fa fa-check"></i><b>4.4</b> Lijsten mengen</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-kaders.html"><a href="5-kaders.html"><i class="fa fa-check"></i><b>5</b> Kaders</a><ul>
+<li class="chapter" data-level="5.1" data-path="5.1-standaard-kader.html"><a href="5.1-standaard-kader.html"><i class="fa fa-check"></i><b>5.1</b> Standaard kader</a></li>
+<li class="chapter" data-level="5.2" data-path="5.2-kader-met-voorbeeld.html"><a href="5.2-kader-met-voorbeeld.html"><i class="fa fa-check"></i><b>5.2</b> Kader met voorbeeld</a></li>
+<li class="chapter" data-level="5.3" data-path="5.3-kader-met-waarschuwing.html"><a href="5.3-kader-met-waarschuwing.html"><i class="fa fa-check"></i><b>5.3</b> Kader met waarschuwing</a></li>
+</ul></li>
+<li class="part"><span><b>II Andere elementen</b></span></li>
+<li class="chapter" data-level="6" data-path="6-h:kruisverwijzing.html"><a href="6-h:kruisverwijzing.html"><i class="fa fa-check"></i><b>6</b> Kruisverwijzigingen</a><ul>
+<li class="chapter" data-level="6.1" data-path="6.1-interne-kruisverwijzingen.html"><a href="6.1-interne-kruisverwijzingen.html"><i class="fa fa-check"></i><b>6.1</b> Interne kruisverwijzingen</a></li>
+<li class="chapter" data-level="6.2" data-path="6.2-externe-verwijzingen.html"><a href="6.2-externe-verwijzingen.html"><i class="fa fa-check"></i><b>6.2</b> Externe verwijzingen</a></li>
+<li class="chapter" data-level="6.3" data-path="6.3-extra-formattering.html"><a href="6.3-extra-formattering.html"><i class="fa fa-check"></i><b>6.3</b> Extra formattering</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html"><i class="fa fa-check"></i><b>7</b> Figuren en tabellen</a><ul>
+<li class="chapter" data-level="7.1" data-path="7.1-tabellen.html"><a href="7.1-tabellen.html"><i class="fa fa-check"></i><b>7.1</b> Tabellen</a></li>
+<li class="chapter" data-level="7.2" data-path="7.2-s:figuur-invoegen.html"><a href="7.2-s:figuur-invoegen.html"><i class="fa fa-check"></i><b>7.2</b> Figuren</a></li>
+<li class="chapter" data-level="7.3" data-path="7.3-plaatsing-van-tabellen-en-figuren.html"><a href="7.3-plaatsing-van-tabellen-en-figuren.html"><i class="fa fa-check"></i><b>7.3</b> Plaatsing van tabellen en figuren</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-h:formules.html"><a href="8-h:formules.html"><i class="fa fa-check"></i><b>8</b> Wiskundige formules</a><ul>
+<li class="chapter" data-level="8.1" data-path="8.1-in-lijn-formules.html"><a href="8.1-in-lijn-formules.html"><i class="fa fa-check"></i><b>8.1</b> In-lijn formules</a></li>
+<li class="chapter" data-level="8.2" data-path="8.2-losstaande-formules.html"><a href="8.2-losstaande-formules.html"><i class="fa fa-check"></i><b>8.2</b> Losstaande formules</a></li>
+<li class="chapter" data-level="8.3" data-path="8.3-s:formule-nummer.html"><a href="8.3-s:formule-nummer.html"><i class="fa fa-check"></i><b>8.3</b> Genummerde formules</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-citeren-van-literatuur.html"><a href="9-citeren-van-literatuur.html"><i class="fa fa-check"></i><b>9</b> Citeren van literatuur</a><ul>
+<li class="chapter" data-level="9.1" data-path="9.1-vereisten.html"><a href="9.1-vereisten.html"><i class="fa fa-check"></i><b>9.1</b> Vereisten</a></li>
+<li class="chapter" data-level="9.2" data-path="9.2-in-lijn-stijlen.html"><a href="9.2-in-lijn-stijlen.html"><i class="fa fa-check"></i><b>9.2</b> In-lijn stijlen</a></li>
+</ul></li>
+<li class="part"><span><b>III R gebaseerde output</b></span></li>
+<li class="chapter" data-level="10" data-path="10-code.html"><a href="10-code.html"><i class="fa fa-check"></i><b>10</b> Code</a><ul>
+<li class="chapter" data-level="10.1" data-path="10.1-door-r-berekende-waarden-gebruiken-in-gewone-tekst.html"><a href="10.1-door-r-berekende-waarden-gebruiken-in-gewone-tekst.html"><i class="fa fa-check"></i><b>10.1</b> Door R berekende waarden gebruiken in gewone tekst</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-figuren.html"><a href="11-figuren.html"><i class="fa fa-check"></i><b>11</b> Figuren</a><ul>
+<li class="chapter" data-level="11.1" data-path="11.1-in-lijn-figuren.html"><a href="11.1-in-lijn-figuren.html"><i class="fa fa-check"></i><b>11.1</b> In-lijn figuren</a></li>
+<li class="chapter" data-level="11.2" data-path="11.2-zwevende-figuren.html"><a href="11.2-zwevende-figuren.html"><i class="fa fa-check"></i><b>11.2</b> Zwevende figuren</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html"><i class="fa fa-check"></i><b>12</b> Tabellen</a><ul>
+<li class="chapter" data-level="12.1" data-path="12.1-kable.html"><a href="12.1-kable.html"><i class="fa fa-check"></i><b>12.1</b> <code>kable()</code></a></li>
+<li class="chapter" data-level="12.2" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html"><i class="fa fa-check"></i><b>12.2</b> Mogelijke alternatieven</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html#aangepaste-kable-formaten-voor-pdf-output"><i class="fa fa-check"></i><b>12.2.1</b> Aangepaste <code>kable()</code> formaten voor pdf output</a></li>
+<li class="chapter" data-level="12.2.2" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html#het-kableextra-package"><i class="fa fa-check"></i><b>12.2.2</b> Het <code>kableExtra</code> package</a></li>
+<li class="chapter" data-level="12.2.3" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html#pandoc.table"><i class="fa fa-check"></i><b>12.2.3</b> <code>pandoc.table()</code></a></li>
+<li class="chapter" data-level="12.2.4" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html#xtable"><i class="fa fa-check"></i><b>12.2.4</b> <code>xtable()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Tips and tricks</b></span></li>
+<li class="chapter" data-level="13" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html"><i class="fa fa-check"></i><b>13</b> Lay-out tips voor pdf</a><ul>
+<li class="chapter" data-level="13.1" data-path="13.1-nieuwe-pagina-forceren.html"><a href="13.1-nieuwe-pagina-forceren.html"><i class="fa fa-check"></i><b>13.1</b> Nieuwe pagina forceren</a></li>
+<li class="chapter" data-level="13.2" data-path="13.2-tekst-samenhouden.html"><a href="13.2-tekst-samenhouden.html"><i class="fa fa-check"></i><b>13.2</b> Tekst samenhouden</a></li>
+<li class="chapter" data-level="13.3" data-path="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><a href="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><i class="fa fa-check"></i><b>13.3</b> Problemen met zwevende figuren en tabellen</a><ul>
+<li class="chapter" data-level="13.3.1" data-path="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><a href="13.3-problemen-met-zwevende-figuren-en-tabellen.html#foutmelding-too-many-unprocessed-floats"><i class="fa fa-check"></i><b>13.3.1</b> Foutmelding: “too many unprocessed floats”</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><a href="13.3-problemen-met-zwevende-figuren-en-tabellen.html#zwevende-figuur-of-tabel-wordt-in-de-volgende-sectie-geplaatst"><i class="fa fa-check"></i><b>13.3.2</b> Zwevende figuur of tabel wordt in de volgende sectie geplaatst</a></li>
+<li class="chapter" data-level="13.3.3" data-path="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><a href="13.3-problemen-met-zwevende-figuren-en-tabellen.html#automatische-floatbarrier"><i class="fa fa-check"></i><b>13.3.3</b> Automatische <code>\FloatBarrier</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13.4-woordafbreking.html"><a href="13.4-woordafbreking.html"><i class="fa fa-check"></i><b>13.4</b> Woordafbreking</a></li>
+<li class="chapter" data-level="13.5" data-path="13.5-foutmelding-bij-het-gebruik-van-in-bijschriften..html"><a href="13.5-foutmelding-bij-het-gebruik-van-in-bijschriften..html"><i class="fa fa-check"></i><b>13.5</b> Foutmelding bij het gebruik van <code>%</code> in bijschriften.</a></li>
+<li class="chapter" data-level="13.6" data-path="13.6-s:onderlijnd.html"><a href="13.6-s:onderlijnd.html"><i class="fa fa-check"></i><b>13.6</b> Gebruik van markdown syntax of quotes in onderlijnde koppen</a></li>
+<li class="chapter" data-level="13.7" data-path="13.7-disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor..html"><a href="13.7-disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor..html"><i class="fa fa-check"></i><b>13.7</b> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em></a></li>
+<li class="chapter" data-level="13.8" data-path="13.8-disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-2.html"><a href="13.8-disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-2.html"><i class="fa fa-check"></i><b>13.8</b> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em></a></li>
+<li class="chapter" data-level="13.9" data-path="13.9-fusce-dignissim-facilisis-tortor..html"><a href="13.9-fusce-dignissim-facilisis-tortor..html"><i class="fa fa-check"></i><b>13.9</b> <em>Fusce dignissim facilisis tortor.</em></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referenties.html"><a href="referenties.html"><i class="fa fa-check"></i>Referenties</a></li>
+<li class="appendix"><span><b>Bijlage</b></span></li>
+<li class="chapter" data-level="A" data-path="A-bijlage-referentietekst-voor-inbo-medewerkers.html"><a href="A-bijlage-referentietekst-voor-inbo-medewerkers.html"><i class="fa fa-check"></i><b>A</b> Bijlage: referentietekst voor INBO-medewerkers</a></li>
+<li class="chapter" data-level="B" data-path="B-bijlage-referentietekst-voor-inbo-medewerkers-1.html"><a href="B-bijlage-referentietekst-voor-inbo-medewerkers-1.html"><i class="fa fa-check"></i><b>B</b> Bijlage: referentietekst voor INBO medewerkers</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Voorbeeldrapport met INBOmd</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="s:vaste-tekenbreedte" class="section level2">
+<h2><span class="header-section-number">3.5</span> Met vaste tekenbreedte</h2>
+<p><code>ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&amp;#§µ^ ()[]{}|²³&lt;&gt;/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789</code></p>
+<p><code>A primo, ut opinor, animantium ortu petitur origo summi boni. "Simul atque natum animal est, gaudet voluptate et eam appetit ut bonum, aspernatur dolorem ut malum." De malis autem et bonis ab iis animalibus, quae nondum depravata sint, ait optime iudicari. Haec et tu ita posuisti, et verba vestra sunt. Quam multa vitiosa! Summum enim bonum et malum vagiens puer utra voluptate diiudicabit, stante an movente? Quoniam, si dis placet, ab Epicuro loqui discimus. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; si movente, quod tamen dicitis, nulla turpis voluptas erit, quae praetermittenda sit, et simul non proficiscitur animal illud modo natum a summa voluptate, quae est a te posita in non dolendo.</code></p>
+<p><code>Aanhalingstekens: "dubbele", 'enkele'</code></p>
+<p><strong><code>ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&amp;#§µ^ ()[]{}|²³&lt;&gt;/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789</code></strong></p>
+<p><strong><code>Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractavissent, ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. Nam quibusdam, et iis quidem non admodum indoctis, totum hoc displicet philosophari. Quidam autem non tam id reprehendunt, si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. Erunt etiam, et ii quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere. Postremo aliquos futuros suspicor, qui me ad alias litteras vocent, genus hoc scribendi, etsi sit elegans, personae tamen et dignitatis esse negent.</code></strong></p>
+<p><strong><code>Aanhalingstekens: "dubbele", 'enkele'</code></strong></p>
+<p>80 karakters passen in de breedte van de pdf</p>
+<p><code>12345678911234567892123456789312345678941234567895123456789612345678971234567898</code></p>
+<p><strong><code>12345678911234567892123456789312345678941234567895123456789612345678971234567898</code></strong></p>
+<p>100 karakters passen niet meer in de breedte van de pdf</p>
+<p><code>1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890</code></p>
+<p><strong><code>1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890</code></strong></p>
+</div>
+<p>&nbsp;</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/></a>
+Onkelinx, T. (2021). <a href="https://doi.org/10.5281/zenodo.842223" class="uri">https://doi.org/10.5281/zenodo.842223</a>
+            </section>
+        </div>
+      </div>
+    </div>
+<a href="3.4-vet-en-cursief.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3.6-onderscheiden-van-tekens.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/inbo/inbomd_examples/edit/master/source/inbo_rapport_delen/../inbo_rapport/1_typografie.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["inbo_rapport_delen.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, "");
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+
+</html>

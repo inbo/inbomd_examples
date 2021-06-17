@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html  lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Recommandations de gestion et/ou de politique | Exemple rapport utilisant INBOmd</title>
+  <meta name="description" content="Recommandations de gestion et/ou de politique | Exemple rapport utilisant INBOmd">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Recommandations de gestion et/ou de politique | Exemple rapport utilisant INBOmd" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="/github/workdir/source/flandre_rapport/cover.jpeg" />
+  
+  <meta name="github-repo" content="inbo/inbomd-examples" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Recommandations de gestion et/ou de politique | Exemple rapport utilisant INBOmd" />
+  
+  
+  <meta name="twitter:image" content="/github/workdir/source/flandre_rapport/cover.jpeg" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="résumé.html"/>
+<link rel="next" href="samenvatting.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/INBOmd-0.5.2/flanders_report.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.20/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+<a href=".">
+<img src="cover.jpeg" class = "thumbnail" alt = "Onkelinx, T. &amp; Lommelen, E. (2021) Exemple rapport utilisant INBOmd">
+</a><br>
+<a class="chapter" href="#"><a href="https://doi.org/10.5281/zenodo.842223" class="uri">https://doi.org/10.5281/zenodo.842223</a></a>
+<br><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-License" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/>
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Préface</a></li>
+<li class="chapter" data-level="" data-path="résumé.html"><a href="résumé.html"><i class="fa fa-check"></i>Résumé</a></li>
+<li class="chapter" data-level="" data-path="recommandations-de-gestion-etou-de-politique.html"><a href="recommandations-de-gestion-etou-de-politique.html"><i class="fa fa-check"></i>Recommandations de gestion et/ou de politique</a></li>
+<li class="chapter" data-level="" data-path="samenvatting.html"><a href="samenvatting.html"><i class="fa fa-check"></i>Samenvatting</a></li>
+<li class="chapter" data-level="" data-path="english-abstract.html"><a href="english-abstract.html"><i class="fa fa-check"></i>English abstract</a></li>
+<li class="chapter" data-level="1" data-path="1-introduction.html"><a href="1-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-introduction.html"><a href="1-introduction.html#lipsum"><i class="fa fa-check"></i><b>1.1</b> Lipsum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-h-koppen.html"><a href="2-h-koppen.html"><i class="fa fa-check"></i><b>2</b> Titres: niveau 1: Utram tandem linguam nescio? Nullam congue suscipit nibh. Morbi vulputate convallis est. Duis tincidunt tristique risus. Pellentesque tristique sodales est.</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-h-koppen.html"><a href="2-h-koppen.html#niveau-2-curabitur-sodales-dapibus-urna.-praesent-interdum-bibendum-magna.-curabitur-auctor-semper-nulla.-etiam-imperdiet-imperdiet-pede.-pellentesque-tristique-sodales-est."><i class="fa fa-check"></i><b>2.1</b> Niveau 2: Curabitur sodales dapibus urna. Praesent interdum bibendum magna. Curabitur auctor semper nulla. Etiam imperdiet imperdiet pede. Pellentesque tristique sodales est.</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-h-koppen.html"><a href="2-h-koppen.html#niveau-3-sed-sollicitudin-tincidunt-arcu.-donec-egestas-ornare-nulla.-integer-ornare-convallis-tortor.-nulla-facilisis-posuere-sapien.-in-sit-amet-diam."><i class="fa fa-check"></i><b>2.1.1</b> Niveau 3: Sed sollicitudin tincidunt arcu. Donec egestas ornare nulla. Integer ornare convallis tortor. Nulla facilisis posuere sapien. In sit amet diam.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="h-koppen-zonder-nummer.html"><a href="h-koppen-zonder-nummer.html"><i class="fa fa-check"></i>Titres sans numéro: niveau 1: Quisque lacinia consequat odio. Vestibulum malesuada malesuada dui. Nulla varius ornare odio. Aliquam vestibulum lobortis felis. Etiam elementum pretium justo.</a><ul>
+<li class="chapter" data-level="" data-path="h-koppen-zonder-nummer.html"><a href="h-koppen-zonder-nummer.html#niveau-2-vivamus-elementum-placerat-enim.-vestibulum-nonummy-vulputate-orci.-nam-elementum-ullamcorper-leo.-an-nisi-populari-fama-nullam-accumsan-euismod-nunc."><i class="fa fa-check"></i>Niveau 2: Vivamus elementum placerat enim. Vestibulum nonummy vulputate orci. Nam elementum ullamcorper leo. An nisi populari fama? Nullam accumsan euismod nunc.</a><ul>
+<li class="chapter" data-level="" data-path="h-koppen-zonder-nummer.html"><a href="h-koppen-zonder-nummer.html#niveau-3-suspendisse-accumsan-sagittis-velit.-fusce-facilisis-lacinia-dui.-ut-egestas-feugiat-magna.-nunc-sodales-auctor-ante.-morbi-tincidunt-posuere-arcu."><i class="fa fa-check"></i>Niveau 3: Suspendisse accumsan sagittis velit. Fusce facilisis lacinia dui. Ut egestas feugiat magna. Nunc sodales auctor ante. Morbi tincidunt posuere arcu.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-polices.html"><a href="3-polices.html"><i class="fa fa-check"></i><b>3</b> Polices</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-polices.html"><a href="3-polices.html#normal"><i class="fa fa-check"></i><b>3.1</b> Normal</a></li>
+<li class="chapter" data-level="3.2" data-path="3-polices.html"><a href="3-polices.html#gras"><i class="fa fa-check"></i><b>3.2</b> Gras</a></li>
+<li class="chapter" data-level="3.3" data-path="3-polices.html"><a href="3-polices.html#italique"><i class="fa fa-check"></i><b>3.3</b> Italique</a></li>
+<li class="chapter" data-level="3.4" data-path="3-polices.html"><a href="3-polices.html#italique-gras"><i class="fa fa-check"></i><b>3.4</b> Italique gras</a></li>
+<li class="chapter" data-level="3.5" data-path="3-polices.html"><a href="3-polices.html#police-à-largeur-fixe"><i class="fa fa-check"></i><b>3.5</b> Police à largeur fixe</a></li>
+<li class="chapter" data-level="3.6" data-path="3-polices.html"><a href="3-polices.html#l-miniscule-contre-i-majuscule"><i class="fa fa-check"></i><b>3.6</b> L miniscule contre i majuscule</a></li>
+<li class="chapter" data-level="3.7" data-path="3-polices.html"><a href="3-polices.html#o-majuscule-contre-chiffre-0"><i class="fa fa-check"></i><b>3.7</b> O majuscule contre chiffre 0</a></li>
+<li class="chapter" data-level="3.8" data-path="3-polices.html"><a href="3-polices.html#caractères-spéciaux"><i class="fa fa-check"></i><b>3.8</b> Caractères spéciaux</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="3-polices.html"><a href="3-polices.html#normal-1"><i class="fa fa-check"></i><b>3.8.1</b> Normal</a></li>
+<li class="chapter" data-level="3.8.2" data-path="3-polices.html"><a href="3-polices.html#gras-1"><i class="fa fa-check"></i><b>3.8.2</b> Gras</a></li>
+<li class="chapter" data-level="3.8.3" data-path="3-polices.html"><a href="3-polices.html#italique-1"><i class="fa fa-check"></i><b>3.8.3</b> Italique</a></li>
+<li class="chapter" data-level="3.8.4" data-path="3-polices.html"><a href="3-polices.html#italique-gras-1"><i class="fa fa-check"></i><b>3.8.4</b> Italique gras</a></li>
+<li class="chapter" data-level="3.8.5" data-path="3-polices.html"><a href="3-polices.html#police-de-largeur-fixe"><i class="fa fa-check"></i><b>3.8.5</b> Police de largeur fixe</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="3-polices.html"><a href="3-polices.html#guillemets"><i class="fa fa-check"></i><b>3.9</b> Guillemets</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-listes.html"><a href="4-listes.html"><i class="fa fa-check"></i><b>4</b> Listes</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-listes.html"><a href="4-listes.html#liste-non-ordonnée"><i class="fa fa-check"></i><b>4.1</b> Liste non ordonnée</a></li>
+<li class="chapter" data-level="4.2" data-path="4-listes.html"><a href="4-listes.html#liste-numérotée"><i class="fa fa-check"></i><b>4.2</b> Liste numérotée</a></li>
+<li class="chapter" data-level="4.3" data-path="4-listes.html"><a href="4-listes.html#liste-numérotée-avec-lettres"><i class="fa fa-check"></i><b>4.3</b> Liste numérotée avec lettres</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-boxes.html"><a href="5-boxes.html"><i class="fa fa-check"></i><b>5</b> Boxes</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-boxes.html"><a href="5-boxes.html#default-box"><i class="fa fa-check"></i><b>5.1</b> Default box</a></li>
+<li class="chapter" data-level="5.2" data-path="5-boxes.html"><a href="5-boxes.html#example-box"><i class="fa fa-check"></i><b>5.2</b> Example box</a></li>
+<li class="chapter" data-level="5.3" data-path="5-boxes.html"><a href="5-boxes.html#alert-box"><i class="fa fa-check"></i><b>5.3</b> Alert box</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-h:kruisverwijzing.html"><a href="6-h:kruisverwijzing.html"><i class="fa fa-check"></i><b>6</b> Cross references</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-h:kruisverwijzing.html"><a href="6-h:kruisverwijzing.html#internal-cross-references"><i class="fa fa-check"></i><b>6.1</b> Internal cross references</a></li>
+<li class="chapter" data-level="6.2" data-path="6-h:kruisverwijzing.html"><a href="6-h:kruisverwijzing.html#external-references"><i class="fa fa-check"></i><b>6.2</b> External references</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-figures-and-tables.html"><a href="7-figures-and-tables.html"><i class="fa fa-check"></i><b>7</b> Figures and tables</a><ul>
+<li class="chapter" data-level="7.1" data-path="7-figures-and-tables.html"><a href="7-figures-and-tables.html#tables"><i class="fa fa-check"></i><b>7.1</b> Tables</a></li>
+<li class="chapter" data-level="7.2" data-path="7-figures-and-tables.html"><a href="7-figures-and-tables.html#s:figuur-invoegen"><i class="fa fa-check"></i><b>7.2</b> Static figure</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-h:formules.html"><a href="8-h:formules.html"><i class="fa fa-check"></i><b>8</b> Equations</a><ul>
+<li class="chapter" data-level="8.1" data-path="8-h:formules.html"><a href="8-h:formules.html#inline-equations"><i class="fa fa-check"></i><b>8.1</b> Inline equations</a></li>
+<li class="chapter" data-level="8.2" data-path="8-h:formules.html"><a href="8-h:formules.html#stand-alone-equations"><i class="fa fa-check"></i><b>8.2</b> Stand alone equations</a></li>
+<li class="chapter" data-level="8.3" data-path="8-h:formules.html"><a href="8-h:formules.html#s:formule-nummer"><i class="fa fa-check"></i><b>8.3</b> Numberd equations</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-citing-literature.html"><a href="9-citing-literature.html"><i class="fa fa-check"></i><b>9</b> Citing literature</a><ul>
+<li class="chapter" data-level="9.1" data-path="9-citing-literature.html"><a href="9-citing-literature.html#inline-style"><i class="fa fa-check"></i><b>9.1</b> Inline style</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-code.html"><a href="10-code.html"><i class="fa fa-check"></i><b>10</b> Code</a></li>
+<li class="chapter" data-level="11" data-path="11-figures.html"><a href="11-figures.html"><i class="fa fa-check"></i><b>11</b> Figures</a><ul>
+<li class="chapter" data-level="11.1" data-path="11-figures.html"><a href="11-figures.html#inline-figure"><i class="fa fa-check"></i><b>11.1</b> Inline figure</a></li>
+<li class="chapter" data-level="11.2" data-path="11-figures.html"><a href="11-figures.html#floating-figure"><i class="fa fa-check"></i><b>11.2</b> Floating figure</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-tables-1.html"><a href="12-tables-1.html"><i class="fa fa-check"></i><b>12</b> Tables</a><ul>
+<li class="chapter" data-level="12.1" data-path="12-tables-1.html"><a href="12-tables-1.html#kable"><i class="fa fa-check"></i><b>12.1</b> <code>kable()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-titre-de-la-première-annexe.html"><a href="A-titre-de-la-première-annexe.html"><i class="fa fa-check"></i><b>A</b> Titre de la première annexe</a></li>
+<li class="chapter" data-level="B" data-path="B-titre-de-la-deuxième-annexe.html"><a href="B-titre-de-la-deuxième-annexe.html"><i class="fa fa-check"></i><b>B</b> Titre de la deuxième annexe</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Exemple rapport utilisant INBOmd</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="recommandations-de-gestion-etou-de-politique" class="section level1 unnumbered">
+<h1>Recommandations de gestion et/ou de politique</h1>
+<p>Donec libero. Quisque vitae est quis dui bibendum suscipit. Fusce leo felis, sagittis non, vehicula ac, ultricies vitae, diam. Aenean congue libero et metus. Nulla convallis libero a lacus. Donec hendrerit lorem sit amet leo. Mauris libero. Pellentesque pulvinar molestie dolor. Proin nibh mauris, ornare at, pretium sit amet, porttitor vel, mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<p>Quid nunc “honeste” dicit? Idemne, quod iucunde? Ergo ita: non posse honeste vivi, nisi honeste vivatur? An nisi populari fama? Sine ea igitur iucunde negat posse (se) vivere? Quid turpius quam sapientis vitam ex insipientium sermone pendere? Quid ergo hoc loco intellegit honestum? Certe nihil nisi quod possit ipsum propter se iure laudari. Nam si propter voluptatem, quae est ista laus, quae possit e macello peti? Non is vir est, ut, cum honestatem eo loco habeat, ut sine ea iucunde neget posse vivi, illud honestum, quod populare sit, sentiat et sine eo neget iucunde vivi posse, aut quicquam aliud honestum intellegat, nisi quod sit rectum ipsumque per se sua vi, sua natura, sua sponte laudabile.</p>
+<p>Pellentesque interdum sapien sed nulla. Proin tincidunt. Aliquam volutpat est vel massa. Sed dolor lacus, imperdiet non, ornare non, commodo eu, neque. Integer pretium semper justo. Proin risus. Nullam id quam. Nam neque. Duis vitae wisi ullamcorper diam congue ultricies. Quisque ligula. Mauris vehicula.</p>
+<p>Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Satisne ergo pudori consulat, si quis sine teste libidini pareat? An est aliquid per se ipsum flagitiosum, etiamsi nulla comitetur infamia? Quid? Fortes viri voluptatumne calculis subductis proelium ineunt, sanguinem pro patria profundunt, an quodam animi ardore atque impetu concitati? utrum tandem censes, Torquate, Imperiosum illum, si nostra verba audiret, tuamne de se orationem libentius auditurum fuisse an meam, cum ego dicerem nihil eum fecisse sua causa omniaque rei publicae, tu contra nihil nisi sua? Si vero id etiam explanare velles apertiusque diceres nihil eum fecisse nisi voluptatis causa, quo modo eum tandem laturum fuisse existimas?</p>
+<p>Ad ea cum accedit, ut neque divinum numen horreat nec praeteritas voluptates effluere patiatur earumque assidua recordatione laetetur, quid est, quod huc possit, quod melius sit, accedere? Statue contra aliquem confectum tantis animi corporisque doloribus, quanti in hominem maximi cadere possunt, nulla spe proposita fore levius aliquando, nulla praeterea neque praesenti nec expectata voluptate, quid eo miserius dici aut fingi potest? Quodsi vita doloribus referta maxime fugienda est, summum profecto malum est vivere cum dolore, cui sententiae consentaneum est ultimum esse bonorum eum voluptate vivere. Nec enim habet nostra mens quicquam, ubi consistat tamquam in extremo, omnesque et metus et aegritudines ad dolorem referuntur, nec praeterea est res ulla, quae sua natura aut sollicitare possit aut angere.</p>
+
+</div>
+<p>&nbsp;</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-License" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/>
+Onkelinx, T. &amp; Lommelen, E. (2021). <a href="https://doi.org/10.5281/zenodo.842223" class="uri">https://doi.org/10.5281/zenodo.842223</a>
+            </section>
+        </div>
+      </div>
+    </div>
+<a href="résumé.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="samenvatting.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/inbo/inbomd_examples/edit/master/source/vlaanderen_rapport/0_frontmatter.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["flandre_rapport.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, "");
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+
+</html>

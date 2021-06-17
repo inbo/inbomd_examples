@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html  lang="nl">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>12.2 Mogelijke alternatieven | Voorbeeldrapport met INBOmd</title>
+  <meta name="description" content="12.2 Mogelijke alternatieven | Voorbeeldrapport met INBOmd">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="12.2 Mogelijke alternatieven | Voorbeeldrapport met INBOmd" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="/github/workdir/source/inbo_rapport_delen/cover.jpeg" />
+  
+  <meta name="github-repo" content="inbo/inbomd-examples" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="12.2 Mogelijke alternatieven | Voorbeeldrapport met INBOmd" />
+  
+  
+  <meta name="twitter:image" content="/github/workdir/source/inbo_rapport_delen/cover.jpeg" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="12.1-kable.html"/>
+<link rel="next" href="13-lay-out-tips-voor-pdf.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/INBOmd-0.5.2/inbo_report.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.20/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/inbo_rapport.css" type="text/css"/>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+<a href=".">
+<img src="cover.jpeg" alt = "Onkelinx, T. (2021) Voorbeeldrapport met INBOmd" class = "thumbnail"></a><br>
+<a class="chapter" href="#"><a href="https://doi.org/10.5281/zenodo.842223" class="uri">https://doi.org/10.5281/zenodo.842223</a></a>
+<br><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/>
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Dankwoord</a></li>
+<li class="chapter" data-level="" data-path="voorwoord.html"><a href="voorwoord.html"><i class="fa fa-check"></i>Voorwoord</a></li>
+<li class="chapter" data-level="" data-path="samenvatting.html"><a href="samenvatting.html"><i class="fa fa-check"></i>Samenvatting</a></li>
+<li class="chapter" data-level="" data-path="aanbevelingen-voor-beheer-enof-beleid.html"><a href="aanbevelingen-voor-beheer-enof-beleid.html"><i class="fa fa-check"></i>Aanbevelingen voor beheer en/of beleid</a></li>
+<li class="chapter" data-level="" data-path="english-abstract.html"><a href="english-abstract.html"><i class="fa fa-check"></i>English abstract</a></li>
+<li class="chapter" data-level="" data-path="resume-francais.html"><a href="resume-francais.html"><i class="fa fa-check"></i>Résumé français</a></li>
+<li class="chapter" data-level="1" data-path="1-inleiding.html"><a href="1-inleiding.html"><i class="fa fa-check"></i><b>1</b> Inleiding</a><ul>
+<li class="chapter" data-level="1.1" data-path="1.1-lipsum.html"><a href="1.1-lipsum.html"><i class="fa fa-check"></i><b>1.1</b> Lipsum</a></li>
+</ul></li>
+<li class="part"><span><b>I Typografie</b></span></li>
+<li class="chapter" data-level="2" data-path="2-koppen.html"><a href="2-koppen.html"><i class="fa fa-check"></i><b>2</b> Kopstijlen: niveau 1: Vivamus viverra fermentum felis. Integer pretium semper justo. Donec sit amet nibh. Nullam eleifend pellentesque ligula. Sed mattis tempor felis.</a><ul>
+<li class="chapter" data-level="2.1" data-path="2.1-niveau-2-aliquam-consectetuer-varius-nulla.-vivamus-scelerisque-semper-mi.-sed-vehicula-aliquam-ligula.-aliquam-tincidunt-ullamcorper-justo.-aliquam-tincidunt-ullamcorper-justo..html"><a href="2.1-niveau-2-aliquam-consectetuer-varius-nulla.-vivamus-scelerisque-semper-mi.-sed-vehicula-aliquam-ligula.-aliquam-tincidunt-ullamcorper-justo.-aliquam-tincidunt-ullamcorper-justo..html"><i class="fa fa-check"></i><b>2.1</b> Niveau 2: Aliquam consectetuer varius nulla. Vivamus scelerisque semper mi. Sed vehicula aliquam ligula. Aliquam tincidunt ullamcorper justo. Aliquam tincidunt ullamcorper justo.</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2.1-niveau-2-aliquam-consectetuer-varius-nulla.-vivamus-scelerisque-semper-mi.-sed-vehicula-aliquam-ligula.-aliquam-tincidunt-ullamcorper-justo.-aliquam-tincidunt-ullamcorper-justo..html"><a href="2.1-niveau-2-aliquam-consectetuer-varius-nulla.-vivamus-scelerisque-semper-mi.-sed-vehicula-aliquam-ligula.-aliquam-tincidunt-ullamcorper-justo.-aliquam-tincidunt-ullamcorper-justo..html#niveau-3-etiam-fringilla-faucibus-augue.-quisque-ullamcorper-placerat-ipsum.-ut-elementum-auctor-metus.-nulla-molestie-convallis-arcu.-sed-vestibulum-dapibus-neque."><i class="fa fa-check"></i><b>2.1.1</b> Niveau 3: Etiam fringilla faucibus augue. Quisque ullamcorper placerat ipsum. Ut elementum auctor metus. Nulla molestie convallis arcu. Sed vestibulum dapibus neque.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="koppen-zonder-nummer.html"><a href="koppen-zonder-nummer.html"><i class="fa fa-check"></i>Kopstijlen zonder nummer: niveau 1: Maecenas sit amet diam. Ut egestas feugiat magna. Nulla ullamcorper vestibulum turpis. In sit amet diam. Donec lacinia malesuada massa.</a><ul>
+<li class="chapter" data-level="" data-path="niveau-2-morbi-malesuada-faucibus-dolor.-etiam-elementum-pretium-justo.-nunc-dictum-vulputate-purus.-phasellus-aliquet-volutpat-odio.-sed-dapibus-feugiat-sapien..html"><a href="niveau-2-morbi-malesuada-faucibus-dolor.-etiam-elementum-pretium-justo.-nunc-dictum-vulputate-purus.-phasellus-aliquet-volutpat-odio.-sed-dapibus-feugiat-sapien..html"><i class="fa fa-check"></i>Niveau 2: Morbi malesuada faucibus dolor. Etiam elementum pretium justo. Nunc dictum vulputate purus. Phasellus aliquet volutpat odio. Sed dapibus feugiat sapien.</a><ul>
+<li class="chapter" data-level="" data-path="niveau-2-morbi-malesuada-faucibus-dolor.-etiam-elementum-pretium-justo.-nunc-dictum-vulputate-purus.-phasellus-aliquet-volutpat-odio.-sed-dapibus-feugiat-sapien..html"><a href="niveau-2-morbi-malesuada-faucibus-dolor.-etiam-elementum-pretium-justo.-nunc-dictum-vulputate-purus.-phasellus-aliquet-volutpat-odio.-sed-dapibus-feugiat-sapien..html#niveau-3-donec-sit-amet-nibh.-mauris-malesuada-malesuada-elit.-phasellus-commodo-vulputate-arcu.-nam-vestibulum-ullamcorper-leo.-vivamus-sagittis-volutpat-dui."><i class="fa fa-check"></i>Niveau 3: Donec sit amet nibh. Mauris malesuada malesuada elit. Phasellus commodo vulputate arcu. Nam vestibulum ullamcorper leo. Vivamus sagittis volutpat dui.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-lettertypes.html"><a href="3-lettertypes.html"><i class="fa fa-check"></i><b>3</b> Lettertypes</a><ul>
+<li class="chapter" data-level="3.1" data-path="3.1-normaal.html"><a href="3.1-normaal.html"><i class="fa fa-check"></i><b>3.1</b> Normaal</a></li>
+<li class="chapter" data-level="3.2" data-path="3.2-vet.html"><a href="3.2-vet.html"><i class="fa fa-check"></i><b>3.2</b> Vet</a></li>
+<li class="chapter" data-level="3.3" data-path="3.3-cursief.html"><a href="3.3-cursief.html"><i class="fa fa-check"></i><b>3.3</b> Cursief</a></li>
+<li class="chapter" data-level="3.4" data-path="3.4-vet-en-cursief.html"><a href="3.4-vet-en-cursief.html"><i class="fa fa-check"></i><b>3.4</b> Vet en cursief</a></li>
+<li class="chapter" data-level="3.5" data-path="3.5-s:vaste-tekenbreedte.html"><a href="3.5-s:vaste-tekenbreedte.html"><i class="fa fa-check"></i><b>3.5</b> Met vaste tekenbreedte</a></li>
+<li class="chapter" data-level="3.6" data-path="3.6-onderscheiden-van-tekens.html"><a href="3.6-onderscheiden-van-tekens.html"><i class="fa fa-check"></i><b>3.6</b> Onderscheiden van tekens</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-opsommingen.html"><a href="4-opsommingen.html"><i class="fa fa-check"></i><b>4</b> Opsommingen</a><ul>
+<li class="chapter" data-level="4.1" data-path="4.1-ongeordende-lijsten.html"><a href="4.1-ongeordende-lijsten.html"><i class="fa fa-check"></i><b>4.1</b> Ongeordende lijsten</a></li>
+<li class="chapter" data-level="4.2" data-path="4.2-genummerde-lijsten.html"><a href="4.2-genummerde-lijsten.html"><i class="fa fa-check"></i><b>4.2</b> Genummerde lijsten</a></li>
+<li class="chapter" data-level="4.3" data-path="4.3-lijsten-met-definities.html"><a href="4.3-lijsten-met-definities.html"><i class="fa fa-check"></i><b>4.3</b> Lijsten met definities</a></li>
+<li class="chapter" data-level="4.4" data-path="4.4-lijsten-mengen.html"><a href="4.4-lijsten-mengen.html"><i class="fa fa-check"></i><b>4.4</b> Lijsten mengen</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-kaders.html"><a href="5-kaders.html"><i class="fa fa-check"></i><b>5</b> Kaders</a><ul>
+<li class="chapter" data-level="5.1" data-path="5.1-standaard-kader.html"><a href="5.1-standaard-kader.html"><i class="fa fa-check"></i><b>5.1</b> Standaard kader</a></li>
+<li class="chapter" data-level="5.2" data-path="5.2-kader-met-voorbeeld.html"><a href="5.2-kader-met-voorbeeld.html"><i class="fa fa-check"></i><b>5.2</b> Kader met voorbeeld</a></li>
+<li class="chapter" data-level="5.3" data-path="5.3-kader-met-waarschuwing.html"><a href="5.3-kader-met-waarschuwing.html"><i class="fa fa-check"></i><b>5.3</b> Kader met waarschuwing</a></li>
+</ul></li>
+<li class="part"><span><b>II Andere elementen</b></span></li>
+<li class="chapter" data-level="6" data-path="6-h:kruisverwijzing.html"><a href="6-h:kruisverwijzing.html"><i class="fa fa-check"></i><b>6</b> Kruisverwijzigingen</a><ul>
+<li class="chapter" data-level="6.1" data-path="6.1-interne-kruisverwijzingen.html"><a href="6.1-interne-kruisverwijzingen.html"><i class="fa fa-check"></i><b>6.1</b> Interne kruisverwijzingen</a></li>
+<li class="chapter" data-level="6.2" data-path="6.2-externe-verwijzingen.html"><a href="6.2-externe-verwijzingen.html"><i class="fa fa-check"></i><b>6.2</b> Externe verwijzingen</a></li>
+<li class="chapter" data-level="6.3" data-path="6.3-extra-formattering.html"><a href="6.3-extra-formattering.html"><i class="fa fa-check"></i><b>6.3</b> Extra formattering</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html"><i class="fa fa-check"></i><b>7</b> Figuren en tabellen</a><ul>
+<li class="chapter" data-level="7.1" data-path="7.1-tabellen.html"><a href="7.1-tabellen.html"><i class="fa fa-check"></i><b>7.1</b> Tabellen</a></li>
+<li class="chapter" data-level="7.2" data-path="7.2-s:figuur-invoegen.html"><a href="7.2-s:figuur-invoegen.html"><i class="fa fa-check"></i><b>7.2</b> Figuren</a></li>
+<li class="chapter" data-level="7.3" data-path="7.3-plaatsing-van-tabellen-en-figuren.html"><a href="7.3-plaatsing-van-tabellen-en-figuren.html"><i class="fa fa-check"></i><b>7.3</b> Plaatsing van tabellen en figuren</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-h:formules.html"><a href="8-h:formules.html"><i class="fa fa-check"></i><b>8</b> Wiskundige formules</a><ul>
+<li class="chapter" data-level="8.1" data-path="8.1-in-lijn-formules.html"><a href="8.1-in-lijn-formules.html"><i class="fa fa-check"></i><b>8.1</b> In-lijn formules</a></li>
+<li class="chapter" data-level="8.2" data-path="8.2-losstaande-formules.html"><a href="8.2-losstaande-formules.html"><i class="fa fa-check"></i><b>8.2</b> Losstaande formules</a></li>
+<li class="chapter" data-level="8.3" data-path="8.3-s:formule-nummer.html"><a href="8.3-s:formule-nummer.html"><i class="fa fa-check"></i><b>8.3</b> Genummerde formules</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-citeren-van-literatuur.html"><a href="9-citeren-van-literatuur.html"><i class="fa fa-check"></i><b>9</b> Citeren van literatuur</a><ul>
+<li class="chapter" data-level="9.1" data-path="9.1-vereisten.html"><a href="9.1-vereisten.html"><i class="fa fa-check"></i><b>9.1</b> Vereisten</a></li>
+<li class="chapter" data-level="9.2" data-path="9.2-in-lijn-stijlen.html"><a href="9.2-in-lijn-stijlen.html"><i class="fa fa-check"></i><b>9.2</b> In-lijn stijlen</a></li>
+</ul></li>
+<li class="part"><span><b>III R gebaseerde output</b></span></li>
+<li class="chapter" data-level="10" data-path="10-code.html"><a href="10-code.html"><i class="fa fa-check"></i><b>10</b> Code</a><ul>
+<li class="chapter" data-level="10.1" data-path="10.1-door-r-berekende-waarden-gebruiken-in-gewone-tekst.html"><a href="10.1-door-r-berekende-waarden-gebruiken-in-gewone-tekst.html"><i class="fa fa-check"></i><b>10.1</b> Door R berekende waarden gebruiken in gewone tekst</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-figuren.html"><a href="11-figuren.html"><i class="fa fa-check"></i><b>11</b> Figuren</a><ul>
+<li class="chapter" data-level="11.1" data-path="11.1-in-lijn-figuren.html"><a href="11.1-in-lijn-figuren.html"><i class="fa fa-check"></i><b>11.1</b> In-lijn figuren</a></li>
+<li class="chapter" data-level="11.2" data-path="11.2-zwevende-figuren.html"><a href="11.2-zwevende-figuren.html"><i class="fa fa-check"></i><b>11.2</b> Zwevende figuren</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html"><i class="fa fa-check"></i><b>12</b> Tabellen</a><ul>
+<li class="chapter" data-level="12.1" data-path="12.1-kable.html"><a href="12.1-kable.html"><i class="fa fa-check"></i><b>12.1</b> <code>kable()</code></a></li>
+<li class="chapter" data-level="12.2" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html"><i class="fa fa-check"></i><b>12.2</b> Mogelijke alternatieven</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html#aangepaste-kable-formaten-voor-pdf-output"><i class="fa fa-check"></i><b>12.2.1</b> Aangepaste <code>kable()</code> formaten voor pdf output</a></li>
+<li class="chapter" data-level="12.2.2" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html#het-kableextra-package"><i class="fa fa-check"></i><b>12.2.2</b> Het <code>kableExtra</code> package</a></li>
+<li class="chapter" data-level="12.2.3" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html#pandoc.table"><i class="fa fa-check"></i><b>12.2.3</b> <code>pandoc.table()</code></a></li>
+<li class="chapter" data-level="12.2.4" data-path="12.2-mogelijke-alternatieven.html"><a href="12.2-mogelijke-alternatieven.html#xtable"><i class="fa fa-check"></i><b>12.2.4</b> <code>xtable()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Tips and tricks</b></span></li>
+<li class="chapter" data-level="13" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html"><i class="fa fa-check"></i><b>13</b> Lay-out tips voor pdf</a><ul>
+<li class="chapter" data-level="13.1" data-path="13.1-nieuwe-pagina-forceren.html"><a href="13.1-nieuwe-pagina-forceren.html"><i class="fa fa-check"></i><b>13.1</b> Nieuwe pagina forceren</a></li>
+<li class="chapter" data-level="13.2" data-path="13.2-tekst-samenhouden.html"><a href="13.2-tekst-samenhouden.html"><i class="fa fa-check"></i><b>13.2</b> Tekst samenhouden</a></li>
+<li class="chapter" data-level="13.3" data-path="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><a href="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><i class="fa fa-check"></i><b>13.3</b> Problemen met zwevende figuren en tabellen</a><ul>
+<li class="chapter" data-level="13.3.1" data-path="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><a href="13.3-problemen-met-zwevende-figuren-en-tabellen.html#foutmelding-too-many-unprocessed-floats"><i class="fa fa-check"></i><b>13.3.1</b> Foutmelding: “too many unprocessed floats”</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><a href="13.3-problemen-met-zwevende-figuren-en-tabellen.html#zwevende-figuur-of-tabel-wordt-in-de-volgende-sectie-geplaatst"><i class="fa fa-check"></i><b>13.3.2</b> Zwevende figuur of tabel wordt in de volgende sectie geplaatst</a></li>
+<li class="chapter" data-level="13.3.3" data-path="13.3-problemen-met-zwevende-figuren-en-tabellen.html"><a href="13.3-problemen-met-zwevende-figuren-en-tabellen.html#automatische-floatbarrier"><i class="fa fa-check"></i><b>13.3.3</b> Automatische <code>\FloatBarrier</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13.4-woordafbreking.html"><a href="13.4-woordafbreking.html"><i class="fa fa-check"></i><b>13.4</b> Woordafbreking</a></li>
+<li class="chapter" data-level="13.5" data-path="13.5-foutmelding-bij-het-gebruik-van-in-bijschriften..html"><a href="13.5-foutmelding-bij-het-gebruik-van-in-bijschriften..html"><i class="fa fa-check"></i><b>13.5</b> Foutmelding bij het gebruik van <code>%</code> in bijschriften.</a></li>
+<li class="chapter" data-level="13.6" data-path="13.6-s:onderlijnd.html"><a href="13.6-s:onderlijnd.html"><i class="fa fa-check"></i><b>13.6</b> Gebruik van markdown syntax of quotes in onderlijnde koppen</a></li>
+<li class="chapter" data-level="13.7" data-path="13.7-disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor..html"><a href="13.7-disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor..html"><i class="fa fa-check"></i><b>13.7</b> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em></a></li>
+<li class="chapter" data-level="13.8" data-path="13.8-disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-2.html"><a href="13.8-disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-2.html"><i class="fa fa-check"></i><b>13.8</b> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em></a></li>
+<li class="chapter" data-level="13.9" data-path="13.9-fusce-dignissim-facilisis-tortor..html"><a href="13.9-fusce-dignissim-facilisis-tortor..html"><i class="fa fa-check"></i><b>13.9</b> <em>Fusce dignissim facilisis tortor.</em></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referenties.html"><a href="referenties.html"><i class="fa fa-check"></i>Referenties</a></li>
+<li class="appendix"><span><b>Bijlage</b></span></li>
+<li class="chapter" data-level="A" data-path="A-bijlage-referentietekst-voor-inbo-medewerkers.html"><a href="A-bijlage-referentietekst-voor-inbo-medewerkers.html"><i class="fa fa-check"></i><b>A</b> Bijlage: referentietekst voor INBO-medewerkers</a></li>
+<li class="chapter" data-level="B" data-path="B-bijlage-referentietekst-voor-inbo-medewerkers-1.html"><a href="B-bijlage-referentietekst-voor-inbo-medewerkers-1.html"><i class="fa fa-check"></i><b>B</b> Bijlage: referentietekst voor INBO medewerkers</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Voorbeeldrapport met INBOmd</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="mogelijke-alternatieven" class="section level2">
+<h2><span class="header-section-number">12.2</span> Mogelijke alternatieven</h2>
+<div id="aangepaste-kable-formaten-voor-pdf-output" class="section level3">
+<h3><span class="header-section-number">12.2.1</span> Aangepaste <code>kable()</code> formaten voor pdf output</h3>
+<p>De booktabs past een lay-out met minder lijnen toe (tabel <a href="12.2-mogelijke-alternatieven.html#tab:kable-booktabs">12.3</a>). Nu geven we ook het gewenste aantal decimalen voor elke kolom weer. Nu past de tabel omdat we een aangepast aantal rijen en kolommen hebben gekozen.</p>
+
+<div class="alertblock">
+<p>De argumenten hebben geen invloed over het uitzicht in de HTML versie.</p>
+</div>
+
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="kw">kable</span>(</a>
+<a class="sourceLine" id="cb36-2" title="2">  <span class="kw">genereer_tabel</span>(<span class="dv">40</span>, <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">1</span>), <span class="dv">5</span>, <span class="dv">4</span>), </a>
+<a class="sourceLine" id="cb36-3" title="3">  <span class="dt">caption =</span> <span class="st">&quot;Booktabs output van `kable()`&quot;</span>,</a>
+<a class="sourceLine" id="cb36-4" title="4">  <span class="dt">digits =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb36-5" title="5">  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb36-6" title="6">)</a></code></pre></div>
+<table>
+<caption><span id="tab:kable-booktabs">Tabel 12.3: </span>Booktabs output van <code>kable()</code></caption>
+<colgroup>
+<col width="7%" />
+<col width="5%" />
+<col width="6%" />
+<col width="7%" />
+<col width="8%" />
+<col width="64%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">X1</th>
+<th align="right">X2</th>
+<th align="right">X3</th>
+<th align="right">X4</th>
+<th align="left">A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">rij 1</td>
+<td align="right">-1.4</td>
+<td align="right">0.35</td>
+<td align="right">-0.255</td>
+<td align="right">1.6314</td>
+<td align="left">px lkhm png qqyszix</td>
+</tr>
+<tr class="even">
+<td align="left">rij 2</td>
+<td align="right">3.3</td>
+<td align="right">-0.74</td>
+<td align="right">-0.169</td>
+<td align="right">-0.3057</td>
+<td align="left">gns afxtoyd ra swd rnyq wj</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 3</td>
+<td align="right">0.7</td>
+<td align="right">-0.89</td>
+<td align="right">-1.742</td>
+<td align="right">-0.3470</td>
+<td align="left">kgzk wfo zgbj cmfnq tt ibv qyfoqast cuwb pnu tvpro ubiks</td>
+</tr>
+<tr class="even">
+<td align="left">rij 4</td>
+<td align="right">-0.2</td>
+<td align="right">1.42</td>
+<td align="right">-0.686</td>
+<td align="right">-0.3375</td>
+<td align="left">psn ko ubsjpfv xnmo bkie mwipxgu vz</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 5</td>
+<td align="right">-1.8</td>
+<td align="right">1.25</td>
+<td align="right">-1.843</td>
+<td align="right">-0.2438</td>
+<td align="left">vxe yavlt yo dcdq wognw yno</td>
+</tr>
+<tr class="even">
+<td align="left">rij 6</td>
+<td align="right">-0.7</td>
+<td align="right">0.65</td>
+<td align="right">-0.028</td>
+<td align="right">-0.8196</td>
+<td align="left">frwxxc laf mkilgp niay qiqus hdwyt lmuutqk uciqx qxam aaod</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 7</td>
+<td align="right">2.8</td>
+<td align="right">-1.36</td>
+<td align="right">-0.031</td>
+<td align="right">0.8360</td>
+<td align="left">pseg my awu</td>
+</tr>
+<tr class="even">
+<td align="left">rij 8</td>
+<td align="right">0.5</td>
+<td align="right">1.49</td>
+<td align="right">1.167</td>
+<td align="right">0.2175</td>
+<td align="left">hghp</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 9</td>
+<td align="right">0.6</td>
+<td align="right">-0.81</td>
+<td align="right">-0.753</td>
+<td align="right">-2.3938</td>
+<td align="left">roinhds lvatm qkqig kitxyjep tjgqjfl mlujcha go</td>
+</tr>
+<tr class="even">
+<td align="left">rij 10</td>
+<td align="right">0.7</td>
+<td align="right">-1.39</td>
+<td align="right">-2.621</td>
+<td align="right">-0.6606</td>
+<td align="left">eqbo qjvim nxj e uybs noelhvsli zyftm</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 11</td>
+<td align="right">-0.7</td>
+<td align="right">-0.08</td>
+<td align="right">-1.538</td>
+<td align="right">0.7826</td>
+<td align="left">red uu j</td>
+</tr>
+<tr class="even">
+<td align="left">rij 12</td>
+<td align="right">1.7</td>
+<td align="right">1.37</td>
+<td align="right">-0.155</td>
+<td align="right">-1.3941</td>
+<td align="left">metdt k goh lshm glft urby yeqpyq rschn</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 13</td>
+<td align="right">0.3</td>
+<td align="right">-0.98</td>
+<td align="right">-0.086</td>
+<td align="right">0.4392</td>
+<td align="left">pdml uooxx fkgnvqg licmvmc</td>
+</tr>
+<tr class="even">
+<td align="left">rij 14</td>
+<td align="right">0.6</td>
+<td align="right">-0.95</td>
+<td align="right">0.341</td>
+<td align="right">-0.0043</td>
+<td align="left">xckjnb rkfkwvgh cew eypeyc iyqtu</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 15</td>
+<td align="right">1.3</td>
+<td align="right">-0.30</td>
+<td align="right">-0.161</td>
+<td align="right">-2.9368</td>
+<td align="left">u kbl cesc</td>
+</tr>
+<tr class="even">
+<td align="left">rij 16</td>
+<td align="right">-0.4</td>
+<td align="right">0.97</td>
+<td align="right">-1.676</td>
+<td align="right">0.4889</td>
+<td align="left">vx bjw fcvbvx io</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 17</td>
+<td align="right">2.3</td>
+<td align="right">-0.72</td>
+<td align="right">1.390</td>
+<td align="right">-0.7452</td>
+<td align="left">xc dleg lakwo luqq qc</td>
+</tr>
+<tr class="even">
+<td align="left">rij 18</td>
+<td align="right">-1.6</td>
+<td align="right">-0.46</td>
+<td align="right">-0.008</td>
+<td align="right">1.2841</td>
+<td align="left">hga f wkuot</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 19</td>
+<td align="right">-1.0</td>
+<td align="right">-0.30</td>
+<td align="right">-0.988</td>
+<td align="right">-0.0741</td>
+<td align="left">yhvc hcjda owj rinq</td>
+</tr>
+<tr class="even">
+<td align="left">rij 20</td>
+<td align="right">-1.7</td>
+<td align="right">-0.07</td>
+<td align="right">0.354</td>
+<td align="right">2.0328</td>
+<td align="left">gtbs vyhm hfn nq tm pyfz</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 21</td>
+<td align="right">-1.6</td>
+<td align="right">0.98</td>
+<td align="right">-0.737</td>
+<td align="right">-0.4870</td>
+<td align="left">qd rcevc vbzis bvxjnh nr</td>
+</tr>
+<tr class="even">
+<td align="left">rij 22</td>
+<td align="right">0.5</td>
+<td align="right">0.29</td>
+<td align="right">-0.104</td>
+<td align="right">1.0221</td>
+<td align="left">ini khmf pa hz xsce xg</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 23</td>
+<td align="right">-0.1</td>
+<td align="right">-0.23</td>
+<td align="right">-0.096</td>
+<td align="right">-0.1495</td>
+<td align="left">yzyng ggik brxk k pdw axss</td>
+</tr>
+<tr class="even">
+<td align="left">rij 24</td>
+<td align="right">-0.7</td>
+<td align="right">-1.97</td>
+<td align="right">-1.950</td>
+<td align="right">-0.1571</td>
+<td align="left">lwu d dm</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 25</td>
+<td align="right">0.8</td>
+<td align="right">-0.66</td>
+<td align="right">0.850</td>
+<td align="right">-0.9607</td>
+<td align="left">o vdovyut cww xaqvp lb jkom</td>
+</tr>
+<tr class="even">
+<td align="left">rij 26</td>
+<td align="right">0.0</td>
+<td align="right">-0.15</td>
+<td align="right">1.170</td>
+<td align="right">-1.9224</td>
+<td align="left">iodl ttcr vaokrh</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 27</td>
+<td align="right">-1.4</td>
+<td align="right">-0.02</td>
+<td align="right">-0.402</td>
+<td align="right">0.2746</td>
+<td align="left">ftxeoux t whe flnl</td>
+</tr>
+<tr class="even">
+<td align="left">rij 28</td>
+<td align="right">1.6</td>
+<td align="right">0.15</td>
+<td align="right">-0.151</td>
+<td align="right">0.9513</td>
+<td align="left">v evco feeoa m gotju rzay</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 29</td>
+<td align="right">-2.1</td>
+<td align="right">0.44</td>
+<td align="right">0.480</td>
+<td align="right">-0.5913</td>
+<td align="left">wqj iv qrghwqquk utc</td>
+</tr>
+<tr class="even">
+<td align="left">rij 30</td>
+<td align="right">1.4</td>
+<td align="right">0.88</td>
+<td align="right">-0.522</td>
+<td align="right">0.7056</td>
+<td align="left">l</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 31</td>
+<td align="right">-0.1</td>
+<td align="right">-1.42</td>
+<td align="right">-0.919</td>
+<td align="right">-2.7633</td>
+<td align="left">jniiter cjdfnj ye sqev</td>
+</tr>
+<tr class="even">
+<td align="left">rij 32</td>
+<td align="right">1.3</td>
+<td align="right">0.39</td>
+<td align="right">-0.252</td>
+<td align="right">-0.6365</td>
+<td align="left">fsau vm gk gufwes jtg gkudyc tvseu</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 33</td>
+<td align="right">-0.7</td>
+<td align="right">0.35</td>
+<td align="right">-1.575</td>
+<td align="right">1.1038</td>
+<td align="left">zm ox i nenry qd ckkjdf llzn</td>
+</tr>
+<tr class="even">
+<td align="left">rij 34</td>
+<td align="right">-0.1</td>
+<td align="right">-0.85</td>
+<td align="right">-1.161</td>
+<td align="right">-0.1499</td>
+<td align="left">r jpw npl to bqzzvmji clwcul aypl</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 35</td>
+<td align="right">-0.5</td>
+<td align="right">1.11</td>
+<td align="right">-0.150</td>
+<td align="right">-0.1637</td>
+<td align="left">fwa hgd</td>
+</tr>
+<tr class="even">
+<td align="left">rij 36</td>
+<td align="right">-0.4</td>
+<td align="right">-0.47</td>
+<td align="right">-0.300</td>
+<td align="right">1.0171</td>
+<td align="left">z vea qdq xp</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 37</td>
+<td align="right">-1.1</td>
+<td align="right">0.41</td>
+<td align="right">-0.250</td>
+<td align="right">0.9712</td>
+<td align="left">f pauj upm xyqtwg zgjya sdfpy rw bd lpo</td>
+</tr>
+<tr class="even">
+<td align="left">rij 38</td>
+<td align="right">-1.7</td>
+<td align="right">-0.95</td>
+<td align="right">-0.212</td>
+<td align="right">0.0400</td>
+<td align="left">cxzp duvm jiv yaey</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 39</td>
+<td align="right">2.0</td>
+<td align="right">-0.95</td>
+<td align="right">-1.050</td>
+<td align="right">0.5366</td>
+<td align="left">ixybbjd nmk jbuela pmf qdxgdvbqo</td>
+</tr>
+<tr class="even">
+<td align="left">rij 40</td>
+<td align="right">-0.6</td>
+<td align="right">-0.22</td>
+<td align="right">0.438</td>
+<td align="right">-0.4441</td>
+<td align="left">aanyq ze fqxn ahgxqdl mqr</td>
+</tr>
+</tbody>
+</table>
+<p>Het longtable formaat is geschikt wanneer we een tabel hebben die langer is dan op een pagina past (tabel <a href="12.2-mogelijke-alternatieven.html#tab:kable-longtable">12.4</a>). Dit soort tabel is geen floating table. Dat wil zeggen dat ze onmiddellijk start daar waar de code ze genereert. Onderaan de pagina wordt de tabel afgebroken en op de volgende pagina opnieuw gestart. Merk op dat een te brede tabel nog steeds wordt afgebroken.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="kw">kable</span>(</a>
+<a class="sourceLine" id="cb37-2" title="2">  <span class="kw">genereer_tabel</span>(<span class="dv">40</span>, <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">1</span>), <span class="dv">4</span>, <span class="dv">4</span>), </a>
+<a class="sourceLine" id="cb37-3" title="3">  <span class="dt">digits =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb37-4" title="4">  <span class="dt">caption =</span> <span class="st">&quot;Longtable output van `kable()`.&quot;</span>,</a>
+<a class="sourceLine" id="cb37-5" title="5">  <span class="dt">longtable =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb37-6" title="6">)</a></code></pre></div>
+<table>
+<caption><span id="tab:kable-longtable">Tabel 12.4: </span>Longtable output van <code>kable()</code>.</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">X1</th>
+<th align="right">X2</th>
+<th align="right">X3</th>
+<th align="right">X4</th>
+<th align="left">A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">rij 1</td>
+<td align="right">0.02</td>
+<td align="right">-1.46</td>
+<td align="right">-0.06</td>
+<td align="right">-0.12</td>
+<td align="left">we f hqvyzd ka pb yghn uvddjyzr kafjjqy</td>
+</tr>
+<tr class="even">
+<td align="left">rij 2</td>
+<td align="right">-0.29</td>
+<td align="right">-0.98</td>
+<td align="right">0.80</td>
+<td align="right">1.16</td>
+<td align="left">bg mxiq ubp ttsq h</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 3</td>
+<td align="right">-1.02</td>
+<td align="right">1.63</td>
+<td align="right">-0.92</td>
+<td align="right">-0.48</td>
+<td align="left">cdjv twfvs</td>
+</tr>
+<tr class="even">
+<td align="left">rij 4</td>
+<td align="right">1.02</td>
+<td align="right">2.38</td>
+<td align="right">0.32</td>
+<td align="right">0.92</td>
+<td align="left">wwdl ik zhhp okiv nvg c</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 5</td>
+<td align="right">-0.16</td>
+<td align="right">0.27</td>
+<td align="right">0.40</td>
+<td align="right">-0.77</td>
+<td align="left">hijt xz me uzep kbtnlybae hgxpyexnqd</td>
+</tr>
+<tr class="even">
+<td align="left">rij 6</td>
+<td align="right">-0.42</td>
+<td align="right">-1.51</td>
+<td align="right">2.18</td>
+<td align="right">-1.76</td>
+<td align="left">fzcf cvc boyfyh dxic hjm rqvay</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 7</td>
+<td align="right">1.37</td>
+<td align="right">-0.43</td>
+<td align="right">-1.25</td>
+<td align="right">0.65</td>
+<td align="left">hvefkn c dxys as xqpq</td>
+</tr>
+<tr class="even">
+<td align="left">rij 8</td>
+<td align="right">-0.44</td>
+<td align="right">0.44</td>
+<td align="right">-0.27</td>
+<td align="right">-0.45</td>
+<td align="left">vmx yp xnmc</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 9</td>
+<td align="right">0.84</td>
+<td align="right">1.08</td>
+<td align="right">1.16</td>
+<td align="right">-0.10</td>
+<td align="left">bvxn ntqt hc ddy gesrhob poc</td>
+</tr>
+<tr class="even">
+<td align="left">rij 10</td>
+<td align="right">1.87</td>
+<td align="right">1.06</td>
+<td align="right">0.56</td>
+<td align="right">-1.63</td>
+<td align="left">rpo fbd hqdzubg</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 11</td>
+<td align="right">-0.82</td>
+<td align="right">-0.93</td>
+<td align="right">-0.52</td>
+<td align="right">0.78</td>
+<td align="left">xftaf vwnhs iy lthonlk fuw</td>
+</tr>
+<tr class="even">
+<td align="left">rij 12</td>
+<td align="right">0.40</td>
+<td align="right">1.54</td>
+<td align="right">0.81</td>
+<td align="right">-0.11</td>
+<td align="left">xvqjux p d tpme</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 13</td>
+<td align="right">0.37</td>
+<td align="right">1.19</td>
+<td align="right">-1.53</td>
+<td align="right">0.01</td>
+<td align="left">keisgt neyk apqu bym yba zue zp plhk</td>
+</tr>
+<tr class="even">
+<td align="left">rij 14</td>
+<td align="right">0.74</td>
+<td align="right">0.91</td>
+<td align="right">1.37</td>
+<td align="right">-1.35</td>
+<td align="left">pv bei jlis jfk</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 15</td>
+<td align="right">0.39</td>
+<td align="right">-0.41</td>
+<td align="right">0.83</td>
+<td align="right">-0.38</td>
+<td align="left">nhype kquujq wsfe kp fdqu esluy</td>
+</tr>
+<tr class="even">
+<td align="left">rij 16</td>
+<td align="right">-0.50</td>
+<td align="right">-1.97</td>
+<td align="right">-0.16</td>
+<td align="right">0.80</td>
+<td align="left">i</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 17</td>
+<td align="right">0.19</td>
+<td align="right">-0.05</td>
+<td align="right">-2.03</td>
+<td align="right">0.95</td>
+<td align="left">whk epirg zjpa hmr xq</td>
+</tr>
+<tr class="even">
+<td align="left">rij 18</td>
+<td align="right">1.05</td>
+<td align="right">-0.85</td>
+<td align="right">-0.34</td>
+<td align="right">-1.20</td>
+<td align="left">wd aucqi ptou</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 19</td>
+<td align="right">-0.34</td>
+<td align="right">-0.73</td>
+<td align="right">-0.60</td>
+<td align="right">0.91</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">rij 20</td>
+<td align="right">-0.11</td>
+<td align="right">-0.11</td>
+<td align="right">0.37</td>
+<td align="right">-0.10</td>
+<td align="left">fdyghd uvzqvp qnu wu fn</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 21</td>
+<td align="right">-0.03</td>
+<td align="right">-0.48</td>
+<td align="right">-1.13</td>
+<td align="right">-1.36</td>
+<td align="left">qwy lmtrb xajd cjkdb p do aelanxv qun kpytrcfa</td>
+</tr>
+<tr class="even">
+<td align="left">rij 22</td>
+<td align="right">0.34</td>
+<td align="right">-0.81</td>
+<td align="right">1.50</td>
+<td align="right">-0.89</td>
+<td align="left">vqh mtq kn ul kfxa dyrtzh v oidhtut ymur eu hess</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 23</td>
+<td align="right">1.26</td>
+<td align="right">1.30</td>
+<td align="right">-0.78</td>
+<td align="right">-0.27</td>
+<td align="left">qzlicu</td>
+</tr>
+<tr class="even">
+<td align="left">rij 24</td>
+<td align="right">0.07</td>
+<td align="right">-1.40</td>
+<td align="right">-1.86</td>
+<td align="right">-0.55</td>
+<td align="left">ubkn hepdn cxybwu ocd yjgqao</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 25</td>
+<td align="right">-1.51</td>
+<td align="right">0.03</td>
+<td align="right">-0.36</td>
+<td align="right">-0.69</td>
+<td align="left">swaf gjmls tmcx</td>
+</tr>
+<tr class="even">
+<td align="left">rij 26</td>
+<td align="right">0.24</td>
+<td align="right">-0.47</td>
+<td align="right">-0.36</td>
+<td align="right">0.78</td>
+<td align="left">gpa idshw pw</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 27</td>
+<td align="right">0.59</td>
+<td align="right">0.53</td>
+<td align="right">-0.22</td>
+<td align="right">-0.75</td>
+<td align="left">ana jvlzvf mnww</td>
+</tr>
+<tr class="even">
+<td align="left">rij 28</td>
+<td align="right">-0.82</td>
+<td align="right">-0.25</td>
+<td align="right">0.17</td>
+<td align="right">-1.08</td>
+<td align="left">qvf vl oxfokksikhy nxfx wylrw</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 29</td>
+<td align="right">0.21</td>
+<td align="right">0.70</td>
+<td align="right">1.82</td>
+<td align="right">-0.45</td>
+<td align="left">naddrd gozi cjobs jecq pvxwtu shaxnvm</td>
+</tr>
+<tr class="even">
+<td align="left">rij 30</td>
+<td align="right">-0.92</td>
+<td align="right">-0.37</td>
+<td align="right">2.39</td>
+<td align="right">0.41</td>
+<td align="left">exsvn ddt jec apuwm c lcxpqyx qjur</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 31</td>
+<td align="right">0.59</td>
+<td align="right">-0.08</td>
+<td align="right">0.51</td>
+<td align="right">0.61</td>
+<td align="left">zq leipxj</td>
+</tr>
+<tr class="even">
+<td align="left">rij 32</td>
+<td align="right">-1.28</td>
+<td align="right">-0.50</td>
+<td align="right">0.44</td>
+<td align="right">-0.14</td>
+<td align="left">vuwmhva bceqdgg</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 33</td>
+<td align="right">0.07</td>
+<td align="right">-1.44</td>
+<td align="right">0.53</td>
+<td align="right">0.62</td>
+<td align="left">abju ul xf nhbtr b yligbg</td>
+</tr>
+<tr class="even">
+<td align="left">rij 34</td>
+<td align="right">1.31</td>
+<td align="right">-0.09</td>
+<td align="right">-1.14</td>
+<td align="right">-0.80</td>
+<td align="left">ahjx</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 35</td>
+<td align="right">0.42</td>
+<td align="right">0.42</td>
+<td align="right">1.49</td>
+<td align="right">-1.01</td>
+<td align="left">tuq</td>
+</tr>
+<tr class="even">
+<td align="left">rij 36</td>
+<td align="right">0.59</td>
+<td align="right">-1.08</td>
+<td align="right">-0.82</td>
+<td align="right">-0.78</td>
+<td align="left">gnp wfvptk zlz</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 37</td>
+<td align="right">-1.54</td>
+<td align="right">-0.77</td>
+<td align="right">-0.34</td>
+<td align="right">0.41</td>
+<td align="left">nuqla gqrb dthpxk a n</td>
+</tr>
+<tr class="even">
+<td align="left">rij 38</td>
+<td align="right">1.15</td>
+<td align="right">-0.22</td>
+<td align="right">-0.29</td>
+<td align="right">0.75</td>
+<td align="left">pvo unfxk</td>
+</tr>
+<tr class="odd">
+<td align="left">rij 39</td>
+<td align="right">-1.59</td>
+<td align="right">-0.72</td>
+<td align="right">-1.50</td>
+<td align="right">-0.77</td>
+<td align="left">ndl uvh yqfby cwrp</td>
+</tr>
+<tr class="even">
+<td align="left">rij 40</td>
+<td align="right">0.29</td>
+<td align="right">-0.43</td>
+<td align="right">0.93</td>
+<td align="right">0.42</td>
+<td align="left">cuf nmqo xgh b dvqgjr wrug</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="het-kableextra-package" class="section level3">
+<h3><span class="header-section-number">12.2.2</span> Het <code>kableExtra</code> package</h3>
+<p><code>kableExtra</code> biedt de mogelijkheid om het uitzicht van <code>kable()</code> tabellen aan te passen. Je kan in een zelfde commando zowel het HTML als pdf formaat aanpassen. In plaats van hier een beperkt aantal voorbeelden te geven, verwijzen we liever naar de uitgebreide vignettes van <code>kableExtra</code>. Ze hebben een vignette voor <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html">HTML output</a> en <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_pdf.pdf">pdf output</a>.</p>
+</div>
+<div id="pandoc.table" class="section level3">
+<h3><span class="header-section-number">12.2.3</span> <code>pandoc.table()</code></h3>
+<p><code>pandoc.table()</code> komt uit het <code>pander</code> package.</p>
+<p>Voordelen:</p>
+<ol style="list-style-type: decimal">
+<li>Zet tabellen steeds naar markdown formaat. Dit betekent dat je steeds een brede waaier aan outputformaten kan gebruiken.</li>
+</ol>
+<p>Nadelen:</p>
+<ol style="list-style-type: decimal">
+<li>Je moet steeds <code>results='asis'</code> toevoegen aan de chunk opties.</li>
+</ol>
+</div>
+<div id="xtable" class="section level3">
+<h3><span class="header-section-number">12.2.4</span> <code>xtable()</code></h3>
+<p><code>xtable()</code> komt uit het <code>xtable</code> package.</p>
+<p>Voordelen:</p>
+<ol style="list-style-type: decimal">
+<li>Biedt veel mogelijkheden om tabellen te fine-tunen. Zie <code>?xtable</code> en <code>?print.xtable</code> voor alle details. Een paar handige opties:
+<ul>
+<li>tabellen in landscape weergeven</li>
+<li>rijnames of kolomnamen roteren</li>
+<li>het lettertype van de tabel verkleinen (of vergroten)</li>
+</ul></li>
+<li>Biedt native code voor latex (pdf) en HTML.</li>
+</ol>
+<p>Nadelen:</p>
+<ol style="list-style-type: decimal">
+<li>Je moet steeds <code>results='asis'</code> toevoegen aan de chunk opties.</li>
+<li>Kan niet dynamisch kiezen tussen pdf of HTML. Minder handig als je zowel HTML als pdf output wilt.</li>
+<li>Kruisverwijzingen zijn lastig, zeker als je ze zowel in pdf als HTML wilt hebben.</li>
+</ol>
+
+</div>
+</div>
+<!-- </div> -->
+
+
+
+</div>
+<p>&nbsp;</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/></a>
+Onkelinx, T. (2021). <a href="https://doi.org/10.5281/zenodo.842223" class="uri">https://doi.org/10.5281/zenodo.842223</a>
+            </section>
+        </div>
+      </div>
+    </div>
+<a href="12.1-kable.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="13-lay-out-tips-voor-pdf.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/inbo/inbomd_examples/edit/master/source/inbo_rapport_delen/../inbo_rapport/3_r_code.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["inbo_rapport_delen.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, "");
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+
+</html>

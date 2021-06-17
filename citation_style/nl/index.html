@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html  lang="nl">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Voorbeeld van referentiestijl</title>
+  <meta name="description" content="Voorbeeld van referentiestijl">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Voorbeeld van referentiestijl" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="inbo/inbomd-examples" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Voorbeeld van referentiestijl" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="2-na-te-kijken.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/INBOmd-0.5.2/inbo_report.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<link rel="stylesheet" href="css/inbo_rapport.css" type="text/css"/>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+
+<br><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/>
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Verwijzingen in tekst</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#doi-of-url"><i class="fa fa-check"></i><b>1.1</b> DOI of URL</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html"><i class="fa fa-check"></i><b>2</b> Na te kijken</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#op-te-volgen-voor-bst"><i class="fa fa-check"></i><b>2.1</b> Op te volgen voor bst</a></li>
+<li class="chapter" data-level="2.2" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#issues-in-het-csl-bestand"><i class="fa fa-check"></i><b>2.2</b> Issues in het csl bestand</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#aandachtspunten-bij-aanmaken-van-een-bib-bestand"><i class="fa fa-check"></i><b>2.2.1</b> Aandachtspunten bij aanmaken van een bib bestand</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#bijzonderheden-in-de-zotero-addon-better-bibtex"><i class="fa fa-check"></i><b>2.3</b> Bijzonderheden in de Zotero addon ‘Better BibTeX’</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#export-van-article-met-page-range-x-y"><i class="fa fa-check"></i><b>2.3.1</b> Export van article met page-range ‘x-y’</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-bibcsl.html"><a href="3-bibcsl.html"><i class="fa fa-check"></i><b>3</b> Aandachtspunten bij aanmaken van een bib bestand voor gebruik met CSL</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-bibcsl.html"><a href="3-bibcsl.html#voor-pandoc-gebruikt-in-r-markdown-gebruik-and-in-publisher-veld"><i class="fa fa-check"></i><b>3.1</b> Voor pandoc (gebruikt in R Markdown): gebruik ‘{and}’ in publisher-veld</a></li>
+<li class="chapter" data-level="3.2" data-path="3-bibcsl.html"><a href="3-bibcsl.html#voor-pandoc-gebruikt-in-r-markdown-en-bij-import-in-zotero-indien-gebruik-van-title-case-strings"><i class="fa fa-check"></i><b>3.2</b> Voor pandoc (gebruikt in R Markdown) en bij import in Zotero, indien gebruik van ‘{Title Case}’ strings</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="3-bibcsl.html"><a href="3-bibcsl.html#ter-overweging"><i class="fa fa-check"></i><b>3.2.1</b> Ter overweging</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Voorbeeld van referentiestijl</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+  <div id="header">
+    <h1 class="title">Voorbeeld van referentiestijl</h1>
+              <h3 class="author">Thierry Onkelinx
+              <a href="https://orcid.org/0000-0001-8804-4216">
+        <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
+        0000-0001-8804-4216
+        </a>
+            </h3>
+                        <address class="author_afil">
+          <a class="author_email" href="mailto:#"><a href="mailto:thierry.onkelinx@inbo.be" class="email">thierry.onkelinx@inbo.be</a></a>
+          </address>
+                            <h1>Colofon</h1>
+      <p><b>Reviewers:</b><br>
+                            Floris
+                Vanderhaeghe
+                  <a href="https://orcid.org/0000-0002-6378-6229">
+          <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
+          0000-0002-6378-6229
+          </a>
+                          <a class="reviewer_email" href="mailto:#"><a href="mailto:floris.vanderhaeghe@inbo.be" class="email">floris.vanderhaeghe@inbo.be</a></a>
+        <br>
+            
+  <p>Het INBO is het onafhankelijk onderzoeksinstituut van de Vlaamse overheid dat via toegepast wetenschappelijk onderzoek, data‐ en kennisontsluiting het biodiversiteitsbeleid en ‐beheer onderbouwt en evalueert.
+
+  <p><b>Vestiging:</b><br>
+    INBO Brussel<br>Herman Teirlinckgebouw, Havenlaan 88 bus 73, 1000 Brussel
+    <br><a href="vlaanderen.be/inbo">vlaanderen.be/inbo</a>
+
+  <p><b>e-mail:</b><br><a class="author_email" href="mailto:#"><a href="mailto:thierry.onkelinx@inbo.be" class="email">thierry.onkelinx@inbo.be</a></a>
+
+  <p><b>Wijze van citeren:</b><br>
+      <h1 class = "missing">!!!! ONTBREKEND: shortauthor !!!!</h1>
+        <h1 class = "missing">!!!! ONTBREKEND: year !!!!</h1>
+    Voorbeeld van referentiestijl. Rapporten van het Instituut voor Natuur- en Bosonderzoek
+        <h1 class = "missing">!!!! ONTBREKEND: reportnr !!!!</h1>
+    Instituut voor Natuur- en Bosonderzoek, Brussel. DOI:
+      <h1 class = "missing">!!!! ONTBREKEND: doi !!!!</h1>
+    <br>Exporteer referentie naar <button onclick="display_export('bibtex')" style = "color: #4183c4; background: #fff; border-width: 0px;">BibTex</button>
+  <button onclick="display_export('RIS')" style = "color: #4183c4; background: #fff; border-width: 0px;">RIS</button>
+  <button onclick="display_export('csl')" style = "color: #4183c4; background: #fff; border-width: 0px;">CSL-JSON</button>
+
+<script>
+function display_export(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<pre id = "bibtex" style ="display: none;">
+@TechReport{
+  author= {Onkelinx, Thierry},
+  title = {Voorbeeld van referentiestijl},
+  institution = {Instituut voor Natuur- en Bosonderzoek},
+  adress = {Brussel, België},
+  year = {},
+  number = { ()},
+  doi = {},
+  type = {techreport}
+}
+</pre>
+
+<pre id = "RIS" style ="display: none;">
+TY  - RPRT
+AU  - Onkelinx, Thierry
+TI  - Voorbeeld van referentiestijl
+DO  - 
+PB  - Instituut voor Natuur- en Bosonderzoek
+PP  - Brussel, België
+PY  - 
+SN  - 1782-9054
+ER  -
+</pre>
+
+<pre id = "csl" style ="display: none;">
+{
+  "id":"Onkelinx",
+  "type":"report",
+  "title":"Voorbeeld van referentiestijl",
+  "author":[
+    {
+      "family":"Onkelinx",
+      "given":"Thierry"
+    
+    }
+  ],
+  "issued":{"date-parts":[[]]},
+  "publisher":"Instituut voor Natuur- en Bosonderzoek",
+  "publisher-place":"Brussel, België",
+}
+</pre>
+
+      <h1 class = "missing">!!!! ONTBREKEND: depotnr !!!!</h1>
+    <b>Rapporten van het Instituut voor Natuur- en Bosonderzoek
+      </b><br>
+  <b>ISSN: 1782‐9054</b>
+
+  <p><b>Verantwoodelijke uitgever:</b><br>Maurice Hoffmann
+
+      <p><b>Foto cover:</b><br>Detail van een blad. Foto door <a href="https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Skyler Ewing</a> via <a href="https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a>
+  
+  
+  
+  <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" /></a><br />Dit werk valt onder een <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Naamsvermelding 4.0 Internationaal-licentie</a>.
+  </div>
+<div id="verwijzingen-in-tekst" class="section level1">
+<h1><span class="header-section-number">1</span> Verwijzingen in tekst</h1>
+<table>
+<caption>Verschillende types documenten</caption>
+<colgroup>
+<col width="17%" />
+<col width="82%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>BibTex type</th>
+<th>voorbeelden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Article</td>
+<td><span class="citation">(Article, <a href="#ref-article-single">2020</a>; Article &amp; Second, <a href="#ref-article-double">2020</a>; Article <em>et al.</em>, <a href="#ref-article-triple">2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Book</td>
+<td><span class="citation">(Banerjee <em>et al.</em>, <a href="#ref-BanerjeeEtal2003">2003</a>; Book, <a href="#ref-book-a1e0">2020</a><a href="#ref-book-a1e0">a</a>, <a href="#ref-book-a0e1">2020</a><a href="#ref-book-a0e1">b</a>; Book &amp; Second, <a href="#ref-book-a2e0">2020</a><a href="#ref-book-a2e0">a</a>, <a href="#ref-book-a0e2">2020</a><a href="#ref-book-a0e2">b</a>; Book <em>et al.</em>, <a href="#ref-book-a3e0">2020</a><a href="#ref-book-a3e0">a</a>, <a href="#ref-book-a0e3">2020</a><a href="#ref-book-a0e3">b</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Booklet</td>
+<td><span class="citation">(Anonymous, <a href="#ref-booklet-a0">2020</a><a href="#ref-booklet-a0">a</a>; Booklet, <a href="#ref-booklet-a1">2020</a>; Booklet &amp; Second, <a href="#ref-booklet-a2">2020</a>; Booklet <em>et al.</em>, <a href="#ref-booklet-a3">2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Conference</td>
+<td><span class="citation">(Conference, <a href="#ref-conference-a1e1">2020</a>; Conference &amp; Second, <a href="#ref-conference-a2e0">2020</a>; Conference <em>et al.</em>, <a href="#ref-conference-a3e3">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>InBook</td>
+<td><span class="citation">(Chapter, <a href="#ref-inbook-a1e0">2020</a><a href="#ref-inbook-a1e0">a</a>, <a href="#ref-inbook-a0e1">2020</a><a href="#ref-inbook-a0e1">b</a>; Chapter &amp; Second, <a href="#ref-inbook-a2e0">2020</a>; Chapter <em>et al.</em>, <a href="#ref-inbook-a3e0">2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td>InCollection</td>
+<td><span class="citation">(InCollection, <a href="#ref-incollection-a1e1">2020</a>; InCollection &amp; Second, <a href="#ref-incollection-a2e0">2020</a>; InCollection <em>et al.</em>, <a href="#ref-incollection-a3e3">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>InProceedings</td>
+<td><span class="citation">(Onkelinx <em>et al.</em>, <a href="#ref-Onkelinx2014a">2014</a>; ProceedingsAuthor, <a href="#ref-inproceedings-a1e0">2020</a>; ProceedingsAuthor &amp; Second, <a href="#ref-inproceedings-a2e1">2020</a>; ProceedingsAuthor <em>et al.</em>, <a href="#ref-inproceedings-a3e3">2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Manual</td>
+<td><span class="citation">(Anonymous, <a href="#ref-manual-a0">2020</a><a href="#ref-manual-a0">b</a>; Manual, <a href="#ref-manual-a1">2020</a>; Manual &amp; Second, <a href="#ref-manual-a2">2020</a>; Manual <em>et al.</em>, <a href="#ref-manual-a3">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>MastersThesis</td>
+<td><span class="citation">(MasterThesis, <a href="#ref-masterthesis">2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Misc</td>
+<td><span class="citation">(Misc, <a href="#ref-misc">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Misc (with type set as dataset)</td>
+<td><span class="citation">(Onkelinx <em>et al.</em>, <a href="#ref-onkelinx_thierry_2019_2682323">2019</a>; Oosterlynck, <a href="#ref-oosterlynck_patrik_2019_3550995">2019</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Online (a BibLaTeX type)</td>
+<td><span class="citation">(Databank Ondergrond Vlaanderen, <a href="#ref-databank_ondergrond_vlaanderen_bepalen_nodate">s.d.</a>; European Topic Centre on Biological Diversity ETC/BD, <a href="#ref-european_topic_centre_on_biological_diversity_etc/bd_reference_2016">2016</a>; Lastname, <a href="#ref-lastnameWebpageTitle2020">2020</a>; Wikipedia, <a href="#ref-wikipedia_muizenberg_2019">2019</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>PhdThesis</td>
+<td><span class="citation">(PhDThesis, <a href="#ref-phdthesis">2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Proceedings</td>
+<td><span class="citation">(Anonymous, <a href="#ref-proceedings-e0">2020</a><a href="#ref-proceedings-e0">c</a>; Proceedings, <a href="#ref-proceedings-e1">2020</a>; Proceedings &amp; Second, <a href="#ref-proceedings-e2">2020</a>; Proceedings <em>et al.</em>, <a href="#ref-proceedings-e3">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>TechReport</td>
+<td><span class="citation">(TechnicalReport, <a href="#ref-techreport-a1">2020</a>; TechnicalReport &amp; Second, <a href="#ref-techreport-a2">2020</a>; TechnicalReport <em>et al.</em>, <a href="#ref-techreport-a3">2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Unpublished</td>
+<td><span class="citation">(Unpublished, <a href="#ref-unpublished-a1">2020</a>; Unpublished &amp; Second, <a href="#ref-unpublished-a2">2020</a>; Unpublished <em>et al.</em>, <a href="#ref-unpublished-a3">2020</a>)</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Weergave van namen</caption>
+<thead>
+<tr class="header">
+<th>Bibtex</th>
+<th>Weergave </th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Achternaam</td>
+<td><span class="citation">Achternaam (<a href="#ref-name0">2020</a><a href="#ref-name0">a</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Achternaam, Voornaam</td>
+<td><span class="citation">Achternaam (<a href="#ref-name1">2020</a><a href="#ref-name1">b</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>De Achternaam, V.</td>
+<td><span class="citation">De Achternaam (<a href="#ref-name2">2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Van de Achternaam, V</td>
+<td><span class="citation">Van de Achternaam (<a href="#ref-name3">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Achternaam, Voornaam Tweede</td>
+<td><span class="citation">Achternaam (<a href="#ref-name4">2020</a><a href="#ref-name4">d</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Achternaam, Voornaam Tweede Derde</td>
+<td><span class="citation">Achternaam (<a href="#ref-name5">2020</a><a href="#ref-name5">f</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Achternaam, V. T. D.</td>
+<td><span class="citation">Achternaam (<a href="#ref-name6">2020</a><a href="#ref-name6">g</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Achternaam, VTD</td>
+<td><span class="citation">Achternaam (<a href="#ref-name7">2020</a><a href="#ref-name7">c</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Achternaam, Voornaam TD</td>
+<td><span class="citation">Achternaam (<a href="#ref-name8">2020</a><a href="#ref-name8">e</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Accent áâàäçéêëèíuîïìóôöòúûüù</td>
+<td><span class="citation">áâàäçéêëèíuîïìóôöòúûüù (<a href="#ref-name9">2020</a>)</span></td>
+</tr>
+</tbody>
+</table>
+<div id="doi-of-url" class="section level2">
+<h2><span class="header-section-number">1.1</span> DOI of URL</h2>
+<ul>
+<li>beide: <span class="citation">Article (<a href="#ref-article-single">2020</a>)</span></li>
+<li>enkel DOI: <span class="citation">Amano (<a href="#ref-Amano2012">2012</a>)</span></li>
+<li>enkel URL: <span class="citation">Franklin (<a href="#ref-franklin_mapping_2009">2009</a>)</span></li>
+</ul>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-name9">
+<p>áâàäçéêëèíuîïìóôöòúûüù A. (2020). Title. Journal.</p>
+</div>
+<div id="ref-name0">
+<p>Achternaam (2020a). Title. Journal 1 (2): 3–4.</p>
+</div>
+<div id="ref-name1">
+<p>Achternaam V. (2020b). Title. Journal 1: 3.</p>
+</div>
+<div id="ref-name7">
+<p>Achternaam V. (2020c). Title. Journal 1: 3–4.</p>
+</div>
+<div id="ref-name4">
+<p>Achternaam V.T. (2020d). Title. Journal 1.</p>
+</div>
+<div id="ref-name8">
+<p>Achternaam V.T. (2020e). Title. Journal 1 (2): 3.</p>
+</div>
+<div id="ref-name5">
+<p>Achternaam V.T.D. (2020f). Title. Journal 1: 3.</p>
+</div>
+<div id="ref-name6">
+<p>Achternaam V.T.D. (2020g). Title. Journal 1 (2).</p>
+</div>
+<div id="ref-Amano2012">
+<p>Amano T. (2012). Unravelling the dynamics of organisms in a changing world using ecological modelling. Ecological Research 27 (3): 495–507. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-booklet-a0">
+<p>Anonymous (2020a). A single author booklet title. Museum exhibit, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-manual-a0">
+<p>Anonymous (2020b). A manual title without author. 3de ed. A Series in Title Case, Vol. 12. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-proceedings-e0">
+<p>Anonymous (ed.) (2020c). A proceedings title without editor. A Series in Title Case, Vol. 12. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-article-single">
+<p>Article A. (2020). A title. Journal of ALLCAPS and Title Case 123 (456): 7–89. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-article-double">
+<p>Article A. &amp; Second A. (2020). A title. Journal of ALLCAPS and Title Case 123 (456): 7–89. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-article-triple">
+<p>Article A., Second A. &amp; Third A. (2020). A triple author article. Journal of ALLCAPS and Title Case 123 (456): 7–89. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-BanerjeeEtal2003">
+<p>Banerjee S., Carlin B.P. &amp; Gelfand A.E. (2003). Hierarchical Modeling and Analysis for Spatial Data. Chapman; Hall, Boca Raton, Florida, USA.</p>
+</div>
+<div id="ref-book-a1e0">
+<p>Book A. (2020a). A book with a single author. A title. 1ste ed. ALLCAPS and Title Case Series, Nr. 2. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-book-a2e0">
+<p>Book A. &amp; Second A. (2020a). A book with two authors. A title. 1st ed. ALLCAPS and Title Case Series, Nr. 2. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-book-a3e0">
+<p>Book A., Second A. &amp; Third A. (2020a). A book with three authors. A title. 2nd ed. ALLCAPS and Title Case Series, Vol. 1. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-book-a0e1">
+<p>Book E. (ed.) (2020b). A book with a single editor. A title. 2de ed. ALLCAPS and Title Case Series, Vol. 1. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-book-a0e2">
+<p>Book E. &amp; Second E. (eds.) (2020b). A book with two editors. A title. 1ste ed. ALLCAPS and Title Case Series, Nr. 2. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-book-a0e3">
+<p>Book E., Second E. &amp; Third E. (eds.) (2020b). A book with a three editors. A title. 1ste ed. ALLCAPS and Title Case Series, Vol. 1. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-booklet-a1">
+<p>Booklet A. (2020). A single author booklet title. Museum exhibit, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-booklet-a2">
+<p>Booklet A. &amp; Second A. (2020). A double author booklet title. Museum exhibit, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-booklet-a3">
+<p>Booklet A., Second A. &amp; Third A. (2020). A triple author booklet title. Museum exhibit, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-inbook-a1e0">
+<p>Chapter A. (2020a). A single author techreport. 2de ed. Series in Title Case, Vol. 12. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow, p. 1–2. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-inbook-a2e0">
+<p>Chapter A. &amp; Second A. (2020). A two author software title. 2de ed. Series in Title Case, Vol. 12. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow, p. 1–2. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-inbook-a3e0">
+<p>Chapter A., Second A. &amp; Third A. (2020). A three author book title. 2de ed. Series in Title Case, Nr. 34. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow, p. 1–2. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-inbook-a0e1">
+<p>Chapter E. (ed.) (2020b). A single editor book. 2de ed. Series in Title Case, Vol. 12. ALLCAPS and Title Case Publishing, Somewhere over the Rainbow, p. 123. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-conference-a1e1">
+<p>Conference A. (2020). A single author conference title. A Series in Title Case, Vol. 12. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow, p. 56–78. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-conference-a2e0">
+<p>Conference A. &amp; Second A. (2020). A double author conference title. A Series in Title Case, Nr. 34. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow, p. 56–78. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-conference-a3e3">
+<p>Conference A., Second A. &amp; Third A. (2020). A triple author conference title. A Series in Title Case, Vol. 12. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow, p. 56–78. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-databank_ondergrond_vlaanderen_bepalen_nodate">
+<p>Databank Ondergrond Vlaanderen (s.d.). Bepalen Gemiddelde Grondwaterstand Op Een Plaats. <a href="https://www.dov.vlaanderen.be/page/bepalen-gemiddelde-grondwaterstand-op-een-plaats">https://www.dov.vlaanderen.be/page/bepalen-gemiddelde-grondwaterstand-op-een-plaats</a> (geraadpleegd 24 juli 2018).</p>
+</div>
+<div id="ref-name2">
+<p>De Achternaam V. (2020). Title. Journal 1 (2): 3.</p>
+</div>
+<div id="ref-european_topic_centre_on_biological_diversity_etc/bd_reference_2016">
+<p>European Topic Centre on Biological Diversity ETC/BD (2016). Reference Portal for Natura 2000. <a href="http://bd.eionet.europa.eu/activities/Natura\_2000/reference\_portal">http://bd.eionet.europa.eu/activities/Natura\_2000/reference\_portal</a> (geraadpleegd 31 mei 2016).</p>
+</div>
+<div id="ref-franklin_mapping_2009">
+<p>Franklin J. (2009). Mapping Species Distributions: Spatial Inference and Prediction. Cambridge University Press, Cambridge. <a href="http://www.alibris.com/Mapping-Species-Distributions-Spatial-Inference-and-Prediction-Janet-Franklin/book/12212704">http://www.alibris.com/Mapping-Species-Distributions-Spatial-Inference-and-Prediction-Janet-Franklin/book/12212704</a>.</p>
+</div>
+<div id="ref-incollection-a1e1">
+<p>InCollection A. (2020). A single author part title. In: InCollection E. (ed.). The single editor book title, A Series in Title Case, Nr. 23, 3de ed. Title Case and ALLCAPS, Somewhere over the rainbow, p. 12–34. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-incollection-a2e0">
+<p>InCollection A. &amp; Second A. (2020). A double author part title. In: The book without editor title, A Series in Title Case, Vol. 12, 3de ed. Title Case and ALLCAPS, Somewhere over the rainbow, p. 12–34. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-incollection-a3e3">
+<p>InCollection A., Second A. &amp; Third A. (2020). A double author part title. In: Collection E., Second E. &amp; Third E. (eds.). The book without editor title, A Series in Title Case, Nr. 23, 3de ed. Title Case and ALLCAPS, Somewhere over the rainbow, p. 12–34. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-lastnameWebpageTitle2020">
+<p>Lastname F. (2020). Webpage title. In: Website title. <a href="https://example.com/titletest">https://example.com/titletest</a> (geraadpleegd 12 november 2020).</p>
+</div>
+<div id="ref-manual-a1">
+<p>Manual A. (2020). A single author manual title. 3de ed. A Series in Title Case, Nr. 34. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-manual-a2">
+<p>Manual A. &amp; Second A. (2020). A double author manual title. 3de ed. A Series in Title Case, Nr. 34. The conference organiser, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-manual-a3">
+<p>Manual A., Second A. &amp; Third A. (2020). A triple author manual title. Vol. 12. Title Case and ALLCAPS Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-masterthesis">
+<p>MasterThesis A. (2020). The title of a master thesis. University of INBO, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-misc">
+<p>Misc A. (2020). A single author misc title. How this was published. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-Onkelinx2014a">
+<p>Onkelinx T., Devos K. &amp; Quataert P. (2014). Applying multiple imputation on waterbird census data. In: 4th International Statistical Ecology Conference. Montpellier, France, p. 35.</p>
+</div>
+<div id="ref-onkelinx_thierry_2019_2682323">
+<p>Onkelinx T., Westra T. &amp; Vanderhaeghe F. (2019). GRTS master sample for habitat monitoring in Flanders. Zenodo. <a href="https://doi.org/10.5281/zenodo.2682323">https://doi.org/10.5281/zenodo.2682323</a>.</p>
+</div>
+<div id="ref-oosterlynck_patrik_2019_3550995">
+<p>Oosterlynck P. (2019). Distribution of the Natura 2000 habitat type 7220 (Cratoneurion) in Flanders, Belgium (version 2019). Zenodo. <a href="https://doi.org/10.5281/zenodo.3550995">https://doi.org/10.5281/zenodo.3550995</a>.</p>
+</div>
+<div id="ref-phdthesis">
+<p>PhDThesis A. (2020). The title of the PhD thesis. University of INBO, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-proceedings-e1">
+<p>Proceedings E. (ed.) (2020). A single editor proceedings title. A Series in Title Case, Nr. 34. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-proceedings-e2">
+<p>Proceedings E. &amp; Second E. (eds.) (2020). A double editor proceedings title. A Series in Title Case, Vol. 12. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-proceedings-e3">
+<p>Proceedings E., Second E. &amp; Third E. (eds.) (2020). A double editor proceedings title. A Series in Title Case, Nr. 34. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-inproceedings-a1e0">
+<p>ProceedingsAuthor A. (2020). A single author proceedings article title. In: A proceedings title, A Series in Title Case, Vol. 12. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow, p. 56–78. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-inproceedings-a2e1">
+<p>ProceedingsAuthor A. &amp; Second A. (2020). A double author proceedings article title. In: ProceedingsEditor A. (ed.). A single editor proceedings title, A Series in Title Case, Nr. 34. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow, p. 56–78. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-inproceedings-a3e3">
+<p>ProceedingsAuthor A., Second A. &amp; Third A. (2020). A triple author proceedings article title. In: ProceedingsEditor A., Second E. &amp; Third E. (eds.). A triple editor proceedings title, A Series in Title Case, Vol. 12. The conference organiser; Title Case and ALLCAPS Publishing, Somewhere over the Rainbow, p. 56–78. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-techreport-a1">
+<p>TechnicalReport A. (2020). A single author technical report. Nr. 123. Research Institute for Nature; Forest, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-techreport-a2">
+<p>TechnicalReport A. &amp; Second A. (2020). A double author technical report without number. Research Institute for Nature; Forest, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-techreport-a3">
+<p>TechnicalReport A., Second A. &amp; Third A. (2020). A double author technical report. Nr. 123. Research Institute for Nature; Forest, Somewhere over the Rainbow. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-unpublished-a1">
+<p>Unpublished A. (2020). A single author unpublished work. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-unpublished-a2">
+<p>Unpublished A. &amp; Second A. (2020). A double author unpublished work. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-unpublished-a3">
+<p>Unpublished A., Second A. &amp; Third A. (2020). A double author unpublished work. <a href="https://doi.org/10.1007/s11284-012-0928-6">https://doi.org/10.1007/s11284-012-0928-6</a>.</p>
+</div>
+<div id="ref-name3">
+<p>Van de Achternaam V. (2020). Title. Journal 1 (2): 3–4.</p>
+</div>
+<div id="ref-wikipedia_muizenberg_2019">
+<p>Wikipedia (2019). Muizenberg (Limburg). <a href="https://nl.wikipedia.org/w/index.php?title=Muizenberg\_(Limburg)\&amp;oldid=53081088">https://nl.wikipedia.org/w/index.php?title=Muizenberg\_(Limburg)\&amp;oldid=53081088</a> (geraadpleegd 30 juni 2020).</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/></a>
+ (). 
+            </section>
+        </div>
+      </div>
+    </div>
+
+<a href="2-na-te-kijken.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["citation_style.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+
+</body>
+
+</html>

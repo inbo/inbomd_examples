@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html  lang="nl">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>5 Kaders | Voorbeeldrapport met INBOmd</title>
+  <meta name="description" content="5 Kaders | Voorbeeldrapport met INBOmd">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="5 Kaders | Voorbeeldrapport met INBOmd" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="/github/workdir/source/vlaanderen_rapport/cover.jpeg" />
+  
+  <meta name="github-repo" content="inbo/inbomd-examples" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Kaders | Voorbeeldrapport met INBOmd" />
+  
+  
+  <meta name="twitter:image" content="/github/workdir/source/vlaanderen_rapport/cover.jpeg" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="4-opsommingen.html"/>
+<link rel="next" href="6-h:kruisverwijzing.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/INBOmd-0.5.2/flanders_report.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.20/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/inbo_rapport.css" type="text/css"/>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+<a href=".">
+<img src="cover.jpeg" alt = "Onkelinx, T. (2021) Voorbeeldrapport met INBOmd" class = "thumbnail"></a><br>
+<a class="chapter" href="#"><a href="https://doi.org/10.5281/zenodo.842223" class="uri">https://doi.org/10.5281/zenodo.842223</a></a>
+<br><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/>
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Dankwoord</a></li>
+<li class="chapter" data-level="" data-path="voorwoord.html"><a href="voorwoord.html"><i class="fa fa-check"></i>Voorwoord</a></li>
+<li class="chapter" data-level="" data-path="samenvatting.html"><a href="samenvatting.html"><i class="fa fa-check"></i>Samenvatting</a></li>
+<li class="chapter" data-level="" data-path="aanbevelingen-voor-beheer-enof-beleid.html"><a href="aanbevelingen-voor-beheer-enof-beleid.html"><i class="fa fa-check"></i>Aanbevelingen voor beheer en/of beleid</a></li>
+<li class="chapter" data-level="" data-path="english-abstract.html"><a href="english-abstract.html"><i class="fa fa-check"></i>English abstract</a></li>
+<li class="chapter" data-level="" data-path="resume-francais.html"><a href="resume-francais.html"><i class="fa fa-check"></i>Résumé français</a></li>
+<li class="chapter" data-level="1" data-path="1-inleiding.html"><a href="1-inleiding.html"><i class="fa fa-check"></i><b>1</b> Inleiding</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-inleiding.html"><a href="1-inleiding.html#lipsum"><i class="fa fa-check"></i><b>1.1</b> Lipsum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-koppen.html"><a href="2-koppen.html"><i class="fa fa-check"></i><b>2</b> Kopstijlen: niveau 1: Fusce euismod luctus tellus. Nunc pulvinar congue urna. Phasellus tempor feugiat velit. Curabitur sodales dapibus urna. Praesent interdum bibendum magna.</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-koppen.html"><a href="2-koppen.html#niveau-2-curabitur-tempus-vulputate-elit.-pellentesque-pulvinar-molestie-dolor.-vestibulum-dapibus-placerat-magna.-sed-sollicitudin-tincidunt-arcu.-donec-egestas-ornare-nulla."><i class="fa fa-check"></i><b>2.1</b> Niveau 2: Curabitur tempus vulputate elit. Pellentesque pulvinar molestie dolor. Vestibulum dapibus placerat magna. Sed sollicitudin tincidunt arcu. Donec egestas ornare nulla.</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-koppen.html"><a href="2-koppen.html#niveau-3-proin-rutrum-mattis-sapien.-aliquam-volutpat-auctor-lorem.-integer-tempus-blandit-dolor.-nulla-facilisis-posuere-sapien.-nullam-pretium-lacinia-est."><i class="fa fa-check"></i><b>2.1.1</b> Niveau 3: Proin rutrum mattis sapien. Aliquam volutpat auctor lorem. Integer tempus blandit dolor. Nulla facilisis posuere sapien. Nullam pretium lacinia est.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="koppen-zonder-nummer.html"><a href="koppen-zonder-nummer.html"><i class="fa fa-check"></i>Kopstijlen zonder nummer: niveau 1: Donec tincidunt faucibus massa. Sed sollicitudin tincidunt arcu. Proin consectetuer pretium urna. Vivamus elementum placerat enim. Vestibulum nonummy vulputate orci.</a><ul>
+<li class="chapter" data-level="" data-path="koppen-zonder-nummer.html"><a href="koppen-zonder-nummer.html#niveau-2-vivamus-rhoncus-tincidunt-libero.-etiam-ullamcorper-elementum-dui.-nulla-varius-ornare-odio.-suspendisse-accumsan-sagittis-velit.-fusce-facilisis-lacinia-dui."><i class="fa fa-check"></i>Niveau 2: Vivamus rhoncus tincidunt libero. Etiam ullamcorper elementum dui. Nulla varius ornare odio. Suspendisse accumsan sagittis velit. Fusce facilisis lacinia dui.</a><ul>
+<li class="chapter" data-level="" data-path="koppen-zonder-nummer.html"><a href="koppen-zonder-nummer.html#niveau-3-pellentesque-varius-laoreet-lorem.-phasellus-tristique-fermentum-leo.-mauris-porttitor-imperdiet-lectus.-vide-ne-etiam-menses-phasellus-gravida-vulputate-nulla."><i class="fa fa-check"></i>Niveau 3: Pellentesque varius laoreet lorem. Phasellus tristique fermentum leo. Mauris porttitor imperdiet lectus. Vide, ne etiam menses! Phasellus gravida vulputate nulla.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-lettertypes.html"><a href="3-lettertypes.html"><i class="fa fa-check"></i><b>3</b> Lettertypes</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-lettertypes.html"><a href="3-lettertypes.html#normaal"><i class="fa fa-check"></i><b>3.1</b> Normaal</a></li>
+<li class="chapter" data-level="3.2" data-path="3-lettertypes.html"><a href="3-lettertypes.html#vet"><i class="fa fa-check"></i><b>3.2</b> Vet</a></li>
+<li class="chapter" data-level="3.3" data-path="3-lettertypes.html"><a href="3-lettertypes.html#cursief"><i class="fa fa-check"></i><b>3.3</b> Cursief</a></li>
+<li class="chapter" data-level="3.4" data-path="3-lettertypes.html"><a href="3-lettertypes.html#vet-en-cursief"><i class="fa fa-check"></i><b>3.4</b> Vet en cursief</a></li>
+<li class="chapter" data-level="3.5" data-path="3-lettertypes.html"><a href="3-lettertypes.html#s:vaste-tekenbreedte"><i class="fa fa-check"></i><b>3.5</b> Met vaste tekenbreedte</a></li>
+<li class="chapter" data-level="3.6" data-path="3-lettertypes.html"><a href="3-lettertypes.html#onderscheiden-van-tekens"><i class="fa fa-check"></i><b>3.6</b> Onderscheiden van tekens</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-opsommingen.html"><a href="4-opsommingen.html"><i class="fa fa-check"></i><b>4</b> Opsommingen</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-opsommingen.html"><a href="4-opsommingen.html#ongeordende-lijsten"><i class="fa fa-check"></i><b>4.1</b> Ongeordende lijsten</a></li>
+<li class="chapter" data-level="4.2" data-path="4-opsommingen.html"><a href="4-opsommingen.html#genummerde-lijsten"><i class="fa fa-check"></i><b>4.2</b> Genummerde lijsten</a></li>
+<li class="chapter" data-level="4.3" data-path="4-opsommingen.html"><a href="4-opsommingen.html#lijsten-met-definities"><i class="fa fa-check"></i><b>4.3</b> Lijsten met definities</a></li>
+<li class="chapter" data-level="4.4" data-path="4-opsommingen.html"><a href="4-opsommingen.html#lijsten-mengen"><i class="fa fa-check"></i><b>4.4</b> Lijsten mengen</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-kaders.html"><a href="5-kaders.html"><i class="fa fa-check"></i><b>5</b> Kaders</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-kaders.html"><a href="5-kaders.html#standaard-kader"><i class="fa fa-check"></i><b>5.1</b> Standaard kader</a></li>
+<li class="chapter" data-level="5.2" data-path="5-kaders.html"><a href="5-kaders.html#kader-met-voorbeeld"><i class="fa fa-check"></i><b>5.2</b> Kader met voorbeeld</a></li>
+<li class="chapter" data-level="5.3" data-path="5-kaders.html"><a href="5-kaders.html#kader-met-waarschuwing"><i class="fa fa-check"></i><b>5.3</b> Kader met waarschuwing</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-h:kruisverwijzing.html"><a href="6-h:kruisverwijzing.html"><i class="fa fa-check"></i><b>6</b> Kruisverwijzigingen</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-h:kruisverwijzing.html"><a href="6-h:kruisverwijzing.html#interne-kruisverwijzingen"><i class="fa fa-check"></i><b>6.1</b> Interne kruisverwijzingen</a></li>
+<li class="chapter" data-level="6.2" data-path="6-h:kruisverwijzing.html"><a href="6-h:kruisverwijzing.html#externe-verwijzingen"><i class="fa fa-check"></i><b>6.2</b> Externe verwijzingen</a></li>
+<li class="chapter" data-level="6.3" data-path="6-h:kruisverwijzing.html"><a href="6-h:kruisverwijzing.html#extra-formattering"><i class="fa fa-check"></i><b>6.3</b> Extra formattering</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html"><i class="fa fa-check"></i><b>7</b> Figuren en tabellen</a><ul>
+<li class="chapter" data-level="7.1" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html#tabellen"><i class="fa fa-check"></i><b>7.1</b> Tabellen</a></li>
+<li class="chapter" data-level="7.2" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html#s:figuur-invoegen"><i class="fa fa-check"></i><b>7.2</b> Figuren</a></li>
+<li class="chapter" data-level="7.3" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html#plaatsing-van-tabellen-en-figuren"><i class="fa fa-check"></i><b>7.3</b> Plaatsing van tabellen en figuren</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-h:formules.html"><a href="8-h:formules.html"><i class="fa fa-check"></i><b>8</b> Wiskundige formules</a><ul>
+<li class="chapter" data-level="8.1" data-path="8-h:formules.html"><a href="8-h:formules.html#in-lijn-formules"><i class="fa fa-check"></i><b>8.1</b> In-lijn formules</a></li>
+<li class="chapter" data-level="8.2" data-path="8-h:formules.html"><a href="8-h:formules.html#losstaande-formules"><i class="fa fa-check"></i><b>8.2</b> Losstaande formules</a></li>
+<li class="chapter" data-level="8.3" data-path="8-h:formules.html"><a href="8-h:formules.html#s:formule-nummer"><i class="fa fa-check"></i><b>8.3</b> Genummerde formules</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-citeren-van-literatuur.html"><a href="9-citeren-van-literatuur.html"><i class="fa fa-check"></i><b>9</b> Citeren van literatuur</a><ul>
+<li class="chapter" data-level="9.1" data-path="9-citeren-van-literatuur.html"><a href="9-citeren-van-literatuur.html#vereisten"><i class="fa fa-check"></i><b>9.1</b> Vereisten</a></li>
+<li class="chapter" data-level="9.2" data-path="9-citeren-van-literatuur.html"><a href="9-citeren-van-literatuur.html#in-lijn-stijlen"><i class="fa fa-check"></i><b>9.2</b> In-lijn stijlen</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-code.html"><a href="10-code.html"><i class="fa fa-check"></i><b>10</b> Code</a><ul>
+<li class="chapter" data-level="10.1" data-path="10-code.html"><a href="10-code.html#door-r-berekende-waarden-gebruiken-in-gewone-tekst"><i class="fa fa-check"></i><b>10.1</b> Door R berekende waarden gebruiken in gewone tekst</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-figuren.html"><a href="11-figuren.html"><i class="fa fa-check"></i><b>11</b> Figuren</a><ul>
+<li class="chapter" data-level="11.1" data-path="11-figuren.html"><a href="11-figuren.html#in-lijn-figuren"><i class="fa fa-check"></i><b>11.1</b> In-lijn figuren</a></li>
+<li class="chapter" data-level="11.2" data-path="11-figuren.html"><a href="11-figuren.html#zwevende-figuren"><i class="fa fa-check"></i><b>11.2</b> Zwevende figuren</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html"><i class="fa fa-check"></i><b>12</b> Tabellen</a><ul>
+<li class="chapter" data-level="12.1" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#kable"><i class="fa fa-check"></i><b>12.1</b> <code>kable()</code></a></li>
+<li class="chapter" data-level="12.2" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#mogelijke-alternatieven"><i class="fa fa-check"></i><b>12.2</b> Mogelijke alternatieven</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#aangepaste-kable-formaten-voor-pdf-output"><i class="fa fa-check"></i><b>12.2.1</b> Aangepaste <code>kable()</code> formaten voor pdf output</a></li>
+<li class="chapter" data-level="12.2.2" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#het-kableextra-package"><i class="fa fa-check"></i><b>12.2.2</b> Het <code>kableExtra</code> package</a></li>
+<li class="chapter" data-level="12.2.3" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#pandoc.table"><i class="fa fa-check"></i><b>12.2.3</b> <code>pandoc.table()</code></a></li>
+<li class="chapter" data-level="12.2.4" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#xtable"><i class="fa fa-check"></i><b>12.2.4</b> <code>xtable()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html"><i class="fa fa-check"></i><b>13</b> Lay-out tips voor pdf</a><ul>
+<li class="chapter" data-level="13.1" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#nieuwe-pagina-forceren"><i class="fa fa-check"></i><b>13.1</b> Nieuwe pagina forceren</a></li>
+<li class="chapter" data-level="13.2" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#tekst-samenhouden"><i class="fa fa-check"></i><b>13.2</b> Tekst samenhouden</a></li>
+<li class="chapter" data-level="13.3" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#problemen-met-zwevende-figuren-en-tabellen"><i class="fa fa-check"></i><b>13.3</b> Problemen met zwevende figuren en tabellen</a><ul>
+<li class="chapter" data-level="13.3.1" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#foutmelding-too-many-unprocessed-floats"><i class="fa fa-check"></i><b>13.3.1</b> Foutmelding: “too many unprocessed floats”</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#zwevende-figuur-of-tabel-wordt-in-de-volgende-sectie-geplaatst"><i class="fa fa-check"></i><b>13.3.2</b> Zwevende figuur of tabel wordt in de volgende sectie geplaatst</a></li>
+<li class="chapter" data-level="13.3.3" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#automatische-floatbarrier"><i class="fa fa-check"></i><b>13.3.3</b> Automatische <code>\FloatBarrier</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#woordafbreking"><i class="fa fa-check"></i><b>13.4</b> Woordafbreking</a></li>
+<li class="chapter" data-level="13.5" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#foutmelding-bij-het-gebruik-van-in-bijschriften."><i class="fa fa-check"></i><b>13.5</b> Foutmelding bij het gebruik van <code>%</code> in bijschriften.</a></li>
+<li class="chapter" data-level="13.6" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#s:onderlijnd"><i class="fa fa-check"></i><b>13.6</b> Gebruik van markdown syntax of quotes in onderlijnde koppen</a></li>
+<li class="chapter" data-level="13.7" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor."><i class="fa fa-check"></i><b>13.7</b> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em></a></li>
+<li class="chapter" data-level="13.8" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-2"><i class="fa fa-check"></i><b>13.8</b> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em></a></li>
+<li class="chapter" data-level="13.9" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#fusce-dignissim-facilisis-tortor."><i class="fa fa-check"></i><b>13.9</b> <em>Fusce dignissim facilisis tortor.</em></a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="14-bijlage-referentietekst-voor-inbo-medewerkers.html"><a href="14-bijlage-referentietekst-voor-inbo-medewerkers.html"><i class="fa fa-check"></i><b>14</b> Bijlage: referentietekst voor INBO-medewerkers</a></li>
+<li class="chapter" data-level="15" data-path="15-bijlage-referentietekst-voor-inbo-medewerkers-1.html"><a href="15-bijlage-referentietekst-voor-inbo-medewerkers-1.html"><i class="fa fa-check"></i><b>15</b> Bijlage: referentietekst voor INBO medewerkers</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Voorbeeldrapport met INBOmd</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="kaders" class="section level1">
+<h1><span class="header-section-number">5</span> Kaders</h1>
+<p>De eenvoudigste manier om kaders in te voegen in RStudio is in de werkbalk het drop-down menu “Addins” te kiezen.
+Vervolgens kies je in de lijst onder “INBOmd” <em>insert “block”</em> (standaard kader), <em>insert “exampleblock”</em> (kader met voorbeeld) <em>insert “alertblock”</em> (kader met waarschuwing).</p>
+<div id="standaard-kader" class="section level2">
+<h2><span class="header-section-number">5.1</span> Standaard kader</h2>
+<p>Non potes ergo ista tueri, Torquate, mihi crede, si te ipse et tuas cogitationes et studia perspexeris; pudebit te, inquam, illius tabulae, quam Cleanthes sane commode verbis depingere solebat. Iubebat eos, qui audiebant, secum ipsos cogitare pictam in tabula Voluptatem pulcherrimo vestitu et ornatu regali in solio sedentem, praesto esse Virtutes ut ancillulas, quae nihil aliud agerent, nullum suum officium ducerent, nisi ut Voluptati ministrarent et eam tantum ad aurem admonerent, si modo id pictura intellegi posset, ut caveret ne quid faceret inprudens, quod offenderet animos hominum, aut quicquam, e quo oriretur aliquis dolor. “Nos quidem Virtutes sic natae sumus, ut tibi serviremus, aliud negotii nihil habemus.”</p>
+
+
+<div class="block">
+<p>Hier plaats je de tekst van het blok.
+<em>Je kan geen <strong>R</strong> chunks of code uitvoeren in een blok.</em>
+Om de resultaten van een chunk in een blok te tonen moet je onderstaande truk
+gebruiken.</p>
+<p>Quisque consectetuer. In suscipit mauris a dolor pellentesque consectetuer. Mauris convallis neque non erat. In lacinia. Pellentesque leo eros, sagittis quis, fermentum quis, tincidunt ut, sapien. Maecenas sem. Curabitur eros odio, interdum eu, feugiat eu, porta ac, nisl. Curabitur nunc. Etiam fermentum convallis velit. Pellentesque laoreet lacus. Quisque sed elit. Nam quis tellus. Aliquam tellus arcu, adipiscing non, tincidunt eleifend, adipiscing quis, augue. Vivamus elementum placerat enim. Suspendisse ut tortor. Integer faucibus adipiscing felis. Aenean consectetuer mattis lectus. Morbi malesuada faucibus dolor. Nam lacus. Etiam arcu libero, malesuada vitae, aliquam vitae, blandit tristique, nisl.</p>
+</div>
+
+<p>Suspendisse porta, dolor sed fringilla ultrices, augue mauris gravida dolor, vel sollicitudin magna dui sit amet nunc. Mauris mollis condimentum risus. Integer ipsum. Quisque malesuada, erat ac dictum pulvinar, magna nisl fermentum ligula, quis euismod mauris felis non diam. Nullam sapien turpis, rutrum vel, condimentum ac, bibendum vulputate, nulla. Vestibulum tortor ipsum, fermentum egestas, placerat ut, vulputate et, wisi. Aliquam erat volutpat. Donec consequat, ligula sit amet tincidunt aliquam, nunc lorem sagittis nunc, a ullamcorper erat ante ac felis. Donec eleifend. Nullam quam leo, lobortis non, condimentum at, tempus consectetuer, orci. Quisque ut lorem. Donec nisl. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec porta, libero eget feugiat posuere, felis arcu pulvinar odio, vel dapibus enim dui nec turpis.</p>
+
+
+
+<div class="block">
+<p>Sed et illum, quem nominavi, et ceteros sophistas, ut e Platone intellegi potest, lusos videmus a Socrate. Is enim percontando atque interrogando elicere solebat eorum opiniones, quibuscum disserebat, ut ad ea, quae ii respondissent, si quid videretur, diceret. Qui mos cum a posterioribus non esset retentus, Arcesilas eum revocavit instituitque ut ii, qui se audire vellent, non de se quaererent, sed ipsi dicerent, quid sentirent; quod cum dixissent, ille contra. Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; quod quidem iam fit etiam in Academia. Ubi enim is, qui audire vult, ita dixit: “Voluptas mihi videtur esse summum bonum”, perpetua oratione contra disputatur, ut facile intellegi possit eos, qui aliquid sibi videri dicant, non ipsos in ea sententia esse, sed audire velle contraria.</p>
+<p>Nunc sed pede. Praesent vitae lectus. Praesent neque justo, vehicula eget, interdum id, facilisis et, nibh. Phasellus at purus et libero lacinia dictum. Fusce aliquet. Nulla eu ante placerat leo semper dictum. Mauris metus. Curabitur lobortis. Curabitur sollicitudin hendrerit nunc. Donec ultrices lacus id ipsum.</p>
+</div>
+
+
+
+
+<div class="block">
+<p>Atque haec contra Aristippum, qui eam voluptatem non modo summam, sed solam etiam ducit, quam omnes unam appellamus voluptatem. Aliter autem vobis placet. Sed ille, ut dixi, vitiose. Nec enim figura corporis nec ratio excellens ingenii humani significat ad unam hanc rem natum hominem, ut frueretur voluptatibus. Nec vero audiendus Hieronymus, cui summum bonum est idem, quod vos interdum vel potius nimium saepe dicitis, nihil dolere. Non enim, si malum est dolor, carere eo malo satis est ad bene vivendum. Hoc dixerit potius Ennius: “Nimium boni est, cui nihil est mali”. Nos beatam vitam non depulsione mali, sed adeptione boni iudicemus, nec eam cessando, sive gaudentem, ut Aristippus, sive non dolentem, ut hic, sed agendo aliquid considerandove quaeramus.</p>
+<p>Vivamus commodo eros eleifend dui. Vestibulum in leo eu erat tristique mattis. Cras at elit. Cras pellentesque. Nullam id lacus sit amet libero aliquet hendrerit. Proin placerat, mi non elementum laoreet, eros elit tincidunt magna, a rhoncus sem arcu id odio. Nulla eget leo a leo egestas facilisis. Curabitur quis velit. Phasellus aliquam, tortor nec ornare rhoncus, purus urna posuere velit, et commodo risus tellus quis tellus. Vivamus leo turpis, tempus sit amet, tristique vitae, laoreet quis, odio. Proin scelerisque bibendum ipsum. Etiam nisl. Praesent vel dolor. Pellentesque vel magna. Curabitur urna. Vivamus congue urna in velit. Etiam ullamcorper elementum dui. Praesent non urna. Sed placerat quam non mi. Pellentesque diam magna, ultricies eget, ultrices placerat, adipiscing rutrum, sem.</p>
+</div>
+
+</div>
+<div id="kader-met-voorbeeld" class="section level2">
+<h2><span class="header-section-number">5.2</span> Kader met voorbeeld</h2>
+<p>Ut sit amet magna. Cras a ligula eu urna dignissim viverra. Nullam tempor leo porta ipsum. Praesent purus. Nullam consequat. Mauris dictum sagittis dui. Vestibulum sollicitudin consectetuer wisi. In sit amet diam. Nullam malesuada pharetra risus. Proin lacus arcu, eleifend sed, vehicula at, congue sit amet, sem. Sed sagittis pede a nisl. Sed tincidunt odio a pede. Sed dui. Nam eu enim. Aliquam sagittis lacus eget libero. Pellentesque diam sem, sagittis molestie, tristique et, fermentum ornare, nibh. Nulla et tellus non felis imperdiet mattis. Aliquam erat volutpat.</p>
+<p>Quid? T. Torquatus, is qui consul cum Cn. Octavio fuit, cum illam severitatem in eo filio adhibuit, quem in adoptionem D. Silano emancipaverat, ut eum Macedonum legatis accusantibus, quod pecunias praetorem in provincia cepisse arguerent, causam apud se dicere iuberet reque ex utraque parte audita pronuntiaret eum non talem videri fuisse in imperio, quales eius maiores fuissent, et in conspectum suum venire vetuit, numquid tibi videtur de voluptatibus suis cogitavisse?</p>
+
+
+<div class="exampleblock">
+<p>Hier plaats je de tekst van het blok.
+<em>Je kan geen <strong>R</strong> chunks of code uitvoeren in een blok.</em>
+Om de resultaten van een chunk in een blok te tonen moet je onderstaande truk
+gebruiken.</p>
+<p>Curabitur sit amet libero eget enim eleifend lacinia. Vivamus sagittis volutpat dui. Suspendisse potenti. Morbi a nibh eu augue fermentum posuere. Curabitur elit augue, porta quis, congue aliquam, rutrum non, massa. Integer mattis mollis ipsum. Sed tellus enim, mattis id, feugiat sed, eleifend in, elit. Phasellus non purus sed elit viverra rhoncus. Vestibulum id tellus vel sem imperdiet congue. Aenean in arcu. Nullam urna justo, imperdiet eget, volutpat vitae, semper eu, quam. Sed turpis dui, porttitor ut, egestas ac, condimentum non, wisi. Fusce iaculis turpis eget dui. Quisque pulvinar est pellentesque leo. Ut nulla elit, mattis vel, scelerisque vel, blandit ut, justo. Nulla feugiat risus in erat.</p>
+</div>
+
+<p>Sunt enim levia et perinfirma, quae dicebantur a te, animi conscientia improbos excruciari, tum etiam poenae timore, qua aut afficiantur aut semper sint in metu ne afficiantur aliquando. Non oportet timidum aut inbecillo animo fingi non bonum illum virum, qui, quicquid fecerit, ipse se cruciet omniaque formidet, sed omnia callide referentem ad utilitatem, acutum, versutum, veteratorem, facile ut excogitet quo modo occulte, sine teste, sine ullo conscio fallat.</p>
+<p>Quodsi vitam omnem perturbari videmus errore et inscientia, sapientiamque esse solam, quae nos a libidinum impetu et a formidinum terrore vindicet et ipsius fortunae modice ferre doceat iniurias et omnis monstret vias, quae ad quietem et ad tranquillitatem ferant, quid est cur dubitemus dicere et sapientiam propter voluptates expetendam et insipientiam propter molestias esse fugiendam?</p>
+
+
+
+<div class="exampleblock">
+<p>Quid ergo attinet dicere: “Nihil haberem, quod reprehenderem, si finitas cupiditates haberent”? Hoc est dicere: “Non reprehenderem asotos, si non essent asoti.” isto modo ne improbos quidem, si essent boni viri. Hic homo severus luxuriam ipsam per se reprehendendam non putat, et hercule, Torquate, ut verum loquamur, si summum bonum voluptas est, rectissime non putat. Noli enim mihi fingere asotos, ut soletis, qui in mensam vomant, et qui de conviviis auferantur crudique postridie se rursus ingurgitent, qui solem, ut aiunt, nec occidentem umquam viderint nec orientem, qui consumptis patrimoniis egeant. Nemo nostrum istius generis asotos iucunde putat vivere. Mundos, elegantis, optimis cocis, pistoribus, piscatu, aucupio, venatione, his omnibus exquisitis, vitantes cruditatem, quibus vinum defusum e pleno sit chrysizon, ut ait Lucilius, cui nihildum situlus et sacculus abstulerit, adhibentis ludos et quae sequuntur, illa, quibus detractis clamat Epicurus se nescire quid sit bonum; adsint etiam formosi pueri, qui ministrent, respondeat his vestis, argentum, Corinthium, locus ipse, aedificium– hos ergo asotos bene quidem vivere aut beate numquam dixerim.</p>
+<p>Sed lustremus animo non has maximas artis, quibus qui carebant inertes a maioribus nominabantur, sed quaero num existimes, non dico Homerum, Archilochum, Pindarum, sed Phidian, Polyclitum, Zeuxim ad voluptatem artes suas direxisse. Ergo opifex plus sibi proponet ad formarum quam civis excellens ad factorum pulchritudinem? Quae autem est alia causa erroris tanti tam longe lateque diffusi, nisi quod is, qui voluptatem summum bonum esse decernit, non cum ea parte animi, qua inest ratio atque consilium, sed cum cupiditate, id est cum animi levissima parte, deliberat? Quaero enim de te, si sunt di, ut vos etiam putatis, qui possint esse beati, cum voluptates corpore percipere non possint, aut, si sine eo genere voluptatis beati sint, cur similem animi usum in sapiente esse nolitis.</p>
+</div>
+
+
+
+
+<div class="exampleblock">
+<p>Etiam suscipit aliquam arcu. Aliquam sit amet est ac purus bibendum congue. Sed in eros. Morbi non orci. Pellentesque mattis lacinia elit. Fusce molestie velit in ligula. Nullam et orci vitae nibh vulputate auctor. Aliquam eget purus. Nulla auctor wisi sed ipsum. Morbi porttitor tellus ac enim. Fusce ornare. Proin ipsum enim, tincidunt in, ornare venenatis, molestie a, augue. Donec vel pede in lacus sagittis porta. Sed hendrerit ipsum quis nisl. Suspendisse quis massa ac nibh pretium cursus. Sed sodales. Nam eu neque quis pede dignissim ornare. Maecenas eu purus ac urna tincidunt congue.</p>
+<p>Phasellus suscipit placerat neque. Duis rutrum. Quisque enim. Proin et erat at augue aliquam aliquam. Mauris porttitor imperdiet lectus. Proin egestas faucibus risus. Praesent pharetra consequat odio. Fusce sed felis et nulla tempor elementum. Nulla eu turpis. Proin posuere. Nullam nonummy nulla sed nulla volutpat consectetuer. Vivamus vehicula accumsan eros. Fusce ullamcorper. Phasellus vehicula consequat mauris. Sed vitae purus. Sed accumsan, felis suscipit auctor fermentum, odio turpis vestibulum risus, vitae mattis metus neque non pede.</p>
+</div>
+
+</div>
+<div id="kader-met-waarschuwing" class="section level2">
+<h2><span class="header-section-number">5.3</span> Kader met waarschuwing</h2>
+<p>Semovenda est igitur voluptas, non solum ut recta sequamini, sed etiam ut loqui deceat frugaliter. Possumusne ergo in vita summum bonum dicere, cum id ne in cena quidem posse videamur? Quo modo autem philosophus loquitur? “Tria genera cupiditatum, naturales et necessariae, naturales et non necessariae, nec naturales nec necessariae.” primum divisit ineleganter; duo enim genera quae erant, fecit tria. Hoc est non dividere, sed frangere. Qui haec didicerunt, quae ille contemnit, sic solent: “Duo genera cupiditatum, naturales et inanes, naturalium duo, necessariae et non necessariae.” confecta res esset. Vitiosum est enim in dividendo partem in genere numerare.</p>
+<p>Phasellus id magna. Duis malesuada interdum arcu. Integer metus. Morbi pulvinar pellentesque mi. Suspendisse sed est eu magna molestie egestas. Quisque mi lorem, pulvinar eget, egestas quis, luctus at, ante. Proin auctor vehicula purus. Fusce ac nisl aliquam ante hendrerit pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Morbi wisi. Etiam arcu mauris, facilisis sed, eleifend non, nonummy ut, pede. Cras ut lacus tempor metus mollis placerat. Vivamus eu tortor vel metus interdum malesuada.</p>
+
+
+<div class="alertblock">
+<p>Hier plaats je de tekst van het blok.
+<em>Je kan geen <strong>R</strong> chunks of code uitvoeren in een blok.</em>
+Om de resultaten van een chunk in een blok te tonen moet je onderstaande truk
+gebruiken.</p>
+<p>Graecum te, Albuci, quam Romanum atque Sabinum, municipem Ponti, Tritani, centurionum, praeclarorum hominum ac primorum signiferumque, maluisti dici. Graece ergo praetor Athenis, id quod maluisti, te, cum ad me accedis, saluto: “[…],” inquam, “Tite!” lictores, turma omnis chorusque: “[…], Tite!” hinc hostis mi Albucius, hinc inimicus.</p>
+</div>
+
+<p>Bestiarum vero nullum iudicium puto. Quamvis enim depravatae non sint, pravae tamen esse possunt. Ut bacillum aliud est inflexum et incurvatum de industria, aliud ita natum, sic ferarum natura non est illa quidem depravata mala disciplina, sed natura sua. Nec vero ut voluptatem expetat, natura movet infantem, sed tantum ut se ipse diligat, ut integrum se salvumque velit. Omne enim animal, simul et ortum est, se ipsum et omnes partes suas diligit duasque, quae maximae sunt, in primis amplectitur, animum et corpus, deinde utriusque partes. Nam sunt et in animo praecipua quaedam et in corpore, quae cum leviter agnovit, tum discernere incipit, ut ea, quae prima data sunt natura, appetat asperneturque contraria.</p>
+
+
+
+<div class="alertblock">
+<p>Sunt autem quidam Epicurei timidiores paulo contra vestra convicia, sed tamen satis acuti, qui verentur ne, si amicitiam propter nostram voluptatem expetendam putemus, tota amicitia quasi claudicare videatur. Itaque primos congressus copulationesque et consuetudinum instituendarum voluntates fieri propter voluptatem; cum autem usus progrediens familiaritatem effecerit, tum amorem efflorescere tantum, ut, etiamsi nulla sit utilitas ex amicitia, tamen ipsi amici propter se ipsos amentur. Etenim si loca, si fana, si urbes, si gymnasia, si campum, si canes, si equos, si ludicra exercendi aut venandi consuetudine adamare solemus, quanto id in hominum consuetudine facilius fieri poterit et iustius?</p>
+<p>At quam pulchre dicere videbare, cum ex altera parte ponebas cumulatum aliquem plurimis et maximis voluptatibus nullo nec praesenti nec futuro dolore, ex altera autem cruciatibus maximis toto corpore nulla nec adiuncta nec sperata voluptate, et quaerebas, quis aut hoc miserior aut superiore illo beatior; deinde concludebas summum malum esse dolorem, summum bonum voluptatem! Lucius Thorius Balbus fuit, Lanuvinus, quem meminisse tu non potes. Is ita vivebat, ut nulla tam exquisita posset inveniri voluptas, qua non abundaret. Erat et cupidus voluptatum et eius generis intellegens et copiosus, ita non superstitiosus, ut illa plurima in sua patria sacrificia et fana contemneret, ita non timidus ad mortem, ut in acie sit ob rem publicam interfectus.</p>
+</div>
+
+
+
+
+<div class="alertblock">
+<p>Sed ut iis bonis erigimur, quae expectamus, sic laetamur iis, quae recordamur. Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant. Est autem situm in nobis ut et adversa quasi perpetua oblivione obruamus et secunda iucunde ac suaviter meminerimus. Sed cum ea, quae praeterierunt, acri animo et attento intuemur, tum fit ut aegritudo sequatur, si illa mala sint, laetitia, si bona.</p>
+<p>Hi non viderunt, ut ad cursum equum, ad arandum bovem, ad indagandum canem, sic hominem ad duas res, ut ait Aristoteles, ad intellegendum et agendum, esse natum quasi mortalem deum, contraque ut tardam aliquam et languidam pecudem ad pastum et ad procreandi voluptatem hoc divinum animal ortum esse voluerunt, quo nihil mihi videtur absurdius.</p>
+</div>
+
+
+</div>
+</div>
+<p>&nbsp;</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="libs/INBOmd-0.5.2/img/cc-by.svg" class = "cc"/></a>
+Onkelinx, T. (2021). <a href="https://doi.org/10.5281/zenodo.842223" class="uri">https://doi.org/10.5281/zenodo.842223</a>
+            </section>
+        </div>
+      </div>
+    </div>
+<a href="4-opsommingen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="6-h:kruisverwijzing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/inbo/inbomd_examples/edit/master/source/vlaanderen_rapport/../inbo_rapport/1_typografie.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["vlaanderen_rapport.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, "");
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+
+</html>
