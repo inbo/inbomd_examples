@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html  lang="nl">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3 Aandachtspunten bij aanmaken van een bib bestand voor gebruik met CSL | Voorbeeld van referentiestijl</title>
+  <meta name="description" content="3 Aandachtspunten bij aanmaken van een bib bestand voor gebruik met CSL | Voorbeeld van referentiestijl">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="3 Aandachtspunten bij aanmaken van een bib bestand voor gebruik met CSL | Voorbeeld van referentiestijl" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Aandachtspunten bij aanmaken van een bib bestand voor gebruik met CSL | Voorbeeld van referentiestijl" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="2-na-te-kijken.html"/>
+<link rel="next" href="referenties.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<link rel="stylesheet" href="css/inbo_rapport.css" type="text/css"/>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Verwijzingen in tekst</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#doi-of-url"><i class="fa fa-check"></i><b>1.1</b> DOI of URL</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html"><i class="fa fa-check"></i><b>2</b> Na te kijken</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#op-te-volgen-voor-bst"><i class="fa fa-check"></i><b>2.1</b> Op te volgen voor bst</a></li>
+<li class="chapter" data-level="2.2" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#issues-in-het-csl-bestand"><i class="fa fa-check"></i><b>2.2</b> Issues in het csl bestand</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#aandachtspunten-bij-aanmaken-van-een-bib-bestand"><i class="fa fa-check"></i><b>2.2.1</b> Aandachtspunten bij aanmaken van een bib bestand</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#bijzonderheden-in-de-zotero-addon-better-bibtex"><i class="fa fa-check"></i><b>2.3</b> Bijzonderheden in de Zotero addon ‘Better BibTeX’</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-na-te-kijken.html"><a href="2-na-te-kijken.html#export-van-article-met-page-range-x-y"><i class="fa fa-check"></i><b>2.3.1</b> Export van article met page-range ‘x-y’</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-bibcsl.html"><a href="3-bibcsl.html"><i class="fa fa-check"></i><b>3</b> Aandachtspunten bij aanmaken van een bib bestand voor gebruik met CSL</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-bibcsl.html"><a href="3-bibcsl.html#voor-pandoc-gebruikt-in-r-markdown-gebruik-and-in-publisher-veld"><i class="fa fa-check"></i><b>3.1</b> Voor pandoc (gebruikt in R Markdown): gebruik ‘{and}’ in publisher-veld</a></li>
+<li class="chapter" data-level="3.2" data-path="3-bibcsl.html"><a href="3-bibcsl.html#voor-pandoc-gebruikt-in-r-markdown-en-bij-import-in-zotero-indien-gebruik-van-title-case-strings"><i class="fa fa-check"></i><b>3.2</b> Voor pandoc (gebruikt in R Markdown) en bij import in Zotero, indien gebruik van ‘{Title Case}’ strings</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="3-bibcsl.html"><a href="3-bibcsl.html#ter-overweging"><i class="fa fa-check"></i><b>3.2.1</b> Ter overweging</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referenties.html"><a href="referenties.html"><i class="fa fa-check"></i>Referenties</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Voorbeeld van referentiestijl</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="bibcsl" class="section level1">
+<h1><span class="header-section-number">3</span> Aandachtspunten bij aanmaken van een bib bestand voor gebruik met CSL</h1>
+<p>Er zijn enkele aandachtspunten in verband met het gebruik van een bib-file in combinatie met CSL, meer bepaald in verband met de wijze van ingeven van bepaalde velden.</p>
+<p>Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zotero en vandaaruit een bib-bestand wordt geëxporteerd, dit met de <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX plugin</a> geïnstalleerd.</p>
+<div id="voor-pandoc-gebruikt-in-r-markdown-gebruik-and-in-publisher-veld" class="section level2">
+<h2><span class="header-section-number">3.1</span> Voor pandoc (gebruikt in R Markdown): gebruik ‘{and}’ in publisher-veld</h2>
+<p>Indien ‘and’ voorkomt in een publisher-veld waarbij dit letterlijk moet worden getoond, dan moet dat met <strong>een extra paar <code>{}</code></strong> worden opgelost, bv. <code>{ALLCAPS {and} Title Case Publishing}</code> of <code>{{ALLCAPS and Title Case Publishing}}</code>.</p>
+<p>Meer info: zie de commit message van <a href="https://github.com/inbo/inbomd_examples/commit/381aa28">381aa28</a>, waar dit is gebeurd op het <code>INBOmd.bib</code> bestand:</p>
+<blockquote>
+<p>By putting an extra pair of curly braces around ‘and’,
+this issue was solved.
+It has to do with the biblatex approach by the csl processor
+in pandoc-citeproc, where ‘and’ is mapped to semicolons.
+See also a similar discussion in
+<a href="https://github.com/jgm/pandoc-citeproc/issues/121" class="uri">https://github.com/jgm/pandoc-citeproc/issues/121</a> :
+“biblatex is the default treatment of .bib files”</p>
+</blockquote>
+<p>Indien dit niet wordt gedaan, dan zal pandoc-citeproc bij de conversie van het bib-bestand naar CSL-JSON (via bib2json) het woord “and” in <code>Publisher</code> vervangen door “;”, conform de biblatex benadering.</p>
+<p>Merk op dat de import van de bib-file met Better BibTeX in Zotero deze omzetting niet doet, waardoor dit probleem alleen in R Markdown optrad en niet via Zotero-gegenereerde bibliografieën.</p>
+</div>
+<div id="voor-pandoc-gebruikt-in-r-markdown-en-bij-import-in-zotero-indien-gebruik-van-title-case-strings" class="section level2">
+<h2><span class="header-section-number">3.2</span> Voor pandoc (gebruikt in R Markdown) en bij import in Zotero, indien gebruik van ‘{Title Case}’ strings</h2>
+<p>Indien je ‘Title Case’ strings in de velden <code>Series</code> en <code>Booktitle</code> (bv. InCollection) wil behouden als ‘Title Case’, dan moeten de ‘Title Case’ woorden (of de hele Title Case woordenreeks) in de bib-file worden omringd met <strong>extra <code>{}</code></strong>.
+Dit is niet nodig voor het eerste woord, waar steeds een hoofdletter wordt gebruikt.</p>
+<p>Voorbeeld: <code>{Series in {Title Case}}</code>.</p>
+<p>Dit is eigen aan CSL-processors: ze veronderstellen voor deze velden sentence case tenzij de stijl expliciet ‘Title Case’ instelt
+(zie <a href="https://github.com/jgm/pandoc-citeproc/issues/436#issuecomment-577184970">deze</a> opmerking in een pandoc-citeproc discussie).</p>
+<ul>
+<li>In een CSL-stijl kan voor een veld een omzetting naar Title Case of sentence case opgelegd worden (dit gebeurt momenteel <em>niet</em> in <code>research-institute-for-nature-and-forest.csl</code>).</li>
+<li>Het verdient volgens de CSL-documentatie overigens aanbeveling (<a href="https://docs.citationstyles.org/en/1.0.1/specification.html#sentence-case-conversion">bron</a>) om steeds <em>in te voeren</em> als <strong>sentence case met alleen <code>{Eigennamen}</code> als hoofdletter</strong>.
+Immers, terwijl de omzetting naar Title Case geen rariteiten zal opleveren, kan een omzetting van Title Case naar sentence case geen rekening houden met eigennamen.</li>
+</ul>
+<p>Ook de Better BibTeX plugin volgt kennelijk deze filosofie (<a href="https://retorque.re/zotero-better-bibtex/support/faq/#bbt-is-changing-the-capitalization-of-my-titles----why">link</a>).</p>
+<div id="ter-overweging" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Ter overweging</h3>
+<p>Een haalbaar, automatiseerbaar en betrouwbaar alternatief voor <code>research-institute-for-nature-and-forest.csl</code> kan zijn om <em>binnen de stijl</em> steeds omzetting naar Title Case te doen voor <em>Engelstalige</em> titel- en serievelden (CSL ondersteunt conversie alleen Engelstalig).
+Momenteel kom je sowieso met heterogeniteit te zitten als gevolg van de heterogeniteit in het referentiebestand (sommige ingevoerd als Title Case, sommige als sentence case).</p>
+
+</div>
+</div>
+</div>
+            </section>
+        </div>
+      </div>
+    </div>
+<a href="2-na-te-kijken.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referenties.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+
+</body>
+
+</html>

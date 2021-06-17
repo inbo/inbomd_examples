@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>13 Lay-out tips voor pdf | Voorbeeldrapport met INBOmd</title>
+  <meta name="description" content="13 Lay-out tips voor pdf | Voorbeeldrapport met INBOmd">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="13 Lay-out tips voor pdf | Voorbeeldrapport met INBOmd" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="inbo/inbomd-examples" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="13 Lay-out tips voor pdf | Voorbeeldrapport met INBOmd" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="12-tabellen-1.html"/>
+<link rel="next" href="14-titel-van-eerste-bijlage.html"/>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.18/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/inbo_rapport.css" type="text/css"/>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="dankwoord.html"><a href="dankwoord.html"><i class="fa fa-check"></i>Dankwoord</a></li>
+<li class="chapter" data-level="" data-path="voorwoord.html"><a href="voorwoord.html"><i class="fa fa-check"></i>Voorwoord</a></li>
+<li class="chapter" data-level="" data-path="samenvatting.html"><a href="samenvatting.html"><i class="fa fa-check"></i>Samenvatting</a></li>
+<li class="chapter" data-level="" data-path="aanbevelingen-voor-beheer-enof-beleid.html"><a href="aanbevelingen-voor-beheer-enof-beleid.html"><i class="fa fa-check"></i>Aanbevelingen voor beheer en/of beleid</a></li>
+<li class="chapter" data-level="" data-path="english-abstract.html"><a href="english-abstract.html"><i class="fa fa-check"></i>English abstract</a></li>
+<li class="chapter" data-level="" data-path="resume-francais.html"><a href="resume-francais.html"><i class="fa fa-check"></i>Résumé français</a></li>
+<li class="chapter" data-level="1" data-path="1-inleiding.html"><a href="1-inleiding.html"><i class="fa fa-check"></i><b>1</b> Inleiding</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-inleiding.html"><a href="1-inleiding.html#lipsum"><i class="fa fa-check"></i><b>1.1</b> Lipsum</a></li>
+</ul></li>
+<li class="part"><span><b>I Typografie</b></span></li>
+<li class="chapter" data-level="2" data-path="2-h-koppen.html"><a href="2-h-koppen.html"><i class="fa fa-check"></i><b>2</b> Kopstijlen: niveau 1: Vivamus viverra fermentum felis. Integer pretium semper justo. Donec sit amet nibh. Nullam eleifend pellentesque ligula. Sed mattis tempor felis.</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-h-koppen.html"><a href="2-h-koppen.html#niveau-2-aliquam-consectetuer-varius-nulla.-vivamus-scelerisque-semper-mi.-sed-vehicula-aliquam-ligula.-aliquam-tincidunt-ullamcorper-justo.-aliquam-tincidunt-ullamcorper-justo."><i class="fa fa-check"></i><b>2.1</b> Niveau 2: Aliquam consectetuer varius nulla. Vivamus scelerisque semper mi. Sed vehicula aliquam ligula. Aliquam tincidunt ullamcorper justo. Aliquam tincidunt ullamcorper justo.</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-h-koppen.html"><a href="2-h-koppen.html#niveau-3-etiam-fringilla-faucibus-augue.-quisque-ullamcorper-placerat-ipsum.-ut-elementum-auctor-metus.-nulla-molestie-convallis-arcu.-sed-vestibulum-dapibus-neque."><i class="fa fa-check"></i><b>2.1.1</b> Niveau 3: Etiam fringilla faucibus augue. Quisque ullamcorper placerat ipsum. Ut elementum auctor metus. Nulla molestie convallis arcu. Sed vestibulum dapibus neque.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="h-koppen-zonder-nummer.html"><a href="h-koppen-zonder-nummer.html"><i class="fa fa-check"></i>Kopstijlen zonder nummer: niveau 1: Maecenas sit amet diam. Ut egestas feugiat magna. Nulla ullamcorper vestibulum turpis. In sit amet diam. Donec lacinia malesuada massa.</a><ul>
+<li class="chapter" data-level="" data-path="h-koppen-zonder-nummer.html"><a href="h-koppen-zonder-nummer.html#niveau-2-morbi-malesuada-faucibus-dolor.-etiam-elementum-pretium-justo.-nunc-dictum-vulputate-purus.-phasellus-aliquet-volutpat-odio.-sed-dapibus-feugiat-sapien."><i class="fa fa-check"></i>Niveau 2: Morbi malesuada faucibus dolor. Etiam elementum pretium justo. Nunc dictum vulputate purus. Phasellus aliquet volutpat odio. Sed dapibus feugiat sapien.</a><ul>
+<li class="chapter" data-level="" data-path="h-koppen-zonder-nummer.html"><a href="h-koppen-zonder-nummer.html#niveau-3-donec-sit-amet-nibh.-mauris-malesuada-malesuada-elit.-phasellus-commodo-vulputate-arcu.-nam-vestibulum-ullamcorper-leo.-vivamus-sagittis-volutpat-dui."><i class="fa fa-check"></i>Niveau 3: Donec sit amet nibh. Mauris malesuada malesuada elit. Phasellus commodo vulputate arcu. Nam vestibulum ullamcorper leo. Vivamus sagittis volutpat dui.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-lettertypes.html"><a href="3-lettertypes.html"><i class="fa fa-check"></i><b>3</b> Lettertypes</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-lettertypes.html"><a href="3-lettertypes.html#normaal"><i class="fa fa-check"></i><b>3.1</b> Normaal</a></li>
+<li class="chapter" data-level="3.2" data-path="3-lettertypes.html"><a href="3-lettertypes.html#vet"><i class="fa fa-check"></i><b>3.2</b> Vet</a></li>
+<li class="chapter" data-level="3.3" data-path="3-lettertypes.html"><a href="3-lettertypes.html#cursief"><i class="fa fa-check"></i><b>3.3</b> Cursief</a></li>
+<li class="chapter" data-level="3.4" data-path="3-lettertypes.html"><a href="3-lettertypes.html#vet-en-cursief"><i class="fa fa-check"></i><b>3.4</b> Vet en cursief</a></li>
+<li class="chapter" data-level="3.5" data-path="3-lettertypes.html"><a href="3-lettertypes.html#met-vaste-tekenbreedte"><i class="fa fa-check"></i><b>3.5</b> Met vaste tekenbreedte</a></li>
+<li class="chapter" data-level="3.6" data-path="3-lettertypes.html"><a href="3-lettertypes.html#kleine-letter-l-versus-hoofdletter-i"><i class="fa fa-check"></i><b>3.6</b> Kleine letter L versus hoofdletter i</a></li>
+<li class="chapter" data-level="3.7" data-path="3-lettertypes.html"><a href="3-lettertypes.html#grote-letter-o-versus-cijfer-0"><i class="fa fa-check"></i><b>3.7</b> Grote letter O versus cijfer 0</a></li>
+<li class="chapter" data-level="3.8" data-path="3-lettertypes.html"><a href="3-lettertypes.html#speciale-characters"><i class="fa fa-check"></i><b>3.8</b> Speciale characters</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="3-lettertypes.html"><a href="3-lettertypes.html#normaal-1"><i class="fa fa-check"></i><b>3.8.1</b> Normaal</a></li>
+<li class="chapter" data-level="3.8.2" data-path="3-lettertypes.html"><a href="3-lettertypes.html#vet-1"><i class="fa fa-check"></i><b>3.8.2</b> Vet</a></li>
+<li class="chapter" data-level="3.8.3" data-path="3-lettertypes.html"><a href="3-lettertypes.html#cursief-1"><i class="fa fa-check"></i><b>3.8.3</b> Cursief</a></li>
+<li class="chapter" data-level="3.8.4" data-path="3-lettertypes.html"><a href="3-lettertypes.html#vet-en-cursief-1"><i class="fa fa-check"></i><b>3.8.4</b> Vet en cursief</a></li>
+<li class="chapter" data-level="3.8.5" data-path="3-lettertypes.html"><a href="3-lettertypes.html#met-vaste-tekenbreedte-1"><i class="fa fa-check"></i><b>3.8.5</b> Met vaste tekenbreedte</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="3-lettertypes.html"><a href="3-lettertypes.html#aanhalingstekens"><i class="fa fa-check"></i><b>3.9</b> Aanhalingstekens</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-opsommingen.html"><a href="4-opsommingen.html"><i class="fa fa-check"></i><b>4</b> Opsommingen</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-opsommingen.html"><a href="4-opsommingen.html#ongeordende-lijsten"><i class="fa fa-check"></i><b>4.1</b> Ongeordende lijsten</a></li>
+<li class="chapter" data-level="4.2" data-path="4-opsommingen.html"><a href="4-opsommingen.html#genummerde-lijsten"><i class="fa fa-check"></i><b>4.2</b> Genummerde lijsten</a></li>
+<li class="chapter" data-level="4.3" data-path="4-opsommingen.html"><a href="4-opsommingen.html#lijsten-met-definities"><i class="fa fa-check"></i><b>4.3</b> Lijsten met definities</a></li>
+<li class="chapter" data-level="4.4" data-path="4-opsommingen.html"><a href="4-opsommingen.html#lijsten-mengen"><i class="fa fa-check"></i><b>4.4</b> Lijsten mengen</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-kaders.html"><a href="5-kaders.html"><i class="fa fa-check"></i><b>5</b> Kaders</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-kaders.html"><a href="5-kaders.html#standaard-kader"><i class="fa fa-check"></i><b>5.1</b> Standaard kader</a></li>
+<li class="chapter" data-level="5.2" data-path="5-kaders.html"><a href="5-kaders.html#kader-met-voorbeeld"><i class="fa fa-check"></i><b>5.2</b> Kader met voorbeeld</a></li>
+<li class="chapter" data-level="5.3" data-path="5-kaders.html"><a href="5-kaders.html#kader-met-waarschuwing"><i class="fa fa-check"></i><b>5.3</b> Kader met waarschuwing</a></li>
+</ul></li>
+<li class="part"><span><b>II Andere elementen</b></span></li>
+<li class="chapter" data-level="6" data-path="6-h-kruisverwijzing.html"><a href="6-h-kruisverwijzing.html"><i class="fa fa-check"></i><b>6</b> Kruisverwijzigingen</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-h-kruisverwijzing.html"><a href="6-h-kruisverwijzing.html#interne-kruisverwijzingen"><i class="fa fa-check"></i><b>6.1</b> Interne kruisverwijzingen</a></li>
+<li class="chapter" data-level="6.2" data-path="6-h-kruisverwijzing.html"><a href="6-h-kruisverwijzing.html#externe-verwijzingen"><i class="fa fa-check"></i><b>6.2</b> Externe verwijzingen</a></li>
+<li class="chapter" data-level="6.3" data-path="6-h-kruisverwijzing.html"><a href="6-h-kruisverwijzing.html#extra-formattering"><i class="fa fa-check"></i><b>6.3</b> Extra formattering</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html"><i class="fa fa-check"></i><b>7</b> Figuren en tabellen</a><ul>
+<li class="chapter" data-level="7.1" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html#tabellen"><i class="fa fa-check"></i><b>7.1</b> Tabellen</a></li>
+<li class="chapter" data-level="7.2" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html#s:figuur-invoegen"><i class="fa fa-check"></i><b>7.2</b> Figuren</a></li>
+<li class="chapter" data-level="7.3" data-path="7-figuren-en-tabellen.html"><a href="7-figuren-en-tabellen.html#plaatsing-van-tabellen-en-figuren"><i class="fa fa-check"></i><b>7.3</b> Plaatsing van tabellen en figuren</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-h-formules.html"><a href="8-h-formules.html"><i class="fa fa-check"></i><b>8</b> Wiskundige formules</a><ul>
+<li class="chapter" data-level="8.1" data-path="8-h-formules.html"><a href="8-h-formules.html#in-lijn-formules"><i class="fa fa-check"></i><b>8.1</b> In-lijn formules</a></li>
+<li class="chapter" data-level="8.2" data-path="8-h-formules.html"><a href="8-h-formules.html#losstaande-formules"><i class="fa fa-check"></i><b>8.2</b> Losstaande formules</a></li>
+<li class="chapter" data-level="8.3" data-path="8-h-formules.html"><a href="8-h-formules.html#s:formule-nummer"><i class="fa fa-check"></i><b>8.3</b> Genummerde formules</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-citeren-van-literatuur.html"><a href="9-citeren-van-literatuur.html"><i class="fa fa-check"></i><b>9</b> Citeren van literatuur</a><ul>
+<li class="chapter" data-level="9.1" data-path="9-citeren-van-literatuur.html"><a href="9-citeren-van-literatuur.html#vereisten"><i class="fa fa-check"></i><b>9.1</b> Vereisten</a></li>
+<li class="chapter" data-level="9.2" data-path="9-citeren-van-literatuur.html"><a href="9-citeren-van-literatuur.html#in-lijn-stijlen"><i class="fa fa-check"></i><b>9.2</b> In-lijn stijlen</a></li>
+</ul></li>
+<li class="part"><span><b>III R gebaseerde output</b></span></li>
+<li class="chapter" data-level="10" data-path="10-code.html"><a href="10-code.html"><i class="fa fa-check"></i><b>10</b> Code</a><ul>
+<li class="chapter" data-level="10.1" data-path="10-code.html"><a href="10-code.html#door-r-berekende-waarden-gebruiken-in-gewone-tekst"><i class="fa fa-check"></i><b>10.1</b> Door R berekende waarden gebruiken in gewone tekst</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-figuren.html"><a href="11-figuren.html"><i class="fa fa-check"></i><b>11</b> Figuren</a><ul>
+<li class="chapter" data-level="11.1" data-path="11-figuren.html"><a href="11-figuren.html#in-lijn-figuren"><i class="fa fa-check"></i><b>11.1</b> In-lijn figuren</a></li>
+<li class="chapter" data-level="11.2" data-path="11-figuren.html"><a href="11-figuren.html#zwevende-figuren"><i class="fa fa-check"></i><b>11.2</b> Zwevende figuren</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html"><i class="fa fa-check"></i><b>12</b> Tabellen</a><ul>
+<li class="chapter" data-level="12.1" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#kable"><i class="fa fa-check"></i><b>12.1</b> <code>kable()</code></a></li>
+<li class="chapter" data-level="12.2" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#mogelijke-alternatieven"><i class="fa fa-check"></i><b>12.2</b> Mogelijke alternatieven</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#aangepaste-kable-formaten-voor-pdf-output"><i class="fa fa-check"></i><b>12.2.1</b> Aangepaste <code>kable()</code> formaten voor pdf output</a></li>
+<li class="chapter" data-level="12.2.2" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#het-kableextra-package"><i class="fa fa-check"></i><b>12.2.2</b> Het <code>kableExtra</code> package</a></li>
+<li class="chapter" data-level="12.2.3" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#pandoc.table"><i class="fa fa-check"></i><b>12.2.3</b> <code>pandoc.table()</code></a></li>
+<li class="chapter" data-level="12.2.4" data-path="12-tabellen-1.html"><a href="12-tabellen-1.html#xtable"><i class="fa fa-check"></i><b>12.2.4</b> <code>xtable()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Tips and tricks</b></span></li>
+<li class="chapter" data-level="13" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html"><i class="fa fa-check"></i><b>13</b> Lay-out tips voor pdf</a><ul>
+<li class="chapter" data-level="13.1" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#nieuwe-pagina-forceren"><i class="fa fa-check"></i><b>13.1</b> Nieuwe pagina forceren</a></li>
+<li class="chapter" data-level="13.2" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#tekst-samenhouden"><i class="fa fa-check"></i><b>13.2</b> Tekst samenhouden</a></li>
+<li class="chapter" data-level="13.3" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#problemen-met-zwevende-figuren-en-tabellen"><i class="fa fa-check"></i><b>13.3</b> Problemen met zwevende figuren en tabellen</a><ul>
+<li class="chapter" data-level="13.3.1" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#foutmelding-too-many-unprocessed-floats"><i class="fa fa-check"></i><b>13.3.1</b> Foutmelding: “too many unprocessed floats”</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#zwevende-figuur-of-tabel-wordt-in-de-volgende-sectie-geplaatst"><i class="fa fa-check"></i><b>13.3.2</b> Zwevende figuur of tabel wordt in de volgende sectie geplaatst</a></li>
+<li class="chapter" data-level="13.3.3" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#automatische-floatbarrier"><i class="fa fa-check"></i><b>13.3.3</b> Automatische <code>\FloatBarrier</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#foutmelding-bij-het-gebruik-van-in-bijschriften."><i class="fa fa-check"></i><b>13.4</b> Foutmelding bij het gebruik van <code>%</code> in bijschriften.</a></li>
+<li class="chapter" data-level="13.5" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#s:onderlijnd"><i class="fa fa-check"></i><b>13.5</b> Gebruik van markdown syntax of quotes in onderlijnde koppen</a></li>
+<li class="chapter" data-level="13.6" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-ut-tempor-laoreet-quam."><i class="fa fa-check"></i><b>13.6</b> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em> <strong>Ut tempor laoreet quam.</strong></a></li>
+<li class="chapter" data-level="13.7" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-ut-tempor-laoreet-quam.-2"><i class="fa fa-check"></i><b>13.7</b> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em> *Ut tempor laoreet quam.**</a></li>
+<li class="chapter" data-level="13.8" data-path="13-lay-out-tips-voor-pdf.html"><a href="13-lay-out-tips-voor-pdf.html#fusce-dignissim-facilisis-tortor."><i class="fa fa-check"></i><b>13.8</b> <em>Fusce dignissim facilisis tortor.</em></a></li>
+</ul></li>
+<li class="part"><span><b>V Bijlagen</b></span></li>
+<li class="chapter" data-level="14" data-path="14-titel-van-eerste-bijlage.html"><a href="14-titel-van-eerste-bijlage.html"><i class="fa fa-check"></i><b>14</b> Titel van eerste bijlage</a></li>
+<li class="chapter" data-level="15" data-path="15-titel-van-tweede-bijlage.html"><a href="15-titel-van-tweede-bijlage.html"><i class="fa fa-check"></i><b>15</b> Titel van tweede bijlage</a></li>
+<li class="chapter" data-level="" data-path="referenties.html"><a href="referenties.html"><i class="fa fa-check"></i>Referenties</a></li>
+<li class="chapter" data-level="" data-path="referenties-1.html"><a href="referenties-1.html"><i class="fa fa-check"></i>Referenties</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Voorbeeldrapport met INBOmd</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lay-out-tips-voor-pdf" class="section level1">
+<h1><span class="header-section-number">13</span> Lay-out tips voor pdf</h1>
+<p>Bij de omzetting van Markdown naar pdf wordt gebruik gemaakt van <a href="https://nl.wikipedia.org/wiki/LaTeX">LaTeX</a>, software speciaal gemaakt voor het zetten van wetenschappelijke documenten.
+Meestal werk dit zeer goed.
+Soms gaat het de mist in.
+Vooral in situatie wanneer het aandeel tekst klein is in vergelijking met andere elementen zoals figuren en tabellen.
+Dit kan een indicatie zijn dat je te weinig tekst of te veel figuren hebt ;-)</p>
+<div id="nieuwe-pagina-forceren" class="section level2">
+<h2><span class="header-section-number">13.1</span> Nieuwe pagina forceren</h2>
+<p>Door <code>\pagebreak</code> te plaatsen forceer je de start van een nieuwe pagina op deze plaats.
+Gebruik dit enkel wanneer je altijd een nieuwe pagina wilt starten en niet om tekst samen te houden.</p>
+</div>
+<div id="tekst-samenhouden" class="section level2">
+<h2><span class="header-section-number">13.2</span> Tekst samenhouden</h2>
+<p>Standaard mag een nieuwe pagina starten voor een kop maar niet na een kop.
+Op die manier wordt een kop samengehouden met de eerst volgende paragraaf.
+Stel dat je een kop 2, een kop 3 en dan gewone tekst hebt.
+De kop 3 en de eerste regels van de gewone tekst worden samengehouden.
+Tussen kop 2 en kop 3 heb je twee conflicterende regels.
+Enerzijds laat kop 2 geen nieuwe pagina toe na zichzelf, terwijl kop 3 een nieuw pagina toelaat voor zichzelf.
+Uiteindelijk wint het toelaten van de nieuwe pagina omdat de pagina’s dan optimaler gevuld worden.
+Met als gevolg dat kop 2 onderaan de pagina staat en kop 3 bovenaan de nieuwe pagina.</p>
+<p>Als dergelijk situatie zich voordoet kan je het <code>\needspace</code> commando gebruiken.
+Dit commando meet hoeveel plaats er nog overblijft onderaan de pagina, gemeten op het punt waar je het commando plaatst.
+Deze verticale ruimte wordt vergeleken met de waarde die je opgeeft in het commando.
+Is die ruimte te klein, dan wordt een nieuwe pagina gestart. Hieronder vind je een concreet voorbeeld.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb38-1"><a href="13-lay-out-tips-voor-pdf.html#cb38-1"></a>Een paragraaf</span>
+<span id="cb38-2"><a href="13-lay-out-tips-voor-pdf.html#cb38-2"></a></span>
+<span id="cb38-3"><a href="13-lay-out-tips-voor-pdf.html#cb38-3"></a>\needspace{50mm}</span>
+<span id="cb38-4"><a href="13-lay-out-tips-voor-pdf.html#cb38-4"></a></span>
+<span id="cb38-5"><a href="13-lay-out-tips-voor-pdf.html#cb38-5"></a><span class="fu">## Een kop 2</span></span>
+<span id="cb38-6"><a href="13-lay-out-tips-voor-pdf.html#cb38-6"></a></span>
+<span id="cb38-7"><a href="13-lay-out-tips-voor-pdf.html#cb38-7"></a><span class="fu">### Een kop 3</span></span>
+<span id="cb38-8"><a href="13-lay-out-tips-voor-pdf.html#cb38-8"></a></span>
+<span id="cb38-9"><a href="13-lay-out-tips-voor-pdf.html#cb38-9"></a>De eerste paragraaf onder kop 3</span></code></pre></div>
+
+</div>
+<div id="problemen-met-zwevende-figuren-en-tabellen" class="section level2">
+<h2><span class="header-section-number">13.3</span> Problemen met zwevende figuren en tabellen</h2>
+<div id="foutmelding-too-many-unprocessed-floats" class="section level3">
+<h3><span class="header-section-number">13.3.1</span> Foutmelding: “too many unprocessed floats”</h3>
+<p>Je document bevat een hoofdstuk met heel veel zwevende figuren of tabellen die nog niet gezet worden.
+Dit treedt meestal op wanneer je meer dan 20 zwevende objecten hebt in een hoofdstuk.
+De truck is een <code>\FloatBarrier</code> plaatsen.
+Dit forceert dat eerst alle nog zwevende objecten gezet worden voor dat de rest van de tekst gezet wordt.</p>
+</div>
+<div id="zwevende-figuur-of-tabel-wordt-in-de-volgende-sectie-geplaatst" class="section level3">
+<h3><span class="header-section-number">13.3.2</span> Zwevende figuur of tabel wordt in de volgende sectie geplaatst</h3>
+<p>LaTeX gaat zelf op zoek naar de optimale plaats om een zwevende figuur (of tabel) te plaatsen.
+Ideaal is dat vlakbij het punt waar je de figuur in de tekst geplaatst hebt.
+Wanneer je voldoende tekst hebt is dat meestal geen probleem.
+Is je figuur nogal groot of plaats je verschillende figuren vlak bij elkaar, dan gaat LaTeX opzoek naar een geschikte plaats verder in het document.
+Hierdoor kan het gebeuren dat de figuur in een volgende (sub)sectie terecht komt.
+Als je een <code>\FloatBarrier</code> toevoegt voor de nieuwe sectie begint, dan dwing je LaTeX om eerst alle nog zwevende elementen te plaatsen voor dat de volgende sectie gezet wordt.</p>
+</div>
+<div id="automatische-floatbarrier" class="section level3">
+<h3><span class="header-section-number">13.3.3</span> Automatische <code>\FloatBarrier</code></h3>
+<p>Alle zwevende elementen bij INBOmd blijven steeds binnen het hoofdstuk waarin ze gedefinieerd zijn.
+Je kan dit strenger instellen door in de <code>yaml</code> de optie <code>floatbarrier: section</code> toe te voegen.
+Dit is equivalent met het manueel plaatsen van een <code>\FloatBarrier</code> voor elke kop van niveau 2 of hoger (<code>#</code> en <code>##</code>).
+Andere opties zijn <code>floatbarrier: subsection</code> en <code>floatbarrier: subsubsection</code> die staan voor respectievelijk kop 3 (<code>#</code>, <code>##</code> en <code>###</code>) en kop 4 (<code>#</code>, <code>##</code>, <code>###</code> en <code>####</code>).</p>
+</div>
+</div>
+<div id="foutmelding-bij-het-gebruik-van-in-bijschriften." class="section level2">
+<h2><span class="header-section-number">13.4</span> Foutmelding bij het gebruik van <code>%</code> in bijschriften.</h2>
+<p><code>%</code> wordt gebruikt als commentaarteken in LaTeX.
+In gewone tekst kan Markdown daar mee zonder problemen overweg, maar in bijschriften moet je een kleine omweg gebruiken.
+Je moet deze truck ook gebruiken als je Markdown formattering wilt gebruiken in bijschriften.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb39-1"><a href="13-lay-out-tips-voor-pdf.html#cb39-1"></a>Een gewone paragraaf.</span>
+<span id="cb39-2"><a href="13-lay-out-tips-voor-pdf.html#cb39-2"></a></span>
+<span id="cb39-3"><a href="13-lay-out-tips-voor-pdf.html#cb39-3"></a>(ref:mijn-label) Een 100% **cool** <span class="bn">`bijschrift`</span></span>
+<span id="cb39-4"><a href="13-lay-out-tips-voor-pdf.html#cb39-4"></a></span>
+<span id="cb39-5"><a href="13-lay-out-tips-voor-pdf.html#cb39-5"></a><span class="bn">```{r mijn-label, fig.cap=&#39;(ref:mijn-label)&#39;}</span></span>
+<span id="cb39-6"><a href="13-lay-out-tips-voor-pdf.html#cb39-6"></a><span class="bn">plot(cars)  # jouw grafiek</span></span>
+<span id="cb39-7"><a href="13-lay-out-tips-voor-pdf.html#cb39-7"></a><span class="bn">```</span></span></code></pre></div>
+</div>
+<div id="s:onderlijnd" class="section level2">
+<h2><span class="header-section-number">13.5</span> Gebruik van markdown syntax of quotes in onderlijnde koppen</h2>
+<p>Het onderlijnen van koppen stuurt de regelafbreking in de war wanneer extra opmaak wordt gebruikt.
+De beste oplossing zou zijn om geen onderlijning te gebruiken.
+Onderlijnen wordt echter opgelegd in de generieke huisstijl van de Vlaamse overheid.</p>
+</div>
+<div id="disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-ut-tempor-laoreet-quam." class="section level2">
+<h2><span class="header-section-number">13.6</span> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em> <strong>Ut tempor laoreet quam.</strong></h2>
+<div id="disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-ut-tempor-laoreet-quam.-1" class="section level4">
+<h4><span class="header-section-number">13.6.0.1</span> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em> <strong>Ut tempor laoreet quam.</strong></h4>
+</div>
+</div>
+<div id="disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-ut-tempor-laoreet-quam.-2" class="section level2">
+<h2><span class="header-section-number">13.7</span> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em> *Ut tempor laoreet quam.**</h2>
+<div id="disserendi-artem-nullam-habuit.-etiam-fringilla-faucibus-augue.-nullam-laoreet-fermentum-urna.-fusce-dignissim-facilisis-tortor.-ut-tempor-laoreet-quam.-3" class="section level4">
+<h4><span class="header-section-number">13.7.0.1</span> Disserendi artem nullam habuit. ‘Etiam fringilla faucibus augue.’ <code>Nullam laoreet fermentum urna.</code> <em>Fusce dignissim facilisis tortor.</em> *Ut tempor laoreet quam.**</h4>
+<p>Je kan het probleem op drie manieren omzeilen:</p>
+<ol style="list-style-type: decimal">
+<li>Gebruik een titel die op 1 lijn past</li>
+<li>Gebruik enkel standaard tekst. Dus geen opmaak of quotes.
+Enkel italics zijn toegestaan.</li>
+<li>Definiëer regeleindes handmatig met het \break commando.
+Deze oplossing werkt overigens niet altijd even goed in combinatie met vette tekst.
+Anderzijds hoort het al dan niet vet zijn bij de definitie van de huisstijl en hoor je dat als auteur niet te gebruiken in een kop.</li>
+</ol>
+</div>
+</div>
+<div id="fusce-dignissim-facilisis-tortor." class="section level2">
+<h2><span class="header-section-number">13.8</span> <em>Fusce dignissim facilisis tortor.</em></h2>
+<div id="fusce-dignissim-facilisis-tortor.-1" class="section level4">
+<h4><span class="header-section-number">13.8.0.1</span> <em>Fusce dignissim facilisis tortor.</em></h4>
+
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+            </section>
+        </div>
+      </div>
+    </div>
+<a href="12-tabellen-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="14-titel-van-eerste-bijlage.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/inbo/inbomd_examples/edit/master/source/inbo_rapport_delen/../inbo_rapport/4_tips.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["inbo_rapport_delen.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, "");
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+
+</html>
