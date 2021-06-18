@@ -22,15 +22,16 @@ client:
   - VAC Brussel ‐ Herman Teirlinck
   - Havenlaan 88 bus 73
   - 1000 Brussel
-client_logo: kohlrabi-2266665-klein.jpg
+  - https://www.vlaanderen.be/inbo/en-gb
+client_logo: logo.jpg
 cooperation:
   - INBO Brussel
   - VAC Brussel ‐ Herman Teirlinck
   - Havenlaan 88 bus 73
   - 1000 Brussel
-cooperation_logo: kohlrabi-2266665-klein.jpg
-cover: # link naar pdf met cover
-cover_image: # link naar jpg versie van cover
+  - https://www.vlaanderen.be/inbo/en-gb
+cooperation_logo: logo.jpg
+cover: cover.pdf # link naar pdf met cover
 doi: https://doi.org/10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
@@ -47,14 +48,11 @@ output:
     base_format: INBOmd::inbo_rapport
     style: Flanders
     tocdepth: 4
-  bookdown::gitbook:
+  INBOmd::inbo_gitbook:
     split_by: "chapter+number"
-    template: !expr INBOmd::inbo_rapport_css("html")
-    pandoc_args: !expr c("--csl", system.file("research-institute-for-nature-and-forest.csl", package = "INBOmd"))
-  bookdown::epub_book:
-    stylesheet: "css/inbo_rapport.css"
-    template: !expr INBOmd::inbo_rapport_css("epub")
-    pandoc_args: !expr c("--csl", system.file("research-institute-for-nature-and-forest.csl", package = "INBOmd"))
+    style: Flanders
+  INBOmd::inbo_ebook:
+    style: Flanders
 ---
 
 ```{r setup, include = FALSE}

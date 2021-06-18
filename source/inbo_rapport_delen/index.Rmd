@@ -16,16 +16,16 @@ github-repo: inbo/inbomd-examples
 year: 2021
 cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
 cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
-cover: # link naar pdf met cover
-cover_image: # link naar jpg versie van cover
+cover: cover.pdf # link naar pdf met cover
 doi: https://doi.org/10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: Het optionele nummer van de opdrachtgever
 embargo: 2099-03-01
+geraardsbergen: TRUE
 
 site: bookdown::bookdown_site
-link-citations: TRUE
+link-citations: FALSE
 bibliography: ../INBOmd.bib
 lang: nl
 
@@ -35,15 +35,10 @@ output:
     lof: FALSE
     lot: FALSE
     tocdepth: 4
-    floatbarrier: section
-  bookdown::gitbook:
-    split_by: "chapter+number"
-    template: !expr INBOmd::inbo_rapport_css("html")
-    pandoc_args: !expr c("--csl", system.file("research-institute-for-nature-and-forest.csl", package = "INBOmd"))
-  bookdown::epub_book:
-    stylesheet: "css/inbo_rapport.css"
-    template: !expr INBOmd::inbo_rapport_css("epub")
-    pandoc_args: !expr c("--csl", system.file("research-institute-for-nature-and-forest.csl", package = "INBOmd"))
+  INBOmd::inbo_gitbook:
+    style: INBO
+  INBOmd::inbo_ebook:
+    style: INBO
 ---
 
 ```{r setup, include = FALSE}

@@ -3,9 +3,10 @@ title: "Voorbeelden met INBOmd"
 author: "Thierry Onkelinx"
 output: 
   html_document:
-    css: 
-      - !expr gsub("/gitbook.html$", "/inbo_rapport.css", INBOmd::inbo_rapport_css("html"))
+    css:
+      - inbo_rapport/css/report.css
       - extra.css
+    self_contained: FALSE
 ---
 
 Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://github.com/inbo/inbomd_examples).
@@ -17,12 +18,11 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
 - alternatief INBO rapport ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/inbo_rapport_delen))
     - extra's
         - delen (groepeert hoofdstukken)
-        - bijlage met koppen met extreem lange nummers
     - verschillen
-        - geen klikbare referenties
-        - geen lijst met figuren
-        - geen lijst met tabellen
-        - zwevende elementen blijven binnen hun sectie
+        - citaties zijn niet klikbaar
+        - geen lijst met figuren (enkel bij pdf)
+        - geen lijst met tabellen (enkel bij pdf)
+        - zwevende elementen zijn niet beperkt tot hun sectie (enkel bij pdf)
     - [PDF](inbo_rapport_delen/inbo_rapport_delen.pdf) versie
     - [HTML](inbo_rapport_delen/dankwoord.html) versie
     - [EPUB](inbo_rapport_delen/inbo_rapport_delen.epub) versie
@@ -38,7 +38,6 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
     - [Stapsgewijze](flanders_slides/flanders_slides.pdf) slides in pdf
     - [Handout versie](flanders_slides/flanders_slides_handout.pdf) slides in pdf
 - Voorbeelden van referenties
-    <!-- - Pdf op basis van [bst bestand](citation_style/citation_style_bst.pdf) -->
     - [PDF met Nederlandstalige bibliografie](citation_style/nl/citation_style_csl.pdf) op basis van csl bestand
     - [HTML met Nederlandstalige bibliografie](citation_style/nl/index.html) op basis van csl bestand
     - [PDF met Engelstalige bibliografie](citation_style/en/citation_style_csl.pdf) op basis van csl bestand

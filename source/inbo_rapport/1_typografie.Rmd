@@ -70,29 +70,53 @@ Deels om te tonen hoe ze er uitzien, deels om eventuele problemen op te sporen m
 
 ## Normaal
 
+ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
+
 `r paragraph(n = 1)`
+
+Aanhalingstekens: "dubbele", 'enkele'
 
 ## Vet
 
+**ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
+
 **`r paragraph(n = 1)`**
+
+**Aanhalingstekens: "dubbele", 'enkele'**
 
 ## Cursief
 
+_ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
+
 _`r paragraph(n = 1)`_
+
+_Aanhalingstekens: "dubbele", 'enkele'_
 
 ## Vet en cursief
 
+**_ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
+  
 _**`r paragraph(n = 1)`**_
 
+_**Aanhalingstekens: "dubbele", 'enkele'**_
+
 ## Met vaste tekenbreedte {#s:vaste-tekenbreedte}
+
+`ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
 
 ```{r echo = FALSE, results = "asis"}
 cat("`", paragraph(), "`", sep = "")
 ```
 
+`Aanhalingstekens: "dubbele", 'enkele'`
+
+**`ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
+
 ```{r echo = FALSE, results = "asis"}
 cat("**`", paragraph(), "`**", sep = "")
 ```
+
+**`Aanhalingstekens: "dubbele", 'enkele'`**
 
 80 karakters passen in de breedte van de pdf
 
@@ -106,76 +130,12 @@ cat("**`", paragraph(), "`**", sep = "")
 
 **`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`**
 
-## Kleine letter L versus hoofdletter i
+## Onderscheiden van tekens
 
-normaal:
-  ~ lI
-
-vet:
-  ~ **lI**
-  
-cursief:
-  ~ _lI_
-
-vet en cursief:
-  ~ **_lI_**
-
-met vaste tekenbreedte:
-  ~ `lI` **`lI`**
-
-## Grote letter O versus cijfer 0
-
-normaal:
-  ~ O0
-
-vet:
-  ~ **O0**
-  
-cursief:
-  ~ _O0_
-
-vet en cursief:
-  ~ **_O0_**
-
-met vaste tekenbreedte:
-  ~ `O0` **`O0`**
-
-## Speciale characters
-  
-### Normaal
-
-€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
-
-### Vet
-**€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
-
-### Cursief
-_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
-
-### Vet en cursief
-**_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
-  
-### Met vaste tekenbreedte
-`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
-
-**`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
-
-## Aanhalingstekens
-
-normaal:
-  ~ "dubbele", 'enkele'
-
-vet:
-  ~ **"dubbele", 'enkele'**
-
-cursief:
-  ~ _"dubbele", 'enkele'_
-
-vet en cursief:
-  ~ **_"dubbele", 'enkele'_**
-
-met vaste tekenbreedte:
-  ~ `"dubbele", 'enkele',` **`"dubbele", 'enkele',`**
+|                                        | normaal | vet | cursief | vet en cursief | vaste tekenbreedte |
+| -------------------------------------- | -- | -- | -- | -- | -- |
+| Kleine letter L versus hoofdletter i   | lI | **lI** | _lI_ | **_lI_** | `lI` **`lI`** |
+| Grote letter O versus cijfer 0         | O0 | **O0** | _O0_ | **_O0_** | `O0` **`O0`** |
 
 # Opsommingen
 
@@ -274,6 +234,11 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 (ref:block) `r paragraph()`
 
 ```{block2, type = "block"}
+Hier plaats je de tekst van het blok.
+_Je kan geen **R** chunks of code uitvoeren in een blok._
+Om de resultaten van een chunk in een blok te tonen moet je onderstaande truk
+gebruiken.
+
 (ref:block)
 
 ```
@@ -285,10 +250,21 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 (ref:block2b) `r paragraph()`
 
 
-```{block2, type = "block", latex.options = "{Optionele titel van het kader}"}
+```{block2, type = "block", latex.options = "{Optionele titel van het kader, enkel zichtbaar in pdf}"}
 (ref:block2a)
 
 (ref:block2b)
+
+```
+
+(ref:block3) `r paragraph()`
+
+(ref:block3b) `r paragraph()`
+
+```{block2, type = "block"}
+(ref:block3)
+
+(ref:block3b)
 
 ```
 
@@ -299,6 +275,11 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 (ref:exampleblock) `r paragraph()`
 
 ```{block2, type = "exampleblock"}
+Hier plaats je de tekst van het blok.
+_Je kan geen **R** chunks of code uitvoeren in een blok._
+Om de resultaten van een chunk in een blok te tonen moet je onderstaande truk
+gebruiken.
+
 (ref:exampleblock)
 
 ```
@@ -309,10 +290,21 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 
 (ref:exampleblock2b) `r paragraph()`
 
-```{block2, type = "exampleblock", latex.options = "{Optionele titel van het kader}"}
+```{block2, type = "exampleblock", latex.options = "{Optionele titel van het kader, enkel zichtbaar in pdf}"}
 (ref:exampleblock2a)
 
 (ref:exampleblock2b)
+
+```
+
+(ref:exampleblock3) `r paragraph()`
+
+(ref:exampleblock3b) `r paragraph()`
+
+```{block2, type = "exampleblock"}
+(ref:exampleblock3)
+
+(ref:exampleblock3b)
 
 ```
 
@@ -323,6 +315,11 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 (ref:alterblock) `r paragraph()`
 
 ```{block2, type = "alertblock"}
+Hier plaats je de tekst van het blok.
+_Je kan geen **R** chunks of code uitvoeren in een blok._
+Om de resultaten van een chunk in een blok te tonen moet je onderstaande truk
+gebruiken.
+
 (ref:alterblock)
 
 ```
@@ -333,7 +330,7 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 
 (ref:alterblock2b) `r paragraph()`
 
-```{block2, type = "alertblock", latex.options = "{Optionele titel van het kader}"}
+```{block2, type = "alertblock", latex.options = "{Optionele titel van het kader, enkel zichtbaar in pdf}"}
 (ref:alterblock2a)
 
 (ref:alterblock2b)
@@ -342,8 +339,11 @@ Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader)
 
 (ref:alterblock3) `r paragraph()`
 
+(ref:alterblock3b) `r paragraph()`
 
 ```{block2, type = "alertblock"}
 (ref:alterblock3)
+
+(ref:alterblock3b)
 
 ```

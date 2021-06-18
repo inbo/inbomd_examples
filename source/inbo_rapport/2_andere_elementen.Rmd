@@ -122,7 +122,11 @@ Het is tevens mogelijk om de losstaande formules te nummeren. Het nummer bevat s
 
 ## Vereisten
 
-Bibliografische verwijzingen zijn geen probleem. De bibliografie moet in BibTex formaat beschikbaar zijn. Dit formaat kan automatisch aangemaakt worden door Mendeley.
+Bibliografische verwijzingen zijn geen probleem.
+De bibliografie moet in CSL YAML, CSL JSON of BibTex formaat beschikbaar zijn.
+De CSL formaten genieten de voorkeur omdat ze geen interne omzetting nodig hebben.
+CSL YAML is leesbaarder dan CSL JSON.
+Je kan je referentie naar deze formaten exporteren vanuit Zotero of Mendeley.
 
 ## In-lijn stijlen
 

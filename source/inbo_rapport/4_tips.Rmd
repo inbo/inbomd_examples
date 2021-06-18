@@ -152,23 +152,36 @@ Het onderlijnen van koppen stuurt de regelafbreking in de war wanneer extra opma
 De beste oplossing zou zijn om geen onderlijning te gebruiken. 
 Onderlijnen wordt echter opgelegd in de generieke huisstijl van de Vlaamse overheid.
 
-## Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._ **Ut tempor laoreet quam.**
-
-#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._ **Ut tempor laoreet quam.**
-
-## Disserendi artem nullam habuit. 'Etiam fringilla \break faucibus augue.' `Nullam laoreet fermentum urna.` \break _Fusce dignissim facilisis tortor._ \break **Ut tempor laoreet quam.**
-
-#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' \break `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._ \break  **Ut tempor laoreet quam.**
-
 Je kan het probleem op drie manieren omzeilen:
 
 1. Gebruik een titel die op 1 lijn past
 1. Gebruik enkel standaard tekst. Dus geen opmaak of quotes.
-Enkel italics zijn toegestaan.
+In principe zijn italics enkel toegestaan wanneer dat strikt noodzakelijk is.
+Bijvoorbeeld bij wetenschappelijke namen.
 1. Definiëer regeleindes handmatig met het \\break commando. 
-Deze oplossing werkt overigens niet altijd even goed in combinatie met vette tekst.
+Deze oplossing werkt overigens enkel wanneer je geen vette tekst gebruikt.
 Anderzijds hoort het al dan niet vet zijn bij de definitie van de huisstijl en hoor je dat als auteur niet te gebruiken in een kop.
+
+## Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._
+
+Voorbeeld van kop 2 met extra opmaak.
+
+#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._
+
+Voorbeeld van kop 4 met extra opmaak.
+
+## Disserendi artem nullam habuit. 'Etiam fringilla \break faucibus augue.' `Nullam laoreet fermentum urna.` \break _Fusce dignissim facilisis tortor._
+
+Voorbeeld van kop 2 met extra opmaak en manuele plaatsing van regeleindes.
+
+#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' \break `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._
+
+Voorbeeld van kop 4 met extra opmaak en manuele plaatsing van regeleindes.
 
 ## _Fusce dignissim facilisis tortor._
 
+Korte kop 2 in italics.
+
 #### _Fusce dignissim facilisis tortor._
+
+Korte kop 4 in italics.
