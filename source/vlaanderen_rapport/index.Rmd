@@ -117,3 +117,7 @@ if (interactive()) {
 switch_colour(vl_darkyellow)
 set.seed(201901017)
 ```
+
+# Dankwoord {-}
+
+`r paragraph(n = 5)`

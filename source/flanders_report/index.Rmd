@@ -114,3 +114,7 @@ if (interactive()) {
 switch_colour(vl_darkyellow)
 set.seed(201901017)
 ```
+
+# Preface {-}
+
+`r paragraph(n = 5)`

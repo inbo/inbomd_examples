@@ -119,3 +119,7 @@ library(lipsum) # remotes::install_github("inbo/lipsum")
 library(DT)
 set.seed(201901017)
 ```
+
+# Dankwoord {-}
+
+`r paragraph(n = 5)`
