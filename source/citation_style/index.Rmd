@@ -5,45 +5,37 @@ author:
     name: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
+corresponding: thierry.onkelinx@inbo.be
 reviewer:
   - firstname: Floris
     name: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
     orcid: 0000-0002-6378-6229
 github-repo: inbo/inbomd-examples
+embargo: 2021-01-01
+cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
+cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
 link-citations: TRUE
 site: bookdown::bookdown_site
 bibliography: ../INBOmd.bib
+
+style: INBO
+lof: FALSE
+lot: FALSE
 lang: nl
 
-  output:
-  bookdown::pdf_book:
-    base_format: INBOmd::inbo_rapport
-    style: INBO
-    lof: FALSE
-    lot: FALSE
-  bookdown::gitbook:
-    split_by: "chapter+number"
-    template: !expr INBOmd::inbo_rapport_css("html")
-    pandoc_args: !expr c("--csl", system.file("inbo.csl", package = "INBOmd"))
-  bookdown::epub_book:
-    stylesheet: "css/inbo_rapport.css"
-    template: !expr INBOmd::inbo_rapport_css("epub")
-    pandoc_args: !expr c("--csl", system.file("inbo.csl", package = "INBOmd"))
+output:
+  INBOmd::report: default
+  INBOmd::gitbook: default
+  INBOmd::ebook: default
+  bookdown::dont_run: default
 ---
 
 # Verwijzingen in tekst
 
 ```{r echo = FALSE, results = "asis"}
 library(knitr)
-natbib <- any(grepl("natbib", opts_knit$get()$rmarkdown.pandoc.args))
-cat(
-  sprintf(
-    "Stijl referentielijst gebaseerd op %s.\n\n", 
-    ifelse(natbib, "bst", "csl")
-  )
-)
 ```
 
 Table: Verschillende types documenten
@@ -139,7 +131,3 @@ Range `x-y` wordt omgezet naar `x--y` (in bib-file).
 Zie bespreking in het [issue](https://github.com/retorquere/zotero-better-bibtex/issues/1602).
 Dit blijkt een weloverwogen feature te zijn (en geen bug) om met zekerheid n-dashes te induceren voor page-ranges.
 Zie ook: '[many, but not all, BibTeX styles will correct hyphen to n-dash](https://tex.stackexchange.com/a/58671/27603)'.
-
-
-
-

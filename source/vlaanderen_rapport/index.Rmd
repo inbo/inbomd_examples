@@ -36,26 +36,24 @@ doi: https://doi.org/10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: Het optionele nummer van de opdrachtgever
+tocdepth: 4
 embargo: 2099-03-01
 print:
   copies: 10
   motivation: Vereist door opdrachtgever
   pages: 123
+style: Vlaanderen
+lang: nl
 
 site: bookdown::bookdown_site
 link-citations: TRUE
 bibliography: ../INBOmd.bib
-lang: nl
 
 output:
-  bookdown::pdf_book:
-    base_format: INBOmd::inbo_rapport
-    style: Vlaanderen
-    tocdepth: 4
-  INBOmd::inbo_gitbook:
-    style: Vlaanderen
-  INBOmd::inbo_ebook:
-    style: Vlaanderen
+  INBOmd::inbo_gitbook: default
+  INBOmd::inbo_rapport: default
+  INBOmd::inbo_ebook: default
+  bookdown::dont_run: default
 ---
 
 ```{r setup, include = FALSE}

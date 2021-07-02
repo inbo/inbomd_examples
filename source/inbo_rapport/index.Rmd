@@ -41,23 +41,20 @@ cooperation:
   - 1000 Brussel
   - https://www.vlaanderen.be/inbo
 cooperation_logo: logo.jpg
+style: INBO
+lang: nl
+lot: TRUE
+lof: TRUE
 
 site: bookdown::bookdown_site
 link-citations: TRUE
 bibliography: ../INBOmd.bib
-lang: nl
 
 output:
-  bookdown::pdf_book:
-    base_format: INBOmd::inbo_rapport
-    style: INBO
-    lot: TRUE
-    lof: TRUE
-  INBOmd::inbo_gitbook:
-    split_by: "chapter+number"
-    style: INBO
-  INBOmd::inbo_ebook:
-    style: INBO
+  INBOmd::gitbook: default
+  INBOmd::report: default
+  INBOmd::ebook: default
+  bookdown::dont_run: default
 ---
 
 ```{r setup, include = FALSE}

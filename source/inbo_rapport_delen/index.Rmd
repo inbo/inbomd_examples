@@ -23,22 +23,20 @@ depotnr: D/2021/999999/999999
 ordernr: Het optionele nummer van de opdrachtgever
 embargo: 2099-03-01
 geraardsbergen: TRUE
+tocdepth: 4
+
+lang: nl
+split_by: section+number
 
 site: bookdown::bookdown_site
 link-citations: FALSE
 bibliography: ../INBOmd.bib
-lang: nl
 
 output:
-  bookdown::pdf_book:
-    base_format: INBOmd::inbo_rapport
-    lof: FALSE
-    lot: FALSE
-    tocdepth: 4
-  INBOmd::inbo_gitbook:
-    style: INBO
-  INBOmd::inbo_ebook:
-    style: INBO
+  INBOmd::inbo_rapport: default
+  INBOmd::inbo_gitbook: default
+  INBOmd::inbo_ebook: default
+  bookdown::dont_run: default
 ---
 
 ```{r setup, include = FALSE}
@@ -99,3 +97,7 @@ if (interactive()) {
 }
 set.seed(20190117)
 ```
+
+# Dankwoord {-}
+
+`r paragraph(n = 5)`

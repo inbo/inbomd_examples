@@ -38,21 +38,20 @@ depotnr: D/2021/999999/999999
 ordernr: The optional order number
 embargo: 2099-03-01
 
+style: Flanders
+lang: en
+tocdepth: 4
+split_by: "chapter+number"
+
 site: bookdown::bookdown_site
 link-citations: TRUE
 bibliography: ../INBOmd.bib
-lang: en
 
 output:
-  bookdown::pdf_book:
-    base_format: INBOmd::inbo_rapport
-    style: Flanders
-    tocdepth: 4
-  INBOmd::inbo_gitbook:
-    split_by: "chapter+number"
-    style: Flanders
-  INBOmd::inbo_ebook:
-    style: Flanders
+  INBOmd::inbo_rapport: default
+  INBOmd::inbo_gitbook: default
+  INBOmd::inbo_ebook: default
+  bookdown::dont_run: default
 ---
 
 ```{r setup, include = FALSE}

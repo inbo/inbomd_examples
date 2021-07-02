@@ -20,7 +20,7 @@ _`r paragraph()`_
 
 ### Lettertype met vaste tekenbreedte
 
-```{r echo = FALSE, results = "asis"}
+```{r vaste-tekenbreedte, echo = FALSE, results = "asis"}
 cat("`", paragraph(), "`", sep = "")
 ```
 
@@ -193,7 +193,7 @@ Item D
 
 (ref:block) `r paragraph()`
 
-```{block2, type = "block", latex.options = "{Titel van het standaardkader}"}
+```{block2, block, type = "block", latex.options = "{Titel van het standaardkader}"}
 (ref:block)
 
 ```
@@ -202,7 +202,7 @@ Item D
   
 (ref:exampleblock) `r paragraph()`
   
-```{block2, type = "exampleblock", latex.options = "{Titel van het voorbeeldkader}"}
+```{block2, example, type = "exampleblock", latex.options = "{Titel van het voorbeeldkader}"}
 (ref:exampleblock)
 
 ```
@@ -211,7 +211,7 @@ Item D
 
 (ref:alertblock) `r paragraph()`
 
-```{block2, type = "alertblock", latex.options = "{Titel van het waarschuwingskader}"}
+```{block2, alert, type = "alertblock", latex.options = "{Titel van het waarschuwingskader}"}
 (ref:alertblock)
 
 ```
