@@ -1,7 +1,3 @@
-# Dankwoord {-}
-
-`r paragraph(n = 5)`
-
 # Voorwoord {-}
 
 `r paragraph(n = 5)`

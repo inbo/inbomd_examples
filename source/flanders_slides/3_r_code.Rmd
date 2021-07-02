@@ -49,7 +49,7 @@ for (i in 1:5) {
 
 ### Using values calculated by R in plain text
 
-```{r echo = FALSE}
+```{r hidden, echo = FALSE}
 life_exp <- sprintf(
   "%.1f (%.1f; %.1f) years",
   mean(state$Life.Exp),
@@ -71,13 +71,13 @@ ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + geom_histogram() +
 
 ### Figure with discrete colours
 
-```{r echo = FALSE, message=FALSE}
+```{r ordinal, echo = FALSE, message=FALSE}
 ggplot(diamonds, aes(x = price, fill = cut)) + geom_histogram()
 ```
 
 ### Figure with discrete colours
 
-```{r echo = FALSE}
+```{r discrete, echo = FALSE}
 ggplot(mtcars, 
        aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
   geom_point() + geom_smooth(method = "lm")
@@ -85,7 +85,7 @@ ggplot(mtcars,
 
 ### Figure with single colour gradient
 
-```{r echo = FALSE}
+```{r gradient, echo = FALSE}
 pp <- function(n) {
   df <- expand.grid(
     x = seq_len(n),
@@ -101,7 +101,7 @@ ggplot(pp(20), aes(x = x, y = y, fill = z)) +
 
 ### Figure with colour gradient over a central colour
 
-```{r echo = FALSE}
+```{r gradient2, echo = FALSE}
 ggplot(pp(20), aes(x = x, y = y, fill = z)) +
   geom_tile(width = 0.8, height = 0.8) +
   scale_fill_gradient2(
@@ -113,7 +113,7 @@ ggplot(pp(20), aes(x = x, y = y, fill = z)) +
 
 ### Default order of discrete colours
 
-```{r echo = FALSE, warning=FALSE}
+```{r palette, echo = FALSE, warning=FALSE}
 testgrid <- expand.grid(x = 1:4, y = 1:4)
 testgrid$z <- factor(((testgrid$x - 1) * 4 + testgrid$y - 1) %% 10 + 1)
 ggplot(testgrid, aes(x = x, y = y, fill = z, label = z)) +

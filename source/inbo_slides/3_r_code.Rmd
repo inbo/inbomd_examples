@@ -49,7 +49,7 @@ for (i in 1:5) {
 
 ### Door R berekende waarden gebruiken in gewone tekst
 
-```{r echo = FALSE}
+```{r hidden, echo = FALSE}
 life_exp <- sprintf(
   "%.1f (%.1f; %.1f) jaren",
   mean(state$Life.Exp),
@@ -69,15 +69,15 @@ ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + geom_histogram() +
   facet_wrap(~agegp, scales = "free")
 ```
 
-### Figuur met kleur per discrete categorie
+### Figuur met kleur per ordinale variabele
 
-```{r echo = FALSE, message=FALSE}
+```{r ordinal, echo = FALSE, message=FALSE}
 ggplot(diamonds, aes(x = price, fill = cut)) + geom_histogram()
 ```
 
 ### Figuur met kleur per discrete categorie
 
-```{r echo = FALSE}
+```{r discrete, echo = FALSE}
 ggplot(mtcars, 
        aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
   geom_point() + geom_smooth(method = "lm")
@@ -85,7 +85,7 @@ ggplot(mtcars,
 
 ### Figuur met enkelvoudige kleurgradient
 
-```{r echo = FALSE}
+```{r gradient, echo = FALSE}
 pp <- function(n) {
   df <- expand.grid(
     x = seq_len(n),
@@ -101,7 +101,7 @@ ggplot(pp(20), aes(x = x, y = y, fill = z)) +
 
 ### Figuur met kleurgradient met middenkleur
 
-```{r echo = FALSE}
+```{r gradient2, echo = FALSE}
 ggplot(pp(20), aes(x = x, y = y, fill = z)) +
   geom_tile(width = 0.8, height = 0.8) +
   scale_fill_gradient2(
@@ -113,7 +113,7 @@ ggplot(pp(20), aes(x = x, y = y, fill = z)) +
 
 ### Standaard volgorde van kleuren bij categorieën
 
-```{r echo = FALSE, warning=FALSE}
+```{r colour-order, echo = FALSE, warning=FALSE}
 testgrid <- expand.grid(x = 1:3, y = 1:3)
 testgrid$z <- factor((testgrid$x - 1) * 3 + testgrid$y)
 ggplot(testgrid, aes(x = x, y = y, fill = z, label = z)) +

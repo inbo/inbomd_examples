@@ -1,22 +1,32 @@
 --- 
 title: "Voorbeeldslides met INBOmd"
-author: "Thierry Onkelinx"
-date: "`r Sys.Date()`"
+subtitle: "Hier komt de optionele ondertitel"
+author: 
+  - firstname: Thierry
+    name: Onkelinx
+    email: thierry.onkelinx@inbo.be
+    orcid: 0000-0001-8804-4216
+location: "Hier komt optioneel de plaats"
+institute: "Hier komt optioneel de affiliatie"
+toc_name: "De naam van de inhoudstafel"
+slide_level: 3
+cover_photo: "trees-1036958.jpg"
+flandersfont: TRUE
+
+corresponding: thierry.onkelinx@inbo.be
+embargo: 2020-01-01
+
 site: bookdown::bookdown_site
 bibliography: ../INBOmd.bib
+
 output:
-  bookdown::pdf_book:
-    base_format: INBOmd::inbo_slides
-    subtitle: "Hier komt de optionele ondertitel"
-    location: "Hier komt optioneel de plaats"
-    institute: "Hier komt optioneel de affiliatie"
-    toc_name: "De naam van de inhoudstafel"
-    cover: "trees-1036958.jpg"
-    cover_horizontal: FALSE
-    slide_level: 3
+  INBOmd::slides: default
+  INBOmd::handouts: default
+  INBOmd::report: default
+  bookdown::dont_run: default
 ---
 
-```{r include = FALSE}
+```{r setup, include = FALSE}
 library(knitr)
 library(DT)
 library(lipsum)
@@ -38,7 +48,7 @@ location
 institute
   ~ affiliatie op titelslide (optioneel)
 
-cover
+cover_photo
   ~ figuur voor achtergrond van titelslide. Standaardfiguur indien ontbreekt.
   
 cover_horizontal

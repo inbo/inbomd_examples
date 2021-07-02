@@ -1,16 +1,3 @@
-
-```{asis echo = FALSE, eval = !natbib}
-\chapter*{Referenties}
-\addcontentsline{toc}{chapter}{Referenties}
-```
-
-`r if (knitr::is_html_output() | !natbib) '# Referenties {-}'`
-
-```{r eval=!natbib, echo=FALSE, results="asis"}
-cat("\n**De citaties en bibliografie in dit rapport zijn aangemaakt door de CSL-processor _pandoc-citeproc_.",
-"De citaties en bibliografie, gerenderd door Zotero na importeren van INBO.bib met de BBT addon, zijn te vinden in [dit google document](https://docs.google.com/document/d/1IfgWq-59xVnK7zoy29AkMbx_AoM3hpTcKeQJTM8ZAYc).",
-"Zotero is een van de toepassingen die de _citeproc-js_ processor gebruiken.**",
-"\n\n")
-```
-
-
+De citaties en bibliografie in dit rapport zijn aangemaakt door de CSL-processor _pandoc-citeproc_.
+De citaties en bibliografie, gerenderd door Zotero na importeren van INBO.bib met de BBT addon, zijn te vinden in [dit google document](https://docs.google.com/document/d/1IfgWq-59xVnK7zoy29AkMbx_AoM3hpTcKeQJTM8ZAYc).
+Zotero is een van de toepassingen die de _citeproc-js_ processor gebruiken.
