@@ -85,4 +85,9 @@ rmarkdown::render_site(output_format = "INBOmd::report", encoding = "UTF-8")
 rmarkdown::render_site(output_format = "INBOmd::gitbook", encoding = "UTF-8")
 rmarkdown::render_site(output_format = "INBOmd::ebook", encoding = "UTF-8")
 
+# INBOmd workshop
+setwd("../inbomd_workshop")
+rmarkdown::render_site(output_format = "INBOmd::slides", encoding = "UTF-8")
+
+
 setwd("../..")
