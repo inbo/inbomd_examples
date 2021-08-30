@@ -243,6 +243,10 @@ Item D
 (ref:block) `r paragraph()`
 
 ```{block2, type = "block"}
+Enter here the text of the block.
+_Note that you cannot run **R** chunks inside a block._
+You need the reference trick as demonstrated below.
+
 (ref:block)
 
 ```
@@ -254,11 +258,21 @@ Item D
 (ref:block2b) `r paragraph()`
 
 
-```{block2, type = "block", latex.options = "{Optional box title}"}
+```{block2, type = "block", latex.options = "{Optional box title, only visbile in pdf output}"}
 (ref:block2a)
 
 (ref:block2b)
 
+```
+
+(ref:block3) `r paragraph()`
+
+(ref:block3b) `r paragraph()`
+
+```{block2, type = "block"}
+(ref:block3)
+
+(ref:block3b)
 ```
 
 ## Example box
@@ -268,6 +282,10 @@ Item D
 (ref:exampleblock) `r paragraph()`
 
 ```{block2, type = "exampleblock"}
+Enter here the text of the block.
+_Note that you cannot run **R** chunks inside a block._
+You need the reference trick as demonstrated below.
+
 (ref:exampleblock)
 
 ```
@@ -278,10 +296,21 @@ Item D
 
 (ref:exampleblock2b) `r paragraph()`
 
-```{block2, type = "exampleblock", latex.options = "{Optional title of the box}"}
+```{block2, type = "exampleblock", latex.options = "{Optional title of the box, only visbile in pdf output}"}
 (ref:exampleblock2a)
 
 (ref:exampleblock2b)
+
+```
+
+(ref:exampleblock3) `r paragraph()`
+
+(ref:exampleblock3b) `r paragraph()`
+
+```{block2, type = "exampleblock"}
+(ref:exampleblock3)
+
+(ref:exampleblock3b)
 
 ```
 
@@ -292,6 +321,10 @@ Item D
 (ref:alterblock) `r paragraph()`
 
 ```{block2, type = "alertblock"}
+Enter here the text of the block.
+_Note that you cannot run **R** chunks inside a block._
+You need the reference trick as demonstrated below.
+
 (ref:alterblock)
 
 ```
@@ -302,7 +335,7 @@ Item D
 
 (ref:alterblock2b) `r paragraph()`
 
-```{block2, type = "alertblock", latex.options = "{Optional title of the box}"}
+```{block2, type = "alertblock", latex.options = "{Optional title of the box, only visbile in pdf output}"}
 (ref:alterblock2a)
 
 (ref:alterblock2b)
@@ -311,8 +344,11 @@ Item D
 
 (ref:alterblock3) `r paragraph()`
 
+(ref:alterblock3b) `r paragraph()`
 
 ```{block2, type = "alertblock"}
 (ref:alterblock3)
+
+(ref:alterblock3b)
 
 ```

@@ -1,30 +1,42 @@
 --- 
 title: "Voorbeeldrapport met INBOmd"
 author: 
-  - 
-    name: "Thierry Onkelinx"
-    email: "thierry.onkelinx@inbo.be"
+  - firstname: Thierry
+    name: Onkelinx
+    email: thierry.onkelinx@inbo.be
+    orcid: 0000-0001-8804-4216
+shortauthor: Onkelinx, T.
+corresponding: thierry.onkelinx@inbo.be
+reviewer:
+  - firstname: Floris
+    name: Vanderhaeghe
+    email: floris.vanderhaeghe@inbo.be
+    orcid: 0000-0002-6378-6229
+github-repo: inbo/inbomd-examples
+year: 2021
+cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
+cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+cover: cover.pdf # link naar pdf met cover
+doi: https://doi.org/10.5281/zenodo.842223
+reportnr: 99999
+depotnr: D/2021/999999/999999
+ordernr: Het optionele nummer van de opdrachtgever
+embargo: 2099-03-01
+geraardsbergen: TRUE
+tocdepth: 4
+
+lang: nl
+split_by: section+number
+
 site: bookdown::bookdown_site
-link-citations: TRUE
+link-citations: FALSE
 bibliography: ../INBOmd.bib
-github-repo: "inbo/inbomd-examples"
-subtitle: "Dit is de versie met een aantal alternatieven"
-reportnr: "Hier komt de DOI van het rapport"
-ordernr: "Het optionele nummer van de opdrachtgever"
+
 output:
-  bookdown::pdf_book:
-    base_format: INBOmd::inbo_rapport
-    lof: FALSE
-    lot: FALSE
-    tocdepth: 4
-    floatbarrier: section
-    citation_package: none
-  bookdown::gitbook:
-    split_by: "chapter+number"
-    template: !expr INBOmd::inbo_rapport_css("html")
-  bookdown::epub_book:
-    stylesheet: "css/inbo_rapport.css"
-    template: !expr INBOmd::inbo_rapport_css("epub")
+  INBOmd::inbo_rapport: default
+  INBOmd::inbo_gitbook: default
+  INBOmd::inbo_ebook: default
+  bookdown::dont_run: default
 ---
 
 ```{r setup, include = FALSE}
@@ -85,3 +97,7 @@ if (interactive()) {
 }
 set.seed(20190117)
 ```
+
+# Dankwoord {-}
+
+`r paragraph(n = 5)`

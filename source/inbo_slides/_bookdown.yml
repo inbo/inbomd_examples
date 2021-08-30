@@ -1,2 +1,3 @@
 book_filename: "inbo_slides"
 output_dir: "../../docs/inbo_slides"
+delete_merged_file: TRUE

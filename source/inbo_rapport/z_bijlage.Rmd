@@ -1,11 +1,7 @@
-\appendix
-
-# Titel van eerste bijlage
+# Bijlage: referentietekst voor INBO-medewerkers
 
 `r paragraph(n = 5)`
 
-# Titel van tweede bijlage
+# Bijlage: referentietekst voor INBO medewerkers
 
 `r paragraph(n = 5)`
-
-`r if (knitr::is_html_output()) '# Referenties {-}'`

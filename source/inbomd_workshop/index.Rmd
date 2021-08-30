@@ -1,18 +1,32 @@
 --- 
 title: "Creating a report using INBOmd"
-author: "Thierry Onkelinx"
+author: 
+  - firstname: Thierry
+    name: Onkelinx
+    email: thierry.onkelinx@inbo.be
+    orcid: 0000-0001-8804-4216
+toc: FALSE
+slide_level: 2
+cover_photo: e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
+flandersfont: TRUE
+cover_horizontal: TRUE
+
+lang: en
+style: INBO
+
+aspect: 4:3
+
+corresponding: thierry.onkelinx@inbo.be
+embargo: 2020-01-01
+
 site: bookdown::bookdown_site
 bibliography: ../INBOmd.bib
+
 output:
-  bookdown::pdf_book:
-    base_format: INBOmd::inbo_slides
-    toc: FALSE
-    slide_level: 2
-    theme: inboenglish
-    lang: english
-    flandersfont: TRUE
-    cover: e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
-    cover_horizontal: FALSE
+  INBOmd::slides: default
+  INBOmd::handouts: default
+  INBOmd::report: default
+  bookdown::dont_run: default
 ---
 
 ```{r setup, include = FALSE}
@@ -45,10 +59,10 @@ if (interactive()) {
 ## Where to find documentation
 
 - Documention on `INBOmd`
-    - https://inbomd.netlify.com
+    - https://inbo.github.io/inbomd
 - Example code using `INBOmd` 
-    - https://inbomd-examples.netlify.com/
-    - Do have a look at our [tips and tricks for the pdf version](https://inbomd-examples.netlify.com/inbo_rapport/13-lay-out-tips-voor-pdf.html)
+    - https://inbo.github.io/inbomd-examples
+    - Do have a look at our [tips and tricks for the pdf version](https://inbo.github.io/inbomd-examples/inbo_rapport/13-lay-out-tips-voor-pdf.html)
 - `bookdown`: Authoring Books and Technical Documents with R Markdown
     - https://bookdown.org/yihui/bookdown/
 - R Markdown: The Definitive Guide 
@@ -72,10 +86,10 @@ if (length(find.package("tinytex", quiet = TRUE)) == 0) {
 ## Install `INBOmd`
 
 ```{r eval = FALSE}
-if (length(find.package("remotes", quiet = TRUE)) == 0) {
-  install.packages("remotes")
-}
-remotes::install_github("inbo/INBOmd", dependencies = TRUE)
+options(repos = c(
+    inbo = 'https://inbo.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+install.packages("INBOmd")
 # setup for tinytex
 tinytex::tlmgr_install(c(
   'inconsolata', 'times', 'tex', 'helvetic', 'dvips'
@@ -184,7 +198,7 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
 
 - Chunk setup identical to chunk setup for figures
 - First try `knitr::kable()` to generate the table
-    - See [examples](https://inbomd-examples.netlify.com/inbo_rapport/7-figuren-en-tabellen.html#tabellen) on the INBOmd website
+    - See [examples](https://inbo.github.io/inbomd_examples/inbo_rapport/7-figuren-en-tabellen.html#tabellen) on the INBOmd website
     - Improve formatting with `kableExtra`
 - `knitr::kable(caption = "My table caption")`
     - Text references `(ref:label)` are possible too

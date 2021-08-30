@@ -20,7 +20,7 @@ _`r paragraph()`_
 
 ### Fixed width font
 
-```{r echo = FALSE, results = "asis"}
+```{r fixed-width, echo = FALSE, results = "asis"}
 cat("`", paragraph(), "`", sep = "")
 ```
 

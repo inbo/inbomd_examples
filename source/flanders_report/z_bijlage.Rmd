@@ -1,5 +1,3 @@
-\appendix
-
 # Title of first appendix
 
 `r paragraph(n = 5)`
@@ -7,5 +5,3 @@
 # Title of second appendix
 
 `r paragraph(n = 5)`
-
-`r if (knitr::is_html_output()) '# Bibliography {-}'`
