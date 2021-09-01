@@ -1,11 +1,11 @@
 stopifnot(
   package_version(installed.packages()["INBOmd", "Version"]) >=
-    package_version("0.4.10")
+    package_version("0.5.0")
 )
 
 options(bookdown.render.file_scope = FALSE)
 old_wd <- getwd()
-on.exit(setwd(old_wd))
+on.exit(setwd(old_wd), add = TRUE)
 # main file
 setwd("source")
 rmarkdown::render("index.Rmd", output_dir = "../docs")
