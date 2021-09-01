@@ -15,7 +15,7 @@ header <- function(words = 4, format = FALSE) {
 }
 ```
 
-# Kopstijlen: niveau 1: `r header(4)` {#h:koppen}
+# Kopstijlen: niveau 1: `r header(4)` {#koppen}
 
 `r paragraph(n = 3)`
 
@@ -45,7 +45,7 @@ Zie sectie \@ref(s:onderlijnd).
 
 `r paragraph(n = 3)`
 
-# Kopstijlen zonder nummer: niveau 1: `r header(4)` {- #h:koppen-zonder-nummer}
+# Kopstijlen zonder nummer: niveau 1: `r header(4)` {- #koppen-zonder-nummer}
 
 `r paragraph(n = 3)`
 
