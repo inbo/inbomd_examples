@@ -50,9 +50,9 @@ link-citations: TRUE
 bibliography: ../INBOmd.bib
 
 output:
-  INBOmd::inbo_gitbook: default
-  INBOmd::inbo_rapport: default
-  INBOmd::inbo_ebook: default
+  INBOmd::gitbook: default
+  INBOmd::report: default
+  INBOmd::ebook: default
   bookdown::dont_run: default
 ---
 

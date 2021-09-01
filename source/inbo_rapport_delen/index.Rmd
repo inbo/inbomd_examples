@@ -33,9 +33,9 @@ link-citations: FALSE
 bibliography: ../INBOmd.bib
 
 output:
-  INBOmd::inbo_rapport: default
-  INBOmd::inbo_gitbook: default
-  INBOmd::inbo_ebook: default
+  INBOmd::report: default
+  INBOmd::gitbook: default
+  INBOmd::ebook: default
   bookdown::dont_run: default
 ---
 
