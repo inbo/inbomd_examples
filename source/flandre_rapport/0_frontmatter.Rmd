@@ -1,0 +1,96 @@
+# Résumé
+
+Extrait sur l'écologie de [Wikipedia](https://fr.wikipedia.org/wiki/%C3%89cologie)
+
+L'**écologie**, également connue sous les noms de **bioécologie**, **bionomie** ou **science de l'environnement ou environnementale**, est la science qui étudie les êtres vivants dans leur milieu et les interactions entre eux.
+
+Le terme écologie vient du grec _oikos_ (maison, habitat) et _logos_ (discours) : c'est la science de la maison, de l'habitat. 
+Il fut inventé en 1866 par Ernst Haeckel, biologiste allemand pro-darwiniste. 
+Dans son ouvrage Morphologie générale des organismes, il désignait par ce terme "la science des relations des organismes avec le monde environnant, c'est-à-dire, dans un sens large, la science des conditions d'existence".
+
+Une définition généralement admise, particulièrement utilisée en écologie humaine, consiste à définir l'écologie comme étant le rapport triangulaire entre les individus d'une espèce, l'activité organisée de cette espèce et l'environnement de cette activité. 
+L'environnement est à la fois le produit et la condition de cette activité, et donc de la survie de l'espèce2.
+
+Un **écologue** ou **écologiste** (qu'il soit chercheur, biologiste ou ingénieur écologue) est un spécialiste de l'écologie. Ce terme ne doit pas être confondu avec la dénomination écologiste comme adepte de l’écologisme ou comme partisan de l’écologie politique.
+
+# Recommandations de gestion et/ou de politique {-}
+
+`r paragraph(n = 5)`
+
+\bdutch
+
+# Samenvatting {-}
+
+Een uittreksel over ecologie uit [Wikipedia](https://nl.wikipedia.org/wiki/Ecologie)
+
+Ecologie (ook wel met de spelling: _oecologie_) als wetenschap is een onderdeel van biologie. 
+De ecologie bestudeert de dynamiek van de wisselwerking tussen organismen, populaties of levensgemeenschappen (de biotische milieufactoren) en de relaties tussen organismen, populaties, levensgemeenschappen of landschappen en het niet-biologische milieu (de abiotische milieufactoren). 
+De studie op het niveau van de soort heet ook wel autoecologie en op het niveau van de levensgemeenschap en ecosysteem heet gemeenschapsecologie of synecologie.
+
+Het woord ecologie (oorspronkelijk Duits: _Ökologie_) werd geïntroduceerd door de Duitse bioloog Ernst Haeckel in 1866, als samentrekking van de Griekse woorden _oikos_ (huishouding) en _logos_ (studie, wetenschap).
+
+In de Angelsaksische wereld werd dit _ecology_, dat daar een iets andere, meer milieukundige en mens-gerichte, betekenis kreeg. 
+In Nederland bestaan het meer biologische oecologie en meer milieukundige ecologie naast elkaar, maar het verschil vervaagt.
+
+Het woord ecologie wordt ook gebruikt in andere betekenissen:
+
+- gerelateerd aan een beter milieu, in het bijzonder dat van de mens, 
+- meer praktisch, betreffende gedrag dat goed is voor de mens en zijn milieu en voor de natuur (zie [ecologische landbouw](https://nl.wikipedia.org/wiki/Ecologische_landbouw) en [EKO-keurmerk](https://nl.wikipedia.org/wiki/EKO-keurmerk)), 
+- gericht op een bepaalde levensbeschouwing (zie [ecologisme](https://nl.wikipedia.org/wiki/Ecologisme)).
+- betreffende omgeving of netwerk van bijvoorbeeld een bedrijf.
+
+\edutch
+
+\benglish
+
+# English abstract {-}
+
+Excerpt on ecology taken from [Wikipedia](https://en.wikipedia.org/wiki/Ecology)
+
+**Ecology** (from oicos, "house", or "environment"; logia, "study of") is the branch of [biology](http://www.dictionary.com/browse/ecology|title=the definition of ecology|website=Dictionary.com|access-date=2018-02-20) which studies the interactions among organisms and their environment. 
+Objects of study include interactions of organisms with each other and with abiotic components of their environment. 
+Topics of interest include the biodiversity, distribution, biomass, and opulations of organisms, as well as cooperation and competition within and between species.
+Ecosystems are dynamically interacting systems of organisms, the communities they make up, and the non-living components of their environment. 
+Ecosystem processes, such as primary production, pedogenesis, nutrient cycling, and niche construction, regulate the flux of energy and matter through an environment.
+These processes are sustained by organisms with specific life history traits.
+Biodiversity means the varieties of species, genes, and ecosystems, enhances certain ecosystem services.
+
+Ecology is not synonymous with environmentalism, natural history, or environmental science.
+It overlaps with the closely related sciences of evolutionary biology, genetics, and ethology.
+An important focus for ecologists is to improve the understanding of how biodiversity affects ecological function. 
+Ecologists seek to explain:
+
+* Life processes, interactions, and adaptations
+* The movement of materials and energy through living communities
+* The successional development of ecosystems
+* The abundance and distribution of organisms and biodiversity in the context of the environment.
+
+Ecology has practical applications in conservation biology, wetland management, natural resource management (agroecology, agriculture, forestry, agroforestry, fisheries), city planning (urban ecology), community health, economics, basic and applied science, and human social interaction (human ecology). 
+For example, the _Circles of Sustainability_ approach treats ecology as more than the environment 'out there'. 
+It is not treated as separate from humans. Organisms (including humans) and resources compose ecosystems which, in turn, maintain biophysical feedback mechanisms that moderate processes  acting on living (biotic) and non-living (abiotic) components of the planet. 
+Ecosystems sustain life-supporting functions and produce natural capital like  biomass production (food, fuel, fiber, and medicine), the regulation of climate, global biogeochemical cycles, water filtration, soil formation, erosion control, flood protection, and many other natural features of scientific, historical, economic, or intrinsic value.
+
+The word "ecology" ("Ökologie") was coined in 1866 by the German scientist Ernst Haeckel. 
+Ecological thought is derivative of established currents in philosophy, particularly from ethics and politics [@LaferriereStoett1999]. 
+Ancient Greek philosophers such as Hippocrates and Aristotle laid the foundations of ecology in their studies on natural history.
+Modern ecology became a much more rigorous science in the late 19th century.
+Evolutionary concepts relating to adaptation and natural selection became the cornerstones of modern ecological theory.
+
+\eenglish
+
+\mainmatter
+
+# Introduction
+
+Ce document est uniquement destiné à afficher tous les éléments de l'identité de l'entreprise.
+
+## Lipsum
+
+Lorem ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+The source code of this document contains code chunks like `\usepackage{lipsum}` or `\lipsum[10]`. 
+This code is only needed to display chunks from the lipsum text.
+You don't need them in a real life report.

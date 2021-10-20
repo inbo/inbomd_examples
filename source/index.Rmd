@@ -28,6 +28,8 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
     - [PDF](vlaanderen_rapport/vlaanderen_rapport.pdf) versie
 - Engelstalig rapport in de huisstijl van de Vlaamse overheid ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/flanders_report))
     - [PDF](flanders_report/flanders_report.pdf) versie
+- Franstalig rapport in de huisstijl van de Vlaamse overheid ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/flandre_rapport))
+    - [PDF](flandre_rapport/flandre_rapport.pdf) versie
 - INBO presentatie ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/inbo_slides))
     - [Stapsgewijze](inbo_slides/inbo_slides.pdf) slides in pdf
     - [Handout versie](inbo_slides/inbo_slides_handout.pdf) slides in pdf
