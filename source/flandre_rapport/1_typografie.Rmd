@@ -15,7 +15,7 @@ header <- function(words = 4, format = FALSE) {
 }
 ```
 
-# Titres: niveau 1: `r header(4)` {#h:koppen}
+# Titres: niveau 1: `r header(4)` {#h-koppen}
 
 `r paragraph(n = 3)`
 
@@ -39,7 +39,7 @@ header <- function(words = 4, format = FALSE) {
 
 `r paragraph(n = 3)`
 
-# Titres sans numéro: niveau 1: `r header(4)` {- #h:koppen-zonder-nummer}
+# Titres sans numéro: niveau 1: `r header(4)` {- #h-koppen-zonder-nummer}
 
 `r paragraph(n = 3)`
 
