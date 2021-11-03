@@ -100,80 +100,80 @@ cat("**`", paragraph(), "`**", sep = "")
 
 **`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`**
 
-## Lowercase L versus uppercase i
+## L miniscule contre i majuscule
 
 normal:
   ~ lI
 
-bold:
+gras:
   ~ **lI**
   
-italics:
+italique:
   ~ _lI_
 
-bold italics:
+italique gras:
   ~ **_lI_**
 
-fixed width:
+largeur fixe:
   ~ `lI` **`lI`**
 
-## Uppercase O versus digit 0
+## O majuscule contre chiffre 0
 
 normal:
   ~ O0
 
-bold:
+gras:
   ~ **O0**
   
-italics:
+italique:
   ~ _O0_
 
-bold italics:
+italique gras:
   ~ **_O0_**
 
-fix width font:
+police de largeur fixe:
   ~ `O0` **`O0`**
 
-## Special characters
+## Caractères spéciaux
   
 ### Normal
 
 €$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
 
-### Bold
+### Gras
 **€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
 
-### Italics
+### Italique
 _€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
 
-### Bold italics
+### Italique gras
 **_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
   
-### Fixed width font
+### Police de largeur fixe
 `€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
 
 **`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
 
-## Quotes
+## Guillemets
 
 normal:
-  ~ "double", 'single'
+  ~ "double", 'simple'
 
-bold:
-  ~ **"double", 'single'**
+gras:
+  ~ **"double", 'simple'**
 
-italics:
-  ~ _"double", 'single'_
+italique:
+  ~ _"double", 'simple'_
 
-bold italics:
-  ~ **_"double", 'single'_**
+italique gras:
+  ~ **_"double", 'simple'_**
 
-fix width font:
-  ~ `"double", 'single',` **`"double", 'single',`**
+police de largeur fixe:
+  ~ `"double", 'simple',` **`"double", 'simple',`**
 
-# Lists
+# Listes
 
-## Unordered list
+## Liste non ordonnée
 
 - `r paragraph()`
 - Item 2
@@ -189,7 +189,7 @@ fix width font:
     - Item c
 - Item 4
 
-## Numbered list
+## Liste numérotée
 
 1. `r paragraph()`
 1. Item 2
@@ -205,7 +205,7 @@ fix width font:
     1. Item c
 1. Item 4
 
-## Definition list
+## Liste numérotée avec lettres
 
 Item A
   ~ `r paragraph()`
