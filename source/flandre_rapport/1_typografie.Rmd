@@ -1,0 +1,354 @@
+```{r generate_header, echo = FALSE}
+header <- function(words = 4, format = FALSE) {
+  sprintf(
+    ifelse(
+      format,
+      "%s '%s' `%s` _%s_ **%s**",
+      "%s %s %s %s %s"
+    ),
+    sentence(words = words),
+    sentence(words = words),
+    sentence(words = words),
+    sentence(words = words),
+    sentence(words = words)
+  )
+}
+```
+
+# Titres: niveau 1: `r header(4)` {#h-koppen}
+
+`r paragraph(n = 3)`
+
+## Niveau 2: `r header(4)`
+
+`r paragraph(n = 3)`
+
+### Niveau 3: `r header(4)`
+
+`r paragraph(n = 3)`
+
+#### Niveau 4: `r header(5)`
+
+`r paragraph(n = 3)`
+
+##### Niveau 5: `r header(4)`
+
+`r paragraph(n = 3)`
+
+###### Niveau 6: `r header(4)`
+
+`r paragraph(n = 3)`
+
+# Titres sans numéro: niveau 1: `r header(4)` {- #h-koppen-zonder-nummer}
+
+`r paragraph(n = 3)`
+
+## Niveau 2: `r header(4)` {-}
+
+`r paragraph(n = 3)`
+
+### Niveau 3: `r header(4)` {-}
+
+`r paragraph(n = 3)`
+
+#### Niveau 4: `r header(5)` {-}
+
+`r paragraph(n = 3)`
+
+Titres sans numéro sont disponibles du niveau 1 à 4.
+
+# Polices
+
+Ce chapitre présente les différentes polices et leurs formes.
+En partie pour les visualiser, en partie pour détecter tout problème avec certains caractères.
+
+## Normal
+
+`r paragraph(n = 1)`
+
+## Gras
+
+**`r paragraph(n = 1)`**
+
+## Italique
+
+_`r paragraph(n = 1)`_
+
+## Italique gras
+
+_**`r paragraph(n = 1)`**_
+
+## Police à largeur fixe
+
+```{r echo = FALSE, results = "asis"}
+cat("`", paragraph(), "`", sep = "")
+```
+
+```{r echo = FALSE, results = "asis"}
+cat("**`", paragraph(), "`**", sep = "")
+```
+
+80 caractères tiennent dans la largeur du pdf
+
+`12345678911234567892123456789312345678941234567895123456789612345678971234567898`
+
+**`12345678911234567892123456789312345678941234567895123456789612345678971234567898`**
+
+100 caractères ne tiennent plus dans la largeur du pdf
+
+`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`
+
+**`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`**
+
+## L miniscule contre i majuscule
+
+normal:
+  ~ lI
+
+gras:
+  ~ **lI**
+  
+italique:
+  ~ _lI_
+
+italique gras:
+  ~ **_lI_**
+
+largeur fixe:
+  ~ `lI` **`lI`**
+
+## O majuscule contre chiffre 0
+
+normal:
+  ~ O0
+
+gras:
+  ~ **O0**
+  
+italique:
+  ~ _O0_
+
+italique gras:
+  ~ **_O0_**
+
+police de largeur fixe:
+  ~ `O0` **`O0`**
+
+## Caractères spéciaux
+  
+### Normal
+
+€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
+
+### Gras
+**€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
+
+### Italique
+_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
+
+### Italique gras
+**_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
+  
+### Police de largeur fixe
+`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
+
+**`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
+
+## Guillemets
+
+normal:
+  ~ "double", 'simple'
+
+gras:
+  ~ **"double", 'simple'**
+
+italique:
+  ~ _"double", 'simple'_
+
+italique gras:
+  ~ **_"double", 'simple'_**
+
+police de largeur fixe:
+  ~ `"double", 'simple',` **`"double", 'simple',`**
+
+# Listes
+
+## Liste non ordonnée
+
+- `r paragraph()`
+- Item 2
+- Item 3
+    - Item a
+        - item I
+        - item II
+            - item A
+            - item B
+            - `r paragraph()`
+        - `r paragraph()`
+    - `r paragraph()`
+    - Item c
+- Item 4
+
+## Liste numérotée
+
+1. `r paragraph()`
+1. Item 2
+1. Item 3
+    1. Item a
+        1. item I
+        1. item II
+            1. `r paragraph()`
+            1. item B
+            1. item C
+        1. `r paragraph()`
+    1. `r paragraph()`
+    1. Item c
+1. Item 4
+
+## Liste numérotée avec lettres
+
+Item A
+  ~ `r paragraph()`
+  
+Longer item title B
+  ~ `r paragraph()`
+  
+    Item B1
+      ~ `r paragraph()`
+
+        Item B1a
+          ~ `r paragraph()`
+
+        Item B1b
+          ~ `r paragraph()`
+
+            Item B1b1
+              ~ `r paragraph()`
+              
+    Item B2
+      ~ `r paragraph()`
+
+Item C
+  ~ `r paragraph()`
+  
+Item D
+  ~ `r paragraph()`
+
+# Boxes
+
+## Default box
+
+`r paragraph(n = 1)`
+
+(ref:block) `r paragraph()`
+
+```{block2, type = "block"}
+Enter here the text of the block.
+_Note that you cannot run **R** chunks inside a block._
+You need the reference trick as demonstrated below.
+
+(ref:block)
+
+```
+
+`r paragraph()`
+
+(ref:block2a) `r paragraph()`
+
+(ref:block2b) `r paragraph()`
+
+
+```{block2, type = "block", latex.options = "{Optional box title, only visbile in pdf output}"}
+(ref:block2a)
+
+(ref:block2b)
+
+```
+
+(ref:block3) `r paragraph()`
+
+(ref:block3b) `r paragraph()`
+
+```{block2, type = "block"}
+(ref:block3)
+
+(ref:block3b)
+```
+
+## Example box
+  
+`r paragraph(n = 2)`
+
+(ref:exampleblock) `r paragraph()`
+
+```{block2, type = "exampleblock"}
+Enter here the text of the block.
+_Note that you cannot run **R** chunks inside a block._
+You need the reference trick as demonstrated below.
+
+(ref:exampleblock)
+
+```
+
+`r paragraph(n = 2)`
+
+(ref:exampleblock2a) `r paragraph()`
+
+(ref:exampleblock2b) `r paragraph()`
+
+```{block2, type = "exampleblock", latex.options = "{Optional title of the box, only visbile in pdf output}"}
+(ref:exampleblock2a)
+
+(ref:exampleblock2b)
+
+```
+
+(ref:exampleblock3) `r paragraph()`
+
+(ref:exampleblock3b) `r paragraph()`
+
+```{block2, type = "exampleblock"}
+(ref:exampleblock3)
+
+(ref:exampleblock3b)
+
+```
+
+## Alert box
+  
+`r paragraph(n = 2)`
+
+(ref:alterblock) `r paragraph()`
+
+```{block2, type = "alertblock"}
+Enter here the text of the block.
+_Note that you cannot run **R** chunks inside a block._
+You need the reference trick as demonstrated below.
+
+(ref:alterblock)
+
+```
+
+`r paragraph(n = 1)`
+
+(ref:alterblock2a) `r paragraph()`
+
+(ref:alterblock2b) `r paragraph()`
+
+```{block2, type = "alertblock", latex.options = "{Optional title of the box, only visbile in pdf output}"}
+(ref:alterblock2a)
+
+(ref:alterblock2b)
+
+```
+
+(ref:alterblock3) `r paragraph()`
+
+(ref:alterblock3b) `r paragraph()`
+
+```{block2, type = "alertblock"}
+(ref:alterblock3)
+
+(ref:alterblock3b)
+
+```

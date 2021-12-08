@@ -39,6 +39,12 @@ rmarkdown::render_site(output_format = "INBOmd::report", encoding = "UTF-8")
 rmarkdown::render_site(output_format = "INBOmd::gitbook", encoding = "UTF-8")
 rmarkdown::render_site(output_format = "INBOmd::ebook", encoding = "UTF-8")
 
+# flandre rapport
+setwd("../flandre_rapport")
+rmarkdown::render_site(output_format = "INBOmd::report", encoding = "UTF-8")
+rmarkdown::render_site(output_format = "INBOmd::gitbook", encoding = "UTF-8")
+rmarkdown::render_site(output_format = "INBOmd::ebook", encoding = "UTF-8")
+
 # flanders slides
 setwd("../flanders_slides")
 rmarkdown::render_site(output_format = "INBOmd::handouts", encoding = "UTF-8")
