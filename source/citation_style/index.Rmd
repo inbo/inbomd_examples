@@ -26,9 +26,9 @@ lot: FALSE
 lang: nl
 
 output:
-  INBOmd::report: default
+  INBOmd::pdf_report: default
   INBOmd::gitbook: default
-  INBOmd::ebook: default
+  INBOmd::epub_book: default
   bookdown::dont_run: default
 ---
 

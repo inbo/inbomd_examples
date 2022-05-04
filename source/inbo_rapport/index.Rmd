@@ -52,8 +52,8 @@ bibliography: ../INBOmd.bib
 
 output:
   INBOmd::gitbook: default
-  INBOmd::report: default
-  INBOmd::ebook: default
+  INBOmd::pdf_report: default
+  INBOmd::epub_book: default
   bookdown::dont_run: default
 ---
 
