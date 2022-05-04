@@ -1,3 +1,5 @@
-\appendix
-
-`r ifelse(knitr::is_html_output(), "# Referenties {-}\n\n<div id='refs'></div>\n\n# (APPENDIX) Bijlage {-}", "# (PART) Bijlage {-}")`
+```{r references, results = "asis", echo = FALSE}
+# insert the references at this position
+# set appendix = FALSE, when the report has no appendix
+INBOmd::references(appendix = TRUE)
+```

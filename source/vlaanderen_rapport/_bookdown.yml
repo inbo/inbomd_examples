@@ -9,6 +9,7 @@ rmd_files:
   - "../inbo_rapport/2_andere_elementen.Rmd"
   - "../inbo_rapport/3_r_code.Rmd"
   - "../inbo_rapport/4_tips.Rmd"
+  - "../inbo_rapport/y_referenties.Rmd"
   - "../inbo_rapport/z_bijlage.Rmd"
 language:
   label:
