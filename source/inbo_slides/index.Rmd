@@ -22,7 +22,7 @@ bibliography: ../INBOmd.bib
 output:
   INBOmd::slides: default
   INBOmd::handouts: default
-  INBOmd::report: default
+  INBOmd::pdf_report: default
   bookdown::dont_run: default
 ---
 

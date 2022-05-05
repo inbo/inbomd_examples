@@ -52,9 +52,9 @@ link-citations: TRUE
 bibliography: ../INBOmd.bib
 
 output:
+  INBOmd::pdf_report: default
   INBOmd::gitbook: default
-  INBOmd::report: default
-  INBOmd::ebook: default
+  INBOmd::epub_book: default
   bookdown::dont_run: default
 ---
 

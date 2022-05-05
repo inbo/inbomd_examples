@@ -18,18 +18,3 @@ jobs:
       - uses: inbo/actions/render_inbomd@master
         with:
           token: ${{ secrets.pat }}
-      - name: push gh-pages
-        if: ${{ github.event_name == 'push' }}
-        run: |
-          ls
-          git config --global user.email "info@inbo.be"
-          git config --global user.name "INBO"
-          git status
-          git checkout gh-pages
-          git status
-          git rm -r .
-          ls
-          cp -R $GITHUB_WORKSPACE/docs/. $GITHUB_WORKSPACE/.
-          git add --all
-          git commit --amend --message="Voorbeelden voor INBOmd"
-          git push -f
