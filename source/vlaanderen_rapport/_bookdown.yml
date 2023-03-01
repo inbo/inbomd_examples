@@ -1,5 +1,5 @@
 book_filename: "vlaanderen_rapport"
-output_dir: "../../docs/vlaanderen_rapport"
+output_dir: "../../output/vlaanderen_rapport"
 delete_merged_file: TRUE
 rmd_files:
   - "index.Rmd"

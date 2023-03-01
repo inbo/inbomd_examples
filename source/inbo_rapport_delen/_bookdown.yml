@@ -13,7 +13,7 @@ rmd_files:
   - "referenties.Rmd"
   - "../inbo_rapport/z_bijlage.Rmd"
 delete_merged_file: TRUE
-output_dir: "../../docs/inbo_rapport_delen"
+output_dir: "../../output/inbo_rapport_delen"
 language:
   label:
     fig: 'Figuur '

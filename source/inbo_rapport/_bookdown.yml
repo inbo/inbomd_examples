@@ -1,5 +1,5 @@
 book_filename: "inbo_rapport"
-output_dir: "../../docs/inbo_rapport"
+output_dir: "../../output/inbo_rapport"
 delete_merged_file: TRUE
 language:
   label:

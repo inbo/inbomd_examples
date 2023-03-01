@@ -10,7 +10,7 @@ old_wd <- getwd()
 on.exit(setwd(old_wd), add = TRUE)
 # main file
 setwd(base_folder)
-rmarkdown::render("index.Rmd", output_dir = here("docs"))
+rmarkdown::render("index.Rmd", output_dir = here("output"))
 
 # citation styles
 setwd(here(base_folder, "citation_style"))
@@ -19,8 +19,8 @@ index[index == "lang: nl"] <- "lang: en"
 index[index == "style: INBO"] <- "style: Flanders"
 writeLines(index, "index.Rmd")
 yml <- readLines("_bookdown.yml")
-yml[yml == "output_dir: \"../../docs/citation_style/nl\""] <-
-  "output_dir: \"../../docs/citation_style/en\""
+yml[yml == "output_dir: \"../../output/citation_style/nl\""] <-
+  "output_dir: \"../../output/citation_style/en\""
 writeLines(yml, "_bookdown.yml")
 rmarkdown::render_site(output_format = "INBOmd::pdf_report", encoding = "UTF-8")
 rmarkdown::render_site(output_format = "INBOmd::gitbook", encoding = "UTF-8")
@@ -29,8 +29,8 @@ index[index == "lang: en"] <- "lang: nl"
 index[index == "style: Flanders"] <- "style: INBO"
 writeLines(index, "index.Rmd")
 yml <- readLines("_bookdown.yml")
-yml[yml == "output_dir: \"../../docs/citation_style/en\""] <-
-  "output_dir: \"../../docs/citation_style/nl\""
+yml[yml == "output_dir: \"../../output/citation_style/en\""] <-
+  "output_dir: \"../../output/citation_style/nl\""
 writeLines(yml, "_bookdown.yml")
 rmarkdown::render_site(output_format = "INBOmd::pdf_report", encoding = "UTF-8")
 rmarkdown::render_site(output_format = "INBOmd::gitbook", encoding = "UTF-8")
@@ -51,13 +51,13 @@ rmarkdown::render_site(output_format = "INBOmd::epub_book", encoding = "UTF-8")
 setwd(here(base_folder, "flanders_slides"))
 rmarkdown::render_site(output_format = "INBOmd::handouts", encoding = "UTF-8")
 file.rename(
-  here("docs", "flanders_slides", "flanders_slides.pdf"),
-  here("docs", "flanders_slides", "flanders_slides_handout.pdf")
+  here("output", "flanders_slides", "flanders_slides.pdf"),
+  here("output", "flanders_slides", "flanders_slides_handout.pdf")
 )
 rmarkdown::render_site(output_format = "INBOmd::pdf_report", encoding = "UTF-8")
 file.rename(
-  here("docs", "flanders_slides", "flanders_slides.pdf"),
-  here("docs", "flanders_slides", "flanders_slides_report.pdf")
+  here("output", "flanders_slides", "flanders_slides.pdf"),
+  here("output", "flanders_slides", "flanders_slides_report.pdf")
 )
 rmarkdown::render_site(output_format = "INBOmd::slides", encoding = "UTF-8")
 
@@ -77,13 +77,13 @@ rmarkdown::render_site(output_format = "INBOmd::epub_book", encoding = "UTF-8")
 setwd(here(base_folder, "inbo_slides"))
 rmarkdown::render_site(output_format = "INBOmd::handouts", encoding = "UTF-8")
 file.rename(
-  here("docs", "inbo_slides", "inbo_slides.pdf"),
-  here("docs", "inbo_slides", "inbo_slides_handout.pdf")
+  here("output", "inbo_slides", "inbo_slides.pdf"),
+  here("output", "inbo_slides", "inbo_slides_handout.pdf")
 )
 rmarkdown::render_site(output_format = "INBOmd::pdf_report", encoding = "UTF-8")
 file.rename(
-  here("docs", "inbo_slides", "inbo_slides.pdf"),
-  here("docs", "inbo_slides", "inbo_slides_rapport.pdf")
+  here("output", "inbo_slides", "inbo_slides.pdf"),
+  here("output", "inbo_slides", "inbo_slides_rapport.pdf")
 )
 rmarkdown::render_site(output_format = "INBOmd::slides", encoding = "UTF-8")
 
