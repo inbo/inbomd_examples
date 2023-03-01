@@ -14,7 +14,7 @@ c("Monday", "Tuesday", "Wednesday")
 # factor
 factor(c("Monday", "Tuesday", "Wednesday"))
 # function
-my_fun <- function(x){
+my_fun <- function(x) {
   cat("my function is", x)
 }
 # data.frame
@@ -46,33 +46,33 @@ for (i in 1:5) {
 
 ```{r gg-mtcars, warning = FALSE}
 ggplot(
-  mtcars, 
+  mtcars,
   aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))
 ) +
-  geom_point() + 
+  geom_point() +
   geom_smooth(method = "lm")
 ```
 
 ## Floating figure
 
 ```{r movie, fig.cap= "Distribution of esophageal cancer in Ille-et-Villaine, France.", message = FALSE}
-ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + 
-  geom_histogram() + 
+ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) +
+  geom_histogram() +
   facet_wrap(~agegp, scales = "free")
 ```
 
 ```{r diamond, fig.cap= "Histrogram of the price of diamonds", message = FALSE, fig.width = 6, fig.height = 4}
-ggplot(diamonds, aes(x = price, fill = cut)) + 
+ggplot(diamonds, aes(x = price, fill = cut)) +
   geom_histogram()
 ```
 
 ```{r gg-mtcars1, fig.cap= "Fuel consumption for 1974 cars in miles per gallon.", dev = "png"}
 ggplot(
-  mtcars, 
+  mtcars,
   aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))
 ) +
-  geom_point() + 
-  geom_smooth(method = "lm") 
+  geom_point() +
+  geom_smooth(method = "lm")
 ```
 
 # Tables
@@ -80,77 +80,52 @@ ggplot(
 ```{r genereer-tabel}
 # functions to generate tables
 digit_table <- function(rows = 20, cols = 10) {
-  data.frame(
-    matrix(
-      rnorm(rows * cols),
-      nrow = rows,
-      ncol = cols
-    ),
-    row.names = paste("row", seq_len(rows))
-  )
+  rnorm(rows * cols) |>
+    matrix(nrow = rows, ncol = cols) |>
+    data.frame(row.names = paste("row", seq_len(rows)))
 }
-random_word <- function(n_letters = 5){
-  paste(
-    sample(letters, size = n_letters, replace = TRUE),
-    collapse = ""
-  )
+random_word <- function(n_letters = 5) {
+  sample(letters, size = n_letters, replace = TRUE) |>
+    paste(collapse = "")
 }
-random_sentence <- function(words = 10, n_letters = 10){
-  paste(
-    sapply(
-      rpois(words, n_letters), 
-      FUN = random_word
-    ),
-    collapse = " "
-  )
+random_sentence <- function(words = 10, n_letters = 10) {
+  rpois(words, n_letters) |>
+    sapply(FUN = random_word) |>
+    paste(collapse = " ")
 }
-text_table <- function(rows = 20, cols = 10, words = 10, n_letters = 5){
-  x <- data.frame(
-    matrix(
-      sapply(
-        rpois(rows * cols, lambda = words), 
-        random_sentence,
-        n_letters
-      ),
-      nrow = rows,
-      ncol = cols
-    )
-  )
+text_table <- function(rows = 20, cols = 10, words = 10, n_letters = 5) {
+  rpois(rows * cols, lambda = words) |>
+    sapply(random_sentence, n_letters) |>
+    matrix(nrow = rows, ncol = cols) |>
+    data.frame() -> x
   colnames(x) <- head(LETTERS, cols)
   return(x)
 }
-generate_table <- function(rows = 20, cols = c(5, 5), words = 10, n_letters = 5){
-  cbind(
-    digit_table(rows = rows, cols = cols[1]),
-    text_table(
-      rows = rows, cols = cols[2], words = words, n_letters = n_letters
+generate_table <- function(
+    rows = 20, cols = c(5, 5), words = 10, n_letters = 5
+) {
+  digit_table(rows = rows, cols = cols[1]) |>
+    cbind(
+      text_table(
+        rows = rows, cols = cols[2], words = words, n_letters = n_letters
+      )
     )
-  )
 }
 ```
 
 ## `kable()`
 
 ```{r kable}
-kable(
-  generate_table(50, c(4, 2), 4, 4), 
-  caption = "Default `kable()` output."
-)
+kable(generate_table(50, c(4, 2), 4, 4), caption = "Default `kable()` output.")
 ```
 
 ```{r kable-markdown}
-kable(
-  generate_table(20, c(4, 3), 5, 4), 
-  digits = 2,
-  format = "markdown"
-)
+kable(generate_table(20, c(4, 3), 5, 4),  digits = 2, format = "markdown")
 ```
 
 ```{r kable-pandoc}
 kable(
-  generate_table(50, c(3, 1), 4, 4), 
-  digits = 3,
-  caption = "pandoc output van `kable()`",
-  format = "pandoc"
+  generate_table(50, c(3, 1), 4, 4), digits = 3, format = "pandoc",
+  caption = "pandoc output van `kable()`"
 )
 ```

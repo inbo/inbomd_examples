@@ -42,19 +42,13 @@ output:
 ```{r setup, include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = TRUE, 
-  eval = TRUE,
-  cache = FALSE,
-  fig.width = 150 / 25.4,
-  fig.height = 100 / 25.4,
-  warning = TRUE,
-  error = TRUE,
-  message = TRUE
+  echo = TRUE, eval = TRUE, cache = FALSE, fig.width = 150 / 25.4,
+  fig.height = 100 / 25.4, warning = TRUE, error = TRUE, message = TRUE
 )
-library(lipsum) # remotes::install_github("inbo/lipsum")
+library(lipsum)
 library(DT)
 library(ggplot2)
-library(INBOtheme) # remotes::install_github("inbo/INBOtheme")
+library(INBOtheme)
 if (interactive()) {
   theme_set(
     theme_inbo(
@@ -68,29 +62,20 @@ if (interactive()) {
     html = {
       opts_chunk$set(dev = "png", dpi = 72)
       theme_set(
-        theme_inbo(
-          base_family = "FlandersArtSans-Regular", 
-          base_size = 12
-        )
+        theme_inbo(base_family = "FlandersArtSans-Regular", base_size = 12)
       )
     },
     latex = {
       opts_chunk$set(dev = "cairo_pdf", dpi = 300)
       theme_set(
-        theme_inbo(
-          base_family = "FlandersArtSans-Regular", 
-          base_size = 9
-        )
+        theme_inbo(base_family = "FlandersArtSans-Regular", base_size = 9)
       )
       update_geom_defaults("point", list(size = 1.5))
     },
     epub3 = {
       opts_chunk$set(dev = "png", dpi = 300)
       theme_set(
-        theme_inbo(
-          base_family = "FlandersArtSans-Regular", 
-          base_size = 12
-        )
+        theme_inbo(base_family = "FlandersArtSans-Regular", base_size = 12)
       )
     }
   )

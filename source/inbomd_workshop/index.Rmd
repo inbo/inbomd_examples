@@ -40,7 +40,7 @@ if (interactive()) {
   theme_set(
     theme_inbo(
       base_family = "Calibri", # "Flanders Art Sans",
-      base_size = 12, 
+      base_size = 12,
       transparent = "plot"
     )
   )
@@ -48,7 +48,7 @@ if (interactive()) {
   theme_set(
     theme_inbo(
       base_family = "Calibri", # "Flanders Art Sans",
-      base_size = 6, 
+      base_size = 6,
       transparent = "plot"
     )
   )
@@ -86,13 +86,16 @@ if (length(find.package("tinytex", quiet = TRUE)) == 0) {
 ## Install `INBOmd`
 
 ```{r eval = FALSE}
-options(repos = c(
-    inbo = 'https://inbo.r-universe.dev',
-    CRAN = 'https://cloud.r-project.org'))
+options(
+  repos = c(
+    inbo = "https://inbo.r-universe.dev",
+    CRAN = "https://cloud.r-project.org"
+  )
+)
 install.packages("INBOmd")
 # setup for tinytex
 tinytex::tlmgr_install(c(
-  'inconsolata', 'times', 'tex', 'helvetic', 'dvips'
+  "inconsolata", "times", "tex", "helvetic", "dvips"
 ))
 tinytex::tlmgr_conf(
   c("auxtrees", "add", system.file("local_tex", package = "INBOmd"))
@@ -353,9 +356,9 @@ Other output formats ignore `\appendix`
 
 ```{r echo = FALSE}
 title <- "## `r selection$title[1]`"
-plot_template <- '```{r mt-{{id}}-plot, fig.cap = selection$caption[1]}
+plot_template <- "```{r mt-{{id}}-plot, fig.cap = selection$caption[1]}
 ggplot(selection, aes(x = year, y = value)) + geom_point()
-```'
+```"
 ```
 
 ````markdown

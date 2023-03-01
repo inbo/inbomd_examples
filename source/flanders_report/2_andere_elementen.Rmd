@@ -23,16 +23,15 @@ mailto:nobody@inbo.be.
 
 ```{r mtcars, echo = FALSE}
 kable(
-  head(mtcars[, 1:5], 10), 
-  booktabs = TRUE,
-  caption = 'First 10 rows of the `mtcars` dataset.'
+  head(mtcars[, 1:5], 10), booktabs = TRUE,
+  caption = "First 10 rows of the `mtcars` dataset."
 )
 ```
 
 ```{r mtcars2, echo = FALSE, fig.cap = "Dynamic table. Will be replaced by a screenshot in case of static format.", out.width="\\textwidth"}
 datatable(
-  mtcars[, 1:5], 
-  caption = 'First 10 rows of the `mtcars` dataset.'
+  mtcars[, 1:5],
+  caption = "First 10 rows of the `mtcars` dataset."
 )
 ```
 

@@ -59,19 +59,13 @@ output:
 ```{r setup, include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = TRUE, 
-  eval = TRUE,
-  cache = FALSE,
-  fig.width = 150 / 25.4,
-  fig.height = 100 / 25.4,
-  warning = TRUE,
-  error = TRUE,
-  message = TRUE
+  echo = TRUE, eval = TRUE, cache = FALSE, fig.width = 150 / 25.4,
+  fig.height = 100 / 25.4, warning = TRUE, error = TRUE, message = TRUE
 )
-library(lipsum) # remotes::install_github("inbo/lipsum")
+library(lipsum)
 library(DT)
 library(ggplot2)
-library(INBOtheme) # remotes::install_github("inbo/INBOtheme")
+library(INBOtheme)
 if (interactive()) {
   theme_set(
     theme_vlaanderen2015(
@@ -86,7 +80,7 @@ if (interactive()) {
       opts_chunk$set(dev = "png", dpi = 72)
       theme_set(
         theme_vlaanderen2015(
-          base_family = "FlandersArtSans-Regular", 
+          base_family = "FlandersArtSans-Regular",
           base_size = 12
         )
       )
@@ -95,7 +89,7 @@ if (interactive()) {
       opts_chunk$set(dev = "cairo_pdf", dpi = 300)
       theme_set(
         theme_vlaanderen2015(
-          base_family = "FlandersArtSans-Regular", 
+          base_family = "FlandersArtSans-Regular",
           base_size = 9
         )
       )
@@ -105,7 +99,7 @@ if (interactive()) {
       opts_chunk$set(dev = "png", dpi = 300)
       theme_set(
         theme_vlaanderen2015(
-          base_family = "FlandersArtSans-Regular", 
+          base_family = "FlandersArtSans-Regular",
           base_size = 12
         )
       )

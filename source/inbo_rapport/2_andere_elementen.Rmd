@@ -35,9 +35,8 @@ Tabellen zijn het eenvoudigst te genereren vanuit een `R data.frame` met de func
 
 ```{r mtcars, echo = FALSE}
 kable(
-  head(mtcars[, 1:5], 10), 
-  booktabs = TRUE,
-  caption = 'Een tabel met de eerste 10 rijen van de `mtcars` dataset.'
+  head(mtcars[, 1:5], 10), booktabs = TRUE,
+  caption = "Een tabel met de eerste 10 rijen van de `mtcars` dataset."
 )
 ```
 
@@ -45,8 +44,8 @@ Je kan de tabellen eveneens dynamisch weergeven met behulp van de `datatable()` 
 
 ```{r mtcars2, echo = FALSE, fig.cap = "Dynamische tabel. Deze wordt automatisch vervangen door een schermafdruk bij formaten die geen dynamische inhoud kunnen weergeven.", out.width="\\textwidth"}
 datatable(
-  mtcars[, 1:5], 
-  caption = 'Een dynamische tabel met de eerste 10 rijen van de `mtcars` dataset.'
+  mtcars[, 1:5],
+caption = "Een dynamische tabel met de eerste 10 rijen van de `mtcars` dataset."
 )
 ```
 

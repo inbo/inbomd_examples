@@ -1,16 +1,15 @@
 ```{r generate_header, echo = FALSE}
 header <- function(words = 4, format = FALSE) {
+  requireNamespace("lipsum", quietly = TRUE)
   sprintf(
     ifelse(
       format,
       "%s '%s' `%s` _%s_ **%s**",
       "%s %s %s %s %s"
     ),
-    sentence(words = words),
-    sentence(words = words),
-    sentence(words = words),
-    sentence(words = words),
-    sentence(words = words)
+    lipsum::sentence(words = words), lipsum::sentence(words = words),
+    lipsum::sentence(words = words), lipsum::sentence(words = words),
+    lipsum::sentence(words = words)
   )
 }
 ```

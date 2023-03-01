@@ -5,19 +5,15 @@
 ### Table
 
 ```{r mtcars, echo = FALSE}
-kable(
-  head(mtcars[, 1:8], 10), 
-  booktabs = TRUE
-)
+kable(head(mtcars[, 1:8], 10), booktabs = TRUE)
 ```
 
 ### Table with caption
 
 ```{r mtcars-cap, echo = FALSE}
 kable(
-  head(mtcars[, 1:8], 10), 
-  booktabs = TRUE,
-  caption = 'A table with the first 10 rows of the `mtcars` dataset.'
+  head(mtcars[, 1:8], 10), booktabs = TRUE,
+  caption = "A table with the first 10 rows of the `mtcars` dataset."
 )
 ```
 
