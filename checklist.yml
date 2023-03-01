@@ -1,0 +1,48 @@
+description: Configuration file for checklist::check_pkg()
+package: no
+allowed:
+  warnings: []
+  notes: []
+required:
+- CITATION
+- checklist
+- filename conventions
+- license
+- lintr
+- spelling
+spelling:
+  default: nl-BE
+  ignore:
+  - .github
+  - LICENSE.md
+  - source/inbo_rapport
+  - source/inbo_rapport_delen
+  - source/inbo_slides
+  other:
+    en-GB:
+    - README.md
+    - source/citation_style/010_making_bib.Rmd
+    - source/citation_style/100_references.Rmd
+    - source/citation_style/index.Rmd
+    - source/flanders_report/0_frontmatter.Rmd
+    - source/flanders_report/1_typografie.Rmd
+    - source/flanders_report/2_andere_elementen.Rmd
+    - source/flanders_report/3_r_code.Rmd
+    - source/flanders_report/index.Rmd
+    - source/flanders_report/y_references.Rmd
+    - source/flanders_report/z_bijlage.Rmd
+    - source/flanders_slides/1_typography.Rmd
+    - source/flanders_slides/2_other_elements.Rmd
+    - source/flanders_slides/3_r_code.Rmd
+    - source/flanders_slides/index.Rmd
+    - source/inbomd_workshop/index.Rmd
+    - source/index.Rmd
+    - source/render_all.R
+    fr-FR:
+    - source/flandre_rapport/0_frontmatter.Rmd
+    - source/flandre_rapport/1_typografie.Rmd
+    - source/flandre_rapport/2_andere_elementen.Rmd
+    - source/flandre_rapport/3_r_code.Rmd
+    - source/flandre_rapport/index.Rmd
+    - source/flandre_rapport/y_references.Rmd
+    - source/flandre_rapport/z_bijlage.Rmd
