@@ -4,6 +4,7 @@
 
 # Samenvatting {-}
 
+<!-- description: start -->
 Een uittreksel over ecologie uit [Wikipedia](https://nl.wikipedia.org/wiki/Ecologie)
 
 Ecologie (ook wel met de spelling: _oecologie_) als wetenschap is een onderdeel van biologie. 
@@ -21,6 +22,7 @@ Het woord ecologie wordt ook gebruikt in andere betekenissen:
 - meer praktisch, betreffende gedrag dat goed is voor de mens en zijn milieu en voor de natuur (zie [ecologische landbouw](https://nl.wikipedia.org/wiki/Ecologische_landbouw) en [EKO-keurmerk](https://nl.wikipedia.org/wiki/EKO-keurmerk)), 
 - gericht op een bepaalde levensbeschouwing (zie [ecologisme](https://nl.wikipedia.org/wiki/Ecologisme)).
 - betreffende omgeving of netwerk van bijvoorbeeld een bedrijf.
+<!-- description: end -->
 
 # Aanbevelingen voor beheer en/of beleid {-}
 

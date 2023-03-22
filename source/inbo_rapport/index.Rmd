@@ -2,16 +2,19 @@
 title: Voorbeeldrapport met INBOmd
 subtitle: Dit is de standaardversie
 author: 
-  - firstname: Thierry
-    name: Onkelinx
+  - name:
+      given: Thierry
+      family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-shortauthor: Onkelinx, T.
-corresponding: thierry.onkelinx@inbo.be
+    affiliation: Research Institute for Nature and Forest (INBO)
+    corresponding: true
 reviewer:
-  - firstname: Floris
-    name: Vanderhaeghe
+  - name:
+      given: Floris
+      family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
+    affiliation: Research Institute for Nature and Forest (INBO)
     orcid: 0000-0002-6378-6229
 github-repo: inbo/inbomd-examples
 year: 2021
@@ -22,6 +25,11 @@ doi: 10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: Het optionele nummer van de opdrachtgever
+funder: Research Institute for Nature and Forest (INBO) 
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: corporate identity; example
+publication_type: report
 embargo: 2099-03-01
 print:
   copies: 10
