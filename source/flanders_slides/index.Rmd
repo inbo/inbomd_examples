@@ -1,10 +1,24 @@
 --- 
 title: "Example presentation using INBOmd"
 author: 
-  - firstname: Thierry
-    name: Onkelinx
+  - name:
+      given: Thierry
+      family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
+    corresponding: true
+    affiliation: Research Institute for Nature and Forest (INBO)
+reviewer:
+  - name:
+      given: Floris
+      family: Vanderhaeghe
+    email: floris.vanderhaeghe@inbo.be
+    orcid: 0000-0002-6378-6229
+    affiliation: Research Institute for Nature and Forest (INBO)
+funder: Research Institute for Nature and Forest (INBO)
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: INBOmd; examples; slides
 subtitle: "Here comes the optional subtitle"
 location: "Here comes the optional location"
 institute: "Here comes the optional affilitation"
@@ -15,7 +29,6 @@ slide_level: 3
 cover_photo: "trees-1036958.jpg"
 flandersfont: TRUE
 
-corresponding: thierry.onkelinx@inbo.be
 embargo: 2020-01-01
 
 site: bookdown::bookdown_site
