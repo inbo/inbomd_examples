@@ -8,7 +8,7 @@ author:
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
     affiliation: Research Institute for Nature and Forest (INBO)
-    corresponding: true
+    corresponding: TRUE
 reviewer:
   - name:
       given: Floris
