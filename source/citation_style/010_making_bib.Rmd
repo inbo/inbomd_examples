@@ -9,7 +9,7 @@ Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zot
 
 Indien 'and' voorkomt in een publisher-veld waarbij dit letterlijk moet worden getoond, dan moet dat met **een extra paar `{}`** worden opgelost, bv. `{ALLCAPS {and} Title Case Publishing}` of `{{ALLCAPS and Title Case Publishing}}`.
 
-Meer info: zie de commit message van [381aa28](https://github.com/inbo/inbomd_examples/commit/381aa28), waar dit is gebeurd op het `INBOmd.bib` bestand:
+Meer info: zie de commit message van [381aa28](https://github.com/inbo/inbomd_examples/commit/381aa28), waar dit is gebeurd op het `inbomd.bib` bestand:
 
 > By putting an extra pair of curly braces around 'and',
 this issue was solved.

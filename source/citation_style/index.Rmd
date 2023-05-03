@@ -26,7 +26,7 @@ cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pex
 
 link-citations: TRUE
 site: bookdown::bookdown_site
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 
 style: INBO
 lof: FALSE
@@ -130,7 +130,7 @@ Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zot
     
 ## Bijzonderheden in de Zotero addon 'Better BibTeX'
 
-Bijzonderheden bij import/export van `INBOmd.bib` naar/van Zotero met addon 'Better BibTeX'
+Bijzonderheden bij import/export van `inbomd.bib` naar/van Zotero met addon 'Better BibTeX'
 
 ### Export van article met page-range 'x-y'
 

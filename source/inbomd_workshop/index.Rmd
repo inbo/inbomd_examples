@@ -34,7 +34,7 @@ corresponding: thierry.onkelinx@inbo.be
 embargo: 2020-01-01
 
 site: bookdown::bookdown_site
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 
 output:
   INBOmd::slides: default

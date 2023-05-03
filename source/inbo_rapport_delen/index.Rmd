@@ -38,7 +38,7 @@ split_by: section+number
 
 site: bookdown::bookdown_site
 link-citations: FALSE
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 
 output:
   INBOmd::pdf_report: default

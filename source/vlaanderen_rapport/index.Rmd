@@ -54,7 +54,7 @@ lang: nl
 
 site: bookdown::bookdown_site
 link-citations: TRUE
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 
 output:
   INBOmd::gitbook: default
