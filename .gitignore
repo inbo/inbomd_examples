@@ -1,10 +1,19 @@
 *.bak
+*.dbf
+*.doc*
+*.gddoc
+*.gdsheet
+*.gpkg
 *.html
 *.log
+*.mdb
 *.nav
+*.shp*
+*.shx
 *.snm
 *.toc
 *.vrb
+*.xls*
 *_files
 .DS_Store
 .RData
@@ -16,4 +25,5 @@ cover.png
 cover.txt
 css
 docs
+libs
 output
