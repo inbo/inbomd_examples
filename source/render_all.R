@@ -1,6 +1,6 @@
 stopifnot(
   package_version(installed.packages()["INBOmd", "Version"]) >=
-    package_version("0.5.3")
+    package_version("0.6.0")
 )
 library(here)
 base_folder <- here("source")
