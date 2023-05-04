@@ -1,4 +1,7 @@
 <!-- badges: start -->
+[![website](https://img.shields.io/badge/website-https://inbo.github.io/inbomd_examples-c04384)](https://inbo.github.io/inbomd_examples)
+![GitHub](https://img.shields.io/github/license/inbo/inbomd_examples)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/inbo/inbomd_examples/check-project)
 <!-- badges: end -->
 
 # Example documents to the INBOmd R package
