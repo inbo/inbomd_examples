@@ -86,18 +86,25 @@ if (length(find.package("tinytex", quiet = TRUE)) == 0) {
 ## Install `INBOmd`
 
 ```{r eval = FALSE}
-options(repos = c(
-    inbo = 'https://inbo.r-universe.dev',
-    CRAN = 'https://cloud.r-project.org'))
-install.packages("INBOmd")
-# setup for tinytex
-tinytex::tlmgr_install(c(
-  'inconsolata', 'times', 'tex', 'helvetic', 'dvips'
-))
+# installation from inbo.r-universe
+install.packages("INBOmd", repos = "https://inbo.r-universe.dev")
+
+## alternative: installation from github
+#if (!"remotes" %in% rownames(installed.packages())) {
+#  install.packages("remotes")
+#}
+#remotes::install_github("inbo/INBOmd", dependencies = TRUE)
+
+# add the local latex package contained in INBOmd to the TinyTeX install 
 tinytex::tlmgr_conf(
   c("auxtrees", "add", system.file("local_tex", package = "INBOmd"))
 )
-tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
+
+# install some other needed latex packages 
+tinytex::tlmgr_install(c(
+  "inconsolata", "times", "tex", "helvetic", "dvips", "hyphen-dutch",
+  "hyphen-french"
+))
 ```
 
 # Getting started
