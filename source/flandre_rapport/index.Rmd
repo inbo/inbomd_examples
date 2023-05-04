@@ -36,15 +36,15 @@ client:
   - Havenlaan 88 bus 73
   - 1000 Brussel
   - https://www.vlaanderen.be/inbo/en-gb
-client_logo: logo.jpg
+client_logo: media/logo.jpg
 cooperation:
   - INBO Brussel
   - Herman Teirlinckgebouw
   - Havenlaan 88 bus 73
   - 1000 Brussel
   - https://www.vlaanderen.be/inbo/en-gb
-cooperation_logo: logo.jpg
-cover: cover.pdf # link naar pdf met cover
+cooperation_logo: media/logo.jpg
+cover: media/cover.pdf # link naar pdf met cover
 doi: 10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999

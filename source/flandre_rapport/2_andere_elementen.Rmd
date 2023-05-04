@@ -36,7 +36,7 @@ datatable(mtcars[, 1:5], caption = "First 10 rows of the `mtcars` dataset.")
 ## Static figure {#s:figuur-invoegen}
 
 ```{r koolrabi2, fig.cap = "Figure caption", echo = FALSE}
-include_graphics("kohlrabi-2266665-klein.jpg")
+include_graphics("media/kohlrabi-2266665-klein.jpg")
 ```
 
 # Equations {#h:formules}

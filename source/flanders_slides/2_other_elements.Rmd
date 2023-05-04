@@ -22,19 +22,19 @@ kable(
 ### Figure with text width
 
 ```{r forest, echo = FALSE, out.width="\\textwidth"}
-include_graphics("trees-1036958.jpg")
+include_graphics("media/trees-1036958.jpg")
 ```
 
 ### Figure with text height
 
 ```{r forest2, echo = FALSE, out.width="\\textheight"}
-include_graphics("trees-1036958.jpg")
+include_graphics("media/trees-1036958.jpg")
 ```
 
 ### Figure with caption
 
 ```{r forest3, fig.cap = "Picture of a forest, half text width", echo = FALSE, out.width="0.5\\textwidth"}
-include_graphics("trees-1036958.jpg")
+include_graphics("media/trees-1036958.jpg")
 ```
 
 ## Mathematical formulas

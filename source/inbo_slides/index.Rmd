@@ -24,7 +24,7 @@ location: "Hier komt optioneel de plaats"
 institute: "Hier komt optioneel de affiliatie"
 toc_name: "De naam van de inhoudstafel"
 slide_level: 3
-cover_photo: "trees-1036958.jpg"
+cover_photo: "media/trees-1036958.jpg"
 flandersfont: TRUE
 
 corresponding: thierry.onkelinx@inbo.be

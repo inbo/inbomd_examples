@@ -24,21 +24,21 @@ keywords: corporate identity; example
 year: 2021
 cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
 cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
-cover: cover.pdf # link naar pdf met cover
+cover: media/cover.pdf # link naar pdf met cover
 client:
   - INBO Brussel
   - VAC Brussel ‐ Herman Teirlinck
   - Havenlaan 88 bus 73
   - 1000 Brussel
   - https://www.vlaanderen.be/inbo
-client_logo: logo.jpg
+client_logo: media/logo.jpg
 cooperation:
   - INBO Brussel
   - VAC Brussel ‐ Herman Teirlinck
   - Havenlaan 88 bus 73
   - 1000 Brussel
   - https://www.vlaanderen.be/inbo
-cooperation_logo: logo.jpg
+cooperation_logo: media/logo.jpg
 doi: 10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999

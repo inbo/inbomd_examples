@@ -21,7 +21,7 @@ community: inbo
 keywords: INBOmd; workshop
 toc: FALSE
 slide_level: 2
-cover_photo: e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
+cover_photo: media/e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
 flandersfont: TRUE
 cover_horizontal: TRUE
 

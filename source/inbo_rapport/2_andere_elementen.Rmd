@@ -101,11 +101,11 @@ De bestandsgrootte daalde met een factor van 2.9 MB naar 295 kB.
 Hierdoor wordt het finale rapport veel compacter, zowel in pdf als HTML formaat.
 
 ```{r koolrabi, fig.cap = "Koolrabi, originele afmetingen", echo = FALSE}
-include_graphics("kohlrabi-2266665.jpg")
+include_graphics("media/kohlrabi-2266665.jpg")
 ```
 
 ```{r koolrabi2, fig.cap = "Koolrabi, verkleind", echo = FALSE}
-include_graphics("kohlrabi-2266665-klein.jpg")
+include_graphics("media/kohlrabi-2266665-klein.jpg")
 ```
 
 ## Plaatsing van tabellen en figuren
