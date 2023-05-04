@@ -1,22 +1,33 @@
 --- 
 title: "Creating a report using INBOmd"
 author: 
-  - firstname: Thierry
-    name: Onkelinx
+  - name:
+      given: Thierry
+      family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
+    affiliation: Research Institute fo Nature and Forest (INBO)
+    corresponding: true
 toc: FALSE
 slide_level: 2
 cover_photo: e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
 flandersfont: TRUE
 cover_horizontal: TRUE
-
+reviewer:
+  - name:
+      given: reviewer_Firstname
+      family: reviewer_Lastname
+    email: "reviewer.firstname.lastname@inbo.be"
+    orcid: 0000-0002-1825-0097
+    affiliation: Research Institute for Nature and Forest (INBO)
 lang: en
 style: INBO
 
 aspect: 4:3
-
-corresponding: thierry.onkelinx@inbo.be
+funder: Research Institute for Nature and Forest (INBO)
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: workshop
 embargo: 2020-01-01
 
 site: bookdown::bookdown_site
@@ -109,7 +120,7 @@ tinytex::tlmgr_install(c(
 
 # Getting started
 
-## Important things to known about bookdown
+## Important things to know about bookdown
 
 - There must be at least a file named `index.Rmd`
     - This contains the YAML header
@@ -119,10 +130,10 @@ tinytex::tlmgr_install(c(
     - Add only a YAML to the `index.Rmd`
     - All `.Rmd` files will be glued into a single `.Rmd` when rendering the document
         - Except files starting with `_`
-        - Their order: `index.Rmd` + other files in alphabethical order
+        - Their order: `index.Rmd` + other files in alphabetical order
     - Pro tip: start the filenames with a number indicating the order
     
-## Starting a new document
+## Starting a new document (traditional way)
 
 - Open RStudio
 - Choose File > New File > R Markdown
@@ -133,6 +144,22 @@ tinytex::tlmgr_install(c(
 - Choose File > New Project > Existing directory, select `name` and press 'Create project'
 - Open `_bookdown.yml` in this project and update `book_filename` and `output_dir`
 - Open `index.Rmd` in this project and update the YAML header
+
+## Starting a new document (using INBOmd::create_report())
+
+- Open RStudio
+```{r eval = FALSE}
+INBOmd::create_report(shortname = "test") #fill in a shortname
+``` 
+- This function will then ask you to enter in the console:
+  - a title
+  - an optional subtitle
+  - (corresponding) author (from a saved list or new persons)
+  - a reviewer
+  - language
+  - keywords
+  - optional client / cooperation
+  
 
 ## Coverting an existing RMarkdown document
 
