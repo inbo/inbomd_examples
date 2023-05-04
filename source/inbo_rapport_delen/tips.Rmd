@@ -1,1 +1,1 @@
-# (PART) Tips and tricks {-}
+# (PART) Tips en tricks {-}

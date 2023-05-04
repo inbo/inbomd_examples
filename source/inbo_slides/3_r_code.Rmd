@@ -2,7 +2,7 @@
 
 ## Code
 
-### Chunks + output {.allowframebreaks}
+### Code blok en output {.allowframebreaks}
 
 ```{r datasets, error = TRUE, message = TRUE}
 # logical
@@ -58,7 +58,11 @@ life_exp <- sprintf(
 )
 ```
 
-R output mengen met gewoon tekst is vrij eenvoudig. Bijvoorbeeld $1 + 1 = `r 1+1`$. Zorg er voor dat je in de tekst een enkel en eenvoudig R commando hoeft gebruiken. Heb je een complexere berekening nodig dan doe je die op voorhand. Bijvoorbeeld: de levensverwachting in de USA is `r life_exp`.
+R output mengen met gewoon tekst is vrij eenvoudig.
+Bijvoorbeeld $1 + 1 = `r 1+1`$.
+Zorg er voor dat je in de tekst een enkel en eenvoudig R commando hoeft gebruiken.
+Heb je een complexere berekening nodig dan doe je die op voorhand.
+Bijvoorbeeld: de levensverwachting in de Verenigde Staten is `r life_exp`.
 
 ## Figuren
 
@@ -85,7 +89,7 @@ ggplot(
   geom_point() + geom_smooth(method = "lm")
 ```
 
-### Figuur met enkelvoudige kleurgradient
+### Figuur met enkelvoudige kleurengradiënt
 
 ```{r gradient, echo = FALSE}
 pp <- function(n) {
@@ -101,7 +105,7 @@ ggplot(pp(20), aes(x = x, y = y, fill = z)) +
   scale_fill_gradient()
 ```
 
-### Figuur met kleurgradient met middenkleur
+### Figuur met kleurengradiënt met middenkleur
 
 ```{r gradient2, echo = FALSE}
 ggplot(pp(20), aes(x = x, y = y, fill = z)) +
@@ -188,7 +192,7 @@ kable(
 )
 ```
 
-### Booktabs `kable()`
+### `Booktabs` `kable()`
 
 ```{r kable-booktabs, echo = FALSE}
 kable(
@@ -198,7 +202,7 @@ kable(
 )
 ```
 
-### longtable `kable()`
+### `longtable` `kable()`
 
 ```{r kable-longtable, echo = FALSE}
 kable(

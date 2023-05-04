@@ -14,7 +14,7 @@ header <- function(words = 4, format = FALSE) {
 }
 ```
 
-# Kopstijlen: niveau 1: `r header(4)` {#koppen}
+# Stijlen voor koppen: niveau 1: `r header(4)` {#koppen}
 
 `r paragraph(n = 3)`
 
@@ -44,7 +44,7 @@ Zie sectie \@ref(s:onderlijnd).
 
 `r paragraph(n = 3)`
 
-# Kopstijlen zonder nummer: niveau 1: `r header(4)` {- #koppen-zonder-nummer}
+# Stijlen voor koppen zonder nummer: niveau 1: `r header(4)` {- #koppen-zonder-nummer}
 
 `r paragraph(n = 3)`
 
@@ -69,7 +69,7 @@ Deels om te tonen hoe ze er uitzien, deels om eventuele problemen op te sporen m
 
 ## Normaal
 
-ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
+ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789  <!-- spell-check: ignore -->
 
 `r paragraph(n = 1)`
 
@@ -77,7 +77,7 @@ Aanhalingstekens: "dubbele", 'enkele'
 
 ## Vet
 
-**ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
+**ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789** <!-- spell-check: ignore -->
 
 **`r paragraph(n = 1)`**
 
@@ -85,7 +85,7 @@ Aanhalingstekens: "dubbele", 'enkele'
 
 ## Cursief
 
-_ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
+_ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_ <!-- spell-check: ignore -->
 
 _`r paragraph(n = 1)`_
 
@@ -93,7 +93,7 @@ _Aanhalingstekens: "dubbele", 'enkele'_
 
 ## Vet en cursief
 
-**_ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
+**_ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_** <!-- spell-check: ignore -->
   
 _**`r paragraph(n = 1)`**_
 
@@ -101,7 +101,7 @@ _**Aanhalingstekens: "dubbele", 'enkele'**_
 
 ## Met vaste tekenbreedte {#s:vaste-tekenbreedte}
 
-`ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
+`ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789` <!-- spell-check: ignore -->
 
 ```{r echo = FALSE, results = "asis"}
 cat("`", paragraph(), "`", sep = "")
@@ -109,7 +109,7 @@ cat("`", paragraph(), "`", sep = "")
 
 `Aanhalingstekens: "dubbele", 'enkele'`
 
-**`ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
+**`ABCDEFHIJKLMNOPQRSTUVWXYZ abcdefghijklmonopqrstuvwxyz €$£ @&#§µ^ ()[]{}|²³<>/\\\_\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`** <!-- spell-check: ignore -->
 
 ```{r echo = FALSE, results = "asis"}
 cat("**`", paragraph(), "`**", sep = "")
@@ -131,10 +131,12 @@ cat("**`", paragraph(), "`**", sep = "")
 
 ## Onderscheiden van tekens
 
+<!-- spell-check: ignore:start -->
 |                                        | normaal | vet | cursief | vet en cursief | vaste tekenbreedte |
 | -------------------------------------- | -- | -- | -- | -- | -- |
 | Kleine letter L versus hoofdletter i   | lI | **lI** | _lI_ | **_lI_** | `lI` **`lI`** |
 | Grote letter O versus cijfer 0         | O0 | **O0** | _O0_ | **_O0_** | `O0` **`O0`** |
+ <!-- spell-check: ignore:end -->
 
 # Opsommingen
 
@@ -175,22 +177,22 @@ cat("**`", paragraph(), "`**", sep = "")
 Item A
   ~ `r paragraph()`
   
-Longer item title B
+Langer item met titel B
   ~ `r paragraph()`
   
-    Item B1
+    Item B1 <!-- spell-check: ignore -->
       ~ `r paragraph()`
 
-        Item B1a
+        Item B1a <!-- spell-check: ignore -->
           ~ `r paragraph()`
 
-        Item B1b
+        Item B1b <!-- spell-check: ignore -->
           ~ `r paragraph()`
 
-            Item B1b1
+            Item B1b1 <!-- spell-check: ignore -->
               ~ `r paragraph()`
               
-    Item B2
+    Item B2 <!-- spell-check: ignore -->
       ~ `r paragraph()`
 
 Item C
@@ -220,11 +222,18 @@ Item D
         1. Item c II
 - Item 4
 
-
 # Kaders
 
-De eenvoudigste manier om kaders in te voegen in RStudio is in de werkbalk het drop-down menu "Addins" te kiezen. 
-Vervolgens kies je in de lijst onder "INBOmd" _insert "block"_ (standaard kader), _insert "exampleblock"_ (kader met voorbeeld)  _insert "alertblock"_ (kader met waarschuwing).
+De eenvoudigste manier om kaders in te voegen in RStudio is in de werkbalk het uitklapbaar menu
+"Addins" <!-- spell-check: ignore -->
+te kiezen. 
+Vervolgens kies je in de lijst onder "INBOmd"
+_insert "block"_ <!-- spell-check: ignore -->
+(standaard kader),
+_insert "exampleblock"_ <!-- spell-check: ignore -->
+(kader met voorbeeld)
+_insert "alertblock"_ <!-- spell-check: ignore -->
+(kader met waarschuwing).
 
 ## Standaard kader
 

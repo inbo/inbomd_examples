@@ -1,37 +1,59 @@
-# Kruisverwijzigingen {#h:kruisverwijzing}
+# Kruisverwijzingen {#h:kruisverwijzing}
 
 ## Interne kruisverwijzingen
 
-Kruisverwijzingen zijn eenvoudig te maken door te verwijzen naar de bijhorende label, bijvoorbeeld figuur \@ref(fig:koolrabi). Doordat we verwijzen naar een uniek label, kan de software voor ons automatisch het juiste nummer berekenen. De cijfers zijn een klikbare link. Je kan kruisverwijzingen maken naar:
+Kruisverwijzingen zijn eenvoudig te maken door te verwijzen naar de bijhorende label, bijvoorbeeld figuur \@ref(fig:koolrabi).
+Doordat we verwijzen naar een uniek label, kan de software voor ons automatisch het juiste nummer berekenen.
+De cijfers zijn een klikbare link.
+Je kan kruisverwijzingen maken naar:
 
 - koppen (\@ref(h:kruisverwijzing), \@ref(s:figuur-invoegen))
 - tabellen (\@ref(tab:mtcars))
 - figuren (\@ref(fig:koolrabi))
-- formules (\@ref(eq:som)^[Het nummer van een formule krijgt automatisch haakjes. Zie ook §\@ref(s:formule-nummer)])
+- formules (\@ref(eq:som)^[Het nummer van een formule krijgt automatisch haakjes.
+Zie ook §\@ref(s:formule-nummer)])
 
-Je voegt een label aan een kop toe door op het einde `{#mijn-label}` te plaatsen. Hierbij vervang je 'mijn-label' door iets zinvol en eenvoudig te onthouden. Het is handig om steeds een prefix te gebruiken. Bijvoorbeeld `h:` voor een hoofdstuk, `s:` voor een sectie. Belangrijk om weten is dat elk label uniek moet zijn binnen het volledige document. Gebruik enkel letters, cijfers, `:`, `/` en `-`. Andere tekens als spaties of lage streepjes (`_`) zijn niet toegestaan.
+Je voegt een label aan een kop toe door op het einde `{#mijn-label}` te plaatsen.
+Hierbij vervang je `mijn-label` door iets zinvol en eenvoudig te onthouden.
+Het is handig om steeds een prefix te gebruiken.
+Bijvoorbeeld `h:` voor een hoofdstuk, `s:` voor een sectie.
+Belangrijk om weten is dat elk label uniek moet zijn binnen het volledige document.
+Gebruik enkel letters, cijfers, `:`, `/` en `-`.
+Andere tekens als spaties of lage streepjes (`_`) zijn niet toegestaan.
 
 ## Externe verwijzingen
 
-Naakte URLs moeten met het gebruikte protocol beginnen, bv. http://www.inbo.be. Relevante protocols zijn http:// en https:// voor websites, ftp:// voor ftp sites, mailto: voor email bv. mailto:nobody@inbo.be. 
+Naakte URLs moeten met het gebruikte protocol beginnen, bijvoorbeeld https://www.inbo.be.
+Relevante protocols zijn `http://` en `https://` voor websites, `ftp://` voor ftp sites, `mailto:` voor email bijvoorbeeld `mailto:nobody@inbo.be`.
 
-We kunnen de URL tevens achter een link tekst plaatsen bv [Google](http://google.be). We kunnen deze techniek eveneens gebruiken voor de andere protocols, bv. [e-mail](mailto:nobody@inbo.be).
+We kunnen de URL tevens achter een link tekst plaatsen bv [Google](https://google.be).
+We kunnen deze techniek eveneens gebruiken voor de andere protocols, bijvoorbeeld [e-mail](mailto:nobody@inbo.be).
 
 ## Extra formattering
 
-Voetnoten^[`r paragraph()`] zijn eenvoudig toe te voegen^[`r sentence()`]. Je voegt `^[gewenste voetnoot tekst]` in op de plaats waar een voetnoot dient te verschijnen.
+Voetnoten^[`r paragraph()`] zijn eenvoudig toe te voegen^[`r sentence()`].
+Je voegt `^[gewenste voetnoot tekst]` in op de plaats waar een voetnoot dient te verschijnen.
 
-Terugkerende voetnoten kun je een label geven en éénmalig in de broncode definiëren.[^yogi] Je kunt ze dan verschillende keren[^yogi] gebruiken. Let wel: er wordt telkens een nieuwe voetnoot met een nieuw nummer aangemaakt.
+Terugkerende voetnoten kun je een label geven en éénmalig in de broncode definiëren.[^yogi] Je kunt ze dan verschillende keren[^yogi] gebruiken.
+Let wel: er wordt telkens een nieuwe voetnoot met een nieuw nummer aangemaakt.
 
 [^yogi]: `r sentence()`
 
-Tekst in onderschrift krijgt je door een `~` te plaatsen voor en achter de tekst die in onderschrift moet komen. Bijvoorbeeld: `H~2~SO~4~` wordt H~2~SO~4~. Bovenschrift krijg je op een gelijkaardige manier door `^` te gebruiken. Bij voorbeeld `Fe^2+^` wordt Fe^2+^. Als alternatief kan je ook wiskundige formules^[Zie hoofdstuk \@ref(h:formules)] gebruiken. Bijvoorbeeld: `$H_2SO_4$` wordt $H_2SO_4$ en `$Fe^{2+}$` wordt $Fe^{2+}$. Je kan ook dingen doen als `$^3_2He$` ($^3_2He$) terwijl `^3^~2~He` (^3^~2~He) niet het gewenste resultaat geeft.
+Tekst in onderschrift krijgt je door een `~` te plaatsen voor en achter de tekst die in onderschrift moet komen.
+Bijvoorbeeld: `H~2~SO~4~` wordt H~2~SO~4~.
+Bovenschrift krijg je op een gelijkaardige manier door `^` te gebruiken.
+Bijvoorbeeld `Fe^2+^` wordt Fe^2+^. <!-- spell-check: ignore -->
+Als alternatief kan je ook wiskundige formules^[Zie hoofdstuk \@ref(h:formules)] gebruiken.
+Bijvoorbeeld: `$H_2SO_4$` wordt $H_2SO_4$ en `$Fe^{2+}$` wordt $Fe^{2+}$.
+Je kan ook dingen doen als `$^3_2He$` ($^3_2He$) terwijl `^3^~2~He` (^3^~2~He) niet het gewenste resultaat geeft.
 
 # Figuren en tabellen
 
 ## Tabellen
 
-Tabellen zijn het eenvoudigst te genereren vanuit een `R data.frame` met de functie `kable()`. De naam van de chunk met prefix `tab:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen. Bijschriften plaats je in `caption`.
+Tabellen zijn het eenvoudigst te genereren vanuit een `R data.frame` met de functie `kable()`.
+De naam van de `chunk` met prefix `tab:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen.
+Bijschriften plaats je in `caption`.
 
 ```{r mtcars, echo = FALSE}
 kable(
@@ -40,7 +62,11 @@ kable(
 )
 ```
 
-Je kan de tabellen eveneens dynamisch weergeven met behulp van de `datatable()` functie uit het `DT` package. De HTML versie van het rapport zal dan een interactieve versie van de tabel bevatten. Hier kan de gebruiker eenvoudig zoeken, sorteren, .... Die functionaliteit is uiteraard niet beschikbaar in pdf formaat. Daarom wordt in de pdf automatisch een schermafdruk gemaakt (figuur \@ref(fig:mtcars2)).
+Je kan de tabellen eveneens dynamisch weergeven met behulp van de `datatable()` functie uit het `DT` package.
+De HTML versie van het rapport zal dan een interactieve versie van de tabel bevatten.
+Hier kan de gebruiker eenvoudig zoeken, sorteren, ...
+Die functionaliteit is uiteraard niet beschikbaar in pdf formaat.
+Daarom wordt in de pdf automatisch een schermafdruk gemaakt (figuur \@ref(fig:mtcars2)).
 
 ```{r mtcars2, echo = FALSE, fig.cap = "Dynamische tabel. Deze wordt automatisch vervangen door een schermafdruk bij formaten die geen dynamische inhoud kunnen weergeven.", out.width="\\textwidth"}
 datatable(
@@ -52,15 +78,27 @@ caption = "Een dynamische tabel met de eerste 10 rijen van de `mtcars` dataset."
 
 ## Figuren {#s:figuur-invoegen}
 
-Figuren zijn het eenvoudigst toe te voegen als een R chunk. De naam van de chunk met prefix `fig:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen. Bijschriften plaats je in `fig.cap`.
+Figuren zijn het eenvoudigst toe te voegen als een R `chunk`.
+De naam van de `chunk` met prefix `fig:` kan je vervolgens gebruiken als label om naar de figuur te verwijzen.
+Bijschriften plaats je in `fig.cap`.
 
-De afmetingen in een figuur zijn in principe gebaseerd op de afmetingen zoals gedefineerd in het bestand: het aantal pixels gedeeld door de resolutie.
+De afmetingen in een figuur zijn in principe gebaseerd op de afmetingen zoals gedefinieerd in het bestand: het aantal pixels gedeeld door de resolutie.
 
 - 600 pixels breed / 600 dpi = 1 inch (25,4 mm)
 - 600 pixels breed / 300 dpi = 2 inch (50,8 mm)
 - 600 pixels breed / 72 dpi = 8.33 inch (211.7 mm)
 
-Figuur \@ref(fig:koolrabi) is 4896 pixels breed en 3264 pixels hoog. Standaard gebruikt de huisstijl een resolutie van 300 dpi. De figuur in de pdf wordt dan 41.5 cm breed en 27.6 cm hoog, hetgeen uiteraard niet op A4 past. In de HTML versie wordt een te grootte figuur automatisch verkleint tot de breedte van de tekst. Er zijn trukjes om de figuur in pdf automatisch te verkleinen, doch dan werkt de HTML output niet meer zo goed. De beste manier is de figuur zelf te verkleinen tot het gewenste formaat. Een bijkomend voordeel is dat de bestandsgrootte enorm verkleind. Figuur \@ref(fig:koolrabi2) geeft dezelfde foto die vooraf met externe software geschaald werd naar 1181 x 787 pixels. Dat komt overeen met 10 cm breed bij een resolutie van 300 dpi. De bestandsgrootte daalde met een factor van 2.9 MB naar 295 kB. Hierdoor wordt het finale rapport veel compacter, zowel in pdf als HTML formaat.
+Figuur \@ref(fig:koolrabi) is 4896 pixels breed en 3264 pixels hoog.
+Standaard gebruikt de huisstijl een resolutie van 300 dpi.
+De figuur in de pdf wordt dan 41.5 cm breed en 27.6 cm hoog, hetgeen uiteraard niet op A4 past.
+In de HTML versie wordt een te grootte figuur automatisch verkleint tot de breedte van de tekst.
+Er zijn truukjes om de figuur in pdf automatisch te verkleinen, doch dan werkt de HTML output niet meer zo goed.
+De beste manier is de figuur zelf te verkleinen tot het gewenste formaat.
+Een bijkomend voordeel is dat de bestandsgrootte enorm verkleind.
+Figuur \@ref(fig:koolrabi2) geeft dezelfde foto die vooraf met externe software geschaald werd naar 1181 x 787 pixels.
+Dat komt overeen met 10 cm breed bij een resolutie van 300 dpi.
+De bestandsgrootte daalde met een factor van 2.9 MB naar 295 kB.
+Hierdoor wordt het finale rapport veel compacter, zowel in pdf als HTML formaat.
 
 ```{r koolrabi, fig.cap = "Koolrabi, originele afmetingen", echo = FALSE}
 include_graphics("kohlrabi-2266665.jpg")
@@ -72,21 +110,43 @@ include_graphics("kohlrabi-2266665-klein.jpg")
 
 ## Plaatsing van tabellen en figuren
 
-Belangrijk om weten is dat, in het geval van het pdf formaat, de software zelf een zo goed mogelijke plaats zoekt voor de zogenaamde floats (tabellen en figuren). Dat kan uiteraard soms de mist in gaan. Vooral wanneer er weinig tekst is in verhouding tot de figuren. In die gevallen kan het zijn dat de figuren pas in een volgende _subsubsection_ (kop 4), _subsection_ (kop 3) of zelfs _section_ (kop 2) getoond worden. De figuren en tabellen zullen nooit in een volgend hoofdstuk terecht komen. Wanneer je eerst een floating tabel invoegt (bijv. table \@ref(tab:kable)) en iets later een lokale tabel (bijv. tabel \@ref(tab:kable-longtable)), dan kan het gebeuren dat de floating tabel pas na de lokale tabel getoond wordt. Het volgnummer hangt echter af van de plaatsing in de code, niet de finale plaats in het document. 
+Belangrijk om weten is dat, in het geval van het pdf formaat, de software zelf een zo goed mogelijke plaats zoekt voor de zwevende tabellen en figuren.
+Dat kan uiteraard soms de mist in gaan.
+Vooral wanneer er weinig tekst is in verhouding tot de figuren.
+In die gevallen kan het zijn dat de figuren pas in een volgende `subsubsection` (kop 4), `subsection` (kop 3) of zelfs `section` (kop 2) getoond worden.
+De figuren en tabellen zullen nooit in een volgend hoofdstuk terecht komen.
+Wanneer je eerst een zwevende tabel invoegt (bijvoorbeeld tabel \@ref(tab:kable)) en iets later een lokale tabel (bijvoorbeeld tabel \@ref(tab:kable-longtable)), dan kan het gebeuren dat de zwevende tabel pas na de lokale tabel getoond wordt.
+Het volgnummer hangt echter af van de plaatsing in de code, niet de finale plaats in het document.
 
-De beste optie om hier iets aan te doen, is te zorgen voor voldoende tekst ;-). Als het probleem zich enkel lokaal voordoet kan je op die plaats volgende code opnemen.
+De beste optie om hier iets aan te doen, is te zorgen voor voldoende tekst ;-).
+Als het probleem zich enkel lokaal voordoet kan je op die plaats volgende code opnemen.
 
 ```
 \FloatBarrier
 ```
 
-Op dat moment worden eerst alle hangende figuren en tabellen geplaatst vooraleer verder te gaan met de tekst. Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke _section_ (kop 2). Je kan dit ook doen met _subsection_ (kop 3) en _subsubsection_ (kop 4). Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen. `\FloatBarrier` heeft enkel invloed op de pdf versie van het rapport.
+Op dat moment worden eerst alle hangende figuren en tabellen geplaatst vooraleer verder te gaan met de tekst.
+Door in de YAML: `floatbarrier: section` op te nemen wordt automatisch een `\FloatBarrier` geplaatst voor elke `section` (kop 2).
+Je kan dit ook doen met `subsection` (kop 3) en `subsubsection` (kop 4).
+Daarnaast kan je nog steeds ad hoc `\FloatBarrier` toevoegen.
+`\FloatBarrier` heeft enkel invloed op de pdf versie van het rapport.
 
 # Wiskundige formules {#h:formules}
 
-## In-lijn formules
+## Formules tussen de tekst
 
-In-lijn formules worden opgenomen binnen de tekst van de alinea. Bijvoorbeeld $P(y < Y|\theta) = \alpha$. Dit werkt het best met beknopte formules. Formules die een zekere hoogte nodig hebben zullen in de mate van het mogelijke aangepast worden om zo min mogelijk hoogte in te nemen. Een voorbeeld hier van is $\bar{X} = \sum_{i = 1}^NX_i$. Hierbij zijn $i = 1$ en $N$ naast $\sum$ geplaatst in plaats van er boven. Dat lukt uiteraard niet altijd. Breuken zijn daar een goed voorbeeld van: $\frac{X}{Y}$. In dat geval wordt het lettertype verkleind. Hetgeen de leesbaarheid niet bevordert. Bij complexe formule als $\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}$ is het noodzakelijk om tevens de regelafstand te vergroten. In dergelijke gevallen is het beter om losstaande formules te gebruiken.
+Deze formules worden opgenomen binnen de tekst van de alinea.
+Bijvoorbeeld $P(y < Y|\theta) = \alpha$.
+Dit werkt het best met beknopte formules.
+Formules die een zekere hoogte nodig hebben zullen in de mate van het mogelijke aangepast worden om zo min mogelijk hoogte in te nemen.
+Een voorbeeld hier van is $\bar{X} = \sum_{i = 1}^NX_i$.
+Hierbij zijn $i = 1$ en $N$ naast $\sum$ geplaatst in plaats van er boven.
+Dat lukt uiteraard niet altijd.
+Breuken zijn daar een goed voorbeeld van: $\frac{X}{Y}$.
+In dat geval wordt het lettertype verkleind.
+Hetgeen de leesbaarheid niet bevordert.
+Bij complexe formule als $\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}$ is het noodzakelijk om tevens de regelafstand te vergroten.
+In dergelijke gevallen is het beter om losstaande formules te gebruiken.
 
 ## Losstaande formules
 
@@ -102,7 +162,12 @@ $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
 
 ## Genummerde formules {#s:formule-nummer}
 
-Het is tevens mogelijk om de losstaande formules te nummeren. Het nummer bevat steeds het hoofdstuknummer als prefix. Wanneer je aan dergelijke formule een label toekent, kan je er naar verwijzen. Bijvoorbeeld: formule \@ref(eq:som). Merk op dat het nummer dat naar een formule verwijst steeds tussen haakjes geplaatst wordt. Het is praktisch om de prefix `eq:` te gebruiken in de labels van formules.
+Het is tevens mogelijk om de losstaande formules te nummeren.
+Het nummer bevat steeds het hoofdstuknummer als prefix.
+Wanneer je aan dergelijke formule een label toekent, kan je er naar verwijzen.
+Bijvoorbeeld: formule \@ref(eq:som).
+Merk op dat het nummer dat naar een formule verwijst steeds tussen haakjes geplaatst wordt.
+Het is praktisch om de prefix `eq:` te gebruiken in de labels van formules.
 
 \begin{equation}
   \bar{X} = \sum_{i = 1}^NX_i
@@ -127,7 +192,7 @@ De CSL formaten genieten de voorkeur omdat ze geen interne omzetting nodig hebbe
 CSL YAML is leesbaarder dan CSL JSON.
 Je kan je referentie naar deze formaten exporteren vanuit Zotero of Mendeley.
 
-## In-lijn stijlen
+## Stijlen van verwijzingen in de tekst
 
 - @BlauwdrukVleermuizen
 - [@BlauwdrukVleermuizen]
@@ -140,7 +205,7 @@ boeken
 deel van een boek
   ~ [@Degraer2013a; @BlauwdrukVogels; @BlauwdrukVleermuizen]
 
-in proceedings
+in proceedings <!-- spell-check: ignore -->
   ~ [@Onkelinx2014a; @Onkelinx2012]
   
 artikels

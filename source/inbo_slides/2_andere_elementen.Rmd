@@ -39,9 +39,20 @@ include_graphics("trees-1036958.jpg")
 
 ## Wiskundige formules
 
-### In-lijn formules
+### Formules in doorlopende tekst
 
-In-lijn formules worden opgenomen binnen de tekst van de alinea. Bijvoorbeeld $P(y < Y|\theta) = \alpha$. Dit werkt het best met beknopte formules. Formules die een zekere hoogte nodig hebben zullen in de mate van het mogelijke aangepast worden om zo min mogelijk hoogte in te nemen. Een voorbeeld hier van is $\bar{X} = \sum_{i = 1}^NX_i$. Hierbij zijn $i = 1$ en $N$ naast $\sum$ geplaatst in plaats van er boven. Dat lukt uiteraard niet altijd. Breuken zijn daar een goed voorbeeld van $\frac{X}{Y}$. In dat geval wordt het lettertype verkleind. Hetgeen de leesbaarheid niet bevordert. Bij complexe formule als $\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}$ is het noodzakelijk om tevens de regelafstand te vergroten. In dergelijke gevallen is het beter om losstaande formules te gebruiken.
+Deze formules worden opgenomen binnen de tekst van de alinea.
+Bijvoorbeeld $P(y < Y|\theta) = \alpha$.
+Dit werkt het best met beknopte formules.
+Formules die een zekere hoogte nodig hebben zullen in de mate van het mogelijke aangepast worden om zo min mogelijk hoogte in te nemen.
+Een voorbeeld hier van is $\bar{X} = \sum_{i = 1}^NX_i$.
+Hierbij zijn $i = 1$ en $N$ naast $\sum$ geplaatst in plaats van er boven.
+Dat lukt uiteraard niet altijd.
+Breuken zijn daar een goed voorbeeld van $\frac{X}{Y}$.
+In dat geval wordt het lettertype verkleind.
+Hetgeen de leesbaarheid niet bevordert.
+Bij complexe formule als $\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}$ is het noodzakelijk om tevens de regelafstand te vergroten.
+In dergelijke gevallen is het beter om losstaande formules te gebruiken.
 
 ### Losstaande formules
 
@@ -72,7 +83,7 @@ $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
 
 ## Citeren van literatuur
 
-### In-lijn stijlen
+### Vormen om verwijzingen in de tekst weer te geven
 
 - auteur (jaartal)
     - @BlauwdrukVleermuizen
@@ -93,7 +104,7 @@ boeken
 hoofdstukken
   ~ [@Degraer2013a; @BlauwdrukVogels; @BlauwdrukVleermuizen]
 
-proceedings
+proceedings <!-- spell-check: ignore -->
   ~ [@Onkelinx2014a; @Onkelinx2012]
 
 artikels

@@ -39,11 +39,11 @@ Een paragraaf
 De eerste paragraaf onder kop 3
 ```
 
-\needspace{50mm}
+\needspace{50mm} <!-- spell-check: ignore -->
 
 ## Problemen met zwevende figuren en tabellen
 
-### Foutmelding: "too many unprocessed floats"
+### Foutmelding: `too many unprocessed floats`
 
 Je document bevat een hoofdstuk met heel veel zwevende figuren of tabellen die nog niet gezet worden. 
 Dit treedt meestal op wanneer je meer dan 20 zwevende objecten hebt in een hoofdstuk. 
@@ -79,13 +79,15 @@ We lijnen de paragrafen zowel links als rechts uit.
 Om de tekst rechts uit te lijnen zal LaTeX de spaties breder of smaller maken.
 Om te vermijden dat de spaties te groot of te klein worden, kunnen we een woord afbreken.
 Als we het woord niet kunnen afbreken, is een alternatief om het woord toch op de dezelfde regel te houden en bijgevolg een langere regel te krijgen.
-LaTeX zal in dat laatste geval een afweging maken tussen te brede/smalle spaties of een te lange regel.
-Regels met weinig spaties en een woord op het einde met weinig mogelijkheden qua woordafbreking maken het moeilijk om alle mooi rechts uit te lijnen zonder heel brede/smalle spaties te gebruiken.
+LaTeX zal in dat laatste geval een afweging maken tussen te brede of te smalle spaties of een te lange regel.
+Regels met weinig spaties en een woord op het einde met weinig mogelijkheden qua woordafbreking maken het moeilijk om alle mooi rechts uit te lijnen zonder heel brede of heel smalle spaties te gebruiken.
 In dergelijke gevallen zal LaTeX ervoor kiezen om de regel langer te maken.
 
 Soms breekt LaTeX een woord niet af, of op de verkeerde plaats.
 Om dat te verhelpen kan je in de YAML onder de tag `hyphenation` een kommagescheiden lijst van woorden opnemen met de gewenste plaatsen waar de LaTeX het woord mag afbreken.
-Bijvoorbeeld `hyphenation: bio-lo-gische, waar-derings-kaart, wild-detectie-systeem` zal wilddetectiesysteem enkel afbreken als wild-detectiesysteem of wilddetectie-systeem.
+Bijvoorbeeld `hyphenation: bio-lo-gische, waar-derings-kaart, wild-detectie-systeem` zal wilddetectiesysteem enkel afbreken als
+wild-detectiesysteem  <!-- spell-check: ignore -->
+of wilddetectie-systeem.
 
 ```{block2, type = "alertblock"}
 Wanneer je een koppelteken in een woord gebruikt, dan zal LaTeX dat woord _enkel op dat punt_ afbreken.
@@ -136,7 +138,8 @@ abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg abcdefg 
 In gewone tekst kan Markdown daar mee zonder problemen overweg, maar in bijschriften moet je een kleine omweg gebruiken. 
 Je moet deze truck ook gebruiken als je Markdown formattering wilt gebruiken in bijschriften.
 
-````markdown
+<!-- spell-check: ignore:start -->
+````markdown 
 Een gewone paragraaf.
 
 (ref:mijn-label) Een 100% **cool** `bijschrift`
@@ -145,43 +148,44 @@ Een gewone paragraaf.
 plot(cars)  # jouw grafiek
 ```
 ````
+<!-- spell-check: ignore:end -->
 
 ## Gebruik van markdown syntax of quotes in onderlijnde koppen {#s:onderlijnd}
 
 Het onderlijnen van koppen stuurt de regelafbreking in de war wanneer extra opmaak wordt gebruikt. 
-De beste oplossing zou zijn om geen onderlijning te gebruiken. 
+De beste oplossing zou zijn om de koppen niet te onderlijnen. 
 Onderlijnen wordt echter opgelegd in de generieke huisstijl van de Vlaamse overheid.
 
 Je kan het probleem op drie manieren omzeilen:
 
 1. Gebruik een titel die op 1 lijn past
 1. Gebruik enkel standaard tekst. Dus geen opmaak of quotes.
-In principe zijn italics enkel toegestaan wanneer dat strikt noodzakelijk is.
+In principe is cursieve tekst enkel toegestaan wanneer dat strikt noodzakelijk is.
 Bijvoorbeeld bij wetenschappelijke namen.
-1. Definiëer regeleindes handmatig met het \\break commando. 
+1. Definieer regeleindes handmatig met het \\break commando. 
 Deze oplossing werkt overigens enkel wanneer je geen vette tekst gebruikt.
 Anderzijds hoort het al dan niet vet zijn bij de definitie van de huisstijl en hoor je dat als auteur niet te gebruiken in een kop.
 
-## Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._
+## Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._  <!-- spell-check: ignore -->
 
 Voorbeeld van kop 2 met extra opmaak.
 
-#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._
+#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._  <!-- spell-check: ignore -->
 
 Voorbeeld van kop 4 met extra opmaak.
 
-## Disserendi artem nullam habuit. 'Etiam fringilla \break faucibus augue.' `Nullam laoreet fermentum urna.` \break _Fusce dignissim facilisis tortor._
+## Disserendi artem nullam habuit. 'Etiam fringilla \break faucibus augue.' `Nullam laoreet fermentum urna.` \break _Fusce dignissim facilisis tortor._  <!-- spell-check: ignore -->
 
 Voorbeeld van kop 2 met extra opmaak en manuele plaatsing van regeleindes.
 
-#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' \break `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._
+#### Disserendi artem nullam habuit. 'Etiam fringilla faucibus augue.' \break `Nullam laoreet fermentum urna.` _Fusce dignissim facilisis tortor._  <!-- spell-check: ignore -->
 
 Voorbeeld van kop 4 met extra opmaak en manuele plaatsing van regeleindes.
 
-## _Fusce dignissim facilisis tortor._
+## _Fusce dignissim facilisis tortor._ <!-- spell-check: ignore -->
 
-Korte kop 2 in italics.
+Korte kop 2 in cursief.
 
-#### _Fusce dignissim facilisis tortor._
+#### _Fusce dignissim facilisis tortor._  <!-- spell-check: ignore -->
 
-Korte kop 4 in italics.
+Korte kop 4 in cursief.

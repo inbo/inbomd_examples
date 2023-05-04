@@ -72,7 +72,7 @@ if (interactive()) {
 
 ## Where to find documentation
 
-- Documention on `INBOmd`
+- Documentation on `INBOmd`
     - https://inbo.github.io/inbomd
 - Example code using `INBOmd` 
     - https://inbo.github.io/inbomd-examples
@@ -129,8 +129,8 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
     - Add only a YAML to the `index.Rmd`
     - All `.Rmd` files will be glued into a single `.Rmd` when rendering the document
         - Except files starting with `_`
-        - Their order: `index.Rmd` + other files in alphabethical order
-    - Pro tip: start the filenames with a number indicating the order
+        - Their order: `index.Rmd` + other files in alphabetical order
+    - Pro tip: start the file names with a number indicating the order
     
 ## Starting a new document
 
@@ -144,7 +144,7 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
 - Open `_bookdown.yml` in this project and update `book_filename` and `output_dir`
 - Open `index.Rmd` in this project and update the YAML header
 
-## Coverting an existing RMarkdown document
+## Converting an existing RMarkdown document
 
 - Start a new Bookdown document
 - Copy-paste the relevant code from the existing document to the new document
@@ -159,15 +159,15 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
     - `fig.width` and `fig.height` are defined in inches
         - `fig.width = 150 / 25.4` defines the plot width to be 150 mm (5.91 in)
 - `theme_set()` and `interactive()`
-    - Sets a default INBO theme for ggplot2
-    - pdf output uses a smaller font size for the ggplot2 graphics
+    - Sets a default INBO theme for `ggplot2`
+    - pdf output uses a smaller font size for the `ggplot2` graphics
     - You can use the Flanders Art Sans font if it is installed on your computer
 
 ## Building the report
 
 - Use the `Build Book` button instead of the `Knit` button
     - You can find this button in the same window as `Environment` and `History`
-- Open the dropdown menu to select the required output format
+- Open the drop down menu to select the required output format
     - Defaults to **all** formats listed in the YAML
     - Pro tip: select a **single** format while working on the document
     
@@ -226,42 +226,43 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
 ## Setting up the YAML
 
 - Add `bibliography: your-bibliography.bib` to the YAML header
-    - Must have `.bib` extention
+    - Must have `.bib` extension
     - Name contains only letters, digits and dash (`-`)
-- Must be in bibtex format
+- Must be in `bibtex` format
 - Add the code below to add a title for the references in HTML or EPUB (not necessary for PDF)
 
-
+<!-- spell-check: ignore:start -->
 ```{r reference, results='asis', echo = FALSE}
 cat("```
 `r if (knitr::is_html_output()) '# References {-}'`
 ```")
 ```
+<!-- spell-check: ignore:end -->
 
 ## Inserting citations manually
 
-- `[@bibtex-key]` for the notation with parantheses [@Agresti2002]
-- `@bibtex-key` for the notation without parantheses @Amano2012
+- `[@bibtex-key]` for the notation with parentheses [@Agresti2002]
+- `@bibtex-key` for the notation without parentheses @Amano2012
 - Use a semi-colon to separate citations
     - `[@bibtex-key; @bibtex-key2; @bibtex-key3]` [@BanerjeeEtal2003; @BlauwdrukVogels]
 - Create a sensible key for each reference in your bibliography
     - Key must contain only letters, digits, dashed and colons
     - Edit the bibliography using RStudio or JabRef
 
-## Inserting citations using `citr` addin
+## Inserting citations using `citr` add-in
 
 - `install.packages("citr")`
-- Go to "Addins" in the RStudio toolbar
-- Select "CITR", "Insert citations" 
+- Go to `Addins` in the RStudio toolbar
+- Select `CITR`, "Insert citations" 
 - Search and select the references you want
 - Insert the citations
 
-## Using Zotero through `citr` addin
+## Using Zotero through `citr` add-in
 
-- Install "Zotero"" and "Better bibtex" plugin
+- Install Zotero and Better bibtex plugin
 - Start Zotero
-- Go to "Addins" in the RStudio toolbar
-- Select "CITR", "Insert citations" 
+- Go to `Addins` in the RStudio toolbar
+- Select `CITR`, "Insert citations" 
 - Connect to Zotero
 - Go to "Settings" tab
 - Add references to local bibliography file
@@ -284,8 +285,10 @@ cat("```
 
 - Equations are based on [LaTeX code](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
 - [Online editor](https://www.codecogs.com/latex/eqneditor.php)
-- Code between single `$` results in an inline equation $\sum_{i=1}^nx_i$
-- Code between double `$` results in a stand alone equation $$\sum_{i=1}^nx_i$$
+- Code between single `$` results in an inline equation
+  $\sum_{i=1}^nx_i$
+- Code between double `$` results in a stand alone equation
+  $$\sum_{i=1}^nx_i$$
 - Code between `\begin{equation}` and `\end{equation}` and with a label `(\#eq:sum)` is stand alone and numbered
 
 \begin{equation}
@@ -307,9 +310,9 @@ cat("```
 
 ## Boxes
 
-- Open the dropdown menu 'Addins' for the RStudio toolbar
+- Open the drop-down menu `Addins` for the RStudio toolbar
 - Look for the INBOmd package[^example]
-- Choose insert 'block', insert 'alertblock' or insert 'exampleblock'
+- Choose insert `block`, insert `alertblock` or insert `exampleblock`
 - Boxes can have an optional title
     - Works only with pdf output!
 
@@ -322,6 +325,7 @@ cat("```
         - Place English text between `\benglish` and `\eenglish`
         - Place French text between `\bfrench` and `\efrench`
 
+<!-- spell-check: ignore:start -->
 ```markdown
 # Voorwoord {-}
 
@@ -333,6 +337,7 @@ cat("```
 
 \mainmatter
 ```
+<!-- spell-check: ignore:end -->
 
 ## Adding appendices
 
@@ -358,7 +363,7 @@ Other output formats ignore `\appendix`
 
 ## Creating the template
 
-- Start by creating a regular Rmarkdown subdocument
+- Start by creating a regular Rmarkdown document
 - Use a name starting with underscore (`_`)
 - Create a template tag by placing it between double curly brackets `{{` and `}}`.
 - Pro tips:
@@ -368,6 +373,7 @@ Other output formats ignore `\appendix`
 
 ## Example template
 
+<!-- spell-check: ignore:start -->
 ```{r echo = FALSE}
 title <- "## `r selection$title[1]`"
 plot_template <- "```{r mt-{{id}}-plot, fig.cap = selection$caption[1]}
@@ -389,15 +395,17 @@ selection <- filter(mt, id == this_id)
 
 `r plot_template`
 ````
+<!-- spell-check: ignore:end -->
 
 ## Handle the template
 
-- Chunk option `results` must be "asis"
+- Chunk option `results` must be `"asis"`
 - Call `knit_expand()` on each value of the template tag
     - The example will replace every `{{id}}` from the template with a value from `to_do`
 - `knit_expand()` only does the 'find and replace'
 - `knit()` actually runs the Rmarkdown code created by `knit_expand()`
 
+<!-- spell-check: ignore:start -->
 ````markdown
 `r ''````{r display-monthly-totals, results = "asis"}
 to_do <- unique(mt$id)
@@ -411,3 +419,4 @@ rmd <- paste(collapse = "\n\n")
 cat(knit(text = rmd, quiet = TRUE))
 ```
 ````
+<!-- spell-check: ignore:end -->

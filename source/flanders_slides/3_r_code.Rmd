@@ -58,7 +58,10 @@ life_exp <- sprintf(
 )
 ```
 
-Mixing R output and text is straightforward. E.g $1 + 1 = `r 1+1`$. Just make sure that you can use a single and simple command. Precalculate the output in case you need more elaborate calculations. E.g the life expectancy in the USA is `r life_exp`.
+Mixing R output and text is straightforward. E.g $1 + 1 = `r 1+1`$.
+Just make sure that you can use a single and simple command.
+Precalculate the output in case you need more elaborate calculations.
+E.g the life expectancy in the USA is `r life_exp`.
 
 ## Figures
 
@@ -169,7 +172,7 @@ kable(
 )
 ```
 
-### Booktabs `kable()`
+### `Booktabs` `kable()`
 
 ```{r kable-booktabs, echo = FALSE}
 kable(
@@ -179,7 +182,7 @@ kable(
 )
 ```
 
-### longtable `kable()`
+### `longtable` `kable()`
 
 ```{r kable-longtable, echo = FALSE}
 kable(generate_table(15, c(2, 1), 4, 4), digits = 2, longtable = TRUE)

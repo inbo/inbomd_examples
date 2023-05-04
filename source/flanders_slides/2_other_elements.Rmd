@@ -55,6 +55,7 @@ $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
 
 ### Numbered formulas
 
+<!-- spell-check: ignore:start -->
 \begin{equation}
   \bar{X} = \sum_{i = 1}^NX_i
   (\#eq:som0)
@@ -69,6 +70,7 @@ $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
   \frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}
   (\#eq:som1)
 \end{equation}
+<!-- spell-check: ignore:end -->
 
 ## Citations
 

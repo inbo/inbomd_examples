@@ -1,5 +1,5 @@
-De citaties en bibliografie in dit rapport zijn aangemaakt door de CSL-processor _pandoc-citeproc_.
-De citaties en bibliografie, gerenderd door Zotero na importeren van INBO.bib met de BBT addon, zijn te vinden in [dit google document](https://docs.google.com/document/d/1IfgWq-59xVnK7zoy29AkMbx_AoM3hpTcKeQJTM8ZAYc).
+De citaties en bibliografie in dit rapport zijn aangemaakt door de CSL processor _pandoc-citeproc_.
+De citaties en bibliografie, gerenderd door Zotero na importeren van `inbomd.bib` met de `Better BibTex` plugin, zijn te vinden in [dit Google document](https://docs.google.com/document/d/1IfgWq-59xVnK7zoy29AkMbx_AoM3hpTcKeQJTM8ZAYc).
 Zotero is een van de toepassingen die de _citeproc-js_ processor gebruiken.
 
 ```{r references, results = "asis", echo = FALSE}
