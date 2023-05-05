@@ -1,19 +1,27 @@
 --- 
 title: Example report using INBOmd
 subtitle: English version using the corporate identity of the Flemish government
-author: 
-  - firstname: Thierry
-    name: Onkelinx
+author:
+  - name:
+      given: Thierry
+      family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-shortauthor: Onkelinx, T.
-corresponding: thierry.onkelinx@inbo.be
+    affiliation: Research Institute for Nature and Forest (INBO)
+    corresponding: TRUE
 reviewer:
-  - firstname: Floris
-    name: Vanderhaeghe
+  - name:
+      given: Floris
+      family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
+    affiliation: Research Institute for Nature and Forest (INBO)
     orcid: 0000-0002-6378-6229
 github-repo: inbo/inbomd-examples
+funder: Research Institute for Nature and Forest (INBO) 
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: corporate identity; example
+publication_type: report
 year: 2021
 cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
 cover_description: Detail of a leaf. Photo by [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
@@ -23,16 +31,16 @@ client:
   - Havenlaan 88 bus 73
   - 1000 Brussel
   - https://www.vlaanderen.be/inbo/en-gb
-client_logo: logo.jpg
+client_logo: media/logo.jpg
 cooperation:
   - INBO Brussel
   - VAC Brussel ‐ Herman Teirlinck
   - Havenlaan 88 bus 73
   - 1000 Brussel
   - https://www.vlaanderen.be/inbo/en-gb
-cooperation_logo: logo.jpg
-cover: cover.pdf # link naar pdf met cover
-doi: https://doi.org/10.5281/zenodo.842223
+cooperation_logo: media/logo.jpg
+cover: media/cover.pdf # link naar pdf met cover
+doi: 10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: The optional order number
@@ -45,7 +53,7 @@ split_by: "chapter+number"
 
 site: bookdown::bookdown_site
 link-citations: TRUE
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 
 output:
   INBOmd::pdf_report: default
@@ -57,19 +65,13 @@ output:
 ```{r setup, include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = TRUE, 
-  eval = TRUE,
-  cache = FALSE,
-  fig.width = 150 / 25.4,
-  fig.height = 100 / 25.4,
-  warning = TRUE,
-  error = TRUE,
-  message = TRUE
+  echo = TRUE, eval = TRUE, cache = FALSE, fig.width = 150 / 25.4,
+  fig.height = 100 / 25.4, warning = TRUE, error = TRUE, message = TRUE
 )
-library(lipsum) # remotes::install_github("inbo/lipsum")
+library(lipsum)
 library(DT)
 library(ggplot2)
-library(INBOtheme) # remotes::install_github("inbo/INBOtheme")
+library(INBOtheme)
 if (interactive()) {
   theme_set(
     theme_vlaanderen2015(
@@ -84,8 +86,7 @@ if (interactive()) {
       opts_chunk$set(dev = "png", dpi = 72)
       theme_set(
         theme_vlaanderen2015(
-          base_family = "FlandersArtSans-Regular", 
-          base_size = 12
+          base_family = "FlandersArtSans-Regular", base_size = 12
         )
       )
     },
@@ -93,8 +94,7 @@ if (interactive()) {
       opts_chunk$set(dev = "cairo_pdf", dpi = 300)
       theme_set(
         theme_vlaanderen2015(
-          base_family = "FlandersArtSans-Regular", 
-          base_size = 9
+          base_family = "FlandersArtSans-Regular", base_size = 9
         )
       )
       update_geom_defaults("point", list(size = 1.5))
@@ -103,8 +103,7 @@ if (interactive()) {
       opts_chunk$set(dev = "png", dpi = 300)
       theme_set(
         theme_vlaanderen2015(
-          base_family = "FlandersArtSans-Regular", 
-          base_size = 12
+          base_family = "FlandersArtSans-Regular", base_size = 12
         )
       )
     }

@@ -23,24 +23,20 @@ mailto:nobody@inbo.be.
 
 ```{r mtcars, echo = FALSE}
 kable(
-  head(mtcars[, 1:5], 10), 
-  booktabs = TRUE,
-  caption = 'First 10 rows of the `mtcars` dataset.'
+  head(mtcars[, 1:5], 10),  booktabs = TRUE,
+  caption = "First 10 rows of the `mtcars` dataset."
 )
 ```
 
 ```{r mtcars2, echo = FALSE, fig.cap = "Dynamic table. Will be replaced by a screenshot in case of static format.", out.width="\\textwidth"}
-datatable(
-  mtcars[, 1:5], 
-  caption = 'First 10 rows of the `mtcars` dataset.'
-)
+datatable(mtcars[, 1:5], caption = "First 10 rows of the `mtcars` dataset.")
 ```
 
 
 ## Static figure {#s:figuur-invoegen}
 
 ```{r koolrabi2, fig.cap = "Figure caption", echo = FALSE}
-include_graphics("kohlrabi-2266665-klein.jpg")
+include_graphics("media/kohlrabi-2266665-klein.jpg")
 ```
 
 # Equations {#h:formules}
@@ -50,7 +46,7 @@ include_graphics("kohlrabi-2266665-klein.jpg")
 Inline equation fit within the paragraph. 
 E.g. $P(y < Y|\theta) = \alpha$. 
 This works OK with short equations.
-More complex, taller equation will altered to minize their height, e.g. $\bar{X} = \sum_{i = 1}^NX_i$. 
+More complex, taller equation will altered to minimize their height, e.g. $\bar{X} = \sum_{i = 1}^NX_i$. 
 $i = 1$ and $N$ are placed beside $\sum$ instead of above it. 
 This doesn't work with even taller equations like breaks, e.g. $\frac{X}{Y}$. 
 In this case the font size is decreased.
@@ -67,7 +63,7 @@ $$\frac{X}{Y}$$
 
 $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
 
-## Numberd equations {#s:formule-nummer}
+## Numbered equations {#s:formule-nummer}
 
 \begin{equation}
   \bar{X} = \sum_{i = 1}^NX_i
@@ -88,7 +84,7 @@ $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
 
 - @BlauwdrukVleermuizen
 - [@BlauwdrukVleermuizen]
-- [zie @BlauwdrukVleermuizen, hoofdstuk 1]
+- [see @BlauwdrukVleermuizen, chapter 1]
 - [@BlauwdrukVleermuizen; @Onkelinx2014a]
 
 book

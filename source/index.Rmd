@@ -7,7 +7,7 @@ output:
     self_contained: FALSE
 ---
 
-Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://github.com/inbo/inbomd_examples).
+Op deze website vind je de gerenderde voorbeelden van [`inbomd_examples`](https://github.com/inbo/inbomd_examples).
 
 - basis INBO rapport ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/inbo_rapport))
     - [PDF](inbo_rapport/inbo_rapport.pdf) versie
@@ -37,12 +37,12 @@ Op deze website vind je de gerenderde voorbeelden van [inbomd_examples](https://
     - [HTML](flandre_rapport/index.html) versie
     - [EPUB](flandre_rapport/flandre_rapport.epub) versie
 - INBO presentatie ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/inbo_slides))
-    - [Stapsgewijze](inbo_slides/inbo_slides.pdf) slides in pdf
-    - [Handout versie](inbo_slides/inbo_slides_handout.pdf) slides in pdf
+    - [Stapsgewijze](inbo_slides/inbo_slides.pdf) presentatie in pdf
+    - [Afdrukbare versie](inbo_slides/inbo_slides_handout.pdf) presentatie in pdf
     - [Rapport versie](inbo_slides/inbo_slides_rapport.pdf) in pdf
 - Presentatie in overkoepelende huisstijl Vlaamse overheid ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/flanders_slides))
-    - [Stapsgewijze](flanders_slides/flanders_slides.pdf) slides in pdf
-    - [Handout versie](flanders_slides/flanders_slides_handout.pdf) slides in pdf
+    - [Stapsgewijze](flanders_slides/flanders_slides.pdf) presentatie in pdf
+    - [Afdrukbare versie](flanders_slides/flanders_slides_handout.pdf) presentatie in pdf
     - [Rapport versie](flanders_slides/flanders_slides_rapport.pdf) in pdf
 - Voorbeelden van referenties ([broncode](https://github.com/inbo/inbomd_examples/tree/master/source/citation_style))
     - [PDF met Nederlandstalige bibliografie](citation_style/nl/citation_style.pdf)

@@ -1,16 +1,15 @@
 ```{r generate_header, echo = FALSE}
 header <- function(words = 4, format = FALSE) {
+  requireNamespace("lipsum", quietly = TRUE)
   sprintf(
     ifelse(
       format,
       "%s '%s' `%s` _%s_ **%s**",
       "%s %s %s %s %s"
     ),
-    sentence(words = words),
-    sentence(words = words),
-    sentence(words = words),
-    sentence(words = words),
-    sentence(words = words)
+    lipsum::sentence(words = words), lipsum::sentence(words = words),
+    lipsum::sentence(words = words), lipsum::sentence(words = words),
+    lipsum::sentence(words = words)
   )
 }
 ```
@@ -100,59 +99,59 @@ cat("**`", paragraph(), "`**", sep = "")
 
 **`1234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890`**
 
-## L miniscule contre i majuscule
+## L minuscule contre i majuscule
 
 normal:
-  ~ lI
+  ~ lI <!-- spell-check: ignore -->
 
 gras:
-  ~ **lI**
+  ~ **lI** <!-- spell-check: ignore -->
   
 italique:
-  ~ _lI_
+  ~ _lI_ <!-- spell-check: ignore -->
 
 italique gras:
-  ~ **_lI_**
+  ~ **_lI_** <!-- spell-check: ignore -->
 
 largeur fixe:
-  ~ `lI` **`lI`**
+  ~ `lI` **`lI`** <!-- spell-check: ignore -->
 
 ## O majuscule contre chiffre 0
 
 normal:
-  ~ O0
+  ~ O0 <!-- spell-check: ignore -->
 
 gras:
-  ~ **O0**
+  ~ **O0** <!-- spell-check: ignore -->
   
 italique:
-  ~ _O0_
+  ~ _O0_ <!-- spell-check: ignore -->
 
 italique gras:
-  ~ **_O0_**
+  ~ **_O0_** <!-- spell-check: ignore -->
 
 police de largeur fixe:
-  ~ `O0` **`O0`**
+  ~ `O0` **`O0`** <!-- spell-check: ignore -->
 
 ## Caractères spéciaux
   
 ### Normal
 
-€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789
+€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789 <!-- spell-check: ignore -->
 
 ### Gras
-**€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789**
+**€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789** <!-- spell-check: ignore -->
 
 ### Italique
-_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_
+_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_ <!-- spell-check: ignore -->
 
 ### Italique gras
-**_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_**
+**_€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789_** <!-- spell-check: ignore -->
   
 ### Police de largeur fixe
-`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`
+`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789` <!-- spell-check: ignore -->
 
-**`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`**
+**`€$£ @&#§µ^ ()[]{}|²³<>/\*+- ,;:.?!~ äàáâã ëèéê ïìíî öòóô üùúû ÿ ç ñ ÄÀÁÂ ËÈÉÊ ÏÌÍÎ ÖÒÓÔ ÜÙÚÛ Ñ 0123456789`** <!-- spell-check: ignore -->
 
 ## Guillemets
 
@@ -210,22 +209,22 @@ police de largeur fixe:
 Item A
   ~ `r paragraph()`
   
-Longer item title B
+Item avec un titre long B
   ~ `r paragraph()`
   
-    Item B1
+    Item B1 <!-- spell-check: ignore -->
       ~ `r paragraph()`
 
-        Item B1a
+        Item B1a <!-- spell-check: ignore -->
           ~ `r paragraph()`
 
-        Item B1b
+        Item B1b <!-- spell-check: ignore -->
           ~ `r paragraph()`
 
-            Item B1b1
+            Item B1b1 <!-- spell-check: ignore -->
               ~ `r paragraph()`
               
-    Item B2
+    Item B2 <!-- spell-check: ignore -->
       ~ `r paragraph()`
 
 Item C
@@ -234,18 +233,18 @@ Item C
 Item D
   ~ `r paragraph()`
 
-# Boxes
+# Boîte
 
-## Default box
+## Boîte par défaut
 
 `r paragraph(n = 1)`
 
 (ref:block) `r paragraph()`
 
 ```{block2, type = "block"}
-Enter here the text of the block.
-_Note that you cannot run **R** chunks inside a block._
-You need the reference trick as demonstrated below.
+Saisissez ici le texte du bloc.
+_Notez que vous ne pouvez pas exécuter des morceaux **R** à l'intérieur d'un bloc._ 
+Vous avez besoin de l'astuce de la référence comme démontré ci-dessous.
 
 (ref:block)
 
@@ -275,16 +274,16 @@ You need the reference trick as demonstrated below.
 (ref:block3b)
 ```
 
-## Example box
+## Boîte à exemple
   
 `r paragraph(n = 2)`
 
 (ref:exampleblock) `r paragraph()`
 
 ```{block2, type = "exampleblock"}
-Enter here the text of the block.
-_Note that you cannot run **R** chunks inside a block._
-You need the reference trick as demonstrated below.
+Saisissez ici le texte du bloc.
+_Notez que vous ne pouvez pas exécuter des morceaux **R** à l'intérieur d'un bloc._ 
+Vous avez besoin de l'astuce de la référence comme démontré ci-dessous.
 
 (ref:exampleblock)
 
@@ -314,16 +313,16 @@ You need the reference trick as demonstrated below.
 
 ```
 
-## Alert box
+## Boîte d'alerte
   
 `r paragraph(n = 2)`
 
 (ref:alterblock) `r paragraph()`
 
 ```{block2, type = "alertblock"}
-Enter here the text of the block.
-_Note that you cannot run **R** chunks inside a block._
-You need the reference trick as demonstrated below.
+Saisissez ici le texte du bloc.
+_Notez que vous ne pouvez pas exécuter des morceaux **R** à l'intérieur d'un bloc._ 
+Vous avez besoin de l'astuce de la référence comme démontré ci-dessous.
 
 (ref:alterblock)
 

@@ -5,19 +5,15 @@
 ### Table
 
 ```{r mtcars, echo = FALSE}
-kable(
-  head(mtcars[, 1:8], 10), 
-  booktabs = TRUE
-)
+kable(head(mtcars[, 1:8], 10), booktabs = TRUE)
 ```
 
 ### Table with caption
 
 ```{r mtcars-cap, echo = FALSE}
 kable(
-  head(mtcars[, 1:8], 10), 
-  booktabs = TRUE,
-  caption = 'A table with the first 10 rows of the `mtcars` dataset.'
+  head(mtcars[, 1:8], 10), booktabs = TRUE,
+  caption = "A table with the first 10 rows of the `mtcars` dataset."
 )
 ```
 
@@ -26,19 +22,19 @@ kable(
 ### Figure with text width
 
 ```{r forest, echo = FALSE, out.width="\\textwidth"}
-include_graphics("trees-1036958.jpg")
+include_graphics("media/trees-1036958.jpg")
 ```
 
 ### Figure with text height
 
 ```{r forest2, echo = FALSE, out.width="\\textheight"}
-include_graphics("trees-1036958.jpg")
+include_graphics("media/trees-1036958.jpg")
 ```
 
 ### Figure with caption
 
 ```{r forest3, fig.cap = "Picture of a forest, half text width", echo = FALSE, out.width="0.5\\textwidth"}
-include_graphics("trees-1036958.jpg")
+include_graphics("media/trees-1036958.jpg")
 ```
 
 ## Mathematical formulas
@@ -59,6 +55,7 @@ $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
 
 ### Numbered formulas
 
+<!-- spell-check: ignore:start -->
 \begin{equation}
   \bar{X} = \sum_{i = 1}^NX_i
   (\#eq:som0)
@@ -73,6 +70,7 @@ $$\frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_i}{N}}$$
   \frac{\sum_{i = 1}^NX_i}{\frac{\sum_{j = 1}^NY_j}{N}}
   (\#eq:som1)
 \end{equation}
+<!-- spell-check: ignore:end -->
 
 ## Citations
 

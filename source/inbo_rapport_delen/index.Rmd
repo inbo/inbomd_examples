@@ -1,23 +1,31 @@
 --- 
 title: "Voorbeeldrapport met INBOmd"
-author: 
-  - firstname: Thierry
-    name: Onkelinx
+author:
+  - name:
+      given: Thierry
+      family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-shortauthor: Onkelinx, T.
-corresponding: thierry.onkelinx@inbo.be
+    affiliation: Research Institute for Nature and Forest (INBO)
+    corresponding: true
 reviewer:
-  - firstname: Floris
-    name: Vanderhaeghe
+  - name:
+      given: Floris
+      family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
+    affiliation: Research Institute for Nature and Forest (INBO)
     orcid: 0000-0002-6378-6229
 github-repo: inbo/inbomd-examples
+funder: Research Institute for Nature and Forest (INBO) 
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: corporate identity; example
+publication_type: report
 year: 2021
 cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
 cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
-cover: cover.pdf # link naar pdf met cover
-doi: https://doi.org/10.5281/zenodo.842223
+cover: media/cover.pdf # link naar pdf met cover
+doi: 10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: Het optionele nummer van de opdrachtgever
@@ -30,7 +38,7 @@ split_by: section+number
 
 site: bookdown::bookdown_site
 link-citations: FALSE
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 
 output:
   INBOmd::pdf_report: default
@@ -42,19 +50,13 @@ output:
 ```{r setup, include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = TRUE, 
-  eval = TRUE,
-  cache = FALSE,
-  fig.width = 150 / 25.4,
-  fig.height = 100 / 25.4,
-  warning = TRUE,
-  error = TRUE,
-  message = TRUE
+  echo = TRUE, eval = TRUE, cache = FALSE, fig.width = 150 / 25.4,
+  fig.height = 100 / 25.4, warning = TRUE, error = TRUE, message = TRUE
 )
-library(lipsum) # remotes::install_github("inbo/lipsum")
+library(lipsum)
 library(DT)
 library(ggplot2)
-library(INBOtheme) # remotes::install_github("inbo/INBOtheme")
+library(INBOtheme)
 if (interactive()) {
   theme_set(
     theme_inbo(
@@ -68,29 +70,20 @@ if (interactive()) {
     html = {
       opts_chunk$set(dev = "png", dpi = 72)
       theme_set(
-        theme_inbo(
-          base_family = "FlandersArtSans-Regular", 
-          base_size = 12
-        )
+        theme_inbo(base_family = "FlandersArtSans-Regular", base_size = 12)
       )
     },
     latex = {
       opts_chunk$set(dev = "cairo_pdf", dpi = 300)
       theme_set(
-        theme_inbo(
-          base_family = "FlandersArtSans-Regular", 
-          base_size = 9
-        )
+        theme_inbo(base_family = "FlandersArtSans-Regular", base_size = 9)
       )
       update_geom_defaults("point", list(size = 1.5))
     },
     epub3 = {
       opts_chunk$set(dev = "png", dpi = 300)
       theme_set(
-        theme_inbo(
-          base_family = "FlandersArtSans-Regular", 
-          base_size = 12
-        )
+        theme_inbo(base_family = "FlandersArtSans-Regular", base_size = 12)
       )
     }
   )
