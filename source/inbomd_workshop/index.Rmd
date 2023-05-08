@@ -36,7 +36,7 @@ bibliography: ../INBOmd.bib
 output:
   INBOmd::slides: default
   INBOmd::handouts: default
-  INBOmd::report: default
+  INBOmd::pdf_report: default
   bookdown::dont_run: default
 ---
 
@@ -67,6 +67,40 @@ if (interactive()) {
 }
 ```
 
+# INBOmd?
+
+## What is INBOmd?
+- RMarkdown ([R beginners course](https://inbo.github.io/tutorials/tutorials/r_beginners/)):
+  - Simple and easy to use plain text language
+  - Combine R code, data analysis results (plots, tables,...) with written commentary
+  - Nicely formatted and reproducible document
+- Bookdown:
+  - Writing books and long-form articles / reports with R markdown 
+- INBOmd:
+  - Bookdown templates for slides, reports, and posters in the INBO style (colors, font,...)
+  - [Color palettes](https://github.com/inbo/INBOtheme)
+  - Handy user functions
+
+
+# Motivation & examples in practice
+
+## Motivation
+
+- Easily use cross references, citations, and bibliography
+- Scripts and text interwoven
+- New data = No problem!
+- INBO look with little effort
+
+## Examples
+
+- Watina (cfr OS Café Joost)
+- Reports that stay largely the same but need to be updated with new data / analyses regularly
+  - EU habitat reporting
+  - Vleemo radarproject
+- The same analysis needs to be done for different subsets of the data
+  - Generating a seperate report on partridge counts for each Game Management Unit (GMU)
+  - Generate a chapter for each habitat in the EU habitat reporting
+
 ## Where to find documentation
 
 - Documention on `INBOmd`
@@ -78,8 +112,9 @@ if (interactive()) {
     - https://bookdown.org/yihui/bookdown/
 - R Markdown: The Definitive Guide 
     - https://bookdown.org/yihui/rmarkdown/
-    
+
 # Install requirements
+
 
 ## Install `tinytex`
 
@@ -133,18 +168,6 @@ tinytex::tlmgr_install(c(
         - Their order: `index.Rmd` + other files in alphabetical order
     - Pro tip: start the filenames with a number indicating the order
     
-## Starting a new document (traditional way)
-
-- Open RStudio
-- Choose File > New File > R Markdown
-- Select 'From Template' and select 'INBO rapport'
-- Enter the `name` for your report, select its main directory and press 'OK'
-    - This creates `name/name.Rmd` in the selected directory
-    - Rename `name/name.Rmd` to `name/index.Rmd` in the `Files` window of RStudio
-- Choose File > New Project > Existing directory, select `name` and press 'Create project'
-- Open `_bookdown.yml` in this project and update `book_filename` and `output_dir`
-- Open `index.Rmd` in this project and update the YAML header
-
 ## Starting a new document (using INBOmd::create_report())
 
 - Open RStudio
@@ -227,6 +250,16 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
     - `label` must be a unique name in the document
     - Pro tip: use the chunk name as `label`
 
+## Example figure
+
+```{r figure-example, warning = FALSE, message = FALSE, fig.cap="Pressure versus temperature", fig.height = 2, fig.width = 4}
+library(tidyverse)
+library(INBOtheme)
+ggplot(pressure) + 
+  geom_point(aes(x = temperature, y = pressure)) + 
+  theme_inbo()
+```
+
 # Tables in bookdown
 
 ## Tables
@@ -238,6 +271,17 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 - `knitr::kable(caption = "My table caption")`
     - Text references `(ref:label)` are possible too
 - Reference the table with `\@ref(tab:the-chunk-name)`
+
+## Example table
+
+```{r table-example, warning = FALSE, message = FALSE}
+pressure %>%
+  head() %>%
+  knitr::kable(
+    booktabs = TRUE,
+    caption = "Pressure and temperature"
+  )
+```
 
 # Citing literature
 
@@ -436,5 +480,20 @@ rmd <- paste(collapse = "\n\n")
 cat(knit(text = rmd, quiet = TRUE))
 ```
 ````
+
+## Evaluatie OSD
+
+Vul de bevraging in!
+
+
+[https://forms.gle/qYZnFeDVLPkhC2vFA](
+https://forms.gle/qYZnFeDVLPkhC2vFA)
+
+
+```{r warning = FALSE, message = FALSE, fig.width=2.5, fig.height=2.5}
+library(qrcode)
+code <- qr_code("https://forms.gle/qYZnFeDVLPkhC2vFA")
+plot(code)
+```
 
 # Bibliography
