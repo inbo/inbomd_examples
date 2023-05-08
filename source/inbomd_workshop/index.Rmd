@@ -159,9 +159,10 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
   - language
   - keywords
   - optional client / cooperation
+  - whether you want a list of figures / tables
   
 
-## Coverting an existing RMarkdown document
+## Converting an existing RMarkdown document
 
 - Start a new Bookdown document
 - Copy-paste the relevant code from the existing document to the new document
@@ -170,7 +171,7 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 
 ## The `setup` chunk
 
-- The `setup` chunk is the best location to load packages
+- The `setup` chunk (in index.Rmd) is the best location to load packages
 - `opts_chunk$set()` defines the default options for each chunk
     - You can override these in an individual chunk
     - `fig.width` and `fig.height` are defined in inches
@@ -185,7 +186,7 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 - Use the `Build Book` button instead of the `Knit` button
     - You can find this button in the same window as `Environment` and `History`
 - Open the dropdown menu to select the required output format
-    - Defaults to **all** formats listed in the YAML
+    - Defaults to **all** formats listed in the YAML (not recommended)
     - Pro tip: select a **single** format while working on the document
     
 - Try this with your first Bookdown document
@@ -243,7 +244,7 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 ## Setting up the YAML
 
 - Add `bibliography: your-bibliography.bib` to the YAML header
-    - Must have `.bib` extention
+    - Must have `.bib` extension
     - Name contains only letters, digits and dash (`-`)
 - Must be in bibtex format
 - Add the code below to add a title for the references in HTML or EPUB (not necessary for PDF)
@@ -257,17 +258,18 @@ cat("```
 
 ## Inserting citations manually
 
-- `[@bibtex-key]` for the notation with parantheses [@Agresti2002]
-- `@bibtex-key` for the notation without parantheses @Amano2012
+- `[@bibtex-key]` for the notation with parentheses [@Agresti2002]
+- `@bibtex-key` for the notation without parentheses @Amano2012
 - Use a semi-colon to separate citations
     - `[@bibtex-key; @bibtex-key2; @bibtex-key3]` [@BanerjeeEtal2003; @BlauwdrukVogels]
 - Create a sensible key for each reference in your bibliography
     - Key must contain only letters, digits, dashed and colons
-    - Edit the bibliography using RStudio or JabRef
+    - Edit the bibliography using RStudio, notepad, or JabRef
 
 ## Inserting citations using `citr` addin
 
-- `install.packages("citr")`
+- `devtools::install_github("crsh/citr")`
+- Restart Rstudio
 - Go to "Addins" in the RStudio toolbar
 - Select "CITR", "Insert citations" 
 - Search and select the references you want
@@ -279,8 +281,8 @@ cat("```
 - Start Zotero
 - Go to "Addins" in the RStudio toolbar
 - Select "CITR", "Insert citations" 
-- Connect to Zotero
 - Go to "Settings" tab
+- Connect to Zotero
 - Add references to local bibliography file
 
 # Miscellaneous
@@ -325,10 +327,16 @@ cat("```
 ## Boxes
 
 - Open the dropdown menu 'Addins' for the RStudio toolbar
-- Look for the INBOmd package[^example]
+- Look for the INBOmd package
 - Choose insert 'block', insert 'alertblock' or insert 'exampleblock'
 - Boxes can have an optional title
     - Works only with pdf output!
+
+```{block2 chunk-name, type="block", latex.options="{title}", echo = TRUE}
+This is an example of a block
+
+```
+
 
 ## Adding introduction chapters
 
@@ -428,3 +436,5 @@ rmd <- paste(collapse = "\n\n")
 cat(knit(text = rmd, quiet = TRUE))
 ```
 ````
+
+# Bibliography
