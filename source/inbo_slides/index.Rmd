@@ -2,10 +2,20 @@
 title: "Voorbeeldslides met INBOmd"
 subtitle: "Hier komt de optionele ondertitel"
 author: 
-  - firstname: Thierry
-    name: Onkelinx
+  - name:
+      given: Thierry
+      family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
+    affiliation: Research Institute fo Nature and Forest (INBO)
+    corresponding: true
+reviewer:
+  - name:
+      given: reviewer_Firstname
+      family: reviewer_Lastname
+    email: "reviewer.firstname.lastname@inbo.be"
+    orcid: 0000-0002-1825-0097
+    affiliation: Research Institute for Nature and Forest (INBO)
 location: "Hier komt optioneel de plaats"
 institute: "Hier komt optioneel de affiliatie"
 toc_name: "De naam van de inhoudstafel"
@@ -13,7 +23,11 @@ slide_level: 3
 cover_photo: "trees-1036958.jpg"
 flandersfont: TRUE
 
-corresponding: thierry.onkelinx@inbo.be
+funder: Research Institute for Nature and Forest (INBO)
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: slides;example
+
 embargo: 2020-01-01
 
 site: bookdown::bookdown_site
