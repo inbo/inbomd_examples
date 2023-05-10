@@ -2,11 +2,9 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
     branches:
       - main
-      - master
 
 name: test-inbomd-examples
 jobs:
@@ -14,7 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     name: "test Rmd"
     steps:
-      - uses: actions/checkout@v2
-      - uses: inbo/actions/render_inbomd@master
-        with:
-          token: ${{ secrets.pat }}
+      - uses: actions/checkout@v3
+      - uses: inbo/actions/render_inbomd@inbomd-0.6.0

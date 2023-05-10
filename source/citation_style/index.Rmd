@@ -1,16 +1,24 @@
 ---
 title: "Voorbeeld van referentiestijl"
 author: 
-  - firstname: Thierry
-    name: Onkelinx
+  - name:
+      given: Thierry
+      family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-corresponding: thierry.onkelinx@inbo.be
+    affiliation: Research Institute for Nature and Forest (INBO)
+    corresponding: true
 reviewer:
-  - firstname: Floris
-    name: Vanderhaeghe
+  - name:
+      given: Floris
+      family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
     orcid: 0000-0002-6378-6229
+    affiliation: Research Institute for Nature and Forest (INBO)
+funder: Research Institute for Nature and Forest (INBO)
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: INBOmd; examples; citation; csl; markdown
 github-repo: inbo/inbomd-examples
 embargo: 2021-01-01
 cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
@@ -18,7 +26,7 @@ cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pex
 
 link-citations: TRUE
 site: bookdown::bookdown_site
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 
 style: INBO
 lof: FALSE
@@ -37,6 +45,8 @@ output:
 ```{r echo = FALSE, results = "asis"}
 library(knitr)
 ```
+
+<!-- spell-check: ignore:start -->
 
 Table: Verschillende types documenten
 
@@ -75,6 +85,8 @@ Table: Weergave van namen
 | Achternaam, Voornaam TD           | @name8   |
 | Accent áâàäçéêëèíuîïìóôöòúûüù     | @name9   |
 
+<!-- spell-check: ignore:end -->
+
 ## DOI of URL
 
 - beide: @article-single
@@ -83,27 +95,35 @@ Table: Weergave van namen
 
 # Na te kijken
 
-Algemene opvolging gebeurt in [deze gsheet](https://docs.google.com/spreadsheets/d/1cQfMKcVxCiGOH6s2np-uecRa-5_r1vS2MGRpqLGM2Gk).
+Algemene opvolging gebeurt in [deze Google sheet](https://docs.google.com/spreadsheets/d/1cQfMKcVxCiGOH6s2np-uecRa-5_r1vS2MGRpqLGM2Gk).
 
-## Op te volgen voor bst
+## Op te volgen voor `bst`
 
-Specifieke zaken (zie ook gsheet):
+Specifieke zaken (zie ook de Google sheet): <!-- spell-check: ignore -->
 
 - Conference
-  - `Organization` beter laten vallen in bst en dit veld niet ondersteunen? citeproc-js toont het niet en pandoc-citeproc voegt dit vooraan in het publisher-veld gevolgd door ";" en publisher (dit gebeurt nog vóór de CSL-processing, dus bij omzetting bib-file).
-- Laten vallen van “URL:” en “DOI:” prefixen.
-- Zoals in csl: Nederlandstalige variant voorzien voor verschillende termen, o.a.: ed. (nl) ipv edn. (en) en Nr. (nl) ipv No. (en).
-- Aanpassing van 'Vol. van', 'No. in' naar de afgesproken syntaxis (zie gsheet).
-- Bij ontbreken van de datum: gebruik '(s.d.)' (cf. csl)
-  - zie voorbeeld @databank_ondergrond_vlaanderen_bepalen_nodate.
+  - `Organization` beter laten vallen in `bst` en dit veld niet ondersteunen?
+    citeproc-js toont het niet en pandoc-citeproc voegt dit vooraan in het `publisher` veld gevolgd door ";" en `publisher` (dit gebeurt nog vóór de CSL processing, dus bij omzetting naar `bib` bestand).
+- Laten vallen van "URL:" en "DOI:" prefixen.
+- Zoals in csl: Nederlandstalige variant voorzien voor verschillende termen, o.a.: `ed.` (Nederlands) in plaats van `edn.` (Engels) en `Nr.` (Nederlands) in plaats van `No.` (Engels).
+- Aanpassing van `Vol. van`, `No. in` naar de afgesproken syntaxis (zie Google sheet).
+- Bij ontbreken van de datum: gebruik `(s.d.)` (vergelijk met csl)
+  - Zie voorbeeld @databank_ondergrond_vlaanderen_bepalen_nodate.
 - Hanteer `<title>. <edition>` in plaats van	`<title>, <edition>`.
-  - Reden: 'title' betreft soms meerdere delen, gescheiden door een punt (bv. titel. subtitel). Het laatste deel laten volgen door een komma en dan '2nd edn.' is wat raar. Zie bv. @book-a1e0.
-  - NB. voor InBook wordt de voorgestelde werkwijze al gevolgd in bst.
-- Voor het BibLaTeX type '**Online**' (aangewezen voor een webpage, want enkel dan wordt dit correct vertaald door pandoc en Zotero als een webpage): volgen van de csl weergave
+  - Reden: `title` betreft soms meerdere delen, gescheiden door een punt (bijvoorbeeld: titel. subtitel).
+  Het laatste deel laten volgen door een komma en dan `2nd edn.` is wat raar.
+  Zie bv. @book-a1e0.
+  - NB. voor `InBook` wordt de voorgestelde werkwijze al gevolgd in `bst`.
+- Voor het BibLaTeX type **"Online"** (aangewezen voor een webpage, want enkel dan wordt dit correct vertaald door pandoc en Zotero als een webpage): volgen van de csl weergave
   - weergave van `[WWW document]` na de titel
-  - toevoegen van "(accessed `datum als tekst`). In csl gebeurt dit taal-afhankelijk, bv. (accessed June 30, 2020) versus (geraadpleegd 30 juni 2020).
-  - merk op dat `@online` een BibLaTeX type is. Om een bib-file met dit type zonder probleem in te kunnen lezen in **JabRef**, moet je bij de preferences > advanced kiezen voor de _BibLaTeX mode_!
-  
+  - toevoegen van "(
+    accessed <!-- spell-check: ignore -->
+    `datum als tekst`).
+    In csl gebeurt dit taalafhankelijk, bijvoorbeeld `(accessed June 30, 2020)` versus `(geraadpleegd 30 juni 2020)`.
+  - merk op dat `@online` een BibLaTeX type is.
+    Om een `bib` bestand met dit type zonder probleem in te kunnen lezen in **JabRef**, moet je bij de 
+    preferences > advanced <!-- spell-check: ignore -->
+    kiezen voor de _BibLaTeX mode_!
 
 ## Issues in het csl bestand
 
@@ -111,23 +131,23 @@ Betreft `research-institute-for-nature-and-forest.csl`.
 
 Momenteel zijn geen resterende issues gekend in de ontwikkelversie.
 
-Issues kunnen gepost worden op de INBO-fork van de CSL-repository (<https://github.com/inbo/styles>), waar verbeteringen aan de file gebeuren (om dan bij te dragen aan de CSL-repo zelf).
+Issues kunnen gepost worden op de INBO vertakking van de CSL repository (<https://github.com/inbo/styles>), waar verbeteringen aan de file gebeuren (om dan bij te dragen aan de CSL repository zelf).
 
 ### Aandachtspunten bij aanmaken van een bib bestand
 
-Er zijn wel enkele aandachtspunten in verband met het gebruik van een bib-file in combinatie met CSL, meer bepaald in verband met de wijze van ingeven van bepaalde velden.
+Er zijn wel enkele aandachtspunten in verband met het gebruik van een `bib` bestand in combinatie met CSL, meer bepaald in verband met de wijze van ingeven van bepaalde velden.
 Deze worden behandeld in hoofdstuk \@ref(bibcsl).
 
-Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zotero en vandaaruit een bib-bestand wordt geëxporteerd, dit met de [Better BibTeX plugin](https://retorque.re/zotero-better-bibtex/) geïnstalleerd.
+Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zotero en van daaruit een `bib` bestand wordt geëxporteerd, dit met de [`Better BibTeX` plugin](https://retorque.re/zotero-better-bibtex/) geïnstalleerd.
     
-## Bijzonderheden in de Zotero addon 'Better BibTeX'
+## Bijzonderheden in de Zotero met `Better BibTeX` plugin
 
-Bijzonderheden bij import/export van `INBOmd.bib` naar/van Zotero met addon 'Better BibTeX'
+Bijzonderheden bij import en export van `inbomd.bib` van en naar Zotero met `Better BibTeX` plugin
 
-### Export van article met page-range 'x-y'
+### Export van article met page-range `x-y` <!-- spell-check: ignore -->
 
-Range `x-y` wordt omgezet naar `x--y` (in bib-file).
+Range `x-y` wordt omgezet naar `x--y` (in `bib` bestand).
 
 Zie bespreking in het [issue](https://github.com/retorquere/zotero-better-bibtex/issues/1602).
-Dit blijkt een weloverwogen feature te zijn (en geen bug) om met zekerheid n-dashes te induceren voor page-ranges.
-Zie ook: '[many, but not all, BibTeX styles will correct hyphen to n-dash](https://tex.stackexchange.com/a/58671/27603)'.
+Dit blijkt een weloverwogen feature te zijn (en geen bug) om met zekerheid `n-dashes` te induceren voor `page-ranges`.
+Zie ook: "[many, but not all, BibTeX styles will correct hyphen to n-dash](https://tex.stackexchange.com/a/58671/27603)". <!-- spell-check: ignore -->

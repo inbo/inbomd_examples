@@ -1,0 +1,43 @@
+{
+  "description": "<p>Een uittreksel over ecologie uit <a\nhref=\"https://nl.wikipedia.org/wiki/Ecologie\">Wikipedia<\/a><\/p>\n<p>Ecologie (ook wel met de spelling: <em>oecologie<\/em>) als wetenschap\nis een onderdeel van biologie. De ecologie bestudeert de dynamiek van de\nwisselwerking tussen organismen, populaties of levensgemeenschappen (de\nbiotische milieufactoren) en de relaties tussen organismen, populaties,\nlevensgemeenschappen of landschappen en het niet-biologische milieu (de\nabiotische milieufactoren). De studie op het niveau van de soort heet\nook wel autoecologie en op het niveau van de levensgemeenschap en\necosysteem heet gemeenschapsecologie of synecologie.<\/p>\n<p>Het woord ecologie (oorspronkelijk Duits: <em>Ökologie<\/em>) werd\ngeïntroduceerd door de Duitse bioloog Ernst Haeckel in 1866, als\nsamentrekking van de Griekse woorden <em>oikos<\/em> (huishouding) en\n<em>logos<\/em> (studie, wetenschap).<\/p>\n<p>In de Angelsaksische wereld werd dit <em>ecology<\/em>, dat daar een\niets andere, meer milieukundige en mens-gerichte, betekenis kreeg. In\nNederland bestaan het meer biologische oecologie en meer milieukundige\necologie naast elkaar, maar het verschil vervaagt.<\/p>\n<p>Het woord ecologie wordt ook gebruikt in andere betekenissen:<\/p>\n<ul>\n<li>gerelateerd aan een beter milieu, in het bijzonder dat van de\nmens,<\/li>\n<li>meer praktisch, betreffende gedrag dat goed is voor de mens en zijn\nmilieu en voor de natuur (zie <a\nhref=\"https://nl.wikipedia.org/wiki/Ecologische_landbouw\">ecologische\nlandbouw<\/a> en <a\nhref=\"https://nl.wikipedia.org/wiki/EKO-keurmerk\">EKO-keurmerk<\/a>),<\/li>\n<li>gericht op een bepaalde levensbeschouwing (zie <a\nhref=\"https://nl.wikipedia.org/wiki/Ecologisme\">ecologisme<\/a>).<\/li>\n<li>betreffende omgeving of netwerk van bijvoorbeeld een bedrijf.<\/li>\n<\/ul>",
+  "title": "Voorbeeldrapport met INBOmd. Dit is de standaardversie.",
+  "upload_type": "publication",
+  "embargo_date": "2099-03-01",
+  "access_right": "embargoed",
+  "license": "CC-BY-4.0",
+  "language": "nld",
+  "keywords": [
+    "corporate identity; example"
+  ],
+  "publication_type": "report",
+  "contributors": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216",
+      "type": "ContactPerson"
+    },
+    {
+      "name": "Vanderhaeghe, Floris",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0002-6378-6229",
+      "type": "Other"
+    },
+    {
+      "name": "Research Institute for Nature and Forest (INBO), ",
+      "type": "RightsHolder"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "inbo"
+    }
+  ]
+}

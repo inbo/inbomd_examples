@@ -6,32 +6,32 @@ author:
       family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-    affiliation: Research Institute fo Nature and Forest (INBO)
     corresponding: true
-toc: FALSE
-slide_level: 2
-cover_photo: e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
-flandersfont: TRUE
-cover_horizontal: TRUE
+    affiliation: Research Institute for Nature and Forest (INBO)
 reviewer:
   - name:
-      given: reviewer_Firstname
-      family: reviewer_Lastname
-    email: "reviewer.firstname.lastname@inbo.be"
-    orcid: 0000-0002-1825-0097
+      given: Floris
+      family: Vanderhaeghe
+    email: floris.vanderhaeghe@inbo.be
+    orcid: 0000-0002-6378-6229
     affiliation: Research Institute for Nature and Forest (INBO)
+funder: Research Institute for Nature and Forest (INBO)
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: INBOmd; workshop
+toc: FALSE
+slide_level: 2
+cover_photo: media/e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
+flandersfont: TRUE
+cover_horizontal: TRUE
 lang: en
 style: INBO
 
 aspect: 4:3
-funder: Research Institute for Nature and Forest (INBO)
-rightsholder: Research Institute for Nature and Forest (INBO)
-community: inbo
-keywords: workshop
 embargo: 2020-01-01
 
 site: bookdown::bookdown_site
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 
 output:
   INBOmd::slides: default
@@ -52,7 +52,7 @@ if (interactive()) {
   theme_set(
     theme_inbo(
       base_family = "Calibri", # "Flanders Art Sans",
-      base_size = 12, 
+      base_size = 12,
       transparent = "plot"
     )
   )
@@ -60,7 +60,7 @@ if (interactive()) {
   theme_set(
     theme_inbo(
       base_family = "Calibri", # "Flanders Art Sans",
-      base_size = 6, 
+      base_size = 6,
       transparent = "plot"
     )
   )
@@ -71,7 +71,7 @@ if (interactive()) {
 
 ## Where to find documentation
 
-- Documention on `INBOmd`
+- Documentation on `INBOmd`
     - https://inbo.github.io/inbomd
 - Example code using `INBOmd` 
     - https://inbo.github.io/inbomd-examples
@@ -137,7 +137,8 @@ tinytex::tlmgr_install(c(
     - All `.Rmd` files will be glued into a single `.Rmd` when rendering the document
         - Except files starting with `_`
         - Their order: `index.Rmd` + other files in alphabetical order
-    - Pro tip: start the filenames with a number indicating the order
+    - Pro tip: start the file names with a number indicating the order
+
     
 ## Starting a new document (using INBOmd::create_report())
 
@@ -171,8 +172,8 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
     - `fig.width` and `fig.height` are defined in inches
         - `fig.width = 150 / 25.4` defines the plot width to be 150 mm (5.91 in)
 - `theme_set()` and `interactive()`
-    - Sets a default INBO theme for ggplot2
-    - pdf output uses a smaller font size for the ggplot2 graphics
+    - Sets a default INBO theme for `ggplot2`
+    - pdf output uses a smaller font size for the `ggplot2` graphics
     - You can use the Flanders Art Sans font if it is installed on your computer
 
 ## Building the report
@@ -180,6 +181,7 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 - Open .Rproj in the same location as your index.Rmd file
 - Use the `Build Book` button instead of the `Knit` button
     - You can find this button in the same window as `Environment` and `History`
+
 - Open the dropdown menu to select the required output format
     - Defaults to **all** formats listed in the YAML (not recommended)
     - Pro tip: select a **single** format while working on the document
@@ -273,15 +275,16 @@ pressure %>%
 - Add `bibliography: your-bibliography.bib` to the YAML header
     - Must have `.bib` extension
     - Name contains only letters, digits and dash (`-`)
-- Must be in bibtex format
+- Must be in `bibtex` format
 - Add the code below to add a title for the references in HTML or EPUB (not necessary for PDF)
 
-
+<!-- spell-check: ignore:start -->
 ```{r reference, results='asis', echo = FALSE}
 cat("```
 `r if (knitr::is_html_output()) '# References {-}'`
 ```")
 ```
+<!-- spell-check: ignore:end -->
 
 ## Inserting citations manually
 
@@ -293,7 +296,8 @@ cat("```
     - Key must contain only letters, digits, dashed and colons
     - Edit the bibliography using RStudio, notepad, or JabRef
 
-## Inserting citations using `citr` addin
+## Inserting citations using `citr` add-in
+
 
 - `devtools::install_github("crsh/citr")`
 - Restart Rstudio
@@ -302,9 +306,9 @@ cat("```
 - Search and select the references you want
 - Insert the citations
 
-## Using Zotero through `citr` addin
+## Using Zotero through `citr` add-in
 
-- Install "Zotero"" and "Better bibtex" plugin
+- Install Zotero and Better bibtex plugin
 - Start Zotero
 - Go to "Addins" in the RStudio toolbar
 - Select "CITR", "Insert citations" 
@@ -330,8 +334,10 @@ cat("```
 
 - Equations are based on [LaTeX code](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
 - [Online editor](https://www.codecogs.com/latex/eqneditor.php)
-- Code between single `$` results in an inline equation $\sum_{i=1}^nx_i$
-- Code between double `$` results in a stand alone equation $$\sum_{i=1}^nx_i$$
+- Code between single `$` results in an inline equation
+  $\sum_{i=1}^nx_i$
+- Code between double `$` results in a stand alone equation
+  $$\sum_{i=1}^nx_i$$
 - Code between `\begin{equation}` and `\end{equation}` and with a label `(\#eq:sum)` is stand alone and numbered
 
 \begin{equation}
@@ -353,9 +359,9 @@ cat("```
 
 ## Boxes
 
-- Open the dropdown menu 'Addins' for the RStudio toolbar
-- Look for the INBOmd package
-- Choose insert 'block', insert 'alertblock' or insert 'exampleblock'
+- Open the drop-down menu `Addins` for the RStudio toolbar
+- Look for the INBOmd package[^example]
+- Choose insert `block`, insert `alertblock` or insert `exampleblock`
 - Boxes can have an optional title
     - Works only with pdf output!
 
@@ -374,6 +380,7 @@ This is an example of a block
         - Place English text between `\benglish` and `\eenglish`
         - Place French text between `\bfrench` and `\efrench`
 
+<!-- spell-check: ignore:start -->
 ```markdown
 # Voorwoord {-}
 
@@ -385,6 +392,7 @@ This is an example of a block
 
 \mainmatter
 ```
+<!-- spell-check: ignore:end -->
 
 ## Adding appendices
 
@@ -417,7 +425,7 @@ Other output formats ignore `\appendix`
 
 ## Creating the template
 
-- Start by creating a regular Rmarkdown subdocument
+- Start by creating a regular Rmarkdown document
 - Use a name starting with underscore (`_`)
 - Create a template tag by placing it between double curly brackets `{{` and `}}`.
 - Pro tips:
@@ -430,6 +438,7 @@ Other output formats ignore `\appendix`
 An example template can be found in the file `__iris_template_within_document.Rmd`. 
 The first chunk is important since this is where the id is selected.
 
+
 ````markdown
 `r ''````{r {{id}}-setup}
 if (interactive()) {
@@ -441,16 +450,18 @@ selection <- iris %>%
   filter(Species == this_id)
 ```
 ````
+<!-- spell-check: ignore:end -->
 
 ## Handle the template
 
-- Chunk option `results` must be "asis"
+- Chunk option `results` must be `"asis"`
 - Call `knit_expand()` on each value of the template tag
     - The example will replace every `{{id}}` from the template with a value from `to_do`
 - `knit_expand()` only does the 'find and replace'
 - `knit()` actually runs the Rmarkdown code created by `knit_expand()`
 - The following three slides show the produced output for each species from the template
 
+<!-- spell-check: ignore:start -->
 ````markdown
 `r ''````{r display-species-analysis, results = "asis"}
 to_do <- unique(mt$id)
@@ -464,6 +475,7 @@ rmd <- paste(collapse = "\n\n")
 cat(knit(text = rmd, quiet = TRUE))
 ```
 ````
+
 
 ```{r display-species-analysis, results = "asis", echo = FALSE}
 to_do <- unique(iris$Species)
@@ -531,3 +543,4 @@ for (id in todo) {
 ```
 
 # Bibliography
+

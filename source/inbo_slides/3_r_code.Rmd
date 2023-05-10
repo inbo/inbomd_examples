@@ -2,7 +2,7 @@
 
 ## Code
 
-### Chunks + output {.allowframebreaks}
+### Code blok en output {.allowframebreaks}
 
 ```{r datasets, error = TRUE, message = TRUE}
 # logical
@@ -18,7 +18,7 @@ c("maandag", "dinsdag", "woensdag")
 # factor
 factor(c("maandag", "dinsdag", "woensdag"))
 # function
-my_fun <- function(x){
+my_fun <- function(x) {
   cat("mijn functie is", x)
 }
 # data.frame
@@ -43,8 +43,8 @@ for (i in 1:5) {
   cat("i =", i, "\n")
 }
 # aantal karakters
-#       10        20        30        40        50        60        70        80        90       100       110       120
-#2345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+#       10        20        30        40        50        60        70        80        90       100       110       120 # nolint: line_length_linter.
+#2345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890 # nolint: line_length_linter.
 ```
 
 ### Door R berekende waarden gebruiken in gewone tekst
@@ -58,14 +58,18 @@ life_exp <- sprintf(
 )
 ```
 
-R output mengen met gewoon tekst is vrij eenvoudig. Bijvoorbeeld $1 + 1 = `r 1+1`$. Zorg er voor dat je in de tekst een enkel en eenvoudig R commando hoeft gebruiken. Heb je een complexere berekening nodig dan doe je die op voorhand. Bijvoorbeeld: de levensverwachting in de USA is `r life_exp`.
+R output mengen met gewoon tekst is vrij eenvoudig.
+Bijvoorbeeld $1 + 1 = `r 1+1`$.
+Zorg er voor dat je in de tekst een enkel en eenvoudig R commando hoeft gebruiken.
+Heb je een complexere berekening nodig dan doe je die op voorhand.
+Bijvoorbeeld: de levensverwachting in de Verenigde Staten is `r life_exp`.
 
 ## Figuren
 
 ### Figuur met standaard kleur
 
 ```{r figtransparant, echo = FALSE, message=FALSE, warning=FALSE}
-ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + geom_histogram() + 
+ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + geom_histogram() +
   facet_wrap(~agegp, scales = "free")
 ```
 
@@ -78,12 +82,14 @@ ggplot(diamonds, aes(x = price, fill = cut)) + geom_histogram()
 ### Figuur met kleur per discrete categorie
 
 ```{r discrete, echo = FALSE}
-ggplot(mtcars, 
-       aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))) +
+ggplot(
+  mtcars,
+  aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))
+) +
   geom_point() + geom_smooth(method = "lm")
 ```
 
-### Figuur met enkelvoudige kleurgradient
+### Figuur met enkelvoudige kleurengradiënt
 
 ```{r gradient, echo = FALSE}
 pp <- function(n) {
@@ -99,16 +105,12 @@ ggplot(pp(20), aes(x = x, y = y, fill = z)) +
   scale_fill_gradient()
 ```
 
-### Figuur met kleurgradient met middenkleur
+### Figuur met kleurengradiënt met middenkleur
 
 ```{r gradient2, echo = FALSE}
 ggplot(pp(20), aes(x = x, y = y, fill = z)) +
   geom_tile(width = 0.8, height = 0.8) +
-  scale_fill_gradient2(
-    midpoint = 20, 
-    low = vl_lightblue, 
-    high = vl_lightred
-  )
+  scale_fill_gradient2(midpoint = 20, low = vl_lightblue, high = vl_lightred)
 ```
 
 ### Standaard volgorde van kleuren bij categorieën
@@ -136,26 +138,28 @@ cijfer_tabel <- function(rijen = 20, kolommen = 10) {
     row.names = paste("rij", seq_len(rijen))
   )
 }
-random_woord <- function(n_letters = 5){
+random_woord <- function(n_letters = 5) {
   paste(
     sample(letters, size = n_letters, replace = TRUE),
     collapse = ""
   )
 }
-random_zin <- function(n_woorden = 10, n_letters = 10){
+random_zin <- function(n_woorden = 10, n_letters = 10) {
   paste(
     sapply(
-      rpois(n_woorden, n_letters), 
+      rpois(n_woorden, n_letters),
       FUN = random_woord
     ),
     collapse = " "
   )
 }
-tekst_tabel <- function(rijen = 20, kolommen = 10, n_woorden = 10, n_letters = 5){
+tekst_tabel <- function(
+    rijen = 20, kolommen = 10, n_woorden = 10, n_letters = 5
+) {
   x <- data.frame(
     matrix(
       sapply(
-        rpois(rijen * kolommen, lambda = n_woorden), 
+        rpois(rijen * kolommen, lambda = n_woorden),
         random_zin,
         n_letters
       ),
@@ -166,11 +170,14 @@ tekst_tabel <- function(rijen = 20, kolommen = 10, n_woorden = 10, n_letters = 5
   colnames(x) <- head(LETTERS, kolommen)
   return(x)
 }
-genereer_tabel <- function(rijen = 20, kolommen = c(5, 5), n_woorden = 10, n_letters = 5){
+genereer_tabel <- function(
+    rijen = 20, kolommen = c(5, 5), n_woorden = 10, n_letters = 5
+) {
   cbind(
     cijfer_tabel(rijen = rijen, kolommen = kolommen[1]),
     tekst_tabel(
-      rijen = rijen, kolommen = kolommen[2], n_woorden = n_woorden, n_letters = n_letters
+      rijen = rijen, kolommen = kolommen[2], n_woorden = n_woorden,
+      n_letters = n_letters
     )
   )
 }
@@ -185,7 +192,7 @@ kable(
 )
 ```
 
-### Booktabs `kable()`
+### `Booktabs` `kable()`
 
 ```{r kable-booktabs, echo = FALSE}
 kable(
@@ -195,11 +202,11 @@ kable(
 )
 ```
 
-### longtable `kable()`
+### `longtable` `kable()`
 
 ```{r kable-longtable, echo = FALSE}
 kable(
-  genereer_tabel(15, c(2, 1), 4, 4), 
+  genereer_tabel(15, c(2, 1), 4, 4),
   digits = 2,
   longtable = TRUE
 )
@@ -209,7 +216,7 @@ kable(
 
 ```{r kable-markdown, echo = FALSE}
 kable(
-  genereer_tabel(15, c(2, 1), 4, 4), 
+  genereer_tabel(15, c(2, 1), 4, 4),
   digits = 2
 )
 ```
@@ -218,7 +225,7 @@ kable(
 
 ```{r kable-pandoc, echo = FALSE}
 kable(
-  genereer_tabel(15, c(2, 1), 4, 4), 
+  genereer_tabel(15, c(2, 1), 4, 4),
   digits = 2,
   format = "pandoc"
 )

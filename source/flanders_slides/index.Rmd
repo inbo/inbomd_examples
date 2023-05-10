@@ -6,15 +6,19 @@ author:
       family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-    affiliation: Research Institute fo Nature and Forest (INBO)
     corresponding: true
+    affiliation: Research Institute for Nature and Forest (INBO)
 reviewer:
   - name:
-      given: reviewer_Firstname
-      family: reviewer_Lastname
-    email: "reviewer.firstname.lastname@inbo.be"
-    orcid: 0000-0002-1825-0097
+      given: Floris
+      family: Vanderhaeghe
+    email: floris.vanderhaeghe@inbo.be
+    orcid: 0000-0002-6378-6229
     affiliation: Research Institute for Nature and Forest (INBO)
+funder: Research Institute for Nature and Forest (INBO)
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: INBOmd; examples; slides
 subtitle: "Here comes the optional subtitle"
 location: "Here comes the optional location"
 institute: "Here comes the optional affilitation"
@@ -22,17 +26,13 @@ toc_name: "Title of the table of content"
 style: Flanders
 lang: en
 slide_level: 3
-cover_photo: "trees-1036958.jpg"
+cover_photo: "media/trees-1036958.jpg"
 flandersfont: TRUE
 
 embargo: 2020-01-01
-funder: Research Institute for Nature and Forest (INBO)
-rightsholder: Research Institute for Nature and Forest (INBO)
-community: inbo
-keywords: slides;flanders
 
 site: bookdown::bookdown_site
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 output:
   INBOmd::slides: default
   INBOmd::handouts: default
@@ -55,47 +55,47 @@ switch_colour(vl_darkyellow)
 
 ### Title slide
 
-subtitle
+`subtitle`
   ~ subtitle on the title slide (optional)
   
-location
+`location`
   ~ place and date of the presentation on the title slide (optional)
   
-institute
+`institute`
   ~ affiliation on title slide (optional)
 
-cover
+`cover`
   ~ background figure for the title slide. A standard figure will be used when missing
   
-cover_horizontal
+`cover_horizontal`
   ~ scale the cover figure to the width when TRUE (default) or to the height when FALSE
 
-cover_offset
+`cover_offset`
   ~ shift the cover figure vertically (optional)
 
-cover_hoffset
+`cover_hoffset`
   ~ shift the cover figure horizontally (optional)
 
 ### Table of content
 
-toc
+`toc`
   ~ add a slide with table of content when TRUE (default), no table of content when FALSE
   
-toc_naam
+`toc_name`
   ~ title of the slide with the table of content
 
-slide_level
+`slide_level`
   ~ header level that matches with slide titles. Default: 2. Must be between 1 and 3
   ~ higher levels become separator slides
 
 # Separator slide heading 1 (in case slide_level > 1) extra text a b c d e f g h i j k l m n o p q r s t
 
-## Separator slide heading 2 (in case slide_level > 2) extra text a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9  a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e
+## Separator slide heading 2 (in case slide_level > 2) extra text a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9  a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e <!-- spell-check: ignore -->
 
-### Slide title (heading = slide_level) extra text a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9
+### Slide title (heading = slide_level) extra text a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 <!-- spell-check: ignore -->
 
-- The text box will automatically shring when the slide title requires more lines
-- The text is vertically centered within the text box
+- The text box will automatically shrink when the slide title requires more lines
+- The text is vertically centred within the text box
 - In case the title of heading 1 is too long, the first part of the title will disappear
 - In case the title of heading 2 is too long, the last part of the title will disappear
 
@@ -109,6 +109,6 @@ slide_level
 ### Split slides automatically {.allowframebreaks}
 
 - Adding `{.allowframebreaks}` at the end of the slide title will split long slides automatically into multiple slides
-- A Roman nummeral will be added at the end of the title to each of those slides
+- A Roman numeral will be added at the end of the title to each of those slides
 
 `r paragraph(1:2)`
