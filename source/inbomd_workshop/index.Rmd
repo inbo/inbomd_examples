@@ -69,40 +69,6 @@ if (interactive()) {
 }
 ```
 
-# INBOmd?
-
-## What is INBOmd?
-- RMarkdown ([R beginners course](https://inbo.github.io/tutorials/tutorials/r_beginners/)):
-  - Simple and easy to use plain text language
-  - Combine R code, data analysis results (plots, tables,...) with written commentary
-  - Nicely formatted and reproducible document
-- Bookdown:
-  - Writing books and long-form articles / reports with R markdown 
-- INBOmd:
-  - Bookdown templates for slides, reports, and posters in the INBO style (colors, font,...)
-  - Handy user functions
-- INBOtheme:
-  - [Color palettes](https://github.com/inbo/INBOtheme), [see Tutorials](https://inbo.github.io/INBOtheme/articles/index.html)
-
-
-# Motivation & examples in practice
-
-## Motivation
-
-- Easily use cross references, citations, and bibliography
-- Scripts and text interwoven
-- New data = No problem!
-- INBO look with little effort
-
-## Examples
-
-- Watina (cfr OS Café Joost)
-- Reports that stay largely the same but need to be updated with new data / analyses regularly
-  - EU habitat reporting
-  - Vleemo radarproject
-- The same analysis needs to be done for different subsets of the data
-  - Generating a seperate report on partridge counts for each Game Management Unit (GMU)
-  - Generate a chapter for each habitat in the EU habitat reporting
 
 ## Where to find documentation
 
@@ -123,8 +89,11 @@ if (interactive()) {
 
 ```{r eval = FALSE}
 update.packages(ask = FALSE, checkBuilt = TRUE)
-if (length(find.package("tinytex", quiet = TRUE)) == 0) {
+if (!"tinytex" %in% rownames(installed.packages())) {
   install.packages("tinytex")
+}
+# install the TinyTeX LaTeX distribution
+if (!tinytex:::is_tinytex()) {
   tinytex::install_tinytex()
 }
 ```
@@ -135,8 +104,8 @@ if (length(find.package("tinytex", quiet = TRUE)) == 0) {
 ## Install `INBOmd`
 
 ```{r eval = FALSE}
-# standard installation 
-install.packages("INBOmd")
+# installation from inbo.r-universe
+install.packages("INBOmd", repos = "https://inbo.r-universe.dev")
 
 ## alternative: installation from github
 #if (!"remotes" %in% rownames(installed.packages())) {
@@ -144,7 +113,16 @@ install.packages("INBOmd")
 #}
 #remotes::install_github("inbo/INBOmd", dependencies = TRUE)
 
+# add the local latex package contained in INBOmd to the TinyTeX install 
+tinytex::tlmgr_conf(
+  c("auxtrees", "add", system.file("local_tex", package = "INBOmd"))
+)
 
+# install some other needed latex packages 
+tinytex::tlmgr_install(c(
+  "inconsolata", "times", "tex", "helvetic", "dvips", "hyphen-dutch",
+  "hyphen-french"
+))
 ```
 
 # Getting started
@@ -512,6 +490,7 @@ cat(knit(text = rmd, quiet = TRUE))
 ## Make the template
 
 An example can be found in `_iris_template_separate_reports.Rmd`
+
 - `params` in the YAML allow you to specify parameters that can be called in the remainder of the document as `params$param_name`
 - select the subset with `selection <- iris %>% filter(Species == params$species)`
 - take care to make your text and code dynamic such that it can accommodate different data.
