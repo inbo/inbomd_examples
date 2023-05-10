@@ -1,5 +1,5 @@
 --- 
-title: "Voorbeeldslides met INBOmd"
+title: "Voorbeeldpresentatie met INBOmd"
 subtitle: "Hier komt de optionele ondertitel"
 author: 
   - name:
@@ -7,31 +7,31 @@ author:
       family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-    affiliation: Research Institute fo Nature and Forest (INBO)
     corresponding: true
+    affiliation: Research Institute for Nature and Forest (INBO)
 reviewer:
   - name:
-      given: reviewer_Firstname
-      family: reviewer_Lastname
-    email: "reviewer.firstname.lastname@inbo.be"
-    orcid: 0000-0002-1825-0097
+      given: Floris
+      family: Vanderhaeghe
+    email: floris.vanderhaeghe@inbo.be
+    orcid: 0000-0002-6378-6229
     affiliation: Research Institute for Nature and Forest (INBO)
+funder: Research Institute for Nature and Forest (INBO)
+rightsholder: Research Institute for Nature and Forest (INBO)
+community: inbo
+keywords: INBOmd; examples; slides
 location: "Hier komt optioneel de plaats"
 institute: "Hier komt optioneel de affiliatie"
 toc_name: "De naam van de inhoudstafel"
 slide_level: 3
-cover_photo: "trees-1036958.jpg"
+cover_photo: "media/trees-1036958.jpg"
 flandersfont: TRUE
 
-funder: Research Institute for Nature and Forest (INBO)
-rightsholder: Research Institute for Nature and Forest (INBO)
-community: inbo
-keywords: slides;example
-
+corresponding: thierry.onkelinx@inbo.be
 embargo: 2020-01-01
 
 site: bookdown::bookdown_site
-bibliography: ../INBOmd.bib
+bibliography: ../inbomd.bib
 
 output:
   INBOmd::slides: default
@@ -51,62 +51,68 @@ theme_set(theme_inbo(6, transparent = "plot"))
 
 # Opties
 
-### Titelslide
+### Titelpagina
 
-subtitle
-  ~ ondertitel op titelslide (optioneel)
+`subtitle`
+  ~ ondertitel op titelpagina (optioneel)
   
-location
-  ~ plaats en datum van presentatie op titelslide (optioneel)
+`location`
+  ~ plaats en datum van presentatie op titelpagina (optioneel)
   
-institute
-  ~ affiliatie op titelslide (optioneel)
+`institute`
+  ~ affiliatie op titelpagina (optioneel)
 
-cover_photo
-  ~ figuur voor achtergrond van titelslide. Standaardfiguur indien ontbreekt.
+`cover_photo`
+  ~ figuur voor achtergrond van titelpagina.
+  Standaardfiguur indien ontbreekt.
   
-cover_horizontal
-  ~ schaal de coverfoto naar de breedte indien TRUE (standaard) of naar de hoogte indien FALSE.
+`cover_horizontal`
+  ~ schaal de coverfoto naar de breedte indien `TRUE` (standaard) of naar de hoogte indien `FALSE`.
 
-cover_offset
-  ~ verschuif de coverfoto vertikaal (optioneel).
+`cover_offset`
+  ~ verschuif de coverfoto verticaal (optioneel).
 
-cover_hoffset
+`cover_hoffset`
   ~ verschuif de coverfoto horizontaal (optioneel).
 
 ### Inhoudstafel
 
-toc
-  ~ maak slide met inhoudstafel indien TRUE (standaard). Geen inhoudstafel indien FALSE
+`toc`
+  ~ maak pagina met inhoudstafel indien `TRUE` (standaard).
+    Geen inhoudstafel indien `FALSE`.
   
-toc_naam
-  ~ titel van de slide met inhoudstafel. Standaard: "Overzicht"
+`toc_naam`
+  ~ titel van de pagina met inhoudstafel.
+    Standaard: "Overzicht"
 
-slide_level
-  ~ hoofdingsniveau dat overeenkomt met slidetitels. Standaard: 2. Moet tussen 1 en 3 liggen.
-  ~ hogere niveaus worden tussenslides
+`slide_level`
+  ~ kopniveau dat overeenkomt met paginatitels.
+    Standaard: 2.
+    Moet tussen 1 en 3 liggen.
+  ~ hogere niveaus worden tussenpagina's
 
-# Tussenslide kop 1 (indien slide_level > 1) extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4
+# Tussenpagina kop 1 (indien `slide_level` > 1) extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4
 
-## Tussenslide kop 2 (indien slide_level > 2) extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9  a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l
+## Tussenpagina kop 2 (indien `slide_level` > 2) extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9  a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l
 
-### Slidetitel (kop = slide_level) extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9
+### Paginatitel (kop = `slide_level`) extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9
+
 
 - Bij een lange titel wordt het vak voor de tekst automatisch kleiner
-- De tekst in het tekstvak blijft vertikaal gecentreerd binnen het tekstvak
-- Bij te lange tekst van kop 1 verdwijnt het begin van de tekst op de tussenslide
-- Bij te lange tekst van kop 2 verdwijnt het einde van de tekst op de tussenslide
+- De tekst in het tekstvak blijft verticaal gecentreerd binnen het tekstvak
+- Bij te lange tekst van kop 1 verdwijnt het begin van de tekst op de tussenpagina
+- Bij te lange tekst van kop 2 verdwijnt het einde van de tekst op de tussenpagina
 
-### Slide met teveel tekst extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9
+### Pagina met teveel tekst extra tekst a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9
 
-- Te lange tekst loopt gewoon verder buiten de afmetingen van de slide
-- Dus niet automatisch verkleind zoals in PowerPoint
+- Te lange tekst loopt gewoon verder buiten de afmetingen van de pagina
+- Dus niet automatisch verkleind zoals in `PowerPoint`
 
 `r paragraph(1:2)`
 
-### Slide met veel tekst automatisch splitsen {.allowframebreaks}
+### Pagina met veel tekst automatisch splitsen {.allowframebreaks}
 
-- Met   `{.allowframebreaks}` achter de titel laat je lange slides automatisch over meerdere slides uitsplitsen
-- Er wordt automatisch een volgnummer (Romeins cijfer) aan de slidetitel toegevoegd
+- Met   `{.allowframebreaks}` achter de titel laat je lange pagina's automatisch over meerdere pagina's uitsplitsen
+- Er wordt automatisch een volgnummer (Romeins cijfer) aan de paginatitel toegevoegd
 
 `r paragraph(1:2)`

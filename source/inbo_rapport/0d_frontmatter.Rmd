@@ -1,0 +1,13 @@
+\mainmatter
+
+# Inleiding 
+
+Het doel van dit document is louter de beschikbare stijlelementen te tonen. De pdf versie heeft als doelstelling een drukklare versie van een tweezijdig rapport af te leveren. De titelpagina's van het rapport en van de verschillende delen staan steeds op de rechterpagina. Het eerste hoofdstuk van een rapport of van een deel begint eveneens steeds op de rechterpagina. Hierdoor komt er een blanco pagina tussen een titelpagina en het eerste hoofdstuk. 
+
+## Lipsum
+
+Lorem ipsum is een opvultekst die drukkers, zetters, grafisch ontwerpers en dergelijke gebruiken om te kijken hoe een lay-out er uit ziet.
+
+De reden waarom de tekst gebruikt wordt door die doelgroep is dat bij een leesbare tekst de lezer afgeleid zou worden door de inhoud, terwijl het alleen om de vormgeving gaat. Bovendien heeft het Lorem ipsum een redelijk normale afwisseling van de verschillende letters en korte en lange woorden.
+
+In de broncode van dit document vind je stukjes code als `\usepackage{lipsum}` of `\lipsum[10]`. Deze code is enkel nodig om de stukjes van de Lipsum tekst te tonen. In een werkelijk rapport heb je deze uiteraard niet nodig.

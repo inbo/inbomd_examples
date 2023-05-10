@@ -1,4 +1,4 @@
 book_filename: "flanders_report"
-output_dir: "../../docs/flanders_report"
+output_dir: "../../output/flanders_report"
 delete_merged_file: TRUE
 edit: https://github.com/inbo/inbomd_examples/edit/main/source/flanders_report/%s

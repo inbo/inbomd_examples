@@ -1,7 +1,10 @@
 book_filename: "inbo_rapport_delen"
 rmd_files:
   - "index.Rmd"
-  - "../inbo_rapport/0_frontmatter.Rmd"
+  - "../inbo_rapport/0a_samenvatting.Rmd"
+  - "../inbo_rapport/0b_abstract.Rmd"
+  - "../inbo_rapport/0c_resume.Rmd"
+  - "../inbo_rapport/0d_frontmatter.Rmd"
   - "definitie_typografie.Rmd"
   - "../inbo_rapport/1_typografie.Rmd"
   - "andere_elementen.Rmd"
@@ -13,7 +16,7 @@ rmd_files:
   - "referenties.Rmd"
   - "../inbo_rapport/z_bijlage.Rmd"
 delete_merged_file: TRUE
-output_dir: "../../docs/inbo_rapport_delen"
+output_dir: "../../output/inbo_rapport_delen"
 language:
   label:
     fig: 'Figuur '
