@@ -2,23 +2,26 @@
 title: Voorbeeldrapport met INBOmd
 subtitle: Dit is de standaardversie
 author: 
-  - firstname: Thierry
-    name: Onkelinx
+  - name:
+      given: Thierry
+      family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-shortauthor: Onkelinx, T.
-corresponding: thierry.onkelinx@inbo.be
+    affiliation: Research Institute fo Nature and Forest (INBO)
+    corresponding: true
 reviewer:
-  - firstname: Floris
-    name: Vanderhaeghe
+  - name:
+      given: Floris
+      family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
     orcid: 0000-0002-6378-6229
+    affiliation: Research Institute fo Nature and Forest (INBO)
 github-repo: inbo/inbomd-examples
 year: 2021
 cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
 cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 cover: cover.pdf # link naar pdf met cover
-doi: https://doi.org/10.5281/zenodo.842223
+doi: 10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: Het optionele nummer van de opdrachtgever
@@ -43,8 +46,13 @@ cooperation:
 cooperation_logo: logo.jpg
 style: INBO
 lang: nl
-lot: TRUE
 lof: TRUE
+lot: TRUE
+keywords: "keyword1;keyword2"
+community: "inbo"
+publication_type: report
+funder: Research Institute for Nature and Forest (INBO)
+rightsholder: Research Institute for Nature and Forest (INBO)
 
 site: bookdown::bookdown_site
 link-citations: TRUE
