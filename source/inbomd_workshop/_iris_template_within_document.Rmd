@@ -1,0 +1,44 @@
+```{r {{id}}-setup, echo=FALSE}
+#A species is randomly sampled if this template is run interactively.
+#Else, the id is equal to the {{id}} that is passed through knit_expand
+if (interactive()) {
+  this_id <- sample(unique(iris$Species), 1)
+} else {
+  this_id <- "{{id}}"
+}
+selection <- iris %>%
+  filter(Species == this_id)
+```
+
+## Analysis of the iris dataset for the `r stringr::str_to_title(this_id)` species
+
+The average sepal width and length are `r round(mean(selection$Sepal.Width),2)` and `r round(mean(selection$Sepal.Width),2)` respectively. 
+
+```{r {{id}}-sepal, echo = FALSE, warning=FALSE, message =FALSE, fig.height=1, fig.width=3}
+selection %>%
+  ggplot(aes(x = Sepal.Width, y = Sepal.Length)) +
+  geom_point()
+```
+
+```{r {{id}}-regression, echo = FALSE, warning=FALSE, message=FALSE}
+reg <- lm(data = selection,
+   formula = Sepal.Width ~ Sepal.Length + Petal.Length + Petal.Width)
+summary_regression <- summary(reg)$coefficients
+#we're not interested in the intercept
+significant <- which(summary_regression[-1,4] < 0.05)
+
+if (length(significant) == 0) {
+   conclusion <- "none of the covariates are significant"
+} else if (length(significant) == 1) {
+     conclusion <- paste("only", names(significant), "is significant")
+} else {
+       conclusion <- paste(length(significant), "of the covariates are significant")
+       }
+summary_regression %>%
+  knitr::kable(caption = "regression results",
+        booktabs = TRUE,
+        digits = 3) %>%
+  kableExtra::kable_styling(font_size = 7)
+```
+
+A simple linear regression model that predicts the sepal width based on sepal length, petal length and petal width shows that `r conclusion` (see Table \@ref(tab:{{id}}-regression)).

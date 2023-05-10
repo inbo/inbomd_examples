@@ -47,6 +47,8 @@ opts_chunk$set(
 )
 library(tidyverse)
 library(INBOtheme)
+library(kableExtra)
+library(rprojroot)
 if (interactive()) {
   theme_set(
     theme_inbo(
@@ -78,8 +80,9 @@ if (interactive()) {
   - Writing books and long-form articles / reports with R markdown 
 - INBOmd:
   - Bookdown templates for slides, reports, and posters in the INBO style (colors, font,...)
-  - [Color palettes](https://github.com/inbo/INBOtheme)
   - Handy user functions
+- INBOtheme:
+  - [Color palettes](https://github.com/inbo/INBOtheme), [see Tutorials](https://inbo.github.io/INBOtheme/articles/index.html)
 
 
 # Motivation & examples in practice
@@ -132,8 +135,8 @@ if (length(find.package("tinytex", quiet = TRUE)) == 0) {
 ## Install `INBOmd`
 
 ```{r eval = FALSE}
-# installation from inbo.r-universe
-install.packages("INBOmd", repos = "https://inbo.r-universe.dev")
+# standard installation 
+install.packages("INBOmd")
 
 ## alternative: installation from github
 #if (!"remotes" %in% rownames(installed.packages())) {
@@ -141,16 +144,7 @@ install.packages("INBOmd", repos = "https://inbo.r-universe.dev")
 #}
 #remotes::install_github("inbo/INBOmd", dependencies = TRUE)
 
-# add the local latex package contained in INBOmd to the TinyTeX install 
-tinytex::tlmgr_conf(
-  c("auxtrees", "add", system.file("local_tex", package = "INBOmd"))
-)
 
-# install some other needed latex packages 
-tinytex::tlmgr_install(c(
-  "inconsolata", "times", "tex", "helvetic", "dvips", "hyphen-dutch",
-  "hyphen-french"
-))
 ```
 
 # Getting started
@@ -206,6 +200,7 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 
 ## Building the report
 
+- Open .Rproj in the same location as your index.Rmd file
 - Use the `Build Book` button instead of the `Knit` button
     - You can find this button in the same window as `Environment` and `History`
 - Open the dropdown menu to select the required output format
@@ -250,9 +245,20 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
     - `label` must be a unique name in the document
     - Pro tip: use the chunk name as `label`
 
-## Example figure
+## Example figures
 
-```{r figure-example, warning = FALSE, message = FALSE, fig.cap="Pressure versus temperature", fig.height = 2, fig.width = 4}
+```{r figure-example, warning = FALSE, message = FALSE, fig.cap = "Pressure vs temperature",fig.height = 1.2, fig.width = 3, echo=FALSE}
+library(tidyverse)
+library(INBOtheme)
+ggplot(pressure) + 
+  geom_point(aes(x = temperature, y = pressure)) + 
+  theme_inbo()
+```
+
+
+(ref:label) This figure caption _works_ 100%!
+
+```{r figure-label, warning = FALSE, message = FALSE, fig.cap = "(ref:label)",fig.height = 1.2, fig.width = 3, echo=FALSE}
 library(tidyverse)
 library(INBOtheme)
 ggplot(pressure) + 
@@ -276,7 +282,7 @@ ggplot(pressure) +
 
 ```{r table-example, warning = FALSE, message = FALSE}
 pressure %>%
-  head() %>%
+  head(5) %>%
   knitr::kable(
     booktabs = TRUE,
     caption = "Pressure and temperature"
@@ -418,6 +424,13 @@ Other output formats ignore `\appendix`
 
 # Using templates within a document
 
+## Using templates within a document
+
+- Execute the same analysis for different subsets of your data.
+- Create a different (sub)section for each subset of the data within your report
+- Take care to make your text and code dynamic such that it can accommodate different data.
+
+
 ## `knit_expand` concept
 
 - Create a template with template tags
@@ -437,26 +450,19 @@ Other output formats ignore `\appendix`
 
 ## Example template
 
-```{r echo = FALSE}
-title <- "## `r selection$title[1]`"
-plot_template <- '```{r mt-{{id}}-plot, fig.cap = selection$caption[1]}
-ggplot(selection, aes(x = year, y = value)) + geom_point()
-```'
-```
+An example template can be found in the file `__iris_template_within_document.Rmd`. 
+The first chunk is important since this is where the id is selected.
 
 ````markdown
-`r ''````{r mt-{{id}}-setup}
+`r ''````{r {{id}}-setup}
 if (interactive()) {
-  this_id <- sample(mt$id, 1)
+  this_id <- sample(unique(iris$Species), 1)
 } else {
   this_id <- "{{id}}"
 }
-selection <- filter(mt, id == this_id)
+selection <- iris %>%
+  filter(Species == this_id)
 ```
-
-`r title`
-
-`r plot_template`
 ````
 
 ## Handle the template
@@ -466,9 +472,10 @@ selection <- filter(mt, id == this_id)
     - The example will replace every `{{id}}` from the template with a value from `to_do`
 - `knit_expand()` only does the 'find and replace'
 - `knit()` actually runs the Rmarkdown code created by `knit_expand()`
+- The following three slides show the produced output for each species from the template
 
 ````markdown
-`r ''````{r display-monthly-totals, results = "asis"}
+`r ''````{r display-species-analysis, results = "asis"}
 to_do <- unique(mt$id)
 rmd <- sapply(
   to_do, 
@@ -481,19 +488,68 @@ cat(knit(text = rmd, quiet = TRUE))
 ```
 ````
 
-## Evaluatie OSD
+```{r display-species-analysis, results = "asis", echo = FALSE}
+to_do <- unique(iris$Species)
+rmd <- sapply(
+  to_do, 
+  function(id) {
+    knit_expand("_iris_template_within_document.Rmd", id = id)
+  }
+) %>%
+  paste(collapse = "\n\n")
+cat(knit(text = rmd, quiet = TRUE))
+```
 
-Vul de bevraging in!
+# Using templates to generate separate reports
 
+## Using templates to generate separate reports
 
-[https://forms.gle/qYZnFeDVLPkhC2vFA](
-https://forms.gle/qYZnFeDVLPkhC2vFA)
+- Execute the same analysis for different subsets of your data.
+- Create a different report for each subset of your data (e.g. for different stakeholders)
+- The Rmd template now has a YAML since it should be a stand-alone document
+  - `params` argument in the YAML is used to select subsets of the data
+  
+## Make the template
 
+An example can be found in `_iris_template_separate_reports.Rmd`
+- `params` in the YAML allow you to specify parameters that can be called in the remainder of the document as `params$param_name`
+- select the subset with `selection <- iris %>% filter(Species == params$species)`
+- take care to make your text and code dynamic such that it can accommodate different data.
 
-```{r warning = FALSE, message = FALSE, fig.width=2.5, fig.height=2.5}
-library(qrcode)
-code <- qr_code("https://forms.gle/qYZnFeDVLPkhC2vFA")
-plot(code)
+````markdown
+---
+author: "Research Institute for Nature and Forest"
+date: "`r Sys.Date()`"
+output:
+  bookdown::pdf_document2: default
+biblio-style: "apalike"
+link-citations: true
+params:
+    species: "setosa"
+---
+````
+## Make the reports
+
+Use `rmarkdown::render()` to generate all your reports 
+- `input` specifies the Rmd template
+- `output_format` lets you choose which type of output you want to generate (needs to be in the template YAML)
+- `params` lists which values you want for the parameters in the template's YAML
+- `output_file` specifies the path and filename for the report
+
+The code below is executed in the console, not from an Rmd file (save it in a R script).
+
+```{r make-reports, eval=FALSE}
+todo <- unique(iris$Species)
+for (id in todo) {
+    rmarkdown::render(input = "_iris_template_separate_reports.Rmd",
+                      output_format = "bookdown::pdf_document2",
+                      params = list(species = id),
+                      output_file =
+                        rprojroot::find_root_file(
+                          "output",
+                          paste0("Rapport_", id, ".pdf"),
+                          criterion = has_file("inbomd_examples.Rproj")))
+}
 ```
 
 # Bibliography
