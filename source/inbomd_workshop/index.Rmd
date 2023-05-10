@@ -47,7 +47,6 @@ opts_chunk$set(
 )
 library(tidyverse)
 library(INBOtheme)
-library(kableExtra)
 library(rprojroot)
 if (interactive()) {
   theme_set(
