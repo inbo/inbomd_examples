@@ -447,7 +447,7 @@ if (interactive()) {
   this_id <- "{{id}}"
 }
 selection <- iris %>%
-  filter(Species == this_id)
+  dplyr::filter(Species == this_id)
 ```
 ````
 
@@ -502,7 +502,7 @@ cat(knit(text = rmd, quiet = TRUE))
 An example can be found in `_iris_template_separate_reports.Rmd`
 
 - `params` in the YAML allow you to specify parameters that can be called in the remainder of the document as `params$param_name`
-- select the subset with `selection <- iris %>% filter(Species == params$species)`
+- select the subset with `selection <- iris %>% dplyr::filter(Species == params$species)`
 - take care to make your text and code dynamic such that it can accommodate different data.
 
 ````markdown

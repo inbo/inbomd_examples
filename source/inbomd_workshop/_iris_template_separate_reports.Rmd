@@ -20,7 +20,7 @@ options(knitr.table.format = function() {
 })
 this_species <- params$species
 selection <- iris %>%
-  filter(Species == this_species)
+  dplyr::filter(Species == this_species)
 #this template shows how to make a dynamic title for the document
 #see `title:` below
 # the dynamic bibliography is only required now since there is one references.bib file for all inbomd_examples

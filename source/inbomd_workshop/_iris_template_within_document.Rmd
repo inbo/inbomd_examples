@@ -7,7 +7,7 @@ if (interactive()) {
   this_id <- "{{id}}"
 }
 selection <- iris %>%
-  filter(Species == this_id)
+  dplyr::filter(Species == this_id)
 ```
 
 ## Analysis of the iris dataset for the `r stringr::str_to_title(this_id)` species
