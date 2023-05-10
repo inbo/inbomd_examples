@@ -2,17 +2,20 @@
 title: Voorbeeldrapport met INBOmd
 subtitle: Versie in generieke huisstijl Vlaamse overheid
 author: 
-  - firstname: Thierry
-    name: Onkelinx
+  - name:
+      given: Thierry
+      family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-shortauthor: Onkelinx, T.
-corresponding: thierry.onkelinx@inbo.be
+    affiliation: Research Institute fo Nature and Forest (INBO)
+    corresponding: true
 reviewer:
-  - firstname: Floris
-    name: Vanderhaeghe
+  - name:
+      given: Floris
+      family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
     orcid: 0000-0002-6378-6229
+    affiliation: Research Institute fo Nature and Forest (INBO)
 github-repo: inbo/inbomd-examples
 year: 2021
 cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
@@ -32,7 +35,7 @@ cooperation:
   - 1000 Brussel
   - https://www.vlaanderen.be/inbo
 cooperation_logo: logo.jpg
-doi: https://doi.org/10.5281/zenodo.842223
+doi: 10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: Het optionele nummer van de opdrachtgever
@@ -44,6 +47,13 @@ print:
   pages: 123
 style: Vlaanderen
 lang: nl
+lof: TRUE
+lot: TRUE
+keywords: "keyword1;keyword2"
+community: "inbo"
+publication_type: report
+funder: Research Institute for Nature and Forest (INBO)
+rightsholder: Research Institute for Nature and Forest (INBO)
 
 site: bookdown::bookdown_site
 link-citations: TRUE
@@ -51,8 +61,8 @@ bibliography: ../INBOmd.bib
 
 output:
   INBOmd::gitbook: default
-  INBOmd::report: default
-  INBOmd::ebook: default
+  INBOmd::pdf_report: default
+  INBOmd::epub_book: default
   bookdown::dont_run: default
 ---
 
