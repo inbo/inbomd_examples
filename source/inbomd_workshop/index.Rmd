@@ -450,7 +450,6 @@ selection <- iris %>%
   filter(Species == this_id)
 ```
 ````
-<!-- spell-check: ignore:end -->
 
 ## Handle the template
 
@@ -475,7 +474,7 @@ rmd <- paste(collapse = "\n\n")
 cat(knit(text = rmd, quiet = TRUE))
 ```
 ````
-
+<!-- spell-check: ignore:end -->
 
 ```{r display-species-analysis, results = "asis", echo = FALSE}
 to_do <- unique(iris$Species)
