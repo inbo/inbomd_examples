@@ -25,15 +25,15 @@ reg <- lm(data = selection,
    formula = Sepal.Width ~ Sepal.Length + Petal.Length + Petal.Width)
 summary_regression <- summary(reg)$coefficients
 #we're not interested in the intercept
-significant <- which(summary_regression[-1,4] < 0.05)
+significant <- which(summary_regression[-1, 4] < 0.05)
 
 if (length(significant) == 0) {
-   conclusion <- "none of the covariates are significant"
+  conclusion <- "none of the covariates are significant"
 } else if (length(significant) == 1) {
-     conclusion <- paste("only", names(significant), "is significant")
+  conclusion <- paste("only", names(significant), "is significant")
 } else {
-       conclusion <- paste(length(significant), "of the covariates are significant")
-       }
+  conclusion <- paste(length(significant), "of the covariates are significant")
+}
 summary_regression %>%
   knitr::kable(caption = "regression results",
         booktabs = TRUE,

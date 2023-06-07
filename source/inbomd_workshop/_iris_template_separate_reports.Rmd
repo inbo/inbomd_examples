@@ -23,7 +23,8 @@ selection <- iris %>%
   dplyr::filter(Species == this_species)
 #this template shows how to make a dynamic title for the document
 #see `title:` below
-# the dynamic bibliography is only required now since there is one references.bib file for all inbomd_examples
+# the dynamic bibliography is only required now since there is one
+# references.bib file for all inbomd_examples
 ```
 ---
 title: "Analysis of the iris dataset for the `r stringr::str_to_title(this_species)` species"
@@ -47,20 +48,20 @@ reg <- lm(data = selection,
    formula = Sepal.Width ~ Sepal.Length + Petal.Length + Petal.Width)
 summary_regression <- summary(reg)$coefficients
 #we're not interested in the intercept
-significant <- which(summary_regression[-1,4] < 0.05)
+significant <- which(summary_regression[-1, 4] < 0.05)
 
 if (length(significant) == 0) {
-   conclusion <- "none of the covariates are significant"
+  conclusion <- "none of the covariates are significant"
 } else if (length(significant) == 1) {
-     conclusion <- paste("only", names(significant), "is significant")
+  conclusion <- paste("only", names(significant), "is significant")
 } else {
-       conclusion <- paste(length(significant), "of the covariates are significant")
-       }
+  conclusion <- paste(length(significant), "of the covariates are significant")
+}
 summary_regression %>%
   knitr::kable(
     caption = "Regression results.",
     booktabs = TRUE,
-    digits = 3) 
+    digits = 3)
 ```
 
 A simple linear regression model that predicts the sepal width based on sepal length, petal length and petal width shows that `r conclusion` (see Table \@ref(tab:regression)).

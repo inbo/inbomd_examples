@@ -88,7 +88,7 @@ if (interactive()) {
 
 ```{r eval = FALSE}
 update.packages(ask = FALSE, checkBuilt = TRUE)
-if (!"tinytex" %in% rownames(installed.packages())) {
+if (length(find.package("tinytex", quiet = TRUE)) == 0) {
   install.packages("tinytex")
 }
 # install the TinyTeX LaTeX distribution
@@ -104,20 +104,22 @@ if (!tinytex:::is_tinytex()) {
 
 ```{r eval = FALSE}
 # installation from inbo.r-universe
-install.packages("INBOmd", repos = "https://inbo.r-universe.dev")
+install.packages(
+  "INBOmd", repos = c("https://inbo.r-universe.dev", getOption("repos"))
+)
 
 ## alternative: installation from github
-#if (!"remotes" %in% rownames(installed.packages())) {
-#  install.packages("remotes")
-#}
-#remotes::install_github("inbo/INBOmd", dependencies = TRUE)
+if (!"remotes" %in% rownames(installed.packages())) {
+  install.packages("remotes")
+}
+remotes::install_github("inbo/INBOmd", dependencies = TRUE)
 
-# add the local latex package contained in INBOmd to the TinyTeX install 
+# add the local latex package contained in INBOmd to the TinyTeX install
 tinytex::tlmgr_conf(
   c("auxtrees", "add", system.file("local_tex", package = "INBOmd"))
 )
 
-# install some other needed latex packages 
+# install some other needed latex packages
 tinytex::tlmgr_install(c(
   "inconsolata", "times", "tex", "helvetic", "dvips", "hyphen-dutch",
   "hyphen-french"
@@ -166,7 +168,7 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 
 ## The `setup` chunk
 
-- The `setup` chunk (in index.Rmd) is the best location to load packages
+- The `setup` chunk (in `index.Rmd`) is the best location to load packages
 - `opts_chunk$set()` defines the default options for each chunk
     - You can override these in an individual chunk
     - `fig.width` and `fig.height` are defined in inches
@@ -178,11 +180,11 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 
 ## Building the report
 
-- Open .Rproj in the same location as your index.Rmd file
+- Open `.Rproj` in the same location as your `index.Rmd` file
 - Use the `Build Book` button instead of the `Knit` button
     - You can find this button in the same window as `Environment` and `History`
 
-- Open the dropdown menu to select the required output format
+- Open the drop-down menu to select the required output format
     - Defaults to **all** formats listed in the YAML (not recommended)
     - Pro tip: select a **single** format while working on the document
     
@@ -229,8 +231,8 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 ```{r figure-example, warning = FALSE, message = FALSE, fig.cap = "Pressure vs temperature",fig.height = 1.2, fig.width = 3, echo=FALSE}
 library(tidyverse)
 library(INBOtheme)
-ggplot(pressure) + 
-  geom_point(aes(x = temperature, y = pressure)) + 
+ggplot(pressure) +
+  geom_point(aes(x = temperature, y = pressure)) +
   theme_inbo()
 ```
 
@@ -240,8 +242,8 @@ ggplot(pressure) +
 ```{r figure-label, warning = FALSE, message = FALSE, fig.cap = "(ref:label)",fig.height = 1.2, fig.width = 3, echo=FALSE}
 library(tidyverse)
 library(INBOtheme)
-ggplot(pressure) + 
-  geom_point(aes(x = temperature, y = pressure)) + 
+ggplot(pressure) +
+  geom_point(aes(x = temperature, y = pressure)) +
   theme_inbo()
 ```
 
@@ -300,9 +302,9 @@ cat("```
 
 
 - `devtools::install_github("crsh/citr")`
-- Restart Rstudio
-- Go to "Addins" in the RStudio toolbar
-- Select "CITR", "Insert citations" 
+- Restart RStudio
+- Go to `"Addins"` in the RStudio toolbar
+- Select `"CITR"`, `"Insert citations"`
 - Search and select the references you want
 - Insert the citations
 
@@ -310,9 +312,9 @@ cat("```
 
 - Install Zotero and Better bibtex plugin
 - Start Zotero
-- Go to "Addins" in the RStudio toolbar
-- Select "CITR", "Insert citations" 
-- Go to "Settings" tab
+- Go to `"Addins"` in the RStudio toolbar
+- Select `"CITR"`, `"Insert citations"`
+- Go to `"Settings"` tab
 - Connect to Zotero
 - Add references to local bibliography file
 
@@ -439,6 +441,7 @@ An example template can be found in the file `__iris_template_within_document.Rm
 The first chunk is important since this is where the id is selected.
 
 
+<!-- spell-check: ignore:start -->
 ````markdown
 `r ''````{r {{id}}-setup}
 if (interactive()) {
@@ -450,6 +453,7 @@ selection <- iris %>%
   dplyr::filter(Species == this_id)
 ```
 ````
+<!-- spell-check: ignore:end -->
 
 ## Handle the template
 
@@ -479,7 +483,7 @@ cat(knit(text = rmd, quiet = TRUE))
 ```{r display-species-analysis, results = "asis", echo = FALSE}
 to_do <- unique(iris$Species)
 rmd <- sapply(
-  to_do, 
+  to_do,
   function(id) {
     knit_expand("_iris_template_within_document.Rmd", id = id)
   }
@@ -494,7 +498,7 @@ cat(knit(text = rmd, quiet = TRUE))
 
 - Execute the same analysis for different subsets of your data.
 - Create a different report for each subset of your data (e.g. for different stakeholders)
-- The Rmd template now has a YAML since it should be a stand-alone document
+- The `Rmd` template now has a YAML since it should be a stand-alone document
   - `params` argument in the YAML is used to select subsets of the data
   
 ## Make the template
@@ -520,12 +524,12 @@ params:
 ## Make the reports
 
 Use `rmarkdown::render()` to generate all your reports 
-- `input` specifies the Rmd template
+- `input` specifies the `Rmd` template
 - `output_format` lets you choose which type of output you want to generate (needs to be in the template YAML)
 - `params` lists which values you want for the parameters in the template's YAML
 - `output_file` specifies the path and filename for the report
 
-The code below is executed in the console, not from an Rmd file (save it in a R script).
+The code below is executed in the console, not from an  `Rmd` file (save it in a R script).
 
 ```{r make-reports, eval=FALSE}
 todo <- unique(iris$Species)
