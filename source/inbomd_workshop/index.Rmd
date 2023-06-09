@@ -24,13 +24,10 @@ slide_level: 2
 cover_photo: media/e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
 flandersfont: TRUE
 cover_horizontal: TRUE
-
 lang: en
 style: INBO
 
 aspect: 4:3
-
-corresponding: thierry.onkelinx@inbo.be
 embargo: 2020-01-01
 
 site: bookdown::bookdown_site
@@ -39,7 +36,7 @@ bibliography: ../inbomd.bib
 output:
   INBOmd::slides: default
   INBOmd::handouts: default
-  INBOmd::report: default
+  INBOmd::pdf_report: default
   bookdown::dont_run: default
 ---
 
@@ -50,6 +47,7 @@ opts_chunk$set(
 )
 library(tidyverse)
 library(INBOtheme)
+library(rprojroot)
 if (interactive()) {
   theme_set(
     theme_inbo(
@@ -70,6 +68,7 @@ if (interactive()) {
 }
 ```
 
+
 ## Where to find documentation
 
 - Documentation on `INBOmd`
@@ -81,8 +80,9 @@ if (interactive()) {
     - https://bookdown.org/yihui/bookdown/
 - R Markdown: The Definitive Guide 
     - https://bookdown.org/yihui/rmarkdown/
-    
+
 # Install requirements
+
 
 ## Install `tinytex`
 
@@ -90,6 +90,9 @@ if (interactive()) {
 update.packages(ask = FALSE, checkBuilt = TRUE)
 if (length(find.package("tinytex", quiet = TRUE)) == 0) {
   install.packages("tinytex")
+}
+# install the TinyTeX LaTeX distribution
+if (!tinytex:::is_tinytex()) {
   tinytex::install_tinytex()
 }
 ```
@@ -100,26 +103,32 @@ if (length(find.package("tinytex", quiet = TRUE)) == 0) {
 ## Install `INBOmd`
 
 ```{r eval = FALSE}
-options(
-  repos = c(
-    inbo = "https://inbo.r-universe.dev",
-    CRAN = "https://cloud.r-project.org"
-  )
+# installation from inbo.r-universe
+install.packages(
+  "INBOmd", repos = c("https://inbo.r-universe.dev", getOption("repos"))
 )
-install.packages("INBOmd")
-# setup for tinytex
-tinytex::tlmgr_install(c(
-  "inconsolata", "times", "tex", "helvetic", "dvips"
-))
+
+## alternative: installation from github
+if (!"remotes" %in% rownames(installed.packages())) {
+  install.packages("remotes")
+}
+remotes::install_github("inbo/INBOmd", dependencies = TRUE)
+
+# add the local latex package contained in INBOmd to the TinyTeX install
 tinytex::tlmgr_conf(
   c("auxtrees", "add", system.file("local_tex", package = "INBOmd"))
 )
-tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
+
+# install some other needed latex packages
+tinytex::tlmgr_install(c(
+  "inconsolata", "times", "tex", "helvetic", "dvips", "hyphen-dutch",
+  "hyphen-french"
+))
 ```
 
 # Getting started
 
-## Important things to known about bookdown
+## Important things to know about bookdown
 
 - There must be at least a file named `index.Rmd`
     - This contains the YAML header
@@ -131,18 +140,24 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
         - Except files starting with `_`
         - Their order: `index.Rmd` + other files in alphabetical order
     - Pro tip: start the file names with a number indicating the order
+
     
-## Starting a new document
+## Starting a new document (using INBOmd::create_report())
 
 - Open RStudio
-- Choose File > New File > R Markdown
-- Select 'From Template' and select 'INBO rapport'
-- Enter the `name` for your report, select its main directory and press 'OK'
-    - This creates `name/name.Rmd` in the selected directory
-    - Rename `name/name.Rmd` to `name/index.Rmd` in the `Files` window of RStudio
-- Choose File > New Project > Existing directory, select `name` and press 'Create project'
-- Open `_bookdown.yml` in this project and update `book_filename` and `output_dir`
-- Open `index.Rmd` in this project and update the YAML header
+```{r eval = FALSE}
+INBOmd::create_report(shortname = "test") #fill in a shortname
+``` 
+- This function will then ask you to enter in the console:
+  - a title
+  - an optional subtitle
+  - (corresponding) author (from a saved list or new persons)
+  - a reviewer
+  - language
+  - keywords
+  - optional client / cooperation
+  - whether you want a list of figures / tables
+  
 
 ## Converting an existing RMarkdown document
 
@@ -153,7 +168,7 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
 
 ## The `setup` chunk
 
-- The `setup` chunk is the best location to load packages
+- The `setup` chunk (in `index.Rmd`) is the best location to load packages
 - `opts_chunk$set()` defines the default options for each chunk
     - You can override these in an individual chunk
     - `fig.width` and `fig.height` are defined in inches
@@ -165,10 +180,12 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
 
 ## Building the report
 
+- Open `.Rproj` in the same location as your `index.Rmd` file
 - Use the `Build Book` button instead of the `Knit` button
     - You can find this button in the same window as `Environment` and `History`
-- Open the drop down menu to select the required output format
-    - Defaults to **all** formats listed in the YAML
+
+- Open the drop-down menu to select the required output format
+    - Defaults to **all** formats listed in the YAML (not recommended)
     - Pro tip: select a **single** format while working on the document
     
 - Try this with your first Bookdown document
@@ -209,6 +226,27 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
     - `label` must be a unique name in the document
     - Pro tip: use the chunk name as `label`
 
+## Example figures
+
+```{r figure-example, warning = FALSE, message = FALSE, fig.cap = "Pressure vs temperature",fig.height = 1.2, fig.width = 3, echo=FALSE}
+library(tidyverse)
+library(INBOtheme)
+ggplot(pressure) +
+  geom_point(aes(x = temperature, y = pressure)) +
+  theme_inbo()
+```
+
+
+(ref:label) This figure caption _works_ 100%!
+
+```{r figure-label, warning = FALSE, message = FALSE, fig.cap = "(ref:label)",fig.height = 1.2, fig.width = 3, echo=FALSE}
+library(tidyverse)
+library(INBOtheme)
+ggplot(pressure) +
+  geom_point(aes(x = temperature, y = pressure)) +
+  theme_inbo()
+```
+
 # Tables in bookdown
 
 ## Tables
@@ -220,6 +258,17 @@ tinytex::tlmgr_install(c("hyphen-dutch", "hyphen-french"))
 - `knitr::kable(caption = "My table caption")`
     - Text references `(ref:label)` are possible too
 - Reference the table with `\@ref(tab:the-chunk-name)`
+
+## Example table
+
+```{r table-example, warning = FALSE, message = FALSE}
+pressure %>%
+  head(5) %>%
+  knitr::kable(
+    booktabs = TRUE,
+    caption = "Pressure and temperature"
+  )
+```
 
 # Citing literature
 
@@ -247,13 +296,15 @@ cat("```
     - `[@bibtex-key; @bibtex-key2; @bibtex-key3]` [@BanerjeeEtal2003; @BlauwdrukVogels]
 - Create a sensible key for each reference in your bibliography
     - Key must contain only letters, digits, dashed and colons
-    - Edit the bibliography using RStudio or JabRef
+    - Edit the bibliography using RStudio, notepad, or JabRef
 
 ## Inserting citations using `citr` add-in
 
-- `install.packages("citr")`
-- Go to `Addins` in the RStudio toolbar
-- Select `CITR`, "Insert citations" 
+
+- `devtools::install_github("crsh/citr")`
+- Restart RStudio
+- Go to `"Addins"` in the RStudio toolbar
+- Select `"CITR"`, `"Insert citations"`
 - Search and select the references you want
 - Insert the citations
 
@@ -261,10 +312,10 @@ cat("```
 
 - Install Zotero and Better bibtex plugin
 - Start Zotero
-- Go to `Addins` in the RStudio toolbar
-- Select `CITR`, "Insert citations" 
+- Go to `"Addins"` in the RStudio toolbar
+- Select `"CITR"`, `"Insert citations"`
+- Go to `"Settings"` tab
 - Connect to Zotero
-- Go to "Settings" tab
 - Add references to local bibliography file
 
 # Miscellaneous
@@ -316,6 +367,12 @@ cat("```
 - Boxes can have an optional title
     - Works only with pdf output!
 
+```{block2 chunk-name, type="block", latex.options="{title}", echo = TRUE}
+This is an example of a block
+
+```
+
+
 ## Adding introduction chapters
 
 - Add ` {-}` at the end of the header to make it an unnumbered header
@@ -354,6 +411,13 @@ Other output formats ignore `\appendix`
 
 # Using templates within a document
 
+## Using templates within a document
+
+- Execute the same analysis for different subsets of your data.
+- Create a different (sub)section for each subset of the data within your report
+- Take care to make your text and code dynamic such that it can accommodate different data.
+
+
 ## `knit_expand` concept
 
 - Create a template with template tags
@@ -373,27 +437,21 @@ Other output formats ignore `\appendix`
 
 ## Example template
 
-<!-- spell-check: ignore:start -->
-```{r echo = FALSE}
-title <- "## `r selection$title[1]`"
-plot_template <- "```{r mt-{{id}}-plot, fig.cap = selection$caption[1]}
-ggplot(selection, aes(x = year, y = value)) + geom_point()
-```"
-```
+An example template can be found in the file `__iris_template_within_document.Rmd`. 
+The first chunk is important since this is where the id is selected.
 
+
+<!-- spell-check: ignore:start -->
 ````markdown
-`r ''````{r mt-{{id}}-setup}
+`r ''````{r {{id}}-setup}
 if (interactive()) {
-  this_id <- sample(mt$id, 1)
+  this_id <- sample(unique(iris$Species), 1)
 } else {
   this_id <- "{{id}}"
 }
-selection <- filter(mt, id == this_id)
+selection <- iris %>%
+  dplyr::filter(Species == this_id)
 ```
-
-`r title`
-
-`r plot_template`
 ````
 <!-- spell-check: ignore:end -->
 
@@ -404,10 +462,11 @@ selection <- filter(mt, id == this_id)
     - The example will replace every `{{id}}` from the template with a value from `to_do`
 - `knit_expand()` only does the 'find and replace'
 - `knit()` actually runs the Rmarkdown code created by `knit_expand()`
+- The following three slides show the produced output for each species from the template
 
 <!-- spell-check: ignore:start -->
 ````markdown
-`r ''````{r display-monthly-totals, results = "asis"}
+`r ''````{r display-species-analysis, results = "asis"}
 to_do <- unique(mt$id)
 rmd <- sapply(
   to_do, 
@@ -420,3 +479,71 @@ cat(knit(text = rmd, quiet = TRUE))
 ```
 ````
 <!-- spell-check: ignore:end -->
+
+```{r display-species-analysis, results = "asis", echo = FALSE}
+to_do <- unique(iris$Species)
+rmd <- sapply(
+  to_do,
+  function(id) {
+    knit_expand("_iris_template_within_document.Rmd", id = id)
+  }
+) %>%
+  paste(collapse = "\n\n")
+cat(knit(text = rmd, quiet = TRUE))
+```
+
+# Using templates to generate separate reports
+
+## Using templates to generate separate reports
+
+- Execute the same analysis for different subsets of your data.
+- Create a different report for each subset of your data (e.g. for different stakeholders)
+- The `Rmd` template now has a YAML since it should be a stand-alone document
+  - `params` argument in the YAML is used to select subsets of the data
+  
+## Make the template
+
+An example can be found in `_iris_template_separate_reports.Rmd`
+
+- `params` in the YAML allow you to specify parameters that can be called in the remainder of the document as `params$param_name`
+- select the subset with `selection <- iris %>% dplyr::filter(Species == params$species)`
+- take care to make your text and code dynamic such that it can accommodate different data.
+
+````markdown
+---
+author: "Research Institute for Nature and Forest"
+date: "`r Sys.Date()`"
+output:
+  bookdown::pdf_document2: default
+biblio-style: "apalike"
+link-citations: true
+params:
+    species: "setosa"
+---
+````
+## Make the reports
+
+Use `rmarkdown::render()` to generate all your reports 
+- `input` specifies the `Rmd` template
+- `output_format` lets you choose which type of output you want to generate (needs to be in the template YAML)
+- `params` lists which values you want for the parameters in the template's YAML
+- `output_file` specifies the path and filename for the report
+
+The code below is executed in the console, not from an  `Rmd` file (save it in a R script).
+
+```{r make-reports, eval=FALSE}
+todo <- unique(iris$Species)
+for (id in todo) {
+    rmarkdown::render(input = "_iris_template_separate_reports.Rmd",
+                      output_format = "bookdown::pdf_document2",
+                      params = list(species = id),
+                      output_file =
+                        rprojroot::find_root_file(
+                          "output",
+                          paste0("Rapport_", id, ".pdf"),
+                          criterion = has_file("inbomd_examples.Rproj")))
+}
+```
+
+# Bibliography
+

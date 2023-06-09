@@ -49,6 +49,8 @@ spelling:
     - source/flandre_rapport/3_r_code.Rmd
     - source/inbo_rapport/0b_abstract.Rmd
     - source/inbomd_workshop/index.Rmd
+    - source/inbomd_workshop/_iris_template_separate_reports.Rmd
+    - source/inbomd_workshop/_iris_template_within_document.Rmd
     - source/render_all.R
     fr-FR:
     - source/flanders_report/0c_resume.Rmd
