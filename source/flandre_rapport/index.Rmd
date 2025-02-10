@@ -1,6 +1,7 @@
 --- 
 title: Exemple rapport utilisant INBOmd
 subtitle: Version française utilisant l'identité visuelle du gouvernement flamand
+shorttitle: Titre-court-pour-URL
 author:
   - name:
       given: Thierry
@@ -50,6 +51,8 @@ reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: Le numéro de commande optionnel
 embargo: 2099-03-01
+publication_type: publication-report
+publisher: Research Institute for Nature and Forest (INBO)
 
 style: Flanders
 lang: fr

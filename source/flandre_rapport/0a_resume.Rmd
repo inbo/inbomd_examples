@@ -1,5 +1,7 @@
 # Résumé {-}
 
+<!-- description: start -->
+
 Extrait sur l'écologie de [Wikipedia](https://fr.wikipedia.org/wiki/%C3%89cologie)
 
 L'**écologie**, également connue sous les noms de **bioécologie**, **bionomie** ou **science de l'environnement ou environnementale**, est la science qui étudie les êtres vivants dans leur milieu et les interactions entre eux.
@@ -21,3 +23,5 @@ Ce terme ne doit pas être confondu avec la dénomination écologiste comme adep
 # Recommandations de gestion et/ou de politique {-}
 
 `r paragraph(n = 5)`
+
+<!-- description: end -->

@@ -1,6 +1,7 @@
 --- 
 title: Voorbeeldrapport met INBOmd
 subtitle: Dit is de standaardversie
+shorttitle: Korte-titel-voor-URL
 author: 
   - name:
       given: Thierry
@@ -25,11 +26,12 @@ doi: 10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: Het optionele nummer van de opdrachtgever
+publisher: Research Institute for Nature and Forest (INBO) 
 funder: Research Institute for Nature and Forest (INBO) 
 rightsholder: Research Institute for Nature and Forest (INBO)
 community: inbo
 keywords: corporate identity; example
-publication_type: report
+publication_type: publication-report
 embargo: 2099-03-01
 print:
   copies: 10

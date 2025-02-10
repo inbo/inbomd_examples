@@ -1,0 +1,44 @@
+{
+  "description": "<p>Extrait sur l’écologie de <a href=\"https://fr.wikipedia.org/wiki/%C3%89cologie\">Wikipedia<\/a><\/p> <p>L’<strong>écologie<\/strong>, également connue sous les noms de <strong>bioécologie<\/strong>, <strong>bionomie<\/strong> ou <strong>science de l’environnement ou environnementale<\/strong>, est la science qui étudie les êtres vivants dans leur milieu et les interactions entre eux.<\/p> <p>Le terme écologie vient du grec <em>oikos<\/em> <!-- spell-check: ignore --> (maison, habitat) et <em>logos<\/em> <!-- spell-check: ignore --> (discours) : c’est la science de la maison, de l’habitat. Il fut inventé en 1866 par Ernst Haeckel, biologiste allemand pro-darwiniste. Dans son ouvrage Morphologie générale des organismes, il désignait par ce terme “la science des relations des organismes avec le monde environnant, c’est-à-dire, dans un sens large, la science des conditions d’existence”.<\/p> <p>Une définition généralement admise, particulièrement utilisée en écologie humaine, consiste à définir l’écologie comme étant le rapport triangulaire entre les individus d’une espèce, l’activité organisée de cette espèce et l’environnement de cette activité. L’environnement est à la fois le produit et la condition de cette activité, et donc de la survie de l’espèce.<\/p> <p>Un <strong>écologue<\/strong> ou <strong>écologiste<\/strong> (qu’il soit chercheur, biologiste ou ingénieur écologue) est un spécialiste de l’écologie. Ce terme ne doit pas être confondu avec la dénomination écologiste comme adepte de l’écologisme ou comme partisan de l’écologie politique.<\/p> <h1 class=\"unnumbered\" id=\"recommandations-de-gestion-etou-de-politique\">Recommandations de gestion et/ou de politique<\/h1> <p><code>r paragraph(n = 5)<\/code><\/p>",
+  "title": "Exemple rapport utilisant INBOmd. Version française utilisant l'identité visuelle du gouvernement flamand.",
+  "upload_type": "publication",
+  "embargo_date": "2099-03-01",
+  "access_right": "embargoed",
+  "publication_date": "2099-03-01",
+  "license": "CC-BY-4.0",
+  "language": "fra",
+  "keywords": [
+    "corporate identity; example"
+  ],
+  "publication_type": "publication-report",
+  "publisher": "Research Institute for Nature and Forest (INBO)",
+  "contributors": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216",
+      "type": "contactperson"
+    },
+    {
+      "name": "Research Institute for Nature and Forest (INBO)",
+      "type": "rightsholder"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216"
+    },
+    {
+      "name": "Lommelen, Els",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0002-3481-5684"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "inbo"
+    }
+  ]
+}
