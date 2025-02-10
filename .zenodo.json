@@ -1,7 +1,7 @@
 {
   "access_right": "open",
   "title": "Example documents to the INBOmd R package",
-  "description": "<p>This repository has some examples of documents generate with the <a\nhref=\"https://www.github.com/inbo/INBOmd\">INBOmd style<\/a> for\nRMarkdown. Please look at https://inbo.github.io/inbomd_examples for the\nrendered versions. We wrote this documents with two goals in mind: 1)\nprovide markdown example code for different kinds of element to use in a\nscientific document; 2) provide dummy output to examine to corporate\nstyle applied to the document. Hence the actual content of the documents\nis rather nonsensical.<\/p>",
+  "description": "<p>This repository has some examples of documents generate with the <a href=\"https://www.github.com/inbo/INBOmd\">INBOmd style<\/a> for RMarkdown. Please look at https://inbo.github.io/inbomd_examples for the rendered versions. We wrote this documents with two goals in mind: 1) provide markdown example code for different kinds of element to use in a scientific document; 2) provide dummy output to examine to corporate style applied to the document. Hence the actual content of the documents is rather nonsensical.<\/p>",
   "keywords": [
     "INBOmd",
     "examples",
@@ -20,11 +20,11 @@
       "name": "Onkelinx, Thierry",
       "affiliation": "Research Institute for Nature and Forest (INBO)",
       "orcid": "0000-0001-8804-4216",
-      "type": "ContactPerson"
+      "type": "contactperson"
     },
     {
       "name": "Research Institute for Nature and Forest (INBO)",
-      "type": "RightsHolder"
+      "type": "rightsholder"
     }
   ],
   "creators": [
