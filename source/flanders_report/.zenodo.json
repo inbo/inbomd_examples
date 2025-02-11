@@ -1,0 +1,39 @@
+{
+  "description": "<p>Excerpt on ecology taken from <a href=\"https://en.wikipedia.org/wiki/Ecology\">Wikipedia<\/a><\/p> <p><strong>Ecology<\/strong> (from <code>oicos<\/code>, “house”, or “environment”; <code>logia<\/code>, “study of”) is the branch of <a href=\"http://www.dictionary.com/browse/ecology%7Ctitle=the%20definition%20of%20ecology%7Cwebsite=Dictionary.com%7Caccess-date=2018-02-20\">biology<\/a> which studies the interactions among organisms and their environment. Objects of study include interactions of organisms with each other and with abiotic components of their environment. Topics of interest include the biodiversity, distribution, biomass, and populations of organisms, as well as cooperation and competition within and between species. Ecosystems are dynamically interacting systems of organisms, the communities they make up, and the non-living components of their environment. Ecosystem processes, such as primary production, pedogenesis, nutrient cycling, and niche construction, regulate the flux of energy and matter through an environment. These processes are sustained by organisms with specific life history traits. Biodiversity means the varieties of species, genes, and ecosystems, enhances certain ecosystem services.<\/p> <p>Ecology is not synonymous with environmentalism, natural history, or environmental science. It overlaps with the closely related sciences of evolutionary biology, genetics, and ethology. An important focus for ecologists is to improve the understanding of how biodiversity affects ecological function. Ecologists seek to explain:<\/p> <ul> <li>Life processes, interactions, and adaptations<\/li> <li>The movement of materials and energy through living communities<\/li> <li>The successional development of ecosystems<\/li> <li>The abundance and distribution of organisms and biodiversity in the context of the environment.<\/li> <\/ul> <p>Ecology has practical applications in conservation biology, wetland management, natural resource management (agroecology, agriculture, forestry, agroforestry, fisheries), city planning (urban ecology), community health, economics, basic and applied science, and human social interaction (human ecology). For example, the <em>Circles of Sustainability<\/em> approach treats ecology as more than the environment ‘out there’. It is not treated as separate from humans. Organisms (including humans) and resources compose ecosystems which, in turn, maintain biophysical feedback mechanisms that moderate processes acting on living (biotic) and non-living (abiotic) components of the planet. Ecosystems sustain life-supporting functions and produce natural capital like biomass production (food, fuel, fibre, and medicine), the regulation of climate, global biogeochemical cycles, water filtration, soil formation, erosion control, flood protection, and many other natural features of scientific, historical, economic, or intrinsic value.<\/p> <p>The word “ecology” (“Ökologie”) <!-- spell-check: ignore --> was coined in 1866 by the German scientist Ernst Haeckel. Ecological thought is derivative of established currents in philosophy, particularly from ethics and politics <span class=\"citation\" data-cites=\"LaferriereStoett1999\">[@LaferriereStoett1999]<\/span>. Ancient Greek philosophers such as Hippocrates and Aristotle laid the foundations of ecology in their studies on natural history. Modern ecology became a much more rigorous science in the late 19<sup>th<\/sup> century. Evolutionary concepts relating to adaptation and natural selection became the cornerstones of modern ecological theory.<\/p>",
+  "title": "Example report using INBOmd. English version using the corporate identity of the Flemish government.",
+  "upload_type": "publication",
+  "embargo_date": "2099-03-01",
+  "access_right": "embargoed",
+  "publication_date": "2099-03-01",
+  "license": "CC-BY-4.0",
+  "language": "eng",
+  "keywords": [
+    "corporate identity; example"
+  ],
+  "publication_type": "publication-report",
+  "publisher": "Research Institute for Nature and Forest (INBO)",
+  "contributors": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216",
+      "type": "contactperson"
+    },
+    {
+      "name": "Research Institute for Nature and Forest (INBO)",
+      "type": "rightsholder"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "inbo"
+    }
+  ]
+}

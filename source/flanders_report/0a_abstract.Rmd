@@ -1,5 +1,6 @@
 # Abstract {-}
 
+<!-- description: start -->
 Excerpt on ecology taken from [Wikipedia](https://en.wikipedia.org/wiki/Ecology)
 
 **Ecology** (from `oicos`, "house", or "environment"; `logia`, "study of") is the branch of [biology](http://www.dictionary.com/browse/ecology|title=the definition of ecology|website=Dictionary.com|access-date=2018-02-20) which studies the interactions among organisms and their environment. 
@@ -32,5 +33,4 @@ Ecological thought is derivative of established currents in philosophy, particul
 Ancient Greek philosophers such as Hippocrates and Aristotle laid the foundations of ecology in their studies on natural history.
 Modern ecology became a much more rigorous science in the late 19^th^ century.
 Evolutionary concepts relating to adaptation and natural selection became the cornerstones of modern ecological theory.
-
-\bdutch
+<!-- description: end -->

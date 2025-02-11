@@ -1,5 +1,6 @@
 --- 
 title: "Voorbeeldrapport met INBOmd"
+shorttitle: "Korte-titel-voor-URL"
 author:
   - name:
       given: Thierry
@@ -20,7 +21,8 @@ funder: Research Institute for Nature and Forest (INBO)
 rightsholder: Research Institute for Nature and Forest (INBO)
 community: inbo
 keywords: corporate identity; example
-publication_type: report
+publication_type: publication-report
+publisher: Research Institute for Nature and Forest (INBO)
 year: 2021
 cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
 cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)

@@ -1,6 +1,7 @@
 --- 
 title: Voorbeeldrapport met INBOmd
 subtitle: Versie in generieke huisstijl Vlaamse overheid
+shorttitle: Korte-titel-voor-URL-vlaamse-huisstijl
 author:
   - name:
       given: Thierry
@@ -19,6 +20,8 @@ reviewer:
 github-repo: inbo/inbomd-examples
 funder: Research Institute for Nature and Forest (INBO) 
 rightsholder: Research Institute for Nature and Forest (INBO)
+publication_type: publication-report
+publisher: Research Institute for Nature and Forest (INBO)
 community: inbo
 keywords: corporate identity; example
 year: 2021

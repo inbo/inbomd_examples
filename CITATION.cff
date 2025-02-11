@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: If you use this software, please cite it using these metadata.
-title: Example documents to the INBOmd R package
+title: "Example documents to the INBOmd R package"
 authors:
 - given-names: Thierry
   family-names: Onkelinx
@@ -24,13 +24,12 @@ doi: ~
 license: CC-BY-4.0
 repository-code: https://github.com/inbo/inbomd_examples/
 type: software
-abstract: |-
-  This repository has some examples of documents generate with the [INBOmd style](https://www.github.com/inbo/INBOmd) for RMarkdown.
-  Please look at https://inbo.github.io/inbomd_examples for the rendered versions.
-  We wrote this documents with two goals in mind:
-  1) provide markdown example code for different kinds of element to use in a scientific document;
-  2) provide dummy output to examine to corporate style applied to the document.
-  Hence the actual content of the documents is rather nonsensical.
+abstract: "This repository has some examples of documents generate with the [INBOmd
+  style](https://www.github.com/inbo/INBOmd) for RMarkdown.\nPlease look at https://inbo.github.io/inbomd_examples
+  for the rendered versions.\nWe wrote this documents with two goals in mind:\n1)
+  provide markdown example code for different kinds of element to use in a scientific
+  document;\n2) provide dummy output to examine to corporate style applied to the
+  document.\nHence the actual content of the documents is rather nonsensical."
 identifiers:
 - type: url
   value: https://inbo.github.io/inbomd_examples

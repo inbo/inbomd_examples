@@ -1,0 +1,39 @@
+{
+  "description": "<p>Dit is een beknopt voorbeeld van een referentiestijl in een R Markdown document.<\/p>",
+  "title": "Voorbeeld van referentiestijl.",
+  "upload_type": "publication",
+  "embargo_date": "2021-01-01",
+  "access_right": "embargoed",
+  "publication_date": "2021-01-01",
+  "license": "CC-BY-4.0",
+  "language": "nld",
+  "keywords": [
+    "INBOmd; examples; citation; csl; markdown"
+  ],
+  "publication_type": "publication-report",
+  "publisher": "Research Institute for Nature and Forest (INBO)",
+  "contributors": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216",
+      "type": "contactperson"
+    },
+    {
+      "name": "Research Institute for Nature and Forest (INBO)",
+      "type": "rightsholder"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "inbo"
+    }
+  ]
+}
