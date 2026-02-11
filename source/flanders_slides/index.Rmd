@@ -1,5 +1,6 @@
 --- 
 title: "Example presentation using INBOmd"
+shorttitle: "example-presentation"
 author: 
   - name:
       given: Thierry
@@ -15,8 +16,17 @@ reviewer:
     email: floris.vanderhaeghe@inbo.be
     orcid: 0000-0002-6378-6229
     affiliation: Research Institute for Nature and Forest (INBO)
-funder: Research Institute for Nature and Forest (INBO)
-rightsholder: Research Institute for Nature and Forest (INBO)
+funder:
+  - name:
+      given: Research Institute for Nature and Forest (INBO)
+    email: info@inbo.be
+    ror: https://ror.org/00j54wy13
+rightsholder:
+  - name:
+      given: Research Institute for Nature and Forest (INBO)
+    email: info@inbo.be
+    ror: https://ror.org/00j54wy13
+license: CC-BY-4.0
 community: inbo
 keywords: INBOmd; examples; slides
 subtitle: "Here comes the optional subtitle"
@@ -24,10 +34,12 @@ location: "Here comes the optional location"
 institute: "Here comes the optional affilitation"
 toc_name: "Title of the table of content"
 style: Flanders
-lang: en
+lang: en-GB
 slide_level: 3
 cover_photo: "media/trees-1036958.jpg"
 flandersfont: TRUE
+publisher: Research Institute for Nature and Forest (INBO)
+publication_type: publication-other
 
 embargo: 2020-01-01
 
@@ -51,10 +63,12 @@ set.seed(20190117)
 switch_colour(vl_darkyellow)
 ```
 
+<!-- description: start -->
+<!-- description: end -->
+
 # Options
 
 ### Title slide
-
 `subtitle`
   ~ subtitle on the title slide (optional)
   

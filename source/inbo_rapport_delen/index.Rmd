@@ -7,18 +7,27 @@ author:
       family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-    affiliation: Research Institute for Nature and Forest (INBO)
+    affiliation: Instituut voor Natuur- en Bosonderzoek (INBO)
     corresponding: true
 reviewer:
   - name:
       given: Floris
       family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
-    affiliation: Research Institute for Nature and Forest (INBO)
+    affiliation: Instituut voor Natuur- en Bosonderzoek (INBO)
     orcid: 0000-0002-6378-6229
 github-repo: inbo/inbomd-examples
-funder: Research Institute for Nature and Forest (INBO) 
-rightsholder: Research Institute for Nature and Forest (INBO)
+funder:
+  - name:
+      given: Instituut voor Natuur- en Bosonderzoek (INBO)
+    email: info@inbo.be
+    ror: https://ror.org/00j54wy13
+rightsholder:
+  - name:
+      given: Instituut voor Natuur- en Bosonderzoek (INBO)
+    email: info@inbo.be
+    ror: https://ror.org/00j54wy13
+license: CC-BY-4.0
 community: inbo
 keywords: corporate identity; example
 publication_type: publication-report
@@ -35,7 +44,7 @@ embargo: 2099-03-01
 geraardsbergen: TRUE
 tocdepth: 4
 
-lang: nl
+lang: nl-BE
 split_by: section+number
 
 site: bookdown::bookdown_site
@@ -52,8 +61,14 @@ output:
 ```{r setup, include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = TRUE, eval = TRUE, cache = FALSE, fig.width = 150 / 25.4,
-  fig.height = 100 / 25.4, warning = TRUE, error = TRUE, message = TRUE
+  echo = TRUE,
+  eval = TRUE,
+  cache = FALSE,
+  fig.width = 150 / 25.4,
+  fig.height = 100 / 25.4,
+  warning = TRUE,
+  error = TRUE,
+  message = TRUE
 )
 library(lipsum)
 library(DT)

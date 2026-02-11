@@ -1,6 +1,7 @@
 --- 
 title: "Voorbeeldpresentatie met INBOmd"
 subtitle: "Hier komt de optionele ondertitel"
+shorttitle: "voorbeeld-slides"
 author: 
   - name:
       given: Thierry
@@ -8,16 +9,27 @@ author:
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
     corresponding: true
-    affiliation: Research Institute for Nature and Forest (INBO)
+    affiliation: Instituut voor Natuur- en Bosonderzoek (INBO)
 reviewer:
   - name:
       given: Floris
       family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
     orcid: 0000-0002-6378-6229
-    affiliation: Research Institute for Nature and Forest (INBO)
-funder: Research Institute for Nature and Forest (INBO)
-rightsholder: Research Institute for Nature and Forest (INBO)
+    affiliation: Instituut voor Natuur- en Bosonderzoek (INBO)
+funder:
+  - name:
+      given: Instituut voor Natuur- en Bosonderzoek (INBO)
+    email: info@inbo.be
+    ror: https://ror.org/00j54wy13
+rightsholder:
+  - name:
+      given: Instituut voor Natuur- en Bosonderzoek (INBO)
+    email: info@inbo.be
+    ror: https://ror.org/00j54wy13
+license: CC-BY-4.0
+publisher: Research Institute for Nature and Forest (INBO)
+publication_type: publication-other
 community: inbo
 keywords: INBOmd; examples; slides
 location: "Hier komt optioneel de plaats"
@@ -26,6 +38,7 @@ toc_name: "De naam van de inhoudstafel"
 slide_level: 3
 cover_photo: "media/trees-1036958.jpg"
 flandersfont: TRUE
+lang: nl-BE
 
 corresponding: thierry.onkelinx@inbo.be
 embargo: 2020-01-01
@@ -48,6 +61,9 @@ library(ggplot2)
 library(INBOtheme)
 theme_set(theme_inbo(6, transparent = "plot"))
 ```
+
+<!-- description: start -->
+<!-- description: end -->
 
 # Opties
 
