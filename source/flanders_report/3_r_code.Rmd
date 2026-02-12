@@ -102,12 +102,18 @@ text_table <- function(rows = 20, cols = 10, words = 10, n_letters = 5) {
   return(x)
 }
 generate_table <- function(
-    rows = 20, cols = c(5, 5), words = 10, n_letters = 5
+  rows = 20,
+  cols = c(5, 5),
+  words = 10,
+  n_letters = 5
 ) {
   digit_table(rows = rows, cols = cols[1]) |>
     cbind(
       text_table(
-        rows = rows, cols = cols[2], words = words, n_letters = n_letters
+        rows = rows,
+        cols = cols[2],
+        words = words,
+        n_letters = n_letters
       )
     )
 }
@@ -120,12 +126,14 @@ kable(generate_table(50, c(4, 2), 4, 4), caption = "Default `kable()` output.")
 ```
 
 ```{r kable-markdown}
-kable(generate_table(20, c(4, 3), 5, 4),  digits = 2, format = "markdown")
+kable(generate_table(20, c(4, 3), 5, 4), digits = 2, format = "markdown")
 ```
 
 ```{r kable-pandoc}
 kable(
-  generate_table(50, c(3, 1), 4, 4), digits = 3, format = "pandoc",
+  generate_table(50, c(3, 1), 4, 4),
+  digits = 3,
+  format = "pandoc",
   caption = "pandoc output van `kable()`"
 )
 ```

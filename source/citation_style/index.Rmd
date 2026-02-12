@@ -121,7 +121,7 @@ Specifieke zaken (zie ook de Google sheet): <!-- spell-check: ignore -->
 
 - Conference
   - `Organization` beter laten vallen in `bst` en dit veld niet ondersteunen?
-    citeproc-js toont het niet en pandoc-citeproc voegt dit vooraan in het `publisher` veld gevolgd door ";" en `publisher` (dit gebeurt nog vóór de CSL processing, dus bij omzetting naar `bib` bestand).
+    `citeproc-js` toont het niet en `pandoc-citeproc` voegt dit vooraan in het `publisher` veld gevolgd door ";" en `publisher` (dit gebeurt nog vóór de CSL processing, dus bij omzetting naar `bib` bestand).
 - Laten vallen van "URL:" en "DOI:" prefixen.
 - Zoals in csl: Nederlandstalige variant voorzien voor verschillende termen, o.a.: `ed.` (Nederlands) in plaats van `edn.` (Engels) en `Nr.` (Nederlands) in plaats van `No.` (Engels).
 - Aanpassing van `Vol. van`, `No. in` naar de afgesproken syntaxis (zie Google sheet).

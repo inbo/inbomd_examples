@@ -136,16 +136,22 @@ random_woord <- function(n_letters = 5) {
 }
 random_zin <- function(n_woorden = 10, n_letters = 10) {
   paste(
-    sapply(rpois(n_woorden, n_letters), FUN = random_woord), collapse = " "
+    sapply(rpois(n_woorden, n_letters), FUN = random_woord),
+    collapse = " "
   )
 }
 tekst_tabel <- function(
-    rijen = 20, kolommen = 10, n_woorden = 10, n_letters = 5
+  rijen = 20,
+  kolommen = 10,
+  n_woorden = 10,
+  n_letters = 5
 ) {
   x <- data.frame(
     matrix(
       sapply(
-        rpois(rijen * kolommen, lambda = n_woorden), random_zin, n_letters
+        rpois(rijen * kolommen, lambda = n_woorden),
+        random_zin,
+        n_letters
       ),
       nrow = rijen,
       ncol = kolommen
@@ -155,12 +161,17 @@ tekst_tabel <- function(
   return(x)
 }
 genereer_tabel <- function(
-    rijen = 20, kolommen = c(5, 5), n_woorden = 10, n_letters = 5
+  rijen = 20,
+  kolommen = c(5, 5),
+  n_woorden = 10,
+  n_letters = 5
 ) {
   cbind(
     cijfer_tabel(rijen = rijen, kolommen = kolommen[1]),
     tekst_tabel(
-      rijen = rijen, kolommen = kolommen[2], n_woorden = n_woorden,
+      rijen = rijen,
+      kolommen = kolommen[2],
+      n_woorden = n_woorden,
       n_letters = n_letters
     )
   )
@@ -177,7 +188,8 @@ Is de tabel zo groot dat ze niet op een pagina past, dan valt het laatste stuk v
 
 ```{r kable}
 kable(
-  genereer_tabel(50, c(4, 2), 4, 4), caption = "Standaard output van `kable()`."
+  genereer_tabel(50, c(4, 2), 4, 4),
+  caption = "Standaard output van `kable()`."
 )
 ```
 
@@ -190,11 +202,13 @@ kable(genereer_tabel(20, c(4, 3), 5, 4), digits = 2, format = "markdown")
 ```
 
 De laatste optie is het pandoc formaat (tabel \@ref(tab:kable-pandoc)).
-Dit gedraagt zich als het `longtable` formaat met een aangepaste lay-out.
+Dit gedraagt zich als het `longtable` formaat met een aangepaste layout.
 
 ```{r kable-pandoc}
 kable(
-  genereer_tabel(50, c(3, 1), 4, 4), digits = 3, format = "pandoc",
+  genereer_tabel(50, c(3, 1), 4, 4),
+  digits = 3,
+  format = "pandoc",
   caption = "pandoc output van `kable()`"
 )
 ```
@@ -203,7 +217,7 @@ kable(
 
 ### Aangepaste `kable()` formaten voor pdf output
 
-De `booktabs` optie past een lay-out met minder lijnen toe (tabel \@ref(tab:kable-booktabs)).
+De `booktabs` optie past een layout met minder lijnen toe (tabel \@ref(tab:kable-booktabs)).
 Nu geven we ook het gewenste aantal decimalen voor elke kolom weer.
 Nu past de tabel omdat we een aangepast aantal rijen en kolommen hebben gekozen.
 
@@ -214,7 +228,9 @@ De argumenten hebben geen invloed over het uitzicht in de HTML versie.
 
 ```{r kable-booktabs}
 kable(
-  genereer_tabel(40, c(4, 1), 5, 4), digits = 1:5, booktabs = TRUE,
+  genereer_tabel(40, c(4, 1), 5, 4),
+  digits = 1:5,
+  booktabs = TRUE,
   caption = "Booktabs output van `kable()`"
 )
 ```
@@ -227,7 +243,9 @@ Merk op dat een te brede tabel nog steeds wordt afgebroken.
 
 ```{r kable-longtable}
 kable(
-  genereer_tabel(40, c(4, 1), 4, 4), digits = 2, longtable = TRUE,
+  genereer_tabel(40, c(4, 1), 4, 4),
+  digits = 2,
+  longtable = TRUE,
   caption = "Longtable output van `kable()`."
 )
 ```

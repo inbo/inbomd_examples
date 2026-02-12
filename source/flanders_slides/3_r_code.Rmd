@@ -68,7 +68,8 @@ E.g the life expectancy in the USA is `r life_exp`.
 ### Figure with default colour
 
 ```{r figtransparant, echo = FALSE, message=FALSE, warning=FALSE}
-ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + geom_histogram() +
+ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) +
+  geom_histogram() +
   facet_wrap(~agegp, scales = "free")
 ```
 
@@ -85,7 +86,8 @@ ggplot(
   mtcars,
   aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))
 ) +
-  geom_point() + geom_smooth(method = "lm")
+  geom_point() +
+  geom_smooth(method = "lm")
 ```
 
 ### Figure with single colour gradient
@@ -152,12 +154,18 @@ text_table <- function(rows = 20, cols = 10, n_words = 10, n_letters = 5) {
   return(x)
 }
 generate_table <- function(
-    rows = 20, cols = c(5, 5), n_words = 10, n_letters = 5
+  rows = 20,
+  cols = c(5, 5),
+  n_words = 10,
+  n_letters = 5
 ) {
   number_table(rows = rows, cols = cols[1]) |>
     cbind(
       text_table(
-        rows = rows, cols = cols[2], n_words = n_words, n_letters = n_letters
+        rows = rows,
+        cols = cols[2],
+        n_words = n_words,
+        n_letters = n_letters
       )
     )
 }

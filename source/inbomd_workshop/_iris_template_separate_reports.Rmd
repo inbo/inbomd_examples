@@ -6,7 +6,7 @@ output:
 biblio-style: "apalike"
 link-citations: true
 params:
-    species: "setosa"
+  species: "setosa"
 ---
 
 
@@ -19,8 +19,8 @@ options(knitr.table.format = function() {
     "latex" else "pipe"
 })
 this_species <- params$species
-selection <- iris %>%
-  dplyr::filter(Species == this_species)
+selection <- iris |>
+  dplyr::filter(.data$Species == this_species)
 #this template shows how to make a dynamic title for the document
 #see `title:` below
 # the dynamic bibliography is only required now since there is one
@@ -36,7 +36,7 @@ bibliography: "`r find_root_file("references.bib", criterion = has_file("inbomd_
 The average sepal width and length are `r round(mean(selection$Sepal.Width),2)` and `r round(mean(selection$Sepal.Width),2)` respectively. Figure \@ref(fig:sepal) shows all `r stringr::str_to_title(this_species)` observations.
 
 ```{r sepal, echo = FALSE, warning=FALSE, message=FALSE, fig.height=3, fig.width=5, fig.cap = "Sepal width versus sepal length."}
-selection %>%
+selection |>
   ggplot(aes(x = Sepal.Width, y = Sepal.Length)) +
   geom_point()
 ```
@@ -44,8 +44,10 @@ selection %>%
 # A simple linear regression model
 
 ```{r regression, echo = FALSE, warning=FALSE, message =FALSE}
-reg <- lm(data = selection,
-   formula = Sepal.Width ~ Sepal.Length + Petal.Length + Petal.Width)
+reg <- lm(
+  formula = Sepal.Width ~ Sepal.Length + Petal.Length + Petal.Width,
+  data = selection
+)
 summary_regression <- summary(reg)$coefficients
 #we're not interested in the intercept
 significant <- which(summary_regression[-1, 4] < 0.05)
@@ -57,11 +59,8 @@ if (length(significant) == 0) {
 } else {
   conclusion <- paste(length(significant), "of the covariates are significant")
 }
-summary_regression %>%
-  knitr::kable(
-    caption = "Regression results.",
-    booktabs = TRUE,
-    digits = 3)
+summary_regression |>
+  knitr::kable(caption = "Regression results.", booktabs = TRUE, digits = 3)
 ```
 
 A simple linear regression model that predicts the sepal width based on sepal length, petal length and petal width shows that `r conclusion` (see Table \@ref(tab:regression)).

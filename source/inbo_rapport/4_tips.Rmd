@@ -1,4 +1,4 @@
-# Lay-out tips voor pdf
+# Layout tips voor pdf
 
 Bij de omzetting van Markdown naar pdf wordt gebruik gemaakt van [LaTeX](https://nl.wikipedia.org/wiki/LaTeX), software speciaal gemaakt voor het zetten van wetenschappelijke documenten. 
 Meestal werk dit zeer goed. 

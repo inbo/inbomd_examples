@@ -168,8 +168,8 @@ tinytex::tlmgr_install(c(
 - Open RStudio
 ```{r eval = FALSE}
 INBOmd::create_report(shortname = "test") #fill in a shortname
-``
-` 
+```
+
 - This function will then ask you to enter in the console:
   - a title
   - an optional subtitle

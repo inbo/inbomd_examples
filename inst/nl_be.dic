@@ -4,11 +4,13 @@ BibTex
 CSL-JSON
 CSL-processors
 DOI
+EKO
 Haeckel
 INBOmd
 JabRef
 Kopstijlen
 Kruisverwijzigingen
+Layout
 Mendeley
 Pexels
 URLs
@@ -28,6 +30,7 @@ gerenderde
 ipsum
 kopniveau
 kruisverwijzigingen
+layout
 lipsum
 lorem
 markdown
