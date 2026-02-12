@@ -21,7 +21,7 @@ contact:
   affiliation: Research Institute for Nature and Forest (INBO)
   orcid: 0000-0001-8804-4216
 doi: ~
-license: CC-BY-4.0
+license: CC BY 4.0
 repository-code: https://github.com/inbo/inbomd_examples/
 type: software
 abstract: "This repository has some examples of documents generate with the [INBOmd

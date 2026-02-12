@@ -22,12 +22,12 @@ funder:
   - name:
       given: Research Institute for Nature and Forest (INBO)
     email: info@inbo.be
-    ror: https://ror.org/00j54wy13
+    ror: 00j54wy13
 rightsholder:
   - name:
       given: Research Institute for Nature and Forest (INBO)
     email: info@inbo.be
-    ror: https://ror.org/00j54wy13
+    ror: 00j54wy13
 license: CC-BY-4.0
 community: inbo
 keywords: corporate identity; example

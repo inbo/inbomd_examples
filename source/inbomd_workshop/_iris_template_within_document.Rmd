@@ -21,8 +21,10 @@ selection %>%
 ```
 
 ```{r {{id}}-regression, echo = FALSE, warning=FALSE, message=FALSE}
-reg <- lm(data = selection,
-   formula = Sepal.Width ~ Sepal.Length + Petal.Length + Petal.Width)
+reg <- lm(
+  data = selection,
+  formula = Sepal.Width ~ Sepal.Length + Petal.Length + Petal.Width
+)
 summary_regression <- summary(reg)$coefficients
 #we're not interested in the intercept
 significant <- which(summary_regression[-1, 4] < 0.05)
@@ -34,10 +36,8 @@ if (length(significant) == 0) {
 } else {
   conclusion <- paste(length(significant), "of the covariates are significant")
 }
-summary_regression %>%
-  knitr::kable(caption = "regression results",
-        booktabs = TRUE,
-        digits = 3) %>%
+summary_regression |>
+  knitr::kable(caption = "regression results", booktabs = TRUE, digits = 3) |>
   kableExtra::kable_styling(font_size = 7)
 ```
 

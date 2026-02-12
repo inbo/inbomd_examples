@@ -17,13 +17,13 @@ waar dit is gebeurd op het `inbomd.bib` bestand:
 > By putting an extra pair of curly braces around 'and',
 this issue was solved.
 It has to do with the biblatex approach by the csl processor
-in pandoc-citeproc, where 'and' is mapped to semicolons.
+in `pandoc-citeproc`, where 'and' is mapped to semicolons.
 See also a similar discussion in
 https://github.com/jgm/pandoc-citeproc/issues/121 :
 "biblatex is the default treatment of .bib files"
 <!-- spell-check: ignore:end -->
 
-Indien dit niet wordt gedaan, dan zal pandoc-citeproc bij de conversie van het `bib` bestand naar CSL-JSON (via bib2json) het woord `and` in `Publisher` vervangen door ";", conform de biblatex benadering.
+Indien dit niet wordt gedaan, dan zal `pandoc-citeproc` bij de conversie van het `bib` bestand naar CSL-JSON (via bib2json) het woord `and` in `Publisher` vervangen door ";", conform de biblatex benadering.
 
 Merk op dat de import van het `bib` bestand met `Better BibTeX` in Zotero deze omzetting niet doet, waardoor dit probleem alleen in R Markdown optrad en niet via door Zotero gegenereerde bibliografieën.
   
@@ -35,7 +35,7 @@ Dit is niet nodig voor het eerste woord, waar steeds een hoofdletter wordt gebru
 Voorbeeld: `{Series in {Title Case}}`.
 
 Dit is eigen aan CSL-processors: ze veronderstellen voor deze velden `sentence case` tenzij de stijl expliciet `Title Case` instelt 
-(zie [deze](https://github.com/jgm/pandoc-citeproc/issues/436#issuecomment-577184970) opmerking in een pandoc-citeproc discussie).
+(zie [deze](https://github.com/jgm/pandoc-citeproc/issues/436#issuecomment-577184970) opmerking in een `pandoc-citeproc` discussie).
 
 - In een CSL stijl kan voor een veld een omzetting naar `Title Case` of `sentence case` opgelegd worden (dit gebeurt momenteel _niet_ in `research-institute-for-nature-and-forest.csl`).
 - Het verdient volgens de CSL documentatie overigens aanbeveling ([bron](https://docs.citationstyles.org/en/1.0.1/specification.html#sentence-case-conversion)) om steeds _in te voeren_ als **`sentence case` met alleen `{Eigennamen}` als hoofdletter**.
