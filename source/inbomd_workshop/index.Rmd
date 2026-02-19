@@ -1,5 +1,6 @@
 --- 
 title: "Creating a report using INBOmd"
+shorttitle: "inbomd-workshop"
 author: 
   - name:
       given: Thierry
@@ -15,8 +16,19 @@ reviewer:
     email: floris.vanderhaeghe@inbo.be
     orcid: 0000-0002-6378-6229
     affiliation: Research Institute for Nature and Forest (INBO)
-funder: Research Institute for Nature and Forest (INBO)
-rightsholder: Research Institute for Nature and Forest (INBO)
+funder:
+  - name:
+      given: Research Institute for Nature and Forest (INBO)
+    email: info@inbo.be
+    ror: 00j54wy13
+rightsholder:
+  - name:
+      given: Research Institute for Nature and Forest (INBO)
+    email: info@inbo.be
+    ror: 00j54wy13
+license: CC-BY-4.0
+publisher: Research Institute for Nature and Forest (INBO)
+publication_type: publication-other
 community: inbo
 keywords: INBOmd; workshop
 toc: FALSE
@@ -24,7 +36,7 @@ slide_level: 2
 cover_photo: media/e-book-ebook-firewood-1475272-darker.jpg # https://www.pexels.com/photo/person-holding-black-e-book-reader-near-pile-of-firewood-1475272/
 flandersfont: TRUE
 cover_horizontal: TRUE
-lang: en
+lang: en-GB
 style: INBO
 
 aspect: 4:3
@@ -68,6 +80,7 @@ if (interactive()) {
 }
 ```
 
+<!-- description: start -->
 
 ## Where to find documentation
 
@@ -80,6 +93,8 @@ if (interactive()) {
     - https://bookdown.org/yihui/bookdown/
 - R Markdown: The Definitive Guide 
     - https://bookdown.org/yihui/rmarkdown/
+
+<!-- description: end -->
 
 # Install requirements
 
@@ -105,7 +120,8 @@ if (!tinytex:::is_tinytex()) {
 ```{r eval = FALSE}
 # installation from inbo.r-universe
 install.packages(
-  "INBOmd", repos = c("https://inbo.r-universe.dev", getOption("repos"))
+  "INBOmd",
+  repos = c("https://inbo.r-universe.dev", getOption("repos"))
 )
 
 ## alternative: installation from github
@@ -121,7 +137,12 @@ tinytex::tlmgr_conf(
 
 # install some other needed latex packages
 tinytex::tlmgr_install(c(
-  "inconsolata", "times", "tex", "helvetic", "dvips", "hyphen-dutch",
+  "inconsolata",
+  "times",
+  "tex",
+  "helvetic",
+  "dvips",
+  "hyphen-dutch",
   "hyphen-french"
 ))
 ```
@@ -147,7 +168,8 @@ tinytex::tlmgr_install(c(
 - Open RStudio
 ```{r eval = FALSE}
 INBOmd::create_report(shortname = "test") #fill in a shortname
-``` 
+```
+
 - This function will then ask you to enter in the console:
   - a title
   - an optional subtitle
@@ -282,9 +304,11 @@ pressure %>%
 
 <!-- spell-check: ignore:start -->
 ```{r reference, results='asis', echo = FALSE}
-cat("```
+cat("`
+``
 `r if (knitr::is_html_output()) '# References {-}'`
-```")
+``
+`")
 ```
 <!-- spell-check: ignore:end -->
 
@@ -534,14 +558,16 @@ The code below is executed in the console, not from an  `Rmd` file (save it in a
 ```{r make-reports, eval=FALSE}
 todo <- unique(iris$Species)
 for (id in todo) {
-    rmarkdown::render(input = "_iris_template_separate_reports.Rmd",
-                      output_format = "bookdown::pdf_document2",
-                      params = list(species = id),
-                      output_file =
-                        rprojroot::find_root_file(
-                          "output",
-                          paste0("Rapport_", id, ".pdf"),
-                          criterion = has_file("inbomd_examples.Rproj")))
+  rmarkdown::render(
+    input = "_iris_template_separate_reports.Rmd",
+    output_format = "bookdown::pdf_document2",
+    params = list(species = id),
+    output_file = rprojroot::find_root_file(
+      "output",
+      paste0("Rapport_", id, ".pdf"),
+      criterion = has_file("inbomd_examples.Rproj")
+    )
+  )
 }
 ```
 

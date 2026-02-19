@@ -69,7 +69,8 @@ Bijvoorbeeld: de levensverwachting in de Verenigde Staten is `r life_exp`.
 ### Figuur met standaard kleur
 
 ```{r figtransparant, echo = FALSE, message=FALSE, warning=FALSE}
-ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) + geom_histogram() +
+ggplot(esoph, aes(x = ncases / (ncases + ncontrols))) +
+  geom_histogram() +
   facet_wrap(~agegp, scales = "free")
 ```
 
@@ -86,7 +87,8 @@ ggplot(
   mtcars,
   aes(x = wt, y = mpg, colour = factor(cyl), fill = factor(cyl))
 ) +
-  geom_point() + geom_smooth(method = "lm")
+  geom_point() +
+  geom_smooth(method = "lm")
 ```
 
 ### Figuur met enkelvoudige kleurengradiënt
@@ -154,7 +156,10 @@ random_zin <- function(n_woorden = 10, n_letters = 10) {
   )
 }
 tekst_tabel <- function(
-    rijen = 20, kolommen = 10, n_woorden = 10, n_letters = 5
+  rijen = 20,
+  kolommen = 10,
+  n_woorden = 10,
+  n_letters = 5
 ) {
   x <- data.frame(
     matrix(
@@ -171,12 +176,17 @@ tekst_tabel <- function(
   return(x)
 }
 genereer_tabel <- function(
-    rijen = 20, kolommen = c(5, 5), n_woorden = 10, n_letters = 5
+  rijen = 20,
+  kolommen = c(5, 5),
+  n_woorden = 10,
+  n_letters = 5
 ) {
   cbind(
     cijfer_tabel(rijen = rijen, kolommen = kolommen[1]),
     tekst_tabel(
-      rijen = rijen, kolommen = kolommen[2], n_woorden = n_woorden,
+      rijen = rijen,
+      kolommen = kolommen[2],
+      n_woorden = n_woorden,
       n_letters = n_letters
     )
   )

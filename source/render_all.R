@@ -1,6 +1,6 @@
 stopifnot(
   package_version(installed.packages()["INBOmd", "Version"]) >=
-    package_version("0.6.0")
+    package_version("0.6.4")
 )
 library(here)
 base_folder <- here("source")
@@ -14,19 +14,16 @@ rmarkdown::render("index.Rmd", output_dir = here("output"))
 
 # citation styles
 setwd(here(base_folder, "citation_style"))
-index <- readLines("index.Rmd")
-index[index == "lang: nl"] <- "lang: en"
-index[index == "style: INBO"] <- "style: Flanders"
-writeLines(index, "index.Rmd")
-yml <- readLines("_bookdown.yml")
-yml[yml == "output_dir: \"../../output/citation_style/nl\""] <-
-  "output_dir: \"../../output/citation_style/en\""
-writeLines(yml, "_bookdown.yml")
 rmarkdown::render_site(output_format = "INBOmd::pdf_report", encoding = "UTF-8")
 rmarkdown::render_site(output_format = "INBOmd::gitbook", encoding = "UTF-8")
 index <- readLines("index.Rmd")
-index[index == "lang: en"] <- "lang: nl"
+index[index == "lang: en-GB"] <- "lang: nl-BE"
 index[index == "style: Flanders"] <- "style: INBO"
+index <- gsub(
+  "Research Institute for Nature and Forest",
+  "Instituut voor Natuur- en Bosonderzoek",
+  index
+)
 writeLines(index, "index.Rmd")
 yml <- readLines("_bookdown.yml")
 yml[yml == "output_dir: \"../../output/citation_style/en\""] <-

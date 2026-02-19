@@ -6,7 +6,7 @@ Het doel van dit document is louter de beschikbare stijlelementen te tonen. De p
 
 ## Lipsum
 
-Lorem ipsum is een opvultekst die drukkers, zetters, grafisch ontwerpers en dergelijke gebruiken om te kijken hoe een lay-out er uit ziet.
+Lorem ipsum is een opvultekst die drukkers, zetters, grafisch ontwerpers en dergelijke gebruiken om te kijken hoe een layout er uit ziet.
 
 De reden waarom de tekst gebruikt wordt door die doelgroep is dat bij een leesbare tekst de lezer afgeleid zou worden door de inhoud, terwijl het alleen om de vormgeving gaat. Bovendien heeft het Lorem ipsum een redelijk normale afwisseling van de verschillende letters en korte en lange woorden.
 

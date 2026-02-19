@@ -61,3 +61,4 @@ spelling:
     - source/flandre_rapport/y_references.Rmd
     - source/flandre_rapport/z_bijlage.Rmd
     - source/inbo_rapport/0c_resume.Rmd
+pak: pdftools

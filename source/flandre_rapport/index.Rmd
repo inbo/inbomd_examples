@@ -8,24 +8,33 @@ author:
       family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-    affiliation: Research Institute for Nature and Forest (INBO)
+    affiliation: Institut de Recherche sur la Nature et les Forêts (INBO)
     corresponding: true
   - name:
       given: Els
       family: Lommelen
     email: els.lommelen@inbo.be
-    affiliation: Research Institute for Nature and Forest (INBO)
+    affiliation: Institut de Recherche sur la Nature et les Forêts (INBO)
     orcid: 0000-0002-3481-5684
 reviewer:
   - name:
       given: Floris
       family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
-    affiliation: Research Institute for Nature and Forest (INBO)
+    affiliation: Institut de Recherche sur la Nature et les Forêts (INBO)
     orcid: 0000-0002-6378-6229
 github-repo: inbo/inbomd-examples
-funder: Research Institute for Nature and Forest (INBO) 
-rightsholder: Research Institute for Nature and Forest (INBO)
+funder:
+  - name:
+      given: Institut de Recherche sur la Nature et les Forêts (INBO)
+    email: info@inbo.be
+    ror: 00j54wy13
+rightsholder:
+  - name:
+      given: Institut de Recherche sur la Nature et les Forêts (INBO)
+    email: info@inbo.be
+    ror: 00j54wy13
+license: CC-BY-4.0
 community: inbo
 keywords: corporate identity; example
 year: 2021
@@ -52,10 +61,10 @@ depotnr: D/2021/999999/999999
 ordernr: Le numéro de commande optionnel
 embargo: 2099-03-01
 publication_type: publication-report
-publisher: Research Institute for Nature and Forest (INBO)
+publisher: Institut de Recherche sur la Nature et les Forêts (INBO)
 
 style: Flanders
-lang: fr
+lang: fr-FR
 tocdepth: 4
 split_by: "chapter+number"
 
@@ -73,8 +82,14 @@ output:
 ```{r setup, include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = TRUE, eval = TRUE, cache = FALSE, fig.width = 150 / 25.4,
-  fig.height = 100 / 25.4, warning = TRUE, error = TRUE, message = TRUE
+  echo = TRUE,
+  eval = TRUE,
+  cache = FALSE,
+  fig.width = 150 / 25.4,
+  fig.height = 100 / 25.4,
+  warning = TRUE,
+  error = TRUE,
+  message = TRUE
 )
 library(lipsum)
 library(DT)
@@ -94,7 +109,8 @@ if (interactive()) {
       opts_chunk$set(dev = "png", dpi = 72)
       theme_set(
         theme_vlaanderen2015(
-          base_family = "FlandersArtSans-Regular", base_size = 12
+          base_family = "FlandersArtSans-Regular",
+          base_size = 12
         )
       )
     },
@@ -102,7 +118,8 @@ if (interactive()) {
       opts_chunk$set(dev = "cairo_pdf", dpi = 300)
       theme_set(
         theme_vlaanderen2015(
-          base_family = "FlandersArtSans-Regular", base_size = 9
+          base_family = "FlandersArtSans-Regular",
+          base_size = 9
         )
       )
       update_geom_defaults("point", list(size = 1.5))
@@ -111,7 +128,8 @@ if (interactive()) {
       opts_chunk$set(dev = "png", dpi = 300)
       theme_set(
         theme_vlaanderen2015(
-          base_family = "FlandersArtSans-Regular", base_size = 12
+          base_family = "FlandersArtSans-Regular",
+          base_size = 12
         )
       )
     }
