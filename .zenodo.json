@@ -1,6 +1,7 @@
 {
   "license": "CC BY 4.0",
   "access_right": "open",
+  "language": "eng",
   "title": "Example documents to the INBOmd R package",
   "description": "<p>This repository has some examples of documents generate with the <a href=\"https://www.github.com/inbo/INBOmd\">INBOmd style<\/a> for RMarkdown. Please look at https://inbo.github.io/inbomd_examples for the rendered versions. We wrote this documents with two goals in mind: 1) provide markdown example code for different kinds of element to use in a scientific document; 2) provide dummy output to examine to corporate style applied to the document. Hence the actual content of the documents is rather nonsensical.<\/p>",
   "keywords": [
@@ -14,7 +15,6 @@
     "beamer"
   ],
   "upload_type": "software",
-  "language": "nld",
   "contributors": [
     {
       "name": "Onkelinx, Thierry",
@@ -38,5 +38,6 @@
     {
       "identifier": "inbo"
     }
-  ]
+  ],
+  "publisher": "Research Institute for Nature and Forest (INBO)"
 }
