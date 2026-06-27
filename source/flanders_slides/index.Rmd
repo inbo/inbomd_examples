@@ -1,7 +1,7 @@
---- 
+---
 title: "Example presentation using INBOmd"
 shorttitle: "example-presentation"
-author: 
+author:
   - name:
       given: Thierry
       family: Onkelinx
@@ -38,7 +38,11 @@ lang: en-GB
 slide_level: 3
 cover_photo: "media/trees-1036958.jpg"
 flandersfont: TRUE
-publisher: Research Institute for Nature and Forest (INBO)
+publisher:
+  - name:
+      given: Research Institute for Nature and Forest (INBO)
+    email: info@inbo.be
+    ror: 00j54wy13
 publication_type: publication-other
 
 embargo: 2020-01-01
@@ -71,16 +75,16 @@ switch_colour(vl_darkyellow)
 ### Title slide
 `subtitle`
   ~ subtitle on the title slide (optional)
-  
+
 `location`
   ~ place and date of the presentation on the title slide (optional)
-  
+
 `institute`
   ~ affiliation on title slide (optional)
 
 `cover`
   ~ background figure for the title slide. A standard figure will be used when missing
-  
+
 `cover_horizontal`
   ~ scale the cover figure to the width when TRUE (default) or to the height when FALSE
 
@@ -94,7 +98,7 @@ switch_colour(vl_darkyellow)
 
 `toc`
   ~ add a slide with table of content when TRUE (default), no table of content when FALSE
-  
+
 `toc_name`
   ~ title of the slide with the table of content
 

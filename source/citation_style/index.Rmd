@@ -1,13 +1,13 @@
 ---
 title: "Voorbeeld van referentiestijl"
 shorttitle: "Referentiestijl"
-author: 
+author:
   - name:
       given: Thierry
       family: Onkelinx
     email: thierry.onkelinx@inbo.be
     orcid: 0000-0001-8804-4216
-    affiliation: Research Institute for Nature and Forest (INBO)
+    affiliation: Instituut voor Natuur- en Bosonderzoek (INBO)
     corresponding: true
 reviewer:
   - name:
@@ -15,15 +15,15 @@ reviewer:
       family: Vanderhaeghe
     email: floris.vanderhaeghe@inbo.be
     orcid: 0000-0002-6378-6229
-    affiliation: Research Institute for Nature and Forest (INBO)
+    affiliation: Instituut voor Natuur- en Bosonderzoek (INBO)
 funder:
   - name:
-      given: Research Institute for Nature and Forest (INBO)
+      given: Instituut voor Natuur- en Bosonderzoek (INBO)
     email: info@inbo.be
     ror: 00j54wy13
 rightsholder:
   - name:
-      given: Research Institute for Nature and Forest (INBO)
+      given: Instituut voor Natuur- en Bosonderzoek (INBO)
     email: info@inbo.be
     ror: 00j54wy13
 license: CC-BY-4.0
@@ -33,17 +33,21 @@ github-repo: inbo/inbomd-examples
 embargo: 2021-01-01
 cover_photo: https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227
 cover_description: Detail van een blad. Foto door [Skyler Ewing](https://www.pexels.com/nl-nl/@skyler-ewing-266953?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) via [Pexels](https://www.pexels.com/nl-nl/foto/hout-natuur-rood-creatief-4599227/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
-publisher: Research Institute for Nature and Forest (INBO)
+publisher:
+  - name:
+      given: Instituut voor Natuur- en Bosonderzoek (INBO)
+    email: info@inbo.be
+    ror: 00j54wy13
 publication_type: publication-report
 
 link-citations: TRUE
 site: bookdown::bookdown_site
 bibliography: ../inbomd.bib
 
-style: Flanders
+style: INBO
 lof: FALSE
 lot: FALSE
-lang: en-GB
+lang: nl-BE
 
 output:
   INBOmd::pdf_report: default
@@ -139,7 +143,7 @@ Specifieke zaken (zie ook de Google sheet): <!-- spell-check: ignore -->
     `datum als tekst`).
     In csl gebeurt dit taalafhankelijk, bijvoorbeeld `(accessed June 30, 2020)` versus `(geraadpleegd 30 juni 2020)`.
   - merk op dat `@online` een BibLaTeX type is.
-    Om een `bib` bestand met dit type zonder probleem in te kunnen lezen in **JabRef**, moet je bij de 
+    Om een `bib` bestand met dit type zonder probleem in te kunnen lezen in **JabRef**, moet je bij de
     preferences > advanced <!-- spell-check: ignore -->
     kiezen voor de _BibLaTeX mode_!
 
@@ -157,7 +161,7 @@ Er zijn wel enkele aandachtspunten in verband met het gebruik van een `bib` best
 Deze worden behandeld in hoofdstuk \@ref(bibcsl).
 
 Merk op dat deze aandachtspunten overbodig zijn indien de invoer gebeurt via Zotero en van daaruit een `bib` bestand wordt geëxporteerd, dit met de [`Better BibTeX` plugin](https://retorque.re/zotero-better-bibtex/) geïnstalleerd.
-    
+
 ## Bijzonderheden in de Zotero met `Better BibTeX` plugin
 
 Bijzonderheden bij import en export van `inbomd.bib` van en naar Zotero met `Better BibTeX` plugin
