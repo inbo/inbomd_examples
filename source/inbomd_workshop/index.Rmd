@@ -1,7 +1,7 @@
---- 
+---
 title: "Creating a report using INBOmd"
 shorttitle: "inbomd-workshop"
-author: 
+author:
   - name:
       given: Thierry
       family: Onkelinx
@@ -27,7 +27,11 @@ rightsholder:
     email: info@inbo.be
     ror: 00j54wy13
 license: CC-BY-4.0
-publisher: Research Institute for Nature and Forest (INBO)
+publisher:
+  - name:
+      given: Research Institute for Nature and Forest (INBO)
+    email: info@inbo.be
+    ror: 00j54wy13
 publication_type: publication-other
 community: inbo
 keywords: INBOmd; workshop
@@ -86,12 +90,12 @@ if (interactive()) {
 
 - Documentation on `INBOmd`
     - https://inbo.github.io/inbomd
-- Example code using `INBOmd` 
+- Example code using `INBOmd`
     - https://inbo.github.io/inbomd-examples
     - Do have a look at our [tips and tricks for the pdf version](https://inbo.github.io/inbomd-examples/inbo_rapport/13-lay-out-tips-voor-pdf.html)
 - `bookdown`: Authoring Books and Technical Documents with R Markdown
     - https://bookdown.org/yihui/bookdown/
-- R Markdown: The Definitive Guide 
+- R Markdown: The Definitive Guide
     - https://bookdown.org/yihui/rmarkdown/
 
 <!-- description: end -->
@@ -162,7 +166,7 @@ tinytex::tlmgr_install(c(
         - Their order: `index.Rmd` + other files in alphabetical order
     - Pro tip: start the file names with a number indicating the order
 
-    
+
 ## Starting a new document (using INBOmd::create_report())
 
 - Open RStudio
@@ -179,7 +183,7 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
   - keywords
   - optional client / cooperation
   - whether you want a list of figures / tables
-  
+
 
 ## Converting an existing RMarkdown document
 
@@ -209,7 +213,7 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
 - Open the drop-down menu to select the required output format
     - Defaults to **all** formats listed in the YAML (not recommended)
     - Pro tip: select a **single** format while working on the document
-    
+
 - Try this with your first Bookdown document
 
 # Figures in bookdown
@@ -240,7 +244,7 @@ INBOmd::create_report(shortname = "test") #fill in a shortname
     - Chunk option: `fig.cap = "Place your caption here"`
 - Special characters or Markdown syntax
     - Use text references
-    - Outside of chunk: 
+    - Outside of chunk:
         - `(ref:label) This figure caption _works_ 100%!`
         - Must be a single line
         - At least 1 blank line above and below
@@ -304,11 +308,13 @@ pressure %>%
 
 <!-- spell-check: ignore:start -->
 ```{r reference, results='asis', echo = FALSE}
-cat("`
+cat(
+  "`
 ``
 `r if (knitr::is_html_output()) '# References {-}'`
 ``
-`")
+`"
+)
 ```
 <!-- spell-check: ignore:end -->
 
@@ -346,7 +352,7 @@ cat("`
 
 ## Footnotes
 
-- `My sentence with a footnote^[footnote text].` 
+- `My sentence with a footnote^[footnote text].`
 - My sentence with a footnote^[footnote text].
 - Use `[^footnote-label]: footnote text` to define the footnote in a separate paragraph[^example].
     - `[^example]: This an example of a reusable footnote.`
@@ -428,7 +434,7 @@ For pdf only
 - The bibliography will be placed before the appendices
 - Chapters in the appendix get letters instead of numbers
 
-Other output formats ignore `\appendix` 
+Other output formats ignore `\appendix`
 
 - The bibliography will be placed at the end of the document
 - Appendix chapters will get a continuing number
@@ -461,7 +467,7 @@ Other output formats ignore `\appendix`
 
 ## Example template
 
-An example template can be found in the file `__iris_template_within_document.Rmd`. 
+An example template can be found in the file `__iris_template_within_document.Rmd`.
 The first chunk is important since this is where the id is selected.
 
 
@@ -493,7 +499,7 @@ selection <- iris %>%
 `r ''````{r display-species-analysis, results = "asis"}
 to_do <- unique(mt$id)
 rmd <- sapply(
-  to_do, 
+  to_do,
   function(id) {
     knit_expand("_monthly_totals.Rmd", id = id)
   }
@@ -524,7 +530,7 @@ cat(knit(text = rmd, quiet = TRUE))
 - Create a different report for each subset of your data (e.g. for different stakeholders)
 - The `Rmd` template now has a YAML since it should be a stand-alone document
   - `params` argument in the YAML is used to select subsets of the data
-  
+
 ## Make the template
 
 An example can be found in `_iris_template_separate_reports.Rmd`
@@ -534,7 +540,7 @@ An example can be found in `_iris_template_separate_reports.Rmd`
 - take care to make your text and code dynamic such that it can accommodate different data.
 
 ````markdown
----
+--\u002d
 author: "Research Institute for Nature and Forest"
 date: "`r Sys.Date()`"
 output:
@@ -543,11 +549,11 @@ biblio-style: "apalike"
 link-citations: true
 params:
     species: "setosa"
----
+--\u002d
 ````
 ## Make the reports
 
-Use `rmarkdown::render()` to generate all your reports 
+Use `rmarkdown::render()` to generate all your reports
 - `input` specifies the `Rmd` template
 - `output_format` lets you choose which type of output you want to generate (needs to be in the template YAML)
 - `params` lists which values you want for the parameters in the template's YAML
@@ -572,4 +578,3 @@ for (id in todo) {
 ```
 
 # Bibliography
-

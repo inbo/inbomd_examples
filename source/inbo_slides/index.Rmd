@@ -1,8 +1,8 @@
---- 
+---
 title: "Voorbeeldpresentatie met INBOmd"
 subtitle: "Hier komt de optionele ondertitel"
 shorttitle: "voorbeeld-slides"
-author: 
+author:
   - name:
       given: Thierry
       family: Onkelinx
@@ -28,7 +28,11 @@ rightsholder:
     email: info@inbo.be
     ror: 00j54wy13
 license: CC-BY-4.0
-publisher: Research Institute for Nature and Forest (INBO)
+publisher:
+  - name:
+      given: Instituut voor Natuur- en Bosonderzoek (INBO)
+    email: info@inbo.be
+    ror: 00j54wy13
 publication_type: publication-other
 community: inbo
 keywords: INBOmd; examples; slides
@@ -63,6 +67,7 @@ theme_set(theme_inbo(6, transparent = "plot"))
 ```
 
 <!-- description: start -->
+
 <!-- description: end -->
 
 # Opties
@@ -71,17 +76,17 @@ theme_set(theme_inbo(6, transparent = "plot"))
 
 `subtitle`
   ~ ondertitel op titelpagina (optioneel)
-  
+
 `location`
   ~ plaats en datum van presentatie op titelpagina (optioneel)
-  
+
 `institute`
   ~ affiliatie op titelpagina (optioneel)
 
 `cover_photo`
   ~ figuur voor achtergrond van titelpagina.
   Standaardfiguur indien ontbreekt.
-  
+
 `cover_horizontal`
   ~ schaal de coverfoto naar de breedte indien `TRUE` (standaard) of naar de hoogte indien `FALSE`.
 
@@ -96,7 +101,7 @@ theme_set(theme_inbo(6, transparent = "plot"))
 `toc`
   ~ maak pagina met inhoudstafel indien `TRUE` (standaard).
     Geen inhoudstafel indien `FALSE`.
-  
+
 `toc_naam`
   ~ titel van de pagina met inhoudstafel.
     Standaard: "Overzicht"

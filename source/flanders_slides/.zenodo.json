@@ -1,17 +1,17 @@
 {
-  "description": "<p>Dit is een beknopt voorbeeld van een referentiestijl in een R Markdown document.<\/p>",
-  "title": "Voorbeeld van referentiestijl.",
-  "shorttitle": "Referentiestijl",
+  "description": "<!-- description: end --> <!-- description: start -->",
+  "title": "Example presentation using INBOmd. Here comes the optional subtitle.",
+  "shorttitle": "example-presentation",
   "upload_type": "publication",
-  "embargo_date": "2021-01-01",
+  "embargo_date": "2020-01-01",
   "access_right": "embargoed",
-  "publication_date": "2021-01-01",
+  "publication_date": "2020-01-01",
   "license": "CC-BY-4.0",
-  "language": "nld",
+  "language": "eng",
   "keywords": [
-    "INBOmd; examples; citation; csl; markdown"
+    "INBOmd; examples; slides"
   ],
-  "publication_type": "publication-report",
+  "publication_type": "publication-other",
   "publisher": "Research Institute for Nature and Forest (INBO)",
   "contributors": [
     {

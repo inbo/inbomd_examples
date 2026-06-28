@@ -1,6 +1,7 @@
 <!-- badges: start -->
+![Language: en-GB](https://img.shields.io/badge/language-en--GB-c04384)
 [![website](https://img.shields.io/badge/website-https://inbo.github.io/inbomd_examples-c04384)](https://inbo.github.io/inbomd_examples)
-[![CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-brightgreen)](https://raw.githubusercontent.com/inbo/checklist/refs/heads/main/inst/generic_template/cc_by_4_0.md)
+[![CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-brightgreen)](https://raw.githubusercontent.com/inbo/citeme/refs/heads/main/inst/licenses/cc_by_4_0.md)
 ![GitHub](https://img.shields.io/github/license/inbo/inbomd_examples)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/inbo/inbomd_examples/check-project)
 <!-- badges: end -->
@@ -8,10 +9,11 @@
 # Example documents to the INBOmd R package
 
 [Onkelinx, Thierry![ORCID logo](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0001-8804-4216)[^aut][^cre][^INBO]
-[Research Institute for Nature and Forest (INBO)](mailto:info%40inbo.be)[^cph][^fnd]
+[Research Institute for Nature and Forest (INBO)](mailto:info%40inbo.be)[^cph][^fnd][^pbl]
 
 [^cph]: copyright holder
 [^fnd]: funder
+[^pbl]: publisher
 [^aut]: author
 [^cre]: contact person
 [^INBO]: Research Institute for Nature and Forest (INBO)

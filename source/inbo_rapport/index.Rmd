@@ -1,8 +1,8 @@
---- 
+---
 title: Voorbeeldrapport met INBOmd
 subtitle: Dit is de standaardversie
 shorttitle: Korte-titel-voor-URL
-author: 
+author:
   - name:
       given: Thierry
       family: Onkelinx
@@ -26,7 +26,11 @@ doi: 10.5281/zenodo.842223
 reportnr: 99999
 depotnr: D/2021/999999/999999
 ordernr: Het optionele nummer van de opdrachtgever
-publisher: Research Institute for Nature and Forest (INBO) 
+publisher:
+  - name:
+      given: Instituut voor Natuur- en Bosonderzoek (INBO)
+    email: info@inbo.be
+    ror: 00j54wy13
 funder:
   - name:
       given: Instituut voor Natuur- en Bosonderzoek (INBO)

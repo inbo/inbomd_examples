@@ -3,10 +3,8 @@ package: no
 allowed:
   warnings: []
   notes:
-  - motivation: no DOI required
-    value: no DOI badge found in README.md
-  - motivation: version not relevant
-    value: No version information found in README.md
+  - motivation: Version not relevant
+    value: no version badge found in README.md
 required:
 - CITATION
 - checklist
@@ -62,3 +60,4 @@ spelling:
     - source/flandre_rapport/z_bijlage.Rmd
     - source/inbo_rapport/0c_resume.Rmd
 pak: pdftools
+gha_install: []

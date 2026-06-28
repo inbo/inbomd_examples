@@ -1,5 +1,5 @@
 book_filename: "citation_style.Rmd"
-output_dir: "../../output/citation_style/en"
+output_dir: "../../output/citation_style/nl"
 delete_merged_file: TRUE
 language:
   label:

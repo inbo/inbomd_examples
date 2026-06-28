@@ -1,0 +1,46 @@
+{
+  "description": "<h2 id=\"where-to-find-documentation\">Where to find documentation<\/h2> <ul> <li>Documentation on <code>INBOmd<\/code> <ul> <li>https://inbo.github.io/inbomd<\/li> <\/ul><\/li> <li>Example code using <code>INBOmd<\/code> <ul> <li>https://inbo.github.io/inbomd-examples<\/li> <li>Do have a look at our <a href=\"https://inbo.github.io/inbomd-examples/inbo_rapport/13-lay-out-tips-voor-pdf.html\">tips and tricks for the pdf version<\/a><\/li> <\/ul><\/li> <li><code>bookdown<\/code>: Authoring Books and Technical Documents with R Markdown <ul> <li>https://bookdown.org/yihui/bookdown/<\/li> <\/ul><\/li> <li>R Markdown: The Definitive Guide <ul> <li>https://bookdown.org/yihui/rmarkdown/<\/li> <\/ul><\/li> <\/ul>",
+  "title": "Creating a report using INBOmd.",
+  "shorttitle": "inbomd-workshop",
+  "upload_type": "publication",
+  "embargo_date": "2020-01-01",
+  "access_right": "embargoed",
+  "publication_date": "2020-01-01",
+  "license": "CC-BY-4.0",
+  "language": "eng",
+  "keywords": [
+    "INBOmd; workshop"
+  ],
+  "publication_type": "publication-other",
+  "publisher": "Research Institute for Nature and Forest (INBO)",
+  "contributors": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216",
+      "type": "contactperson"
+    },
+    {
+      "name": "Vanderhaeghe, Floris",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0002-6378-6229",
+      "type": "other"
+    },
+    {
+      "name": "Research Institute for Nature and Forest (INBO)",
+      "type": "rightsholder"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Onkelinx, Thierry",
+      "affiliation": "Research Institute for Nature and Forest (INBO)",
+      "orcid": "0000-0001-8804-4216"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "inbo"
+    }
+  ]
+}
