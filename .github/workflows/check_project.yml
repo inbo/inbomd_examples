@@ -19,4 +19,4 @@ jobs:
 
     steps:
       - name: "Check project with checklist"
-        uses: inbo/actions/check_project@a29089fc9a2ea38b9d9bd62c0d1db3b448b224c8 # composite
+        uses: inbo/actions/check_project@composite
